@@ -150,6 +150,7 @@
                 <item id="6">
                     <label>$LOCALIZE[744]</label>
                     <onclick>ActivateWindow(videos,files,return)</onclick>
+                    <visible>Skin.HasSetting(HomeVideoFiles)</visible>
                 </item>
                 <item id="7">
                     <label>$LOCALIZE[20388]</label>
@@ -230,6 +231,7 @@
                 <item id="6">
                     <label>$LOCALIZE[744]</label>
                     <onclick>ActivateWindow(videos,files,return)</onclick>
+                    <visible>Skin.HasSetting(HomeVideoFiles)</visible>
                 </item>
                 <item id="7">
                     <label>$LOCALIZE[20388]</label>
@@ -302,6 +304,7 @@
                 <item id="4">
                     <label>$LOCALIZE[744]</label>
                     <onclick>ActivateWindow(musicfiles)</onclick>
+                    <visible>Skin.HasSetting(HomeMusicFiles)</visible>
                 </item>
                 <item id="5">
                     <label>$LOCALIZE[136]</label>

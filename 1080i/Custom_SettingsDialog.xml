@@ -70,7 +70,6 @@
                     <include>SettingsDialogRadioButtonVars</include>
                     <selected>!Skin.HasSetting(HomePictures)</selected>
                     <onclick>Skin.ToggleSetting(HomePictures)</onclick>
-                    <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
                     <label>$LOCALIZE[1]</label>
                     <visible>!Skin.HasSetting(HomeClassic.Enabled)</visible>
                 </control>
@@ -79,11 +78,26 @@
                     <include>SettingsDialogRadioButtonVars</include>
                     <selected>!Skin.HasSetting(HomeTrailers)</selected>
                     <onclick>Skin.ToggleSetting(HomeTrailers)</onclick>
-                    <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
                     <label>Trailers</label>
                     <visible>!Skin.HasSetting(HomeClassic.Enabled) + System.HasAddon(plugin.video.the.trailers)</visible>
                 </control>
                 <control type="radiobutton" id="2107">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HomeMusicFiles)</selected>
+                    <onclick>Skin.ToggleSetting(HomeMusicFiles)</onclick>
+                    <label>$LOCALIZE[41447] [LOWERCASE]$LOCALIZE[744][/LOWERCASE]</label>
+                    <visible>!Skin.HasSetting(HomeClassic.Enabled)</visible>
+                </control>
+                <control type="radiobutton" id="2108">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HomeVideoFiles)</selected>
+                    <onclick>Skin.ToggleSetting(HomeVideoFiles)</onclick>
+                    <label>Video [LOWERCASE]$LOCALIZE[744][/LOWERCASE]</label>
+                    <visible>!Skin.HasSetting(HomeClassic.Enabled)</visible>
+                </control>
+                <control type="radiobutton" id="2109">
                     <width>1210</width>
                     <include>SettingsDialogRadioButtonVars</include>
                     <selected>!Skin.HasSetting(HomePrograms)</selected>
@@ -91,16 +105,15 @@
                     <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
                     <label>$LOCALIZE[41504]</label>
                 </control>
-                <control type="radiobutton" id="2108">
+                <control type="radiobutton" id="2110">
                     <width>1210</width>
                     <include>SettingsDialogRadioButtonVars</include>
                     <selected>!Skin.HasSetting(HomeAddons)</selected>
                     <onclick>Skin.ToggleSetting(HomeAddons)</onclick>
-                    <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
                     <label>$LOCALIZE[24001]</label>
                     <visible>!Skin.HasSetting(HomeClassic.Enabled)</visible>
                 </control>
-                <control type="radiobutton" id="2109">
+                <control type="radiobutton" id="2111">
                     <width>1210</width>
                     <include>SettingsDialogRadioButtonVars</include>
                     <selected>!Skin.HasSetting(HomeWeather)</selected>

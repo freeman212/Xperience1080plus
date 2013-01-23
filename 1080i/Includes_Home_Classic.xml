@@ -637,6 +637,18 @@
                     <onclick>ActivateWindow(videos,plugin://plugin.video.the.trailers/,return)</onclick>
                     <icon>windows/home/panel_icons/panel_menu_apple.png</icon>
                     <visible>!Skin.HasSetting(HomeTrailers) + System.HasAddon(plugin.video.the.trailers)</visible>
+                </item>      
+                <item id="11">
+                    <label>$LOCALIZE[41447] [LOWERCASE]$LOCALIZE[744][/LOWERCASE]</label>
+                    <onclick>ActivateWindow(musicfiles)</onclick>
+                    <icon>windows/home/panel_icons/panel_menu_musicfiles.png</icon>
+                    <visible>!Skin.HasSetting(HomeMusicFiles)</visible>
+                </item>             
+                <item id="12">
+                    <label>Video [LOWERCASE]$LOCALIZE[744][/LOWERCASE]</label>
+                    <onclick>ActivateWindow(videos,files,return)</onclick>
+                    <icon>windows/home/panel_icons/panel_menu_videos.png</icon>
+                    <visible>!Skin.HasSetting(HomeVideoFiles)</visible>
                 </item>             
                 <item id="7">
                     <label>$LOCALIZE[41504]</label>
@@ -651,8 +663,6 @@
                     <onclick>ActivateWindow(addonbrowser)</onclick>
                     <icon>windows/home/panel_icons/panel_menu_addons.png</icon>
                     <visible>!Skin.HasSetting(HomeAddons)</visible>
-                    <property name="single">$INFO[Skin.String(HomeProgramsSingleImage)]</property>
-                    <property name="multi">$INFO[Skin.String(HomeProgramsMultiImage)]</property>
                 </item>
                 <item id="9">
                     <label>$LOCALIZE[8] ($INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits])</label>
