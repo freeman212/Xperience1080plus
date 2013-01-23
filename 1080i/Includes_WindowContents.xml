@@ -39,8 +39,15 @@
         </control>
         <control type="image">
             <include>FullscreenDimensions</include>
+            <include>Animation_FanartFade</include>
+            <texture>windows/common/fanartoverlay.png</texture>
+            <visible>[!Skin.HasSetting(BackgroundVideo) + Player.HasVideo] | Player.HasAudio | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog)</visible>
+        </control>
+        <control type="image">
+            <include>FullscreenDimensions</include>
+            <include>Animation_FanartFade</include>
             <texture>windows/common/stage-dark-overlay.png</texture>
-            <visible>Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) | Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml)  | Window.IsVisible(script-globalsearch-infodialog.xml)</visible>
+            <visible>[Skin.HasSetting(BackgroundVideo) + Player.HasVideo] | Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-globalsearch-infodialog.xml)</visible>
         </control>
         <control type="image">
             <include>FullscreenDimensions</include>
