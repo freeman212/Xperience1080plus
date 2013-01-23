@@ -142,20 +142,20 @@
             <visible>!IsEmpty(Container(20).ListItem.property(multi)) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo] + !Container(20).Scrolling</visible>
         </control> 
         <control type="image">
-            <description>Search results fanart</description>
-            <include>FullscreenDimensions</include>
-            <texture background="true">$INFO[Window(Home).Property(fanart_image)]</texture>
-            <fadetime>600</fadetime>
-            <include>Animation_FanartFade</include>
-            <visible>!IsEmpty(Window(Home).property(fanart_image)) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
-        </control>
-        <control type="image">
             <description>Music npl fanart</description>
             <include>FullscreenDimensions</include>
             <texture background="true">$INFO[Player.Art(fanart)]</texture>
             <fadetime>600</fadetime>
             <include>Animation_FanartFade</include>
             <visible>[ControlGroup(402).HasFocus | [!Skin.HasSetting(HomeClassic.Enabled) + Container(20).HasFocus(4)]] + Player.HasAudio</visible>
+        </control>
+        <control type="image">
+            <description>Search results fanart</description>
+            <include>FullscreenDimensions</include>
+            <texture background="true">$INFO[Window(Home).Property(fanart_image)]</texture>
+            <fadetime>600</fadetime>
+            <include>Animation_FanartFade</include>
+            <visible>!IsEmpty(Window(Home).property(fanart_image)) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
         </control>
         <control type="image">
             <description>Classic recent items fanart(s)</description>
