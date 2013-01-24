@@ -39,7 +39,7 @@
                     <onclick>Skin.ToggleSetting(HomeHome)</onclick>
                     <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
                     <label>$LOCALIZE[41524]</label>
-                    <visible>Skin.HasSetting(HomeClassic.Enabled)</visible>
+                    <visible>!Skin.HasSetting(HomeClassic.Enabled)</visible>
                 </control>
                 <control type="radiobutton" id="2102">
                     <width>1210</width>
@@ -71,7 +71,7 @@
                     <selected>!Skin.HasSetting(HomePictures)</selected>
                     <onclick>Skin.ToggleSetting(HomePictures)</onclick>
                     <label>$LOCALIZE[1]</label>
-                    <visible>!Skin.HasSetting(HomeClassic.Enabled)</visible>
+                    <visible>Skin.HasSetting(HomeClassic.Enabled)</visible>
                 </control>
                 <control type="radiobutton" id="2106">
                     <width>1210</width>
@@ -79,7 +79,7 @@
                     <selected>!Skin.HasSetting(HomeTrailers)</selected>
                     <onclick>Skin.ToggleSetting(HomeTrailers)</onclick>
                     <label>Trailers</label>
-                    <visible>!Skin.HasSetting(HomeClassic.Enabled) + System.HasAddon(plugin.video.the.trailers)</visible>
+                    <visible>Skin.HasSetting(HomeClassic.Enabled) + System.HasAddon(plugin.video.the.trailers)</visible>
                 </control>
                 <control type="radiobutton" id="2107">
                     <width>1210</width>
@@ -87,7 +87,7 @@
                     <selected>!Skin.HasSetting(HomeMusicFiles)</selected>
                     <onclick>Skin.ToggleSetting(HomeMusicFiles)</onclick>
                     <label>$LOCALIZE[41447] [LOWERCASE]$LOCALIZE[744][/LOWERCASE]</label>
-                    <visible>!Skin.HasSetting(HomeClassic.Enabled)</visible>
+                    <visible>Skin.HasSetting(HomeClassic.Enabled)</visible>
                 </control>
                 <control type="radiobutton" id="2108">
                     <width>1210</width>
@@ -95,7 +95,7 @@
                     <selected>!Skin.HasSetting(HomeVideoFiles)</selected>
                     <onclick>Skin.ToggleSetting(HomeVideoFiles)</onclick>
                     <label>Video [LOWERCASE]$LOCALIZE[744][/LOWERCASE]</label>
-                    <visible>!Skin.HasSetting(HomeClassic.Enabled)</visible>
+                    <visible>Skin.HasSetting(HomeClassic.Enabled)</visible>
                 </control>
                 <control type="radiobutton" id="2109">
                     <width>1210</width>
@@ -111,7 +111,7 @@
                     <selected>!Skin.HasSetting(HomeAddons)</selected>
                     <onclick>Skin.ToggleSetting(HomeAddons)</onclick>
                     <label>$LOCALIZE[24001]</label>
-                    <visible>!Skin.HasSetting(HomeClassic.Enabled)</visible>
+                    <visible>Skin.HasSetting(HomeClassic.Enabled)</visible>
                 </control>
                 <control type="radiobutton" id="2111">
                     <width>1210</width>
