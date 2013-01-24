@@ -88,6 +88,7 @@
                         <onclick>SetFocus(20)</onclick>
                         <onclick>$INFO[Window.Property(RecentMovie.1.Play)]</onclick>
                         <icon>$INFO[Window.Property(RecentMovie.1.Art(fanart))]</icon>
+                        <property name="RecentMovieExtrafanart">$INFO[Window.Property(RecentMovie.1.Path),,/extrafanart]</property>
                         <label>$INFO[Window.Property(RecentMovie.1.Title)]</label>
                         <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentMovie.1.Year),, • ]$INFO[Window.Property(RecentMovie.1.Runtime),, $LOCALIZE[12391]][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
@@ -96,6 +97,7 @@
                         <onclick>SetFocus(20)</onclick>
                         <onclick>$INFO[Window.Property(RecentMovie.2.Play)]</onclick>
                         <icon>$INFO[Window.Property(RecentMovie.2.Art(fanart))]</icon>
+                        <property name="RecentMovieExtrafanart">$INFO[Window.Property(RecentMovie.2.Path),,/extrafanart]</property>
                         <label>$INFO[Window.Property(RecentMovie.2.Title)]</label>
                         <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentMovie.2.Year),, • ]$INFO[Window.Property(RecentMovie.2.Runtime),, $LOCALIZE[12391]][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
@@ -104,6 +106,7 @@
                         <onclick>SetFocus(20)</onclick>
                         <onclick>$INFO[Window.Property(RecentMovie.3.Play)]</onclick>
                         <icon>$INFO[Window.Property(RecentMovie.3.Art(fanart))]</icon>
+                        <property name="RecentMovieExtrafanart">$INFO[Window.Property(RecentMovie.3.Path),,/extrafanart]</property>
                         <label>$INFO[Window.Property(RecentMovie.3.Title)]</label>
                         <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentMovie.3.Year),, • ]$INFO[Window.Property(RecentMovie.3.Runtime),, $LOCALIZE[12391]][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
@@ -112,6 +115,7 @@
                         <onclick>SetFocus(20)</onclick>
                         <onclick>$INFO[Window.Property(RecentMovie.4.Play)]</onclick>
                         <icon>$INFO[Window.Property(RecentMovie.4.Art(fanart))]</icon>
+                        <property name="RecentMovieExtrafanart">$INFO[Window.Property(RecentMovie.4.Path),,/extrafanart]</property>
                         <label>$INFO[Window.Property(RecentMovie.4.Title)]</label>
                         <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentMovie.4.Year),, • ]$INFO[Window.Property(RecentMovie.4.Runtime),, $LOCALIZE[12391]][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
@@ -120,6 +124,7 @@
                         <onclick>SetFocus(20)</onclick>
                         <onclick>$INFO[Window.Property(RecentMovie.5.Play)]</onclick>
                         <icon>$INFO[Window.Property(RecentMovie.5.Art(fanart))]</icon>
+                        <property name="RecentMovieExtrafanart">$INFO[Window.Property(RecentMovie.5.Path),,/extrafanart]</property>
                         <label>$INFO[Window.Property(RecentMovie.5.Title)]</label>
                         <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentMovie.5.Year),, • ]$INFO[Window.Property(RecentMovie.5.Runtime),, $LOCALIZE[12391]][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
@@ -128,6 +133,7 @@
                         <onclick>SetFocus(20)</onclick>
                         <onclick>$INFO[Window.Property(RecentMovie.6.Play)]</onclick>
                         <icon>$INFO[Window.Property(RecentMovie.6.Art(fanart))]</icon>
+                        <property name="RecentMovieExtrafanart">$INFO[Window.Property(RecentMovie.6.Path),,/extrafanart]</property>
                         <label>$INFO[Window.Property(RecentMovie.6.Title)]</label>
                         <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentMovie.6.Year),, • ]$INFO[Window.Property(RecentMovie.6.Runtime),, $LOCALIZE[12391]][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
@@ -304,7 +310,7 @@
                     <control type="label">
                         <posx>140r</posx>
                         <posy>175</posy>
-                        <width>633</width>
+                        <width>460</width>
                         <height>437</height>
                         <textcolor>CCFFFFFF</textcolor>
                         <font>Font-Condensed-S45-B</font>
@@ -314,7 +320,7 @@
                     <control type="label">
                         <posx>140r</posx>
                         <posy>134</posy>
-                        <width>633</width>
+                        <width>460</width>
                         <height>437</height>
                         <colordiffuse>99FFFFFF</colordiffuse>
                         <font>Font-Condensed-S27</font>

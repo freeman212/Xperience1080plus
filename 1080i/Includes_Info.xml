@@ -299,10 +299,52 @@
             </control>
         </control>
     </include>
+    
+    <include name="Common-HomeClassicNowPlaying">
+        <control type="group">
+            <visible>Player.HasAudio + Player.Paused + !IsEmpty(Player.Art(thumb)) + !Skin.HasSetting(HomeClassic.Enabled)</visible>
+            <animation type="Visible" reversible="false">
+                <effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
+                <effect type="zoom" start="200" end="100" time="300" center="960,540" tween="sine" easing="inout" />
+                <effect type="fade" start="100" end="0" time="300" delay="4000" tween="sine" easing="inout" />
+                <effect type="zoom" start="100" end="200" time="300" center="960,540" delay="4000" tween="sine" easing="inout" />
+            </animation>
+            <animation type="Hidden" reversible="false">
+                <effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+                <effect type="zoom" start="100" end="200" time="300" center="960,540" delay="0" tween="sine" easing="inout" />
+            </animation>
+            <control type="image">
+                <posx>770</posx>
+                <posy>350</posy>
+                <width>380</width>
+                <height>380</height>
+                <texture>overlays/notification/back.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="image">
+                <posx>825</posx>
+                <posy>405</posy>
+                <width>270</width>
+                <height>270</height>
+                <aspectratio align="center">stretch</aspectratio>
+                <texture>$INFO[Player.Art(thumb)]</texture>
+                <colordiffuse>DDFFFFFF</colordiffuse>
+            </control>
+            <control type="image">
+                <posx>786</posx>
+                <posy>366</posy>
+                <width>348</width>
+                <height>348</height>
+                <texture>overlays/notification/cover-overlay.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+        </control>
+    </include>
 
     <include name="Common-Home-Info">
         <include>Common-Clock</include>
         <include>Common-NowPlaying</include>
+        <include>Common-HomeClassicNowPlaying</include>
     </include>
     
     <include name="Common-Info">
