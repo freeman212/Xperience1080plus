@@ -96,6 +96,25 @@
                 <texture>flags/mpaa/rating-nc17.png</texture>
                 <visible>substring(ListItem.MPAA, NC-17) | substring(ListItem.MPAA,USA:NC-17)</visible>
             </control>  
+            <!-- IT ratings-->
+            <control type="image">
+                <description>IT-T Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/IT/rating-t.png</texture>
+                <visible>StringCompare(ListItem.MPAA,T)</visible>
+            </control>  
+            <control type="image">
+                <description>IT-VM14 Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/IT/rating-vm14.png</texture>
+                <visible>StringCompare(ListItem.MPAA,VM14)</visible>
+            </control>  
+            <control type="image">
+                <description>IT-VM18 Rating label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/IT/rating-vm18.png</texture>
+                <visible>StringCompare(ListItem.MPAA,VM18)</visible>
+            </control>  
         </control>
         <control type="group">
             <width>121</width>
