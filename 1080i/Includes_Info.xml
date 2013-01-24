@@ -50,19 +50,36 @@
                     <visible>Weather.IsFetched + ![stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]</visible>
                     <include>visiblehidefadeinfo</include>
                 </control>
-                <control type="label">
-                    <description>Clock label</description>
-                    <posx>160r</posx>
-                    <posy>950</posy>
-                    <width>180</width>
-                    <height>100</height>
-                    <label>[B]$INFO[System.Time][/B]</label>
-                    <font>Font-Condensed-S34-B</font>
-                    <textcolor>eewhite</textcolor>
-                    <shadowcolor>22000000</shadowcolor>
-                    <align>right</align>
-                    <scroll>false</scroll>
+                <control type="group">
                     <animation effect="slide" end="60" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched | [stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]">Conditional</animation>
+                    <control type="label">
+                        <description>Clock label</description>
+                        <posx>160r</posx>
+                        <posy>950</posy>
+                        <width>180</width>
+                        <height>100</height>
+                        <label>[B]$INFO[System.Time][/B]</label>
+                        <font>Font-Condensed-S34-B</font>
+                        <textcolor>eewhite</textcolor>
+                        <shadowcolor>22000000</shadowcolor>
+                        <align>right</align>
+                        <scroll>false</scroll>
+                        <animation effect="slide" end="0,-15" time="100" condition="Control.HasFocus(21) | Control.HasFocus(22)">Conditional</animation>
+                    </control>
+                    <control type="label">
+                        <description>Date label</description>
+                        <posx>160r</posx>
+                        <posy>970</posy>
+                        <width>480</width>
+                        <height>100</height>
+                        <label>$INFO[System.Date]</label>
+                        <font>Font-Condensed-S28</font>
+                        <textcolor>80FFFFFF</textcolor>
+                        <scroll>false</scroll>
+                        <align>right</align>
+                        <visible>Control.HasFocus(21) | Control.HasFocus(22)</visible>
+                        <animation effect="fade" start="0" end="100" time="100" reversible="true">Visible</animation>
+                    </control>
                 </control>
             </control>
             <control type="group">
@@ -302,7 +319,7 @@
     
     <include name="Common-HomeClassicNowPlaying">
         <control type="group">
-            <visible>Player.HasAudio + Player.Paused + !IsEmpty(Player.Art(thumb)) + !Skin.HasSetting(HomeClassic.Enabled)</visible>
+            <visible>Player.HasAudio + Player.Paused + !IsEmpty(Player.Art(thumb))</visible>
             <animation type="Visible" reversible="false">
                 <effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
                 <effect type="zoom" start="200" end="100" time="300" center="960,540" tween="sine" easing="inout" />
@@ -344,7 +361,7 @@
     <include name="Common-Home-Info">
         <include>Common-Clock</include>
         <include>Common-NowPlaying</include>
-        <include>Common-HomeClassicNowPlaying</include>
+        <include condition="!Skin.HasSetting(HomeClassic.Enabled)">Common-HomeClassicNowPlaying</include>
     </include>
     
     <include name="Common-Info">
