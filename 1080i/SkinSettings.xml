@@ -320,8 +320,6 @@
                     <include>SettingsCategoryRadioButtonVars</include>
                     <selected>Skin.HasSetting(HomeClassic.Enabled)</selected>
                     <onclick>Skin.ToggleSetting(HomeClassic.Enabled)</onclick>
-                    <onfocus condition="!IsEmpty(Window(Home).Property(ReloadSkin))">ReloadSkin</onfocus>
-                    <onfocus condition="!IsEmpty(Window(Home).Property(ReloadSkin))">ClearProperty(ReloadSkin,Home)</onfocus>
                     <label>Use Classic Home</label>
                 </control>
                 <control type="button" id="2000">
@@ -710,6 +708,13 @@
             <control type="grouplist" id="5">
                 <include>SettingsCategoryGrouplistVars</include>
                 <visible>ControlGroup(3).HasFocus(35)</visible>
+                <control type="radiobutton" id="8000">
+                    <width>1210</width>
+                    <include>SettingsCategoryRadioButtonVars</include>
+                    <selected>Skin.HasSetting(MusicVisClassic.Enabled)</selected>
+                    <onclick>Skin.ToggleSetting(MusicVisClassic.Enabled)</onclick>
+                    <label>Use Classic music visualisation screen</label>
+                </control>
                 <control type="radiobutton" id="8001">
                     <width>1210</width>
                     <include>SettingsCategoryRadioButtonVars</include>
@@ -750,6 +755,8 @@
                     <selected>Skin.HasSetting(CDArt.Enabled)</selected>
                     <onclick>Skin.ToggleSetting(CDArt.Enabled)</onclick>
                     <label>$LOCALIZE[41107]</label>
+                    <enable>!Skin.HasSetting(MusicVisClassic.Enabled)</enable>
+                    <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(8005)">Conditional</animation>
                 </control>
                 <control type="radiobutton" id="8006">
                     <width>1210</width>
@@ -758,7 +765,6 @@
                     <onclick>Skin.ToggleSetting(OSDDefaultSubtitleButton.Enabled)</onclick>
                     <enable>!IsEmpty(Skin.String(SubtitleScript_Path))</enable>
                     <label>$LOCALIZE[41242]</label>
-                    <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(8005)">Conditional</animation>
                 </control>
             </control>
             
