@@ -514,16 +514,17 @@
                     <posy>404</posy>
                     <control type="image">
                         <animation type="Visible" reversible="false">
-                            <effect type="fade" start="0" end="100" time="400" tween="sine" easing="inout" />
+                            <effect type="fade" start="0" end="100" time="200" tween="sine" easing="inout" />
                         </animation>
                         <animation type="Hidden" reversible="false">
-                            <effect type="fade" start="100" end="0" time="400" tween="sine" easing="inout" />
+                            <effect type="fade" start="100" end="0" time="200" tween="sine" easing="inout" />
                         </animation>
                         <posx>-110</posx>
                         <posy>20</posy>
                         <width>949</width>
                         <height>440</height>
                         <texture>views/posterview/shadow-focus-square.png</texture>
+                        <colordiffuse>aaffffff</colordiffuse>
                         <visible>Control.HasFocus(82)</visible>
                     </control>
                     <control type="image">

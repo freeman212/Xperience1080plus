@@ -223,9 +223,41 @@
                     <onup>20</onup>
                     <ondown>-</ondown>
                     <onleft>13</onleft>
-                    <onright>7</onright>
+                    <onright>15</onright>
                     <enable>Skin.HasSetting(OSDVisualisation.Enabled)</enable>
                     <animation effect="fade" end="50" time="0" condition="!Control.IsEnabled(14)">Conditional</animation>
+                </control>
+                <control type="button" id="15">
+                    <description>Toggle layout</description>
+                    <posx>1850</posx>
+                    <posy>15</posy>
+                    <height>75</height>
+                    <width>120</width>
+                    <texturefocus>osd/fullscreen/buttons/radio-button-fo.png</texturefocus>
+                    <texturenofocus>osd/fullscreen/buttons/radio-button-nf.png</texturenofocus>
+                    <onclick>Skin.ToggleSetting(MusicVisClassic.Enabled)</onclick>
+                    <onclick>ReloadSkin</onclick>
+                    <onup>20</onup>
+                    <ondown>-</ondown>
+                    <onleft>14</onleft>
+                    <onright>7</onright>
+                    <visible>Skin.HasSetting(MusicVisClassic.Enabled)</visible>
+                </control>
+                <control type="button" id="15">
+                    <description>Toggle layout</description>
+                    <posx>1850</posx>
+                    <posy>15</posy>
+                    <height>75</height>
+                    <width>120</width>
+                    <texturefocus>osd/fullscreen/buttons/radio-button-fo2.png</texturefocus>
+                    <texturenofocus>osd/fullscreen/buttons/radio-button-nf2.png</texturenofocus>
+                    <onclick>Skin.ToggleSetting(MusicVisClassic.Enabled)</onclick>
+                    <onclick>ReloadSkin</onclick>
+                    <onup>20</onup>
+                    <ondown>-</ondown>
+                    <onleft>14</onleft>
+                    <onright>7</onright>
+                    <visible>!Skin.HasSetting(MusicVisClassic.Enabled)</visible>
                 </control>
             </control>
             <control type="group">

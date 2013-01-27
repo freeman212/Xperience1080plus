@@ -441,34 +441,39 @@
                     <onclick>ActivateWindow(skinsettings)</onclick>
                 </item>
                 <item id="3">
+                    <label>$LOCALIZE[41524] Metro</label>
+                    <onclick>Skin.ToggleSetting(HomeClassic.Enabled)</onclick>
+                    <onclick>ReloadSkin</onclick>
+                </item>
+                <item id="4">
                     <label>$LOCALIZE[24001]</label>
                     <onclick>ActivateWindow(addonbrowser)</onclick>
                 </item>
-                <item id="4">
+                <item id="5">
                     <label>$LOCALIZE[13200]</label>
                     <onclick>ActivateWindow(profiles)</onclick>
                 </item>
-                <item id="5">
+                <item id="6">
                     <label>$LOCALIZE[14036]</label>
                     <onclick>ActivateWindow(servicesettings)</onclick>
                 </item>
-                <item id="6">
+                <item id="7">
                     <label>$LOCALIZE[8]</label>
                     <onclick>ActivateWindow(weathersettings)</onclick>
                 </item>
-                <item id="7">
+                <item id="8">
                     <label>$LOCALIZE[41220]</label>
                     <onclick>ActivateWindow(pvrsettings)</onclick>
                 </item>
-                <item id="8">
+                <item id="9">
                     <label>$LOCALIZE[1]</label>
                     <onclick>ActivateWindow(picturessettings)</onclick>
                 </item>
-                <item id="9">
+                <item id="10">
                     <label>$LOCALIZE[2]</label>
                     <onclick>ActivateWindow(musicsettings)</onclick>
                 </item>
-                <item id="10">
+                <item id="11">
                     <label>$LOCALIZE[157]</label>
                     <onclick>ActivateWindow(videossettings)</onclick>
                 </item>
