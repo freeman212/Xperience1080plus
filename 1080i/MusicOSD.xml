@@ -240,7 +240,7 @@
                     <textoffsetx>35</textoffsetx>
                     <selected>Skin.HasSetting(MusicVisClassic.Enabled)</selected>
                     <onclick>Skin.ToggleSetting(MusicVisClassic.Enabled)</onclick>
-                    <onclick>ReloadSkin</onclick>
+                    <onclick>ActivateWindow(visualisation)</onclick>
                     <label>Classic</label>
                 </control>
            </control>

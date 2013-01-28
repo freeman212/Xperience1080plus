@@ -235,6 +235,14 @@
                     <visible>System.HasLoginScreen + System.Loggedon + !stringcompare(System.Language,German)</visible>
                 </control>
                 <control type="button" id="13">
+                    <description>Restart XBMC button</description>
+                    <include>optionsbuttonsdimensions</include>
+                    <label>$LOCALIZE[41358] XBMC</label>
+                    <onclick>RestartApp</onclick>
+                    <texturefocus>dialogs/options/buttons/reboot-fo.png</texturefocus>
+                    <texturenofocus>dialogs/options/buttons/reboot-nf.png</texturenofocus>
+                </control>
+                <control type="button" id="14">
                     <include>optionsbuttonsdimensions</include>
                     <label>Reload Skin</label>
                     <onclick>ReloadSkin</onclick>

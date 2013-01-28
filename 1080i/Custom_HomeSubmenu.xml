@@ -54,7 +54,8 @@
                 <item id="1">
                     <label>-</label>
                     <onclick>Skin.ToggleSetting(HomeClassic.Enabled)</onclick>
-                    <onclick>ReloadSkin</onclick>
+                    <onclick>Dialog.Close(3023)</onclick>
+                    <onclick>ActivateWindow(home)</onclick>
                 </item>
             </content>
         </control>        

@@ -443,7 +443,7 @@
                 <item id="3">
                     <label>$LOCALIZE[41524] Metro</label>
                     <onclick>Skin.ToggleSetting(HomeClassic.Enabled)</onclick>
-                    <onclick>ReloadSkin</onclick>
+                    <onclick>ActivateWindow(home)</onclick>
                 </item>
                 <item id="4">
                     <label>$LOCALIZE[24001]</label>
