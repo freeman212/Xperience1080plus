@@ -49,6 +49,15 @@
                         <width>633</width>
                         <height>317</height>
                         <aspectratio>scale</aspectratio>
+                        <texture>views/fallbacks/DefaultVideo.png/landscape.png</texture>
+                        <visible>IsEmpty(ListItem.Icon) + IsEmpty(ListItem.property(EpisodeThumb))</visible>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>633</width>
+                        <height>317</height>
+                        <aspectratio>scale</aspectratio>
                         <texture background="true">$INFO[ListItem.Icon]</texture>
                         <visible>IsEmpty(ListItem.property(EpisodeThumb))</visible>
                     </control>
@@ -63,6 +72,15 @@
                     </control>
                 </itemlayout>
                 <focusedlayout height="633" width="437">
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>633</width>
+                        <height>317</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture>views/fallbacks/DefaultVideo.png/landscape.png</texture>
+                        <visible>IsEmpty(ListItem.Icon) + IsEmpty(ListItem.property(EpisodeThumb))</visible>
+                    </control>
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
