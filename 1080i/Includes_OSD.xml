@@ -860,7 +860,7 @@
                             <posy>16</posy>
                             <width>129</width>
                             <height>23</height>
-                            <texture fallback="osd/music/rating0.png">$INFO[ListItem.Label2,osd/music/rating,.png]</texture>
+                            <texture fallback="dialogs/music-info/nf-rating0.png">$INFO[ListItem.Label2,dialogs/music-info/nf-rating,.png]</texture>
                             <visible>!IsEmpty(ListItem.property(rating))</visible>
                         </control>
                     </itemlayout>
@@ -1198,7 +1198,7 @@
                             <posy>16</posy>
                             <width>129</width>
                             <height>23</height>
-                            <texture fallback="osd/music/rating0.png">$INFO[ListItem.Label2,osd/music/rating,.png]</texture>
+                            <texture fallback="dialogs/music-info/nf-rating0.png">$INFO[ListItem.Label2,dialogs/music-info/nf-rating,.png]</texture>
                             <visible>!IsEmpty(ListItem.property(rating))</visible>
                         </control>
                     </itemlayout>
