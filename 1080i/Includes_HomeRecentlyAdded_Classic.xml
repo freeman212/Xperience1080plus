@@ -50,7 +50,7 @@
                         <height>317</height>
                         <aspectratio>scale</aspectratio>
                         <texture>views/fallbacks/DefaultVideo.png/landscape.png</texture>
-                        <visible>IsEmpty(ListItem.Icon) + IsEmpty(ListItem.property(EpisodeThumb))</visible>
+                        <visible>IsEmpty(ListItem.Icon) + IsEmpty(ListItem.property(EpisodeThumb)) + !Container(20).HasFocus(9)</visible>
                     </control>
                     <control type="image">
                         <posx>0</posx>
