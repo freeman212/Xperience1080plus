@@ -614,7 +614,7 @@
                         <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
                         <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
                         <radioposx>-19</radioposx>
-                        <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Actors) | Container.Content(Sets)</visible>
+                        <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Actors) | Container.Content(Sets) | Container.HasFolders</visible>
                     </control>
                     <control type="radiobutton" id="207">
                         <description>Thumbnail</description>
@@ -629,16 +629,16 @@
                         <visible>substring(Container.FolderPath,addons,left) | substring(Container.FolderPath,plugin,left) | Container.HasFiles + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(actors) | Container.Content(Sets)]</visible>
                     </control>
                     <control type="radiobutton" id="208">
-                        <description>Thumbnail</description>
+                        <description>Video Thumbnail</description>
                         <include>optionsbuttonsdimensions</include>
-                        <label>$LOCALIZE[21371]</label>
+                        <label>Video $LOCALIZE[21371]</label>
                         <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                         <onclick>Container.SetViewMode(501)</onclick>
                         <selected>Control.IsVisible(501)</selected>
                         <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
                         <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
                         <radioposx>-19</radioposx>
-                        <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(actors) | Container.Content(Sets)</visible>
+                        <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(actors) | Container.Content(Sets) | Container.HasFolders</visible>
                     </control>
                     <control type="radiobutton" id="209">
                         <description>Banner</description>

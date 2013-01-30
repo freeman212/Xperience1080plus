@@ -3474,7 +3474,7 @@
                 <animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
                 <animation effect="fade" start="0" end="100" time="0" delay="1310" reversible="false">Visible</animation>       
                 <control type="fixedlist" id="55">
-                    <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Actors) | Container.Content(Sets)</visible>
+                    <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Actors) | Container.Content(Sets) | Container.HasFolders</visible>
                     <posx>-174</posx>
                     <posy>250</posy>
                     <width>2200</width>
@@ -3665,7 +3665,7 @@
                         <posx>110</posx>
                         <posy>830</posy>
                         <control type="group">
-                            <visible>Container.Content(movies) | Container.Content(Sets)</visible>
+                            <visible>Container.Content(movies) | Container.Content(Sets) | Container.HasFolders</visible>
                             <control type="label">
                                 <posx>85</posx>
                                 <posy>15</posy>
@@ -4152,7 +4152,7 @@
                     <onup>501</onup>
                     <ondown>501</ondown>
                     <preloaditems>2</preloaditems>
-                    <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(actors) | Container.Content(Sets)</visible>
+                    <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(actors) | Container.Content(Sets) | Container.HasFolders</visible>
                     <animation effect="slide" end="35" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(ThumbnailVideoSmall)">Conditional</animation>
                     <itemlayout width="167" height="244" condition="Skin.HasSetting(ThumbnailVideoSmall)">
                         <control type="image">
