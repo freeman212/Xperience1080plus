@@ -921,7 +921,7 @@
                         </item>
                         <item id="4">
                             <label>$LOCALIZE[180]</label>
-                            <label2>$INFO[MusicPlayer.Time,, / ]$INFO[MusicPlayer.Duration]</label2>
+                            <label2>$INFO[MusicPlayer.Time]$INFO[MusicPlayer.Duration, / ,]</label2>
                             <property name="duration">1</property>
                             <onclick>-</onclick>
                         </item>
@@ -1278,7 +1278,7 @@
                         </item>
                         <item id="4">
                             <label>$LOCALIZE[180]</label>
-                            <label2>$INFO[MusicPlayer.Time,, / ]$INFO[MusicPlayer.Duration]</label2>
+                            <label2>$INFO[MusicPlayer.Time]$INFO[MusicPlayer.Duration, / ,]</label2>
                             <property name="duration">1</property>
                             <onclick>-</onclick>
                         </item>
