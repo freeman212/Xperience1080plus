@@ -67,6 +67,12 @@
             <width>121</width>
             <visible>Container.Content(movies) + !IsEmpty(ListItem.MPAA)</visible>
             <control type="image">
+                <description>Not rated label</description>
+                <include>MPAADimensionsSmall</include>
+                <texture>flags/mpaa/US/rating-un.png</texture>
+                <visible>substring(ListItem.MPAA,NR)</visible>
+            </control>  
+            <control type="image">
                 <description>G Rating label</description>
                 <include>MPAADimensionsSmall</include>
                 <texture>flags/mpaa/US/rating-g.png</texture>
