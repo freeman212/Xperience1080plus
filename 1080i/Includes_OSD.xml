@@ -793,18 +793,18 @@
                     <effect type="slide" start="0" end="-1000" time="300" tween="cubic" easing="in" />
                 </animation>
                 <posx>288</posx>
-                <posy>329</posy>
+                <posy>279</posy>
                 <control type="image">
                     <description>Info Back</description>
                     <posx>0</posx>
                     <posy>0</posy>
                     <width>556</width>
-                    <height>444</height>
+                    <height>544</height>
                     <texture>osd/music/info.png</texture>
                 </control>
                 <control type="image">
                     <posx>385</posx>
-                    <posy>322</posy>
+                    <posy>344</posy>
                     <width>112</width>
                     <height>80</height>
                     <texture fallback="flags/audioosd/na.png">$INFO[MusicPlayer.Codec,flags/audioosd/,.png]</texture>
@@ -812,9 +812,9 @@
                 </control>
                 <control type="list">
                     <posx>54</posx>
-                    <posy>54</posy>
+                    <posy>76</posy>
                     <width>448</width>
-                    <height>336</height>
+                    <height>436</height>
                     <itemlayout width="448" height="56">
                         <control type="label">
                             <posx>15</posx>
@@ -839,7 +839,20 @@
                             <aligny>center</aligny>
                             <textcolor>FF585858</textcolor>
                             <scroll>true</scroll>
-                            <visible>IsEmpty(ListItem.property(rating))</visible>
+                            <visible>IsEmpty(ListItem.property(rating)) + IsEmpty(ListItem.property(hasnext))</visible>
+                        </control>
+                        <control type="label">
+                            <posx>433</posx>
+                            <posy>-2</posy>
+                            <width>418</width>
+                            <height>56</height>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <font>Font-Condensed-S25</font>
+                            <align>right</align>
+                            <aligny>center</aligny>
+                            <textcolor>FF787878</textcolor>
+                            <scroll>true</scroll>
+                            <visible>!IsEmpty(ListItem.property(hasnext))</visible>
                         </control>
                         <control type="progress">
                             <posx>1</posx>
@@ -921,6 +934,12 @@
                             <label>Rating</label>
                             <label2>$INFO[MusicPlayer.Rating]</label2>
                             <property name="rating">1</property>
+                            <onclick>-</onclick>
+                        </item>
+                        <item id="7">
+                            <label>$LOCALIZE[19031]</label>
+                            <label2>$INFO[MusicPlayer.Offset(1).Artist,,]$INFO[MusicPlayer.Offset(1).Title, - ,]</label2>
+                            <property name="hasnext">1</property>
                             <onclick>-</onclick>
                         </item>
                     </content>
@@ -1119,7 +1138,7 @@
             </control>
             <control type="group">
                 <posx>1076</posx>
-                <posy>329</posy>
+                <posy>279</posy>
                 <animation type="WindowClose">
                     <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
                     <effect type="slide" start="0" end="1000" time="300" tween="cubic" easing="in" />
@@ -1137,12 +1156,12 @@
                     <posx>0</posx>
                     <posy>0</posy>
                     <width>556</width>
-                    <height>444</height>
+                    <height>544</height>
                     <texture flipx="true">osd/music/info.png</texture>
                 </control>
                 <control type="image">
                     <posx>385</posx>
-                    <posy>322</posy>
+                    <posy>344</posy>
                     <width>112</width>
                     <height>80</height>
                     <texture fallback="flags/audioosd/na.png">$INFO[MusicPlayer.Codec,flags/audioosd/,.png]</texture>
@@ -1150,9 +1169,9 @@
                 </control>
                 <control type="list">
                     <posx>54</posx>
-                    <posy>54</posy>
+                    <posy>76</posy>
                     <width>448</width>
-                    <height>336</height>
+                    <height>436</height>
                     <itemlayout width="448" height="56">
                         <control type="label">
                             <posx>15</posx>
@@ -1177,7 +1196,20 @@
                             <aligny>center</aligny>
                             <textcolor>FF585858</textcolor>
                             <scroll>true</scroll>
-                            <visible>IsEmpty(ListItem.property(rating))</visible>
+                            <visible>IsEmpty(ListItem.property(rating)) + IsEmpty(ListItem.property(hasnext))</visible>
+                        </control>
+                        <control type="label">
+                            <posx>433</posx>
+                            <posy>-2</posy>
+                            <width>418</width>
+                            <height>56</height>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <font>Font-Condensed-S25</font>
+                            <align>right</align>
+                            <aligny>center</aligny>
+                            <textcolor>FF787878</textcolor>
+                            <scroll>true</scroll>
+                            <visible>!IsEmpty(ListItem.property(hasnext))</visible>
                         </control>
                         <control type="progress">
                             <posx>1</posx>
@@ -1259,6 +1291,12 @@
                             <label>$LOCALIZE[563]</label>
                             <label2>$INFO[MusicPlayer.Rating]</label2>
                             <property name="rating">1</property>
+                            <onclick>-</onclick>
+                        </item>
+                        <item id="7">
+                            <label>$LOCALIZE[19031]</label>
+                            <label2>$INFO[MusicPlayer.Offset(1).Artist,,]$INFO[MusicPlayer.Offset(1).Title, - ,]</label2>
+                            <property name="hasnext">1</property>
                             <onclick>-</onclick>
                         </item>
                     </content>
