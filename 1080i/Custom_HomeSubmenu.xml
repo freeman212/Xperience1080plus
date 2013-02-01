@@ -1,6 +1,7 @@
 <window type="dialog" id="3023">
     <defaultcontrol always="true">3</defaultcontrol>
     <onunload>ClearProperty(Close,3023)</onunload>
+    <visible>Window.IsActive(3023) + Window.IsActive(Home)</visible>
     <controls>
         <control type="GroupList">
             <description>Button labels</description>
