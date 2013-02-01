@@ -534,6 +534,21 @@
                         <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
                         <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
                         <radioposx>-19</radioposx>
+                        <enable>!Skin.HasSetting(ThumbnailHidePanel)</enable>
+                        <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(115)">Conditional</animation>
+                    </control>
+                    <control type="radiobutton" id="116">
+                        <description>Hide all in thumbnail view</description>
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Hide panel</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Skin.ToggleSetting(ThumbnailHidePanel)</onclick>
+                        <onclick>ReloadSkin</onclick>
+                        <selected>Skin.HasSetting(ThumbnailHidePanel)</selected>
+                        <visible>Control.IsVisible(501)</visible>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
                     </control>
                 </control>
                 <control type="grouplist" id="9223">

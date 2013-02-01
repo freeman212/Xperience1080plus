@@ -4114,6 +4114,12 @@
 <!-- =============== -->
 <!-- Thumbnail (501) -->
 <!-- =============== -->
+    <include name="VideoThumbsWidth1">
+        <width>1252</width>
+    </include>
+    <include name="VideoThumbsWidth2">
+        <width>1752</width>
+    </include>  
     <include name="Viewtype-ThumbnailVideo">
         <control type="group">
             <include>FullscreenDimensions</include>
@@ -4133,7 +4139,8 @@
                 <control type="panel" id="501">
                     <posx>88</posx>
                     <posy>174</posy>
-                    <width>1252</width>
+                    <include condition="!Skin.HasSetting(ThumbnailHidePanel)">VideoThumbsWidth1</include>
+                    <include condition="Skin.HasSetting(ThumbnailHidePanel)">VideoThumbsWidth2</include>
                     <height>744</height>
                     <pagecontrol>70</pagecontrol>
                     <scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -4393,7 +4400,7 @@
                 </control>
             </control>
             <control type="group">
-                <visible>Control.IsVisible(501) + !Window.IsActive(movieinformation)</visible>
+                <visible>Control.IsVisible(501) + !Skin.HasSetting(ThumbnailHidePanel) + !Window.IsActive(movieinformation)</visible>
                 <include>ThumbnailAnimationsPoster</include>
                 <control type="image">
                     <description>Poster</description>
