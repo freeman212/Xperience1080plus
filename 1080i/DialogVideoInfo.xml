@@ -1,7 +1,6 @@
 <window>
     <defaultcontrol always="true">9333</defaultcontrol>
     <onload>SetProperty(fanart_image,$INFO[ListItem.Art(fanart)])</onload>
-    <onload condition="Skin.HasSetting(MovieInformation.PlayTrailer)">AlarmClock(PlayTrailer,PlayMedia($INFO[ListItem.Trailer],false,1),00:01,silent)</onload>
     <onunload>ClearProperty(fanart_image)</onunload>
     <onload>SetProperty(extrafanart,.)</onload>
     <onload>SetProperty(extrafanartshows,.)</onload>
@@ -556,64 +555,6 @@
                     <visible>Player.HasVideo</visible>
                 </control>
 
-                <control type="group" id="9336">
-                    <posx>329</posx>
-                    <posy>500</posy>
-                    <width>177</width>
-                    <height>59</height>
-                    <animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="![Control.HasFocus(1101) | Control.HasFocus(1104) | Control.HasFocus(1105)]">Conditional</animation>
-                    <control type="button" id="1101">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>59</width>
-                        <height>59</height>
-                        <onleft>1105</onleft>
-                        <onright>1104</onright>
-                        <onup>9333</onup>
-                        <ondown>9333</ondown>
-                        <onclick>PlayerControl(Stop)</onclick>
-                        <onclick>SetFocus(9333)</onclick>
-                        <texturefocus>dialogs/video-info/osd-stop.png</texturefocus>
-                        <texturenofocus>dialogs/video-info/osd-stop-nf.png</texturenofocus>
-                        <visible>Player.HasVideo</visible>
-                        <enable>Player.HasVideo</enable>
-                    </control>
-                    <control type="togglebutton" id="1104">
-                        <posx>59</posx>
-                        <posy>0</posy>
-                        <width>59</width>
-                        <height>59</height>
-                        <onleft>1101</onleft>
-                        <onright>1105</onright>
-                        <onup>9333</onup>
-                        <ondown>9333</ondown>
-                        <onclick>PlayerControl(Play)</onclick>
-                        <texturefocus>dialogs/video-info/osd-play.png</texturefocus>
-                        <texturenofocus>dialogs/video-info/osd-play-nf.png</texturenofocus>
-                        <alttexturefocus>dialogs/video-info/osd-pause.png</alttexturefocus>
-                        <alttexturenofocus>dialogs/video-info/osd-pause-nf.png</alttexturenofocus>
-                        <usealttexture>!Player.IsPaused</usealttexture>
-                        <visible>Player.HasVideo</visible>
-                        <enable>Player.HasVideo</enable>
-                    </control>
-                    <control type="button" id="1105">
-                        <posx>118</posx>
-                        <posy>0</posy>
-                        <width>59</width>
-                        <height>59</height>
-                        <onleft>1104</onleft>
-                        <onright>SendClick(2003,5)</onright>
-                        <onright>SetFocus(9334)</onright>
-                        <onup>9333</onup>
-                        <ondown>9333</ondown>
-                        <onclick>Action(fullscreen)</onclick>
-                        <texturefocus>dialogs/video-info/osd-fs.png</texturefocus>
-                        <texturenofocus>dialogs/video-info/osd-fs-nf.png</texturenofocus>
-                        <visible>Player.HasVideo</visible>
-                        <enable>Player.HasVideo</enable>
-                    </control>
-                </control>
-                
                 <!-- Panel menu-->
                 <control type="list" id="9333">
                     <posx>100</posx>
@@ -623,10 +564,8 @@
                     <onleft>1110</onleft>
                     <onright condition="Control.IsVisible(70)">70</onright>
                     <onright condition="!Control.IsVisible(70)">71</onright>
-                    <onup condition="!Player.HasVideo">9333</onup>
-                    <onup condition="Player.HasVideo">9336</onup>
-                    <ondown condition="!Player.HasVideo">9333</ondown>
-                    <ondown condition="Player.HasVideo">9336</ondown>
+                    <onup>9333</onup>
+                    <ondown>9333</ondown>
                     <scrolltime>0</scrolltime>
                     <orientation>vertical</orientation>
                     <focusposition>0</focusposition>
