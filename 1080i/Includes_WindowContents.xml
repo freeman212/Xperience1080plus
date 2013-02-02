@@ -217,7 +217,7 @@
             <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
             <fadetime>600</fadetime>
             <include>Animation_FanartFade</include>
-            <visible>!Skin.HasSetting(HideFanart) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo] + !Control.IsVisible(502)</visible>
+            <visible>!Skin.HasSetting(HideFanart) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
         </control>
         <control type="image">
             <description>List Panel fanart</description>
@@ -229,7 +229,7 @@
         </control>
         <control type="group">
            <description>Extrafanart</description>
-           <visible>!Skin.HasSetting(HideFanart) + Skin.HasSetting(ExtraFanart.Enabled) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo] + !Control.IsVisible(502)</visible>
+           <visible>!Skin.HasSetting(HideFanart) + Skin.HasSetting(ExtraFanart.Enabled) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
            <animation effect="fade" start="0" end="100" time="600" delay="8000">WindowOpen</animation>
            <control type="multiimage">
                <include>FullscreenDimensions</include>
