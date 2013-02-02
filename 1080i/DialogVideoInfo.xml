@@ -543,18 +543,6 @@
                     </control>
                 </control>
                 
-                <!-- OSD Back -->
-                <control type="image">
-                    <posx>324</posx>
-                    <posy>500</posy>
-                    <width>188</width>
-                    <height>59</height>
-                    <texture>dialogs/video-info/osd-back.png</texture>
-                    <animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="![Control.HasFocus(1101) | Control.HasFocus(1104) | Control.HasFocus(1105)]">Conditional</animation>
-                    <include>visiblehidefade</include>
-                    <visible>Player.HasVideo</visible>
-                </control>
-
                 <!-- Panel menu-->
                 <control type="list" id="9333">
                     <posx>100</posx>
