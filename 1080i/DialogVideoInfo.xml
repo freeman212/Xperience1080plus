@@ -401,9 +401,24 @@
                     <textcolor>eewhite</textcolor>
                     <align>left</align>
                     <scroll>false</scroll>
-                    <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(9334) | Control.HasFocus(9337) | Control.HasFocus(50) | Control.HasFocus(1110)">Conditional</animation>
+                    <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(9334) | Control.HasFocus(9337) | Control.HasFocus(50) | Control.HasFocus(71) | Control.HasFocus(1110)">Conditional</animation>
                 </control>
 
+                <!-- Director Label -->
+                <control type="label">
+                    <posx>118</posx>
+                    <posy>0</posy>
+                    <width min="50" max="400">auto</width>
+                    <height>60</height>
+                    <label>Director</label>
+                    <font>Font-Condensed-S45</font>
+                    <textcolor>eewhite</textcolor>
+                    <align>left</align>
+                    <scroll>false</scroll>	
+                    <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(9333) | Control.HasFocus(9337) | Control.HasFocus(70) | Control.HasFocus(9335) | Control.HasFocus(50) | Control.HasFocus(1110)">Conditional</animation>
+                    <visible>!Container.Content(tvshows) + !IsEmpty(ListItem.Director)</visible>
+                </control>
+                
                 <!-- Cast Label -->
                 <control type="label">
                     <posx>118</posx>
@@ -417,7 +432,7 @@
                     <scroll>false</scroll>	
                     <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(9333) | Control.HasFocus(9337) | Control.HasFocus(70) | Control.HasFocus(71) | Control.HasFocus(9335) | Control.HasFocus(1110)">Conditional</animation>
                 </control>
-
+                
                 <!-- Fanart Label -->
                 <control type="label">
                     <posx>118</posx>
