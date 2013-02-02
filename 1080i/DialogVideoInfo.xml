@@ -141,21 +141,21 @@
                     <include>FullscreenDimensions</include>
                     <fadetime>600</fadetime>
                     <texture background="true">$INFO[Control.GetLabel(9338)]</texture>
-                    <visible>Container.Content(Movies) + Skin.HasSetting(ExtraFanart.Enabled)</visible>
+                    <visible>Container.Content(Movies) + Skin.HasSetting(ExtraFanart.Enabled) + !Skin.HasSetting(HideFanart)</visible>
                 </control>
                 <control type="image">
                     <description>Fullscreen extra fanart shows and seasons</description>
                     <include>FullscreenDimensions</include>
                     <fadetime>600</fadetime>
                     <texture background="true">$INFO[Control.GetLabel(9339)]</texture>
-                    <visible>[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(ExtraFanart.Enabled)</visible>
+                    <visible>[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(ExtraFanart.Enabled) + !Skin.HasSetting(HideFanart)</visible>
                 </control>
                 <control type="image">
                     <description>Fullscreen extra fanart episodes</description>
                     <include>FullscreenDimensions</include>
                     <fadetime>600</fadetime>
                     <texture background="true">$INFO[Control.GetLabel(9400)]</texture>
-                    <visible>Container.Content(Episodes) + Skin.HasSetting(ExtraFanart.Enabled)</visible>
+                    <visible>Container.Content(Episodes) + Skin.HasSetting(ExtraFanart.Enabled) + !Skin.HasSetting(HideFanart)</visible>
                 </control>
                 
                 <control type="image">
@@ -501,7 +501,7 @@
                         
                         <!--extrafanart-->
                         <control type="group">
-                            <visible>Skin.HasSetting(ExtraFanart.Enabled) + !Container.Content(episodes)</visible>
+                            <visible>Skin.HasSetting(ExtraFanart.Enabled) + !Skin.HasSetting(HideFanart) + !Container.Content(episodes)</visible>
                             <animation effect="fade" start="0" end="100" time="600" delay="8000">WindowOpen</animation>
                             <control type="image">
                                 <description>Extra fanart movies</description>

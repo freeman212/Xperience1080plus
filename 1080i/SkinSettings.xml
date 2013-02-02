@@ -699,27 +699,29 @@
                     <selected>Skin.HasSetting(ExtraFanart.Enabled)</selected>
                     <onclick>Skin.ToggleSetting(ExtraFanart.Enabled)</onclick>
                     <label>$LOCALIZE[41287]</label>
+                    <enable>!Skin.HasSetting(HideFanart)</enable>
+                    <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(3002)">Conditional</animation>
                 </control>
                 <control type="button" id="3003">
                     <width>1210</width>
                     <include>SettingsCategoryDefaultButtonVars</include>
                     <onclick>Addon.OpenSettings(script.artwork.downloader)</onclick>
                     <label> • $LOCALIZE[41289]</label>
-                    <visible>Skin.HasSetting(ExtraFanart.Enabled) + System.HasAddon(script.artwork.downloader)</visible>
+                    <visible>Skin.HasSetting(ExtraFanart.Enabled) + !Skin.HasSetting(HideFanart) + System.HasAddon(script.artwork.downloader)</visible>
                 </control>
                 <control type="button" id="3004">
                     <width>1210</width>
                     <include>SettingsCategoryDefaultButtonVars</include>
                     <onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=movie,extrafanart)</onclick>
                     <label> • Download extra fanarts for Movies</label>
-                    <visible>Skin.HasSetting(ExtraFanart.Enabled) + System.HasAddon(script.artwork.downloader)</visible>
+                    <visible>Skin.HasSetting(ExtraFanart.Enabled) + !Skin.HasSetting(HideFanart) + System.HasAddon(script.artwork.downloader)</visible>
                 </control>
                 <control type="button" id="3005">
                     <width>1210</width>
                     <include>SettingsCategoryDefaultButtonVars</include>
                     <onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,extrafanart)</onclick>
-                    <label> • Download extra fanarts for TVshows</label>
-                    <visible>Skin.HasSetting(ExtraFanart.Enabled) + System.HasAddon(script.artwork.downloader)</visible>
+                    <label> • Download extra fanarts for TV Shows</label>
+                    <visible>Skin.HasSetting(ExtraFanart.Enabled) + !Skin.HasSetting(HideFanart) + System.HasAddon(script.artwork.downloader)</visible>
                 </control>
             </control>
 
