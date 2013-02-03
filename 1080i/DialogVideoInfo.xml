@@ -2,12 +2,12 @@
     <defaultcontrol always="true">9333</defaultcontrol>
     <onload>SetProperty(fanart_image,$INFO[ListItem.Art(fanart)])</onload>
     <onunload>ClearProperty(fanart_image)</onunload>
-    <onload>SetProperty(extrafanart,.)</onload>
-    <onload>SetProperty(extrafanartshows,.)</onload>
-    <onload>SetProperty(extrafanartepisodes,.)</onload>
-    <onload>AlarmClock(extrafanart,SetProperty(extrafanart,$INFO[ListItem.Path,,extrafanart]),00:08,silent)</onload>
-    <onload>AlarmClock(extrafanartshows,SetProperty(extrafanartshows,$INFO[ListItem.FileNameAndPath,,extrafanart]),00:08,silent)</onload>
-    <onload>AlarmClock(extrafanartepisodes,SetProperty(extrafanartepisodes,$INFO[ListItem.Path,,../extrafanart]),00:08,silent)</onload>
+    <onload condition="Skin.HasSetting(ExtraFanart.Enabled)">SetProperty(extrafanart,.)</onload>
+    <onload condition="Skin.HasSetting(ExtraFanart.Enabled)">SetProperty(extrafanartshows,.)</onload>
+    <onload condition="Skin.HasSetting(ExtraFanart.Enabled)">SetProperty(extrafanartepisodes,.)</onload>
+    <onload condition="Skin.HasSetting(ExtraFanart.Enabled)">AlarmClock(extrafanart,SetProperty(extrafanart,$INFO[ListItem.Path,,extrafanart]),00:08,silent)</onload>
+    <onload condition="Skin.HasSetting(ExtraFanart.Enabled)">AlarmClock(extrafanartshows,SetProperty(extrafanartshows,$INFO[ListItem.FileNameAndPath,,extrafanart]),00:08,silent)</onload>
+    <onload condition="Skin.HasSetting(ExtraFanart.Enabled)">AlarmClock(extrafanartepisodes,SetProperty(extrafanartepisodes,$INFO[ListItem.Path,,../extrafanart]),00:08,silent)</onload>
     <allowoverlay>no</allowoverlay>
     <controls>
 
@@ -401,7 +401,7 @@
                     <textcolor>eewhite</textcolor>
                     <align>left</align>
                     <scroll>false</scroll>
-                    <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(9334) | Control.HasFocus(9337) | Control.HasFocus(50) | Control.HasFocus(71) | Control.HasFocus(1110)">Conditional</animation>
+                    <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(9334) | Control.HasFocus(9337) | Control.HasFocus(50) | Control.HasFocus(71) | Control.HasFocus(1101) | Control.HasFocus(1104) | Control.HasFocus(1105) | Control.HasFocus(1110)">Conditional</animation>
                 </control>
 
                 <!-- Director Label -->
@@ -415,7 +415,7 @@
                     <textcolor>eewhite</textcolor>
                     <align>left</align>
                     <scroll>false</scroll>	
-                    <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(9333) | Control.HasFocus(9337) | Control.HasFocus(70) | Control.HasFocus(9335) | Control.HasFocus(50) | Control.HasFocus(1110)">Conditional</animation>
+                    <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(9333) | Control.HasFocus(9337) | Control.HasFocus(70) | Control.HasFocus(9335) | Control.HasFocus(50) | Control.HasFocus(1101) | Control.HasFocus(1104) | Control.HasFocus(1105) | Control.HasFocus(1110)">Conditional</animation>
                     <visible>!Container.Content(tvshows) + !IsEmpty(ListItem.Director)</visible>
                 </control>
                 
@@ -430,7 +430,7 @@
                     <textcolor>eewhite</textcolor>
                     <align>left</align>
                     <scroll>false</scroll>	
-                    <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(9333) | Control.HasFocus(9337) | Control.HasFocus(70) | Control.HasFocus(71) | Control.HasFocus(9335) | Control.HasFocus(1110)">Conditional</animation>
+                    <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(9333) | Control.HasFocus(9337) | Control.HasFocus(70) | Control.HasFocus(71) | Control.HasFocus(9335) | Control.HasFocus(1101) | Control.HasFocus(1104) | Control.HasFocus(1105) | Control.HasFocus(1110)">Conditional</animation>
                 </control>
                 
                 <!-- Fanart Label -->
@@ -444,14 +444,14 @@
                     <textcolor>eewhite</textcolor>
                     <align>left</align>
                     <scroll>false</scroll>	
-                    <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(9333) | Control.HasFocus(9334) | Control.HasFocus(70) | Control.HasFocus(71) | Control.HasFocus(9335) |  Control.HasFocus(50) | Control.HasFocus(1110)">Conditional</animation>
+                    <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(9333) | Control.HasFocus(9334) | Control.HasFocus(70) | Control.HasFocus(71) | Control.HasFocus(9335) |  Control.HasFocus(50) | Control.HasFocus(1101) | Control.HasFocus(1104) | Control.HasFocus(1105) | Control.HasFocus(1110)">Conditional</animation>
                 </control>
             </control>
 
             <!-- Info Stuff -->
             <control type="group">
                 <include>FullscreenDimensions</include>
-                <visible allowhiddenfocus="true">Control.HasFocus(70) | Control.HasFocus(71) | Control.HasFocus(9333) | Control.HasFocus(9335) | Control.HasFocus(1110)</visible>
+                <visible allowhiddenfocus="true">Control.HasFocus(70) | Control.HasFocus(71) | Control.HasFocus(9333) | Control.HasFocus(9335) | Control.HasFocus(1101) | Control.HasFocus(1104) | Control.HasFocus(1105) | Control.HasFocus(1110)</visible>
                 <include>listEndAnimation</include>
                 <animation type="Visible">
                     <effect type="slide" start="-1920" end="0" time="600" delay="0" tween="sine" easing="inout" />
@@ -487,9 +487,11 @@
                 <control type="group">
                     <posx>100</posx>
                     <posy>220</posy>
+                    <!--fanart-->
                     <control type="group">
-                        <visible>!Player.HasVideo | Skin.HasSetting(BackgroundVideo)</visible>
+                        <visible>!Player.HasVideo | [Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
                         <include>visiblehidefadeinfo</include>
+                        <!--fanart / thumbs-->
                         <control type="image">
                             <posx>0</posx>
                             <posy>0</posy>
@@ -498,7 +500,6 @@
                             <aspectratio>scale</aspectratio>
                             <texture background="true">$VAR[VideoInfoArt]</texture>
                         </control>
-                        
                         <!--extrafanart-->
                         <control type="group">
                             <visible>Skin.HasSetting(ExtraFanart.Enabled) + !Skin.HasSetting(HideFanart) + !Container.Content(episodes)</visible>
@@ -524,7 +525,7 @@
                                 <visible>Container.Content(TVShows) | Container.Content(Seasons)</visible>
                             </control>
                         </control>
-                        
+                        <!--watched overlay-->
                         <control type="image">
                             <posx>534</posx>
                             <posy>0</posy>
@@ -534,6 +535,7 @@
                             <texture>$VAR[VideoInfoOverlay]</texture>
                         </control>
                     </control>
+                    <!--video window-->
                     <control type="group">
                         <visible>Player.HasVideo + !Skin.HasSetting(BackgroundVideo)</visible>
                         <include>visiblehidefadeinfo</include>
@@ -558,6 +560,75 @@
                     </control>
                 </control>
                 
+                <!-- OSD Back -->
+                <control type="image">
+                    <posx>324</posx>
+                    <posy>500</posy>
+                    <width>188</width>
+                    <height>59</height>
+                    <texture>dialogs/video-info/osd-back.png</texture>
+                    <animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="![Control.HasFocus(1101) | Control.HasFocus(1104) | Control.HasFocus(1105)]">Conditional</animation>
+                    <include>visiblehidefade</include>
+                    <visible>Player.HasVideo</visible>
+                </control>
+                <!-- OSD player controls -->
+                <control type="group" id="9336">
+                    <posx>329</posx>
+                    <posy>500</posy>
+                    <width>177</width>
+                    <height>59</height>
+                    <animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="![Control.HasFocus(1101) | Control.HasFocus(1104) | Control.HasFocus(1105)]">Conditional</animation>
+                    <control type="button" id="1101">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>59</width>
+                        <height>59</height>
+                        <onleft>1105</onleft>
+                        <onright>1104</onright>
+                        <onup>9333</onup>
+                        <ondown>9333</ondown>
+                        <onclick>PlayerControl(Stop)</onclick>
+                        <onclick>SetFocus(9333)</onclick>
+                        <texturefocus>dialogs/video-info/osd-stop.png</texturefocus>
+                        <texturenofocus>dialogs/video-info/osd-stop-nf.png</texturenofocus>
+                        <visible>Player.HasVideo</visible>
+                        <enable>Player.HasVideo</enable>
+                    </control>
+                    <control type="togglebutton" id="1104">
+                        <posx>59</posx>
+                        <posy>0</posy>
+                        <width>59</width>
+                        <height>59</height>
+                        <onleft>1101</onleft>
+                        <onright>1105</onright>
+                        <onup>9333</onup>
+                        <ondown>9333</ondown>
+                        <onclick>PlayerControl(Play)</onclick>
+                        <texturefocus>dialogs/video-info/osd-play.png</texturefocus>
+                        <texturenofocus>dialogs/video-info/osd-play-nf.png</texturenofocus>
+                        <alttexturefocus>dialogs/video-info/osd-pause.png</alttexturefocus>
+                        <alttexturenofocus>dialogs/video-info/osd-pause-nf.png</alttexturenofocus>
+                        <usealttexture>!Player.IsPaused</usealttexture>
+                        <visible>Player.HasVideo</visible>
+                        <enable>Player.HasVideo</enable>
+                    </control>
+                    <control type="button" id="1105">
+                        <posx>118</posx>
+                        <posy>0</posy>
+                        <width>59</width>
+                        <height>59</height>
+                        <onleft>1104</onleft>
+                        <onright>1101</onright>
+                        <onup>9333</onup>
+                        <ondown>9333</ondown>
+                        <onclick>Action(fullscreen)</onclick>
+                        <texturefocus>dialogs/video-info/osd-fs.png</texturefocus>
+                        <texturenofocus>dialogs/video-info/osd-fs-nf.png</texturenofocus>
+                        <visible>Player.HasVideo</visible>
+                        <enable>Player.HasVideo</enable>
+                    </control>
+                </control>                
+                
                 <!-- Panel menu-->
                 <control type="list" id="9333">
                     <posx>100</posx>
@@ -567,7 +638,8 @@
                     <onleft>1110</onleft>
                     <onright condition="Control.IsVisible(70)">70</onright>
                     <onright condition="!Control.IsVisible(70)">71</onright>
-                    <onup>9333</onup>
+                    <onup condition="!Player.HasVideo">9333</onup>
+                    <onup condition="Player.HasVideo + !Skin.HasSetting(BackgroundVideo)">9336</onup>
                     <ondown>9333</ondown>
                     <scrolltime>0</scrolltime>
                     <orientation>vertical</orientation>
