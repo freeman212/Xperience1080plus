@@ -929,22 +929,33 @@
                         <font>Font-Condensed-S40</font>
                         <pagecontrol>70</pagecontrol>
                     </control>
+                    <!-- Scrollbar -->
+                    <control type="image">
+                        <description>Scrollbar background</description>
+                        <posx>1070</posx>
+                        <posy>13</posy>
+                        <width>6</width>
+                        <height>244</height>
+                        <texture border="1">views/other/scrollbar-sq.png</texture>
+                        <visible>Control.IsVisible(70)</visible>
+                        <animation effect="fade" start="25" end="0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
+                    </control>
                     <control type="scrollbar" id="70">
-                       <description>Scrollbar</description>
-                       <posx>1070</posx>
-                       <posy>10</posy>
-                       <width>6</width>
-                       <height>270</height>   
-                       <onup>71</onup>
-                       <ondown>70</ondown>                  
-                       <onleft>9333</onleft>
-                       <onright>SendClick(2003,5)</onright>
-                       <onright>SetFocus(9334)</onright>
-                       <texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
-                       <texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
-                       <orientation>vertical</orientation>
-                       <showonepage>false</showonepage>
-                       <animation effect="fade" start="35" end="0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
+                        <description>Scrollbar</description>
+                        <posx>1070</posx>
+                        <posy>13</posy>
+                        <width>6</width>
+                        <height>244</height>
+                        <onup>71</onup>
+                        <ondown>70</ondown>                  
+                        <onleft>9333</onleft>
+                        <onright>SendClick(2003,5)</onright>
+                        <onright>SetFocus(9334)</onright>
+                        <texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
+                        <texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+                        <orientation>vertical</orientation>
+                        <showonepage>false</showonepage>
+                        <animation effect="fade" start="75" end="35" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
                     </control>
                 </control>
             </control>
