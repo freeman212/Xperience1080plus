@@ -73,9 +73,6 @@
         <textcolor>eewhite</textcolor>
         <shadowcolor>33000000</shadowcolor>
         <label>$INFO[ListItem.label, ,]</label>
-        <animation type="Conditional" condition="!Control.HasFocus(23)" reversible="true">
-            <effect type="fade" start="100" end="40" time="250" />
-        </animation>
         <animation type="Focus" condition="Container(23).OnNext | Container(23).OnPrevious" reversible="false">
             <effect type="fade" start="40" end="100" time="200" tween="sine" easing="in" />
             <effect type="zoom" start="75" end="100" time="200" tween="sine" easing="in" center="0,30" />
@@ -95,6 +92,9 @@
         <animation type="Hidden">
             <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
             <effect type="slide" start="0,0" end="0,-75" time="300" tween="sine" easing="out" />
+        </animation>
+        <animation type="Conditional" condition="!Control.HasFocus(23)" reversible="true">
+            <effect type="fade" start="100" end="40" time="250" tween="sine" easing="inout"/>
         </animation>
         <visible>!Window.IsActive(favourites) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-globalsearch-infodialog.xml) + !Window.IsActive(script-globalsearch-contextmenu.xml) + ![Window.IsVisible(virtualkeyboard) + !IsEmpty(Window.Property(HomeSearch))]</visible>
     </include>

@@ -486,19 +486,17 @@
                         <aspectratio>scale</aspectratio>
                         <texture background="true">$INFO[ListItem.ActualIcon]</texture>
                     </control>
-                    <control type="group">
+                    <control type="label">
                         <animation effect="fade" start="100" end="45" time="0" condition="true">Conditional</animation>
-                        <control type="label">
-                            <font>Font-Condensed-S50-B</font>
-                            <align>right</align>
-                            <posx>-120r</posx>
-                            <posy>380</posy>
-                            <width>500</width>
-                            <height>50</height>
-                            <textcolor>BCFFFFFF</textcolor>
-                            <shadowcolor>FF000000</shadowcolor>
-                            <info>ListItem.Label</info>
-                        </control>
+                        <font>Font-Condensed-S50-B</font>
+                        <align>right</align>
+                        <posx>-120r</posx>
+                        <posy>380</posy>
+                        <width>500</width>
+                        <height>50</height>
+                        <textcolor>BCFFFFFF</textcolor>
+                        <shadowcolor>FF000000</shadowcolor>
+                        <info>ListItem.Label</info>
                     </control>
                 </control>
             </itemlayout>
@@ -513,18 +511,18 @@
                     <posx>0</posx>
                     <posy>404</posy>
                     <control type="image">
-                        <animation type="Visible" reversible="false">
-                            <effect type="fade" start="0" end="100" time="200" tween="sine" easing="inout" />
-                        </animation>
-                        <animation type="Hidden" reversible="false">
-                            <effect type="fade" start="100" end="0" time="200" tween="sine" easing="inout" />
-                        </animation>
                         <posx>-110</posx>
                         <posy>20</posy>
                         <width>949</width>
                         <height>440</height>
                         <texture>views/posterview/shadow-focus-square.png</texture>
                         <colordiffuse>aaffffff</colordiffuse>
+                        <animation type="Visible" reversible="false">
+                            <effect type="fade" start="0" end="100" time="200" tween="sine" easing="inout" />
+                        </animation>
+                        <animation type="Hidden" reversible="false">
+                            <effect type="fade" start="100" end="0" time="200" tween="sine" easing="inout" />
+                        </animation>
                         <visible>Control.HasFocus(82)</visible>
                     </control>
                     <control type="image">
@@ -535,12 +533,6 @@
                         <texture>windows/home/panel_menu.png</texture>
                     </control>
                     <control type="image">
-                        <animation type="Focus" condition="Container(20).OnNext | Container(20).OnPrevious">
-                            <effect type="fade" start="60" end="100" time="350" tween="sine" easing="out" />
-                        </animation>
-                        <animation type="Unfocus" condition="Container(20).OnNext | Container(20).OnPrevious">
-                            <effect type="fade" start="100" end="60" time="250" tween="sine" easing="out" />
-                        </animation>
                         <posx>48</posx>
                         <posy>23</posy>
                         <width>633</width>
@@ -548,29 +540,33 @@
                         <aspectratio>scale</aspectratio>
                         <texture background="true">$INFO[ListItem.ActualIcon]</texture>
                         <include>Animation_RecentlyFadeIcon</include>
+                        <animation type="Focus" condition="Container(20).OnNext | Container(20).OnPrevious">
+                            <effect type="fade" start="60" end="100" time="350" tween="sine" easing="out" />
+                        </animation>
+                        <animation type="Unfocus" condition="Container(20).OnNext | Container(20).OnPrevious">
+                            <effect type="fade" start="100" end="60" time="250" tween="sine" easing="out" />
+                        </animation>
+                        <animation effect="fade" start="100" end="60" time="250" tween="sine" easing="inout" reversible="true" condition="Control.HasFocus(23)">Conditional</animation>
                         <visible>!Control.HasFocus(82)</visible>
-                        <animation effect="fade" start="100" end="60" time="250" reversible="true" condition="Control.HasFocus(23)">Conditional</animation>
                     </control>
-                    <control type="group">
+                    <control type="label">
+                        <font>Font-Condensed-S50-B</font>
+                        <align>right</align>
+                        <posx>-120r</posx>
+                        <posy>380</posy>
+                        <width>500</width>
+                        <height>50</height>
+                        <textcolor>BCFFFFFF</textcolor>
+                        <shadowcolor>99000000</shadowcolor>
+                        <include>Animation_RecentlyFade</include>
+                        <info>ListItem.Label</info>
                         <animation type="Focus" condition="Container(20).OnNext | Container(20).OnPrevious">
                             <effect type="fade" start="45" end="100" time="350" tween="sine" easing="out" />
                         </animation>
                         <animation type="Unfocus" condition="Container(20).OnNext | Container(20).OnPrevious">
                             <effect type="fade" start="100" end="45" time="250" tween="sine" easing="out" />
                         </animation>
-                        <control type="label">
-                            <font>Font-Condensed-S50-B</font>
-                            <align>right</align>
-                            <posx>-120r</posx>
-                            <posy>380</posy>
-                            <width>500</width>
-                            <height>50</height>
-                            <textcolor>BCFFFFFF</textcolor>
-                            <shadowcolor>99000000</shadowcolor>
-                            <include>Animation_RecentlyFade</include>
-                            <info>ListItem.Label</info>
-                            <animation effect="fade" start="100" end="45" time="250" reversible="true" condition="Control.HasFocus(23)">Conditional</animation>
-                        </control>
+                        <animation effect="fade" start="100" end="45" time="250" tween="sine" easing="inout" reversible="true" condition="Control.HasFocus(23)">Conditional</animation>
                     </control>
                     <control type="image">
                         <posx>350</posx>
