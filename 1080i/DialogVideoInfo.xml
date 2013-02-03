@@ -385,7 +385,7 @@
                 </animation>
                 <posx>118</posx>
                 <posy>144</posy>
-                <width>600</width>
+                <width>800</width>
                 <height>60</height>
                 <orientation>horizontal</orientation>
                 <itemgap>20</itemgap>
@@ -410,11 +410,11 @@
                     <posy>0</posy>
                     <width min="50" max="400">auto</width>
                     <height>60</height>
-                    <label>Director</label>
+                    <label>$LOCALIZE[41380]</label>
                     <font>Font-Condensed-S45</font>
                     <textcolor>eewhite</textcolor>
                     <align>left</align>
-                    <scroll>false</scroll>	
+                    <scroll>false</scroll>
                     <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(9333) | Control.HasFocus(9337) | Control.HasFocus(70) | Control.HasFocus(9335) | Control.HasFocus(50) | Control.HasFocus(1101) | Control.HasFocus(1104) | Control.HasFocus(1105) | Control.HasFocus(1110)">Conditional</animation>
                     <visible>!Container.Content(tvshows) + !IsEmpty(ListItem.Director)</visible>
                 </control>
@@ -429,7 +429,7 @@
                     <font>Font-Condensed-S45</font>
                     <textcolor>eewhite</textcolor>
                     <align>left</align>
-                    <scroll>false</scroll>	
+                    <scroll>false</scroll>
                     <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(9333) | Control.HasFocus(9337) | Control.HasFocus(70) | Control.HasFocus(71) | Control.HasFocus(9335) | Control.HasFocus(1101) | Control.HasFocus(1104) | Control.HasFocus(1105) | Control.HasFocus(1110)">Conditional</animation>
                 </control>
                 
@@ -443,7 +443,7 @@
                     <font>Font-Condensed-S45</font>
                     <textcolor>eewhite</textcolor>
                     <align>left</align>
-                    <scroll>false</scroll>	
+                    <scroll>false</scroll>
                     <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(9333) | Control.HasFocus(9334) | Control.HasFocus(70) | Control.HasFocus(71) | Control.HasFocus(9335) |  Control.HasFocus(50) | Control.HasFocus(1101) | Control.HasFocus(1104) | Control.HasFocus(1105) | Control.HasFocus(1110)">Conditional</animation>
                 </control>
             </control>
@@ -891,7 +891,7 @@
                             <height>36</height>
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
-                            <label>$INFO[ListItem.Director,Director: , (select for more)]</label>
+                            <label>$INFO[ListItem.Director,$LOCALIZE[41308],]</label>
                             <textcolor>aawhite</textcolor>
                             <focusedcolor>eewhite</focusedcolor>
                             <scroll>false</scroll>
