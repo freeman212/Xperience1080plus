@@ -12,6 +12,7 @@
         <include>Viewtype-Panel</include>
         <include>Viewtype-Landscape</include>
         <include>Viewtype-Poster</include>
+        <include>Viewtype-PosterSmall</include>
         <include>Viewtype-Thumbnail</include>
         <include>Viewtype-ThumbnailVideo</include>
         <include>Viewtype-WallVideo</include>
@@ -145,41 +146,74 @@
         <value>$INFO[ListItem.Overlay,overlays/,/poster-w.png]</value>
     </variable>
     
+    <!--poster overlay-->
     <variable name="PosterOverlay0">
         <value condition="Container(55).ListItem(0).IsResumable">$INFO[Container(55).ListItem(0).Overlay,overlays/,/poster-p.png]</value>
         <value>$INFO[Container(55).ListItem(0).Overlay,overlays/,/poster-w.png]</value>
     </variable>
-    
     <variable name="PosterOverlay1">
         <value condition="Container(55).ListItem(1).IsResumable">$INFO[Container(55).ListItem(1).Overlay,overlays/,/poster-p.png]</value>
         <value>$INFO[Container(55).ListItem(1).Overlay,overlays/,/poster-w.png]</value>
     </variable>
-    
     <variable name="PosterOverlay2">
         <value condition="Container(55).ListItem(2).IsResumable">$INFO[Container(55).ListItem(2).Overlay,overlays/,/poster-p.png]</value>
         <value>$INFO[Container(55).ListItem(2).Overlay,overlays/,/poster-w.png]</value>
     </variable>
-    
     <variable name="PosterOverlay3">
         <value condition="Container(55).ListItem(3).IsResumable">$INFO[Container(55).ListItem(3).Overlay,overlays/,/poster-p.png]</value>
         <value>$INFO[Container(55).ListItem(3).Overlay,overlays/,/poster-w.png]</value>
     </variable>
-    
     <variable name="PosterOverlay4">
         <value condition="Container(55).ListItem(4).IsResumable">$INFO[Container(55).ListItem(4).Overlay,overlays/,/poster-p.png]</value>
         <value>$INFO[Container(55).ListItem(4).Overlay,overlays/,/poster-w.png]</value>
     </variable>
-    
     <variable name="PosterOverlay5">
         <value condition="Container(55).ListItem(5).IsResumable">$INFO[Container(55).ListItem(5).Overlay,overlays/,/poster-p.png]</value>
         <value>$INFO[Container(55).ListItem(5).Overlay,overlays/,/poster-w.png]</value>
     </variable>
-    
     <variable name="PosterOverlay-1">
         <value condition="Container(55).ListItem(-1).IsResumable">$INFO[Container(55).ListItem(-1).Overlay,overlays/,/poster-p.png]</value>
         <value>$INFO[Container(55).ListItem(-1).Overlay,overlays/,/poster-w.png]</value>
     </variable>
     
+    <!--poster overlay small-->
+    <variable name="PosterOverlaySmall0">
+        <value condition="Container(56).ListItem(0).IsResumable">$INFO[Container(56).ListItem(0).Overlay,overlays/,/poster-p.png]</value>
+        <value>$INFO[Container(56).ListItem(0).Overlay,overlays/,/poster-w.png]</value>
+    </variable>
+    <variable name="PosterOverlaySmall1">
+        <value condition="Container(56).ListItem(1).IsResumable">$INFO[Container(56).ListItem(1).Overlay,overlays/,/poster-p.png]</value>
+        <value>$INFO[Container(56).ListItem(1).Overlay,overlays/,/poster-w.png]</value>
+    </variable>
+    <variable name="PosterOverlaySmall2">
+        <value condition="Container(56).ListItem(2).IsResumable">$INFO[Container(56).ListItem(2).Overlay,overlays/,/poster-p.png]</value>
+        <value>$INFO[Container(56).ListItem(2).Overlay,overlays/,/poster-w.png]</value>
+    </variable>
+    <variable name="PosterOverlaySmall3">
+        <value condition="Container(56).ListItem(3).IsResumable">$INFO[Container(56).ListItem(3).Overlay,overlays/,/poster-p.png]</value>
+        <value>$INFO[Container(56).ListItem(3).Overlay,overlays/,/poster-w.png]</value>
+    </variable>
+    <variable name="PosterOverlaySmall4">
+        <value condition="Container(56).ListItem(4).IsResumable">$INFO[Container(56).ListItem(4).Overlay,overlays/,/poster-p.png]</value>
+        <value>$INFO[Container(56).ListItem(4).Overlay,overlays/,/poster-w.png]</value>
+    </variable>
+    <variable name="PosterOverlaySmall5">
+        <value condition="Container(56).ListItem(5).IsResumable">$INFO[Container(56).ListItem(5).Overlay,overlays/,/poster-p.png]</value>
+        <value>$INFO[Container(56).ListItem(5).Overlay,overlays/,/poster-w.png]</value>
+    </variable>
+    <variable name="PosterOverlaySmall6">
+        <value condition="Container(56).ListItem(6).IsResumable">$INFO[Container(56).ListItem(6).Overlay,overlays/,/poster-p.png]</value>
+        <value>$INFO[Container(56).ListItem(6).Overlay,overlays/,/poster-w.png]</value>
+    </variable>
+    <variable name="PosterOverlaySmall7">
+        <value condition="Container(56).ListItem(7).IsResumable">$INFO[Container(56).ListItem(7).Overlay,overlays/,/poster-p.png]</value>
+        <value>$INFO[Container(56).ListItem(7).Overlay,overlays/,/poster-w.png]</value>
+    </variable>
+    <variable name="PosterOverlaySmall-1">
+        <value condition="Container(56).ListItem(-1).IsResumable">$INFO[Container(56).ListItem(-1).Overlay,overlays/,/poster-p.png]</value>
+        <value>$INFO[Container(56).ListItem(-1).Overlay,overlays/,/poster-w.png]</value>
+    </variable>
+
     <variable name="VideoInfoOverlay">
         <value condition="IntegerGreaterThan(ListItem.PercentPlayed,0) + !IntegerGreaterThan(ListItem.PercentPlayed,99)">$INFO[ListItem.Overlay,overlays/,/extended-p.png]</value>
         <value>$INFO[ListItem.Overlay,overlays/,/extended-w.png]</value>
@@ -239,46 +273,88 @@
         <value>$INFO[ListItem.ActualIcon,views/fallbacks/,/large.png]</value>
     </variable>
     
+    <!-- Poster -->
     <variable name="PosterViewPoster-1">
         <value condition="!IsEmpty(Container(55).ListItem(-1).Art(poster))">$INFO[Container(55).ListItem(-1).Art(poster)]</value>
         <value condition="!IsEmpty(Container(55).ListItem(-1).Art(thumb))">$INFO[Container(55).ListItem(-1).Art(thumb)]</value>
         <value>$INFO[Container(55).ListItem(-1).ActualIcon,views/fallbacks/,/large.png]</value>
     </variable>
-    
     <variable name="PosterViewPoster0">
         <value condition="!IsEmpty(Container(55).ListItem(0).Art(poster))">$INFO[Container(55).ListItem(0).Art(poster)]</value>
         <value condition="!IsEmpty(Container(55).ListItem(0).Art(thumb))">$INFO[Container(55).ListItem(0).Art(thumb)]</value>
         <value>$INFO[Container(55).ListItem(0).ActualIcon,views/fallbacks/,/large.png]</value>
     </variable>
-    
     <variable name="PosterViewPoster1">
         <value condition="!IsEmpty(Container(55).ListItem(1).Art(poster))">$INFO[Container(55).ListItem(1).Art(poster)]</value>
         <value condition="!IsEmpty(Container(55).ListItem(1).Art(thumb))">$INFO[Container(55).ListItem(1).Art(thumb)]</value>
         <value>$INFO[Container(55).ListItem(1).ActualIcon,views/fallbacks/,/large.png]</value>
     </variable>
-    
     <variable name="PosterViewPoster2">
         <value condition="!IsEmpty(Container(55).ListItem(2).Art(poster))">$INFO[Container(55).ListItem(2).Art(poster)]</value>
         <value condition="!IsEmpty(Container(55).ListItem(2).Art(thumb))">$INFO[Container(55).ListItem(2).Art(thumb)]</value>
         <value>$INFO[Container(55).ListItem(2).ActualIcon,views/fallbacks/,/large.png]</value>
     </variable>
-    
     <variable name="PosterViewPoster3">
         <value condition="!IsEmpty(Container(55).ListItem(3).Art(poster))">$INFO[Container(55).ListItem(3).Art(poster)]</value>
         <value condition="!IsEmpty(Container(55).ListItem(3).Art(thumb))">$INFO[Container(55).ListItem(3).Art(thumb)]</value>
         <value>$INFO[Container(55).ListItem(3).ActualIcon,views/fallbacks/,/large.png]</value>
     </variable>
-    
     <variable name="PosterViewPoster4">
         <value condition="!IsEmpty(Container(55).ListItem(4).Art(poster))">$INFO[Container(55).ListItem(4).Art(poster)]</value>
         <value condition="!IsEmpty(Container(55).ListItem(4).Art(thumb))">$INFO[Container(55).ListItem(4).Art(thumb)]</value>
         <value>$INFO[Container(55).ListItem(4).ActualIcon,views/fallbacks/,/large.png]</value>
     </variable>
-    
     <variable name="PosterViewPoster5">
         <value condition="!IsEmpty(Container(55).ListItem(5).Art(poster))">$INFO[Container(55).ListItem(5).Art(poster)]</value>
         <value condition="!IsEmpty(Container(55).ListItem(5).Art(thumb))">$INFO[Container(55).ListItem(5).Art(thumb)]</value>
         <value>$INFO[Container(55).ListItem(5).ActualIcon,views/fallbacks/,/large.png]</value>
+    </variable>
+    
+    <!-- Poster small-->
+    <variable name="PosterViewPosterSmall-1">
+        <value condition="!IsEmpty(Container(56).ListItem(-1).Art(poster))">$INFO[Container(56).ListItem(-1).Art(poster)]</value>
+        <value condition="!IsEmpty(Container(56).ListItem(-1).Art(thumb))">$INFO[Container(56).ListItem(-1).Art(thumb)]</value>
+        <value>$INFO[Container(56).ListItem(-1).ActualIcon,views/fallbacks/,/large.png]</value>
+    </variable>
+    <variable name="PosterViewPosterSmall0">
+        <value condition="!IsEmpty(Container(56).ListItem(0).Art(poster))">$INFO[Container(56).ListItem(0).Art(poster)]</value>
+        <value condition="!IsEmpty(Container(56).ListItem(0).Art(thumb))">$INFO[Container(56).ListItem(0).Art(thumb)]</value>
+        <value>$INFO[Container(56).ListItem(0).ActualIcon,views/fallbacks/,/large.png]</value>
+    </variable>
+    <variable name="PosterViewPosterSmall1">
+        <value condition="!IsEmpty(Container(56).ListItem(1).Art(poster))">$INFO[Container(56).ListItem(1).Art(poster)]</value>
+        <value condition="!IsEmpty(Container(56).ListItem(1).Art(thumb))">$INFO[Container(56).ListItem(1).Art(thumb)]</value>
+        <value>$INFO[Container(56).ListItem(1).ActualIcon,views/fallbacks/,/large.png]</value>
+    </variable>
+    <variable name="PosterViewPosterSmall2">
+        <value condition="!IsEmpty(Container(56).ListItem(2).Art(poster))">$INFO[Container(56).ListItem(2).Art(poster)]</value>
+        <value condition="!IsEmpty(Container(56).ListItem(2).Art(thumb))">$INFO[Container(56).ListItem(2).Art(thumb)]</value>
+        <value>$INFO[Container(56).ListItem(2).ActualIcon,views/fallbacks/,/large.png]</value>
+    </variable>
+    <variable name="PosterViewPosterSmall3">
+        <value condition="!IsEmpty(Container(56).ListItem(3).Art(poster))">$INFO[Container(56).ListItem(3).Art(poster)]</value>
+        <value condition="!IsEmpty(Container(56).ListItem(3).Art(thumb))">$INFO[Container(56).ListItem(3).Art(thumb)]</value>
+        <value>$INFO[Container(56).ListItem(3).ActualIcon,views/fallbacks/,/large.png]</value>
+    </variable>
+    <variable name="PosterViewPosterSmall4">
+        <value condition="!IsEmpty(Container(56).ListItem(4).Art(poster))">$INFO[Container(56).ListItem(4).Art(poster)]</value>
+        <value condition="!IsEmpty(Container(56).ListItem(4).Art(thumb))">$INFO[Container(56).ListItem(4).Art(thumb)]</value>
+        <value>$INFO[Container(56).ListItem(4).ActualIcon,views/fallbacks/,/large.png]</value>
+    </variable>
+    <variable name="PosterViewPosterSmall5">
+        <value condition="!IsEmpty(Container(56).ListItem(5).Art(poster))">$INFO[Container(56).ListItem(5).Art(poster)]</value>
+        <value condition="!IsEmpty(Container(56).ListItem(5).Art(thumb))">$INFO[Container(56).ListItem(5).Art(thumb)]</value>
+        <value>$INFO[Container(56).ListItem(5).ActualIcon,views/fallbacks/,/large.png]</value>
+    </variable>
+    <variable name="PosterViewPosterSmall6">
+        <value condition="!IsEmpty(Container(56).ListItem(5).Art(poster))">$INFO[Container(56).ListItem(6).Art(poster)]</value>
+        <value condition="!IsEmpty(Container(56).ListItem(5).Art(thumb))">$INFO[Container(56).ListItem(6).Art(thumb)]</value>
+        <value>$INFO[Container(56).ListItem(6).ActualIcon,views/fallbacks/,/large.png]</value>
+    </variable>
+    <variable name="PosterViewPosterSmall7">
+        <value condition="!IsEmpty(Container(56).ListItem(5).Art(poster))">$INFO[Container(56).ListItem(7).Art(poster)]</value>
+        <value condition="!IsEmpty(Container(56).ListItem(5).Art(thumb))">$INFO[Container(56).ListItem(7).Art(thumb)]</value>
+        <value>$INFO[Container(56).ListItem(7).ActualIcon,views/fallbacks/,/large.png]</value>
     </variable>
     
     <variable name="ExtendedViewThumb">
