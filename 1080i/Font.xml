@@ -191,6 +191,11 @@
             <size>60</size>
         </font>
         <font>
+            <name>Font-Condensed-S72</name>
+            <filename>XPCondensed.ttf</filename>
+            <size>72</size>
+        </font>
+        <font>
             <name>Font-Condensed-S75</name>
             <filename>XPCondensed.ttf</filename>
             <size>75</size>
