@@ -129,8 +129,11 @@
                         <height>45</height>
                         <font>Font-Condensed-S34</font>
                         <align>center</align>
-                        <textcolor>80ffffff</textcolor>
+                        <textcolor>eewhite</textcolor>
                         <info>ListItem.Label</info>
+                        <animation type="Conditional" condition="true" reversible="false">
+                            <effect type="fade" end="40" time="0" />
+                        </animation>
                     </control>
                 </itemlayout>
                 <focusedlayout height="45">
@@ -141,9 +144,13 @@
                         <height>45</height>
                         <font>Font-Condensed-S34</font>
                         <align>center</align>
-                        <textcolor>80ffffff</textcolor>
+                        <textcolor>eewhite</textcolor>
                         <label>$INFO[ListItem.Label]</label>
                         <visible>!Control.HasFocus(110)</visible>
+                        <animation type="Visible" condition="true" reversible="false">
+                            <effect type="fade" end="40" time="0" />
+                            <effect type="zoom" start="110" end="100" time="200" tween="sine" easing="out" center="510,22" />
+                        </animation>
                     </control>
                     <control type="label">
                         <posx>510</posx>
@@ -153,9 +160,17 @@
                         <font>Font-Condensed-S34</font>
                         <align>center</align>
                         <aligny>center</aligny>
-                        <textcolor>white</textcolor>
+                        <textcolor>eewhite</textcolor>
                         <label fallback="--">$INFO[ListItem.Label]</label>
                         <visible>Control.HasFocus(110)</visible>
+                        <animation type="Focus" reversible="false">
+                            <effect type="fade" start="40" end="100" time="200" tween="sine" easing="in" />
+                            <effect type="zoom" start="100" end="110" time="200" tween="sine" easing="in" center="510,22" />
+                        </animation>
+                        <animation type="Unfocus" reversible="false">
+                            <effect type="fade" start="100" end="40" time="200" tween="sine" easing="out" />
+                            <effect type="zoom" start="110" end="100" time="200" tween="sine" easing="out" center="510,22" />
+                        </animation>
                     </control>
                 </focusedlayout>
             </control>            
