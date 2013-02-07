@@ -902,13 +902,24 @@
                     <textcolor>ddwhite</textcolor>
                     <aligny>center</aligny>
                 </control>
-                <control type="image">
+                <!-- <control type="image">
                     <posx>142</posx>
                     <posy>490</posy>
                     <width>51</width>
                     <height>51</height>
                     <colordiffuse>aawhite</colordiffuse>
                     <texture>$INFO[Window.Property(Current.WindDegree),weather/directions/small/,.png]</texture>
+                </control> -->
+                <control type="label">
+                    <description>current feels like label</description>
+                    <posx>142</posx>
+                    <posy>490</posy>
+                    <width>250</width>
+                    <height>51</height>
+                    <font>Font-Condensed-S34</font>
+                    <label>$INFO[Window.Property(Current.WindDirection)]</label>
+                    <textcolor>ddwhite</textcolor>
+                    <aligny>center</aligny>
                 </control>
                 <control type="label">
                     <description>current feels like label</description>
@@ -1137,7 +1148,17 @@
                                 <posy>0</posy>
                                 <width min="0" max="250">auto</width>
                                 <height>51</height>
-                                <font>Font-Condensed-S36</font>
+                                <font>Font-Condensed-S34</font>
+                                <label>$INFO[Window.Property(Daily.1.WindDirection),, ]</label>
+                                <textcolor>aawhite</textcolor>
+                            </control>
+                            <control type="label">
+                                <description>wind speed label</description>
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width min="0" max="250">auto</width>
+                                <height>51</height>
+                                <font>Font-Condensed-S34</font>
                                 <label>$INFO[Window.Property(Daily.1.WindSpeed)]</label>
                                 <textcolor>aawhite</textcolor>
                             </control>
@@ -1283,7 +1304,17 @@
                                 <posy>0</posy>
                                 <width min="0" max="250">auto</width>
                                 <height>51</height>
-                                <font>Font-Condensed-S36</font>
+                                <font>Font-Condensed-S34</font>
+                                <label>$INFO[Window.Property(Daily.2.WindDirection),, ]</label>
+                                <textcolor>aawhite</textcolor>
+                            </control>
+                            <control type="label">
+                                <description>wind speed label</description>
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width min="0" max="250">auto</width>
+                                <height>51</height>
+                                <font>Font-Condensed-S34</font>
                                 <label>$INFO[Window.Property(Daily.2.WindSpeed)]</label>
                                 <textcolor>aawhite</textcolor>
                             </control>
@@ -1429,7 +1460,17 @@
                                 <posy>0</posy>
                                 <width min="0" max="250">auto</width>
                                 <height>51</height>
-                                <font>Font-Condensed-S36</font>
+                                <font>Font-Condensed-S34</font>
+                                <label>$INFO[Window.Property(Daily.3.WindDirection),, ]</label>
+                                <textcolor>aawhite</textcolor>
+                            </control>
+                            <control type="label">
+                                <description>wind speed label</description>
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width min="0" max="250">auto</width>
+                                <height>51</height>
+                                <font>Font-Condensed-S34</font>
                                 <label>$INFO[Window.Property(Daily.3.WindSpeed)]</label>
                                 <textcolor>aawhite</textcolor>
                             </control>
@@ -1575,7 +1616,17 @@
                                 <posy>0</posy>
                                 <width min="0" max="250">auto</width>
                                 <height>51</height>
-                                <font>Font-Condensed-S36</font>
+                                <font>Font-Condensed-S34</font>
+                                <label>$INFO[Window.Property(Daily.4.WindDirection),, ]</label>
+                                <textcolor>aawhite</textcolor>
+                            </control>
+                            <control type="label">
+                                <description>wind speed label</description>
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width min="0" max="250">auto</width>
+                                <height>51</height>
+                                <font>Font-Condensed-S34</font>
                                 <label>$INFO[Window.Property(Daily.4.WindSpeed)]</label>
                                 <textcolor>aawhite</textcolor>
                             </control>
@@ -1721,7 +1772,17 @@
                                 <posy>0</posy>
                                 <width min="0" max="250">auto</width>
                                 <height>51</height>
-                                <font>Font-Condensed-S36</font>
+                                <font>Font-Condensed-S34</font>
+                                <label>$INFO[Window.Property(Daily.5.WindDirection),, ]</label>
+                                <textcolor>aawhite</textcolor>
+                            </control>
+                            <control type="label">
+                                <description>wind speed label</description>
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width min="0" max="250">auto</width>
+                                <height>51</height>
+                                <font>Font-Condensed-S34</font>
                                 <label>$INFO[Window.Property(Daily.5.WindSpeed)]</label>
                                 <textcolor>aawhite</textcolor>
                             </control>
@@ -1867,7 +1928,17 @@
                                 <posy>0</posy>
                                 <width min="0" max="250">auto</width>
                                 <height>51</height>
-                                <font>Font-Condensed-S36</font>
+                                <font>Font-Condensed-S34</font>
+                                <label>$INFO[Window.Property(Daily.6.WindDirection),, ]</label>
+                                <textcolor>aawhite</textcolor>
+                            </control>
+                            <control type="label">
+                                <description>wind speed label</description>
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width min="0" max="250">auto</width>
+                                <height>51</height>
+                                <font>Font-Condensed-S34</font>
                                 <label>$INFO[Window.Property(Daily.6.WindSpeed)]</label>
                                 <textcolor>aawhite</textcolor>
                             </control>
@@ -2013,7 +2084,17 @@
                                 <posy>0</posy>
                                 <width min="0" max="250">auto</width>
                                 <height>51</height>
-                                <font>Font-Condensed-S36</font>
+                                <font>Font-Condensed-S34</font>
+                                <label>$INFO[Window.Property(Daily.7.WindDirection),, ]</label>
+                                <textcolor>aawhite</textcolor>
+                            </control>
+                            <control type="label">
+                                <description>wind speed label</description>
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width min="0" max="250">auto</width>
+                                <height>51</height>
+                                <font>Font-Condensed-S34</font>
                                 <label>$INFO[Window.Property(Daily.7.WindSpeed)]</label>
                                 <textcolor>aawhite</textcolor>
                             </control>
@@ -2159,7 +2240,17 @@
                                 <posy>0</posy>
                                 <width min="0" max="250">auto</width>
                                 <height>51</height>
-                                <font>Font-Condensed-S36</font>
+                                <font>Font-Condensed-S34</font>
+                                <label>$INFO[Window.Property(Daily.8.WindDirection),, ]</label>
+                                <textcolor>aawhite</textcolor>
+                            </control>
+                            <control type="label">
+                                <description>wind speed label</description>
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width min="0" max="250">auto</width>
+                                <height>51</height>
+                                <font>Font-Condensed-S34</font>
                                 <label>$INFO[Window.Property(Daily.8.WindSpeed)]</label>
                                 <textcolor>aawhite</textcolor>
                             </control>
@@ -2305,7 +2396,17 @@
                                 <posy>0</posy>
                                 <width min="0" max="250">auto</width>
                                 <height>51</height>
-                                <font>Font-Condensed-S36</font>
+                                <font>Font-Condensed-S34</font>
+                                <label>$INFO[Window.Property(Daily.9.WindDirection),, ]</label>
+                                <textcolor>aawhite</textcolor>
+                            </control>
+                            <control type="label">
+                                <description>wind speed label</description>
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width min="0" max="250">auto</width>
+                                <height>51</height>
+                                <font>Font-Condensed-S34</font>
                                 <label>$INFO[Window.Property(Daily.9.WindSpeed)]</label>
                                 <textcolor>aawhite</textcolor>
                             </control>
@@ -2451,7 +2552,17 @@
                                 <posy>0</posy>
                                 <width min="0" max="250">auto</width>
                                 <height>51</height>
-                                <font>Font-Condensed-S36</font>
+                                <font>Font-Condensed-S34</font>
+                                <label>$INFO[Window.Property(Daily.10.WindDirection),, ]</label>
+                                <textcolor>aawhite</textcolor>
+                            </control>
+                            <control type="label">
+                                <description>wind speed label</description>
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <width min="0" max="250">auto</width>
+                                <height>51</height>
+                                <font>Font-Condensed-S34</font>
                                 <label>$INFO[Window.Property(Daily.10.WindSpeed)]</label>
                                 <textcolor>aawhite</textcolor>
                             </control>
