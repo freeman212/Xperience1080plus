@@ -147,7 +147,7 @@
                         <textcolor>eewhite</textcolor>
                         <label>$INFO[ListItem.Label]</label>
                         <visible>!Control.HasFocus(110)</visible>
-                        <animation type="Visible" condition="true" reversible="false">
+                        <animation type="Visible" reversible="false">
                             <effect type="fade" end="40" time="0" />
                             <effect type="zoom" start="110" end="100" time="200" tween="sine" easing="out" center="510,22" />
                         </animation>
