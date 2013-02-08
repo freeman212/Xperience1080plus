@@ -225,7 +225,7 @@
                     </control>
                     <control type="label">
                         <animation effect="fade" start="100" end="45" time="0" condition="true">Conditional</animation>
-                        <font>Font-Condensed-S50-B</font>
+                        <font>Font-Condensed-S49-B</font>
                         <align>right</align>
                         <posx>642</posx>
                         <posy>380</posy>
@@ -272,7 +272,7 @@
                     </control>
                     <control type="label">
                         <animation effect="fade" start="100" end="45" time="0" condition="true">Conditional</animation>
-                        <font>Font-Condensed-S50-B</font>
+                        <font>Font-Condensed-S49-B</font>
                         <align>right</align>
                         <posx>642</posx>
                         <posy>380</posy>
@@ -319,7 +319,7 @@
                     </control>
                     <control type="label">
                         <animation effect="fade" start="100" end="45" time="0" condition="true">Conditional</animation>
-                        <font>Font-Condensed-S50-B</font>
+                        <font>Font-Condensed-S49-B</font>
                         <align>right</align>
                         <posx>642</posx>
                         <posy>380</posy>
@@ -366,7 +366,7 @@
                     </control>
                     <control type="label">
                         <animation effect="fade" start="100" end="45" time="0" condition="true">Conditional</animation>
-                        <font>Font-Condensed-S50-B</font>
+                        <font>Font-Condensed-S49-B</font>
                         <align>right</align>
                         <posx>642</posx>
                         <posy>380</posy>
@@ -407,7 +407,7 @@
                     <texture background="true">$INFO[Container(20).ListItem(0).ActualIcon]</texture>
                 </control>
                 <control type="label">
-                    <font>Font-Condensed-S50-B</font>
+                    <font>Font-Condensed-S49-B</font>
                     <align>right</align>
                     <posx>642</posx>
                     <posy>380</posy>
@@ -488,7 +488,7 @@
                     </control>
                     <control type="label">
                         <animation effect="fade" start="100" end="45" time="0" condition="true">Conditional</animation>
-                        <font>Font-Condensed-S50-B</font>
+                        <font>Font-Condensed-S49-B</font>
                         <align>right</align>
                         <posx>-120r</posx>
                         <posy>380</posy>
@@ -550,7 +550,7 @@
                         <visible>!Control.HasFocus(82)</visible>
                     </control>
                     <control type="label">
-                        <font>Font-Condensed-S50-B</font>
+                        <font>Font-Condensed-S49-B</font>
                         <align>right</align>
                         <posx>-120r</posx>
                         <posy>380</posy>

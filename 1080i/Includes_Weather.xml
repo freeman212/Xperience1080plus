@@ -857,7 +857,7 @@
                 </control>
                 <control type="label">
                     <description>current temp label</description>
-                    <posx>217</posx>
+                    <posx>227</posx>
                     <posy>300</posy>
                     <width>250</width>
                     <height>75</height>
@@ -867,7 +867,7 @@
                 </control>
                 <control type="label">
                     <description>current feels like label</description>
-                    <posx>217</posx>
+                    <posx>227</posx>
                     <posy>370</posy>
                     <width>250</width>
                     <height>34</height>
@@ -893,7 +893,7 @@
                 </control>
                 <control type="label">
                     <description>current feels like label</description>
-                    <posx>217</posx>
+                    <posx>227</posx>
                     <posy>426</posy>
                     <width>250</width>
                     <height>56</height>
@@ -912,7 +912,7 @@
                 </control> -->
                 <control type="label">
                     <description>current feels like label</description>
-                    <posx>142</posx>
+                    <posx>136</posx>
                     <posy>490</posy>
                     <width>250</width>
                     <height>51</height>
@@ -923,7 +923,7 @@
                 </control>
                 <control type="label">
                     <description>current feels like label</description>
-                    <posx>217</posx>
+                    <posx>227</posx>
                     <posy>490</posy>
                     <width>250</width>
                     <height>51</height>
@@ -933,7 +933,7 @@
                     <aligny>center</aligny>
                 </control>
                 <control type="image">
-                    <posx>369</posx>
+                    <posx>379</posx>
                     <posy>424</posy>
                     <width>56</width>
                     <height>56</height>
@@ -942,7 +942,7 @@
                 </control>
                 <control type="label">
                     <description>sunrise label</description>
-                    <posx>447</posx>
+                    <posx>457</posx>
                     <posy>426</posy>
                     <width>250</width>
                     <height>56</height>
@@ -952,7 +952,7 @@
                     <aligny>center</aligny>
                 </control>
                 <control type="image">
-                    <posx>369</posx>
+                    <posx>379</posx>
                     <posy>486</posy>
                     <width>56</width>
                     <height>56</height>
@@ -961,7 +961,7 @@
                 </control>
                 <control type="label">
                     <description>sunset label</description>
-                    <posx>447</posx>
+                    <posx>457</posx>
                     <posy>490</posy>
                     <width>250</width>
                     <height>51</height>
