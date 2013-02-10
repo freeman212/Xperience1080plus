@@ -125,31 +125,31 @@
             <control type="image">
                 <description>FSK-0 Rating label</description>
                 <include>MPAADimensionsSmall</include>
-                <texture>flags/mpaa/DE/Rated FSK0.png</texture>
+                <texture>flags/mpaa/DE/Rated 0.png</texture>
                 <visible>SubString(ListItem.MPAA,Germany:0) | SubString(ListItem.MPAA,o.A) | SubString(ListItem.MPAA,Rated 0)</visible>
             </control>  
             <control type="image">
                 <description>FSK-6 Rating label</description>
                 <include>MPAADimensionsSmall</include>
-                <texture>flags/mpaa/DE/Rated FSK6.png</texture>
+                <texture>flags/mpaa/DE/Rated 6.png</texture>
                 <visible>SubString(ListItem.MPAA,Germany:6)| SubString(ListItem.MPAA,ab 6) | StringCompare(ListItem.MPAA,6) | SubString(ListItem.MPAA,Rated 6)</visible>
             </control>  
             <control type="image">
                 <description>FSK-12 Rating label</description>
                 <include>MPAADimensionsSmall</include>
-                <texture>flags/mpaa/DE/Rated FSK12.png</texture>
+                <texture>flags/mpaa/DE/Rated 12.png</texture>
                 <visible>SubString(ListItem.MPAA,Germany:12) | SubString(ListItem.MPAA,ab 12) | StringCompare(ListItem.MPAA,12) | SubString(ListItem.MPAA,Rated 12)</visible>
             </control>  
             <control type="image">
                 <description>FSK-16 Rating label</description>
                 <include>MPAADimensionsSmall</include>
-                <texture>flags/mpaa/DE/Rated FSK16.png</texture>
+                <texture>flags/mpaa/DE/Rated 16.png</texture>
                 <visible>SubString(ListItem.MPAA,Germany:16) | SubString(ListItem.MPAA,ab 16) | StringCompare(ListItem.MPAA,16) | SubString(ListItem.MPAA,Rated 16)</visible>
             </control>  
             <control type="image">
                 <description>FSK-18 Rating label</description>
                 <include>MPAADimensionsSmall</include>
-                <texture>flags/mpaa/DE/Rated FSK18.png</texture>
+                <texture>flags/mpaa/DE/Rated 18.png</texture>
                 <visible>SubString(ListItem.MPAA,Germany:18) | SubString(ListItem.MPAA,ab 18) | StringCompare(ListItem.MPAA,18) | SubString(ListItem.MPAA,Rated 18)</visible>
             </control>  
             <!-- UK ratings-->
