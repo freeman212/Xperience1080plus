@@ -5239,6 +5239,74 @@
                         </control>
                     </focusedlayout>
                 </control>
+                <control type="group">
+                    <posx>120</posx>
+                    <visible>!Skin.HasSetting(ThumbnailSmall) + Container.Content(episodes)</visible>
+                    <control type="label">
+                        <posx>0</posx>
+                        <posy>874</posy>
+                        <width>1680</width>
+                        <height>56</height>
+                        <label>[B]$INFO[ListItem.Label][/B]</label>
+                        <font>Font-Condensed-S50-B</font>
+                        <textcolor>aawhite</textcolor>
+                        <align>left</align>
+                        <scroll>true</scroll>
+                    </control>
+                    <control type="image">
+                        <posx>1530</posx>
+                        <posy>857</posy>
+                        <width>85</width>
+                        <height>85</height>
+                        <texture>dialogs/video-info/rating.png</texture>
+                        <visible>!IsEmpty(ListItem.Rating)</visible>
+                    </control>
+                    <control type="label">
+                        <posx>1670</posx>
+                        <posy>874</posy>
+                        <width>100</width>
+                        <height>56</height>
+                        <label>[B]$INFO[ListItem.Rating][/B]</label>
+                        <font>Font-Condensed-S50-B</font>
+                        <textcolor>aawhite</textcolor>
+                        <align>right</align>
+                        <scroll>false</scroll>
+                    </control>
+                </control>
+                <control type="group">
+                    <posx>185</posx>
+                    <visible>Skin.HasSetting(ThumbnailSmall) + Container.Content(episodes)</visible>
+                    <control type="label">
+                        <posx>0</posx>
+                        <posy>874</posy>
+                        <width>1525</width>
+                        <height>56</height>
+                        <label>[B]$INFO[ListItem.Label][/B]</label>
+                        <font>Font-Condensed-S50-B</font>
+                        <textcolor>aawhite</textcolor>
+                        <align>left</align>
+                        <scroll>true</scroll>
+                    </control>
+                    <control type="image">
+                        <posx>1410</posx>
+                        <posy>857</posy>
+                        <width>85</width>
+                        <height>85</height>
+                        <texture>dialogs/video-info/rating.png</texture>
+                        <visible>!IsEmpty(ListItem.Rating)</visible>
+                    </control>
+                    <control type="label">
+                        <posx>1550</posx>
+                        <posy>874</posy>
+                        <width>100</width>
+                        <height>56</height>
+                        <label>[B]$INFO[ListItem.Rating][/B]</label>
+                        <font>Font-Condensed-S50-B</font>
+                        <textcolor>aawhite</textcolor>
+                        <align>right</align>
+                        <scroll>false</scroll>
+                    </control>
+                </control>
                 <control type="button">
                     <posx>120</posx>
                     <posy>874</posy>
@@ -5251,7 +5319,7 @@
                     <shadowcolor>22000000</shadowcolor>
                     <scroll>false</scroll>
                     <align>left</align>
-                    <visible>!Skin.HasSetting(ThumbnailSmall)</visible>
+                    <visible>!Skin.HasSetting(ThumbnailSmall) + !Container.Content(episodes)</visible>
                 </control>
                 <control type="button">
                     <posx>185</posx>
@@ -5265,7 +5333,7 @@
                     <shadowcolor>22000000</shadowcolor>
                     <scroll>false</scroll>
                     <align>left</align>
-                    <visible>Skin.HasSetting(ThumbnailSmall)</visible>
+                    <visible>Skin.HasSetting(ThumbnailSmall) + !Container.Content(episodes)</visible>
                 </control>
                 <control type="group">
                     <animation effect="slide" end="65" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(ThumbnailSmall)">Conditional</animation>
