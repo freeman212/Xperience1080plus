@@ -14,8 +14,8 @@
 
     <include name="HomeDotIndicator">
         <posy>0</posy>
-        <width>12</width>
-        <height>12</height>
+        <width>16</width>
+        <height>16</height>
         <texture>windows/home/dot.png</texture>
     </include>
     
@@ -108,7 +108,7 @@
                         <icon>$INFO[Window.Property(RecentMovie.1.Art(fanart))]</icon>
                         <property name="RecentMovieExtrafanart">$INFO[Window.Property(RecentMovie.1.Path),,/extrafanart]</property>
                         <label>$INFO[Window.Property(RecentMovie.1.Title)]</label>
-                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentMovie.1.Year),, • ]$INFO[Window.Property(RecentMovie.1.Runtime),, $LOCALIZE[12391]][/COLOR]</label2>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentMovie.1.Year),, • ]$INFO[Window.Property(RecentMovie.1.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RecentMovie.1.Rating, • ,][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
                     </item>
                     <item id="2">
@@ -117,7 +117,7 @@
                         <icon>$INFO[Window.Property(RecentMovie.2.Art(fanart))]</icon>
                         <property name="RecentMovieExtrafanart">$INFO[Window.Property(RecentMovie.2.Path),,/extrafanart]</property>
                         <label>$INFO[Window.Property(RecentMovie.2.Title)]</label>
-                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentMovie.2.Year),, • ]$INFO[Window.Property(RecentMovie.2.Runtime),, $LOCALIZE[12391]][/COLOR]</label2>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentMovie.2.Year),, • ]$INFO[Window.Property(RecentMovie.2.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RecentMovie.2.Rating, • ,][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
                     </item>
                     <item id="3">
@@ -126,7 +126,7 @@
                         <icon>$INFO[Window.Property(RecentMovie.3.Art(fanart))]</icon>
                         <property name="RecentMovieExtrafanart">$INFO[Window.Property(RecentMovie.3.Path),,/extrafanart]</property>
                         <label>$INFO[Window.Property(RecentMovie.3.Title)]</label>
-                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentMovie.3.Year),, • ]$INFO[Window.Property(RecentMovie.3.Runtime),, $LOCALIZE[12391]][/COLOR]</label2>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentMovie.3.Year),, • ]$INFO[Window.Property(RecentMovie.3.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RecentMovie.3.Rating, • ,][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
                     </item>
                     <item id="4">
@@ -135,7 +135,7 @@
                         <icon>$INFO[Window.Property(RecentMovie.4.Art(fanart))]</icon>
                         <property name="RecentMovieExtrafanart">$INFO[Window.Property(RecentMovie.4.Path),,/extrafanart]</property>
                         <label>$INFO[Window.Property(RecentMovie.4.Title)]</label>
-                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentMovie.4.Year),, • ]$INFO[Window.Property(RecentMovie.4.Runtime),, $LOCALIZE[12391]][/COLOR]</label2>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentMovie.4.Year),, • ]$INFO[Window.Property(RecentMovie.4.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RecentMovie.4.Rating, • ,][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
                     </item>
                     <item id="5">
@@ -144,7 +144,7 @@
                         <icon>$INFO[Window.Property(RecentMovie.5.Art(fanart))]</icon>
                         <property name="RecentMovieExtrafanart">$INFO[Window.Property(RecentMovie.5.Path),,/extrafanart]</property>
                         <label>$INFO[Window.Property(RecentMovie.5.Title)]</label>
-                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentMovie.5.Year),, • ]$INFO[Window.Property(RecentMovie.5.Runtime),, $LOCALIZE[12391]][/COLOR]</label2>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentMovie.5.Year),, • ]$INFO[Window.Property(RecentMovie.5.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RecentMovie.5.Rating, • ,][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
                     </item>
                     <item id="6">
@@ -153,7 +153,7 @@
                         <icon>$INFO[Window.Property(RecentMovie.6.Art(fanart))]</icon>
                         <property name="RecentMovieExtrafanart">$INFO[Window.Property(RecentMovie.6.Path),,/extrafanart]</property>
                         <label>$INFO[Window.Property(RecentMovie.6.Title)]</label>
-                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentMovie.6.Year),, • ]$INFO[Window.Property(RecentMovie.6.Runtime),, $LOCALIZE[12391]][/COLOR]</label2>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentMovie.6.Year),, • ]$INFO[Window.Property(RecentMovie.6.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RecentMovie.6.Rating, • ,][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
                     </item>
     
@@ -376,41 +376,59 @@
                 <!-- dots -->
                 <control type="grouplist">
                     <visible>!Container(20).HasFocus(9)</visible>
-                    <posx>35</posx>
-                    <posy>347</posy>
+                    <posx>33</posx>
+                    <posy>345</posy>
                     <width>96</width>
-                    <height>12</height>
+                    <height>16</height>
                     <orientation>horizontal</orientation>
-                    <itemgap>4</itemgap>
+                    <itemgap>0</itemgap>
                     <control type="image">
                         <decription>Dot #1</decription>
                         <include>HomeDotIndicator</include>
-                        <animation effect="fade" start="100" end="20" time="300" tween="sine" easing="inout" condition="![Container(82).HasFocus(1) | Container(82).HasFocus(7) | Container(82).HasFocus(13)]">Conditional</animation>
+                        <animation type="Conditional" condition="![Container(82).HasFocus(1) | Container(82).HasFocus(7) | Container(82).HasFocus(13)]">
+                            <effect type="fade" start="100" end="20" time="300" tween="sine" easing="inout" />
+                            <effect type="zoom" center="auto" start="85" end="85" time="300" tween="sine" easing="inout" /> 
+                        </animation>
                     </control>
                     <control type="image">
                         <decription>Dot #2</decription>
                         <include>HomeDotIndicator</include>
-                        <animation effect="fade" start="100" end="20" time="300" tween="sine" easing="inout" condition="![Container(82).HasFocus(2) | Container(82).HasFocus(8) | Container(82).HasFocus(14)]">Conditional</animation>
+                        <animation type="Conditional" condition="![Container(82).HasFocus(2) | Container(82).HasFocus(8) | Container(82).HasFocus(14)]">
+                            <effect type="fade" start="100" end="20" time="300" tween="sine" easing="inout" />
+                            <effect type="zoom" center="auto" start="85" end="85" time="300" tween="sine" easing="inout" /> 
+                        </animation>
                     </control>
                     <control type="image">
                         <decription>Dot #3</decription>
                         <include>HomeDotIndicator</include>
-                        <animation effect="fade" start="100" end="20" time="300" tween="sine" easing="inout" condition="![Container(82).HasFocus(3) | Container(82).HasFocus(9) | Container(82).HasFocus(15)]">Conditional</animation>
+                        <animation type="Conditional" condition="![Container(82).HasFocus(3) | Container(82).HasFocus(9) | Container(82).HasFocus(15)]">
+                            <effect type="fade" start="100" end="20" time="300" tween="sine" easing="inout" />
+                            <effect type="zoom" center="auto" start="85" end="85" time="300" tween="sine" easing="inout" /> 
+                        </animation>
                     </control>
                     <control type="image">
                         <decription>Dot #4</decription>
                         <include>HomeDotIndicator</include>
-                        <animation effect="fade" start="100" end="20" time="300" tween="sine" easing="inout" condition="![Container(82).HasFocus(4) | Container(82).HasFocus(10) | Container(82).HasFocus(16)]">Conditional</animation>
+                        <animation type="Conditional" condition="![Container(82).HasFocus(4) | Container(82).HasFocus(10) | Container(82).HasFocus(16)]">
+                            <effect type="fade" start="100" end="20" time="300" tween="sine" easing="inout" />
+                            <effect type="zoom" center="auto" start="85" end="85" time="300" tween="sine" easing="inout" /> 
+                        </animation>
                     </control>
                     <control type="image">
                         <decription>Dot #5</decription>
                         <include>HomeDotIndicator</include>
-                        <animation effect="fade" start="100" end="20" time="300" tween="sine" easing="inout" condition="![Container(82).HasFocus(5) | Container(82).HasFocus(11) | Container(82).HasFocus(17)]">Conditional</animation>
+                        <animation type="Conditional" condition="![Container(82).HasFocus(5) | Container(82).HasFocus(11) | Container(82).HasFocus(17)]">
+                            <effect type="fade" start="100" end="20" time="300" tween="sine" easing="inout" />
+                            <effect type="zoom" center="auto" start="85" end="85" time="300" tween="sine" easing="inout" /> 
+                        </animation>
                     </control>
                     <control type="image">
                         <decription>Dot #6</decription>
                         <include>HomeDotIndicator</include>
-                        <animation effect="fade" start="100" end="20" time="300" tween="sine" easing="inout" condition="![Container(82).HasFocus(6) | Container(82).HasFocus(12) | Container(82).HasFocus(18)]">Conditional</animation>
+                        <animation type="Conditional" condition="![Container(82).HasFocus(6) | Container(82).HasFocus(12) | Container(82).HasFocus(18)]">
+                            <effect type="fade" start="100" end="20" time="300" tween="sine" easing="inout" />
+                            <effect type="zoom" center="auto" start="85" end="85" time="300" tween="sine" easing="inout" /> 
+                        </animation>
                     </control>
                 </control>
 

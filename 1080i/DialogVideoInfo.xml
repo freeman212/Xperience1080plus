@@ -1,5 +1,6 @@
 <window>
     <defaultcontrol always="true">9333</defaultcontrol>
+    <onload condition="System.HasAddon(script.videolanguage)">RunScript(script.videolanguage,movieid=$INFO[ListItem.DBID])</onload>
     <onload>SetProperty(fanart_image,$INFO[ListItem.Art(fanart)])</onload>
     <onunload>ClearProperty(fanart_image)</onunload>
     <onload condition="Skin.HasSetting(ExtraFanart.Enabled)">SetProperty(extrafanart,.)</onload>
@@ -741,6 +742,58 @@
                     </content>
                 </control>
                 
+                <!-- Language flags -->
+                <control type="grouplist">
+                    <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(9333) | !Container(9333).HasFocus(1)">Conditional</animation>
+                    <posx>415</posx>
+                    <posy>593</posy>
+                    <width>290</width>
+                    <height>48</height>
+                    <align>right</align>
+                    <itemgap>10</itemgap>
+                    <orientation>horizontal</orientation>
+                    <control type="image">
+                        <width>48</width>
+                        <height>48</height>
+                        <aspectratio>center</aspectratio>
+                        <texture>$INFO[Window.Property(AudioLanguage.1),flags/language/,.png]</texture>
+                        <include>visiblehidefadeflags</include>
+                        <visible>!IsEmpty(Window.Property(AudioLanguage.1))</visible>
+                    </control>
+                    <control type="image">
+                        <width>48</width>
+                        <height>48</height>
+                        <aspectratio>center</aspectratio>
+                        <texture>$INFO[Window.Property(AudioLanguage.2),flags/language/,.png]</texture>
+                        <include>visiblehidefadeflags</include>
+                        <visible>!IsEmpty(Window.Property(AudioLanguage.2))</visible>
+                    </control>
+                    <control type="image">
+                        <width>48</width>
+                        <height>48</height>
+                        <aspectratio>center</aspectratio>
+                        <texture>$INFO[Window.Property(AudioLanguage.3),flags/language/,.png]</texture>
+                        <include>visiblehidefadeflags</include>
+                        <visible>!IsEmpty(Window.Property(AudioLanguage.3))</visible>
+                    </control>
+                    <control type="image">
+                        <width>48</width>
+                        <height>48</height>
+                        <aspectratio>center</aspectratio>
+                        <texture>$INFO[Window.Property(AudioLanguage.4),flags/language/,.png]</texture>
+                        <include>visiblehidefadeflags</include>
+                        <visible>!IsEmpty(Window.Property(AudioLanguage.4))</visible>
+                    </control>
+                    <control type="image">
+                        <width>48</width>
+                        <height>48</height>
+                        <aspectratio>center</aspectratio>
+                        <texture>$INFO[Window.Property(AudioLanguage.5),flags/language/,.png]</texture>
+                        <include>visiblehidefadeflags</include>
+                        <visible>!IsEmpty(Window.Property(AudioLanguage.5))</visible>
+                    </control>
+                </control>
+                
                 <!-- Info -->
                 <control type="grouplist">
                     <animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
@@ -786,31 +839,31 @@
                         </control>
                     </control>
                     <control type="group">
-                        <width>950</width>
+                        <width>1044</width>
                         <height>40</height>
                         <visible>!Container.Content(TVShows)</visible>
                         <!-- Year | Runtime -->
                         <control type="label">
                             <posx>8</posx>
                             <posy>0</posy>
-                            <width>950</width>
+                            <width>1044</width>
                             <height>36</height>
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
-                            <label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
+                            <label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.RatingAndVotes, • ,]</label>
                             <textcolor>aawhite</textcolor>
                             <scroll>false</scroll>
                         </control>
                     </control>
                     <control type="group">
-                        <width>950</width>
+                        <width>1044</width>
                         <height>40</height>
                         <visible>Container.Content(TVShows) + !IsEmpty(ListItem.Premiered)</visible>
                         <!-- Premiered -->
                         <control type="label">
                             <posx>8</posx>
                             <posy>0</posy>
-                            <width>950</width>
+                            <width>1044</width>
                             <height>36</height>
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
@@ -820,14 +873,14 @@
                         </control>
                     </control>
                     <control type="group">
-                        <width>950</width>
+                        <width>1044</width>
                         <height>40</height>
                         <visible>Container.Content(TVShows) + !IsEmpty(ListItem.Studio)</visible>
                         <!-- Studio -->
                         <control type="label">
                             <posx>8</posx>
                             <posy>0</posy>
-                            <width>950</width>
+                            <width>1044</width>
                             <height>36</height>
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
@@ -838,7 +891,7 @@
                     </control>
                     <control type="group">
                         <!-- Genre -->
-                        <width>950</width>
+                        <width>1044</width>
                         <height>40</height>
                         <visible>!IsEmpty(ListItem.Genre)</visible>
                         <control type="image">
@@ -851,7 +904,7 @@
                         <control type="label">
                             <posx>50</posx>
                             <posy>0</posy>
-                            <width>950</width>
+                            <width>1002</width>
                             <height>36</height>
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
@@ -862,7 +915,7 @@
                     </control>
                     <control type="group">
                         <!-- Director -->
-                        <width>950</width>
+                        <width>1044</width>
                         <height>40</height>
                         <visible>!Container.Content(tvshows) + !IsEmpty(ListItem.Director)</visible>
                         <control type="image">
@@ -875,7 +928,7 @@
                         <control type="label">
                             <posx>50</posx>
                             <posy>0</posy>
-                            <width>950</width>
+                            <width>1002</width>
                             <height>36</height>
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
@@ -887,7 +940,7 @@
                         <control type="button" id="71">
                             <posx>50</posx>
                             <posy>0</posy>
-                            <width>950</width>
+                            <width>1002</width>
                             <height>36</height>
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
@@ -902,12 +955,12 @@
                             <onright>SetFocus(9334)</onright>
                             <onclick>SendClick(2003,13)</onclick>
                             <animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(71)">Conditional</animation>
-                            <animation effect="fade" start="100" end="50" time="1200" delay="600" tween="sine" easing="inout" pulse="true" condition="Control.HasFocus(71)">Conditional</animation>
+                            <animation effect="fade" start="100" end="50" time="800" delay="600" tween="sine" easing="inout" pulse="true" condition="Control.HasFocus(71)">Conditional</animation>
                         </control>
                     </control>
                     <control type="group">
                         <!-- Writer -->
-                        <width>950</width>
+                        <width>1044</width>
                         <height>59</height>
                         <visible>!Container.Content(tvshows) + !IsEmpty(ListItem.Writer)</visible>
                         <control type="image">
@@ -920,7 +973,7 @@
                         <control type="label">
                             <posx>50</posx>
                             <posy>0</posy>
-                            <width>950</width>
+                            <width>1002</width>
                             <height>36</height>
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
@@ -930,14 +983,14 @@
                         </control>
                     </control>
                     <control type="group">
-                        <width>950</width>
+                        <width>1044</width>
                         <height>40</height>
                         <visible>Container.Content(TVShows) + !IsEmpty(ListItem.Property(TotalEpisodes))</visible>
                         <!-- Episodes -->
                         <control type="label">
                             <posx>8</posx>
                             <posy>0</posy>
-                            <width>950</width>
+                            <width>1044</width>
                             <height>36</height>
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
@@ -947,14 +1000,14 @@
                         </control>
                     </control>
                     <control type="group">
-                        <width>950</width>
+                        <width>1044</width>
                         <height>40</height>
                         <visible>Container.Content(TVShows) + !IsEmpty(ListItem.Property(unWatchedepisodes))</visible>
                         <!-- Unwatched -->
                         <control type="label">
                             <posx>8</posx>
                             <posy>0</posy>
-                            <width>950</width>
+                            <width>1044</width>
                             <height>36</height>
                             <font>Font-Condensed-S34</font>
                             <align>left</align>

@@ -319,12 +319,12 @@
                     <onclick>ActivateWindow(musiclibrary,genres,return)</onclick>
                 </item>
                 <item id="8">
-                    <label>$LOCALIZE[132] ($INFO[Window.Property(Music.AlbumsCount)])</label>
-                    <onclick>ActivateWindow(musiclibrary,albums,return)</onclick>
-                </item>
-                <item id="9">
                     <label>$LOCALIZE[133] ($INFO[Window.Property(Music.ArtistsCount)])</label>
                     <onclick>ActivateWindow(musiclibrary,artists,return)</onclick>
+                </item>
+                <item id="9">
+                    <label>$LOCALIZE[132] ($INFO[Window.Property(Music.AlbumsCount)])</label>
+                    <onclick>ActivateWindow(musiclibrary,albums,return)</onclick>
                 </item>
                 <item id="10">
                     <label>$LOCALIZE[41150]</label>

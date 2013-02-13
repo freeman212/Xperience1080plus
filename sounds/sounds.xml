@@ -42,13 +42,13 @@
         </window>
         <window>
           <name>home</name>
-          <activate>-</activate>
+          <activate></activate>
           <deactivate>windowopen.wav</deactivate>
         </window>
         <window>
           <name>infodialog</name>
           <activate>kaitoast.wav</activate>
-          <deactivate>-</deactivate>
+          <deactivate></deactivate>
         </window>
     </windows>
 </sounds>
