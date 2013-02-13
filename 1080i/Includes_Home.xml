@@ -3636,7 +3636,7 @@
                         </control>
                         <control type="label">
                             <posx>0</posx>
-                            <posy>574</posy>
+                            <posy>576</posy>
                             <width>477</width>
                             <height>25</height>
                             <font>Font-Condensed-S20-B</font>
