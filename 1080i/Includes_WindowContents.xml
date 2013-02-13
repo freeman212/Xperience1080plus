@@ -32,7 +32,17 @@
             <visible>Skin.HasSetting(BackgroundOpacity)</visible>
         </control>
     </include>
-    <include name="CommonOverlayClassic">
+    <include name="CommonOverlayHome">
+        <control type="videowindow">
+            <include>FullscreenDimensions</include>
+            <visible>Skin.HasSetting(BackgroundVideo) + Player.HasVideo</visible>
+        </control>
+        <control type="image">
+            <include>FullscreenDimensions</include>
+            <texture>windows/common/overlay.png</texture>
+        </control>
+    </include>
+    <include name="CommonOverlayHomeClassic">
         <control type="videowindow">
             <include>FullscreenDimensions</include>
             <visible>Skin.HasSetting(BackgroundVideo) + Player.HasVideo</visible>
@@ -54,20 +64,22 @@
             <texture>windows/common/stage-dark.png</texture>
         </control>
     </include>
-    <include name="CommonItemsHome">
-        <include>CommonContent</include>
-        <include>HomeCustomBackdrops</include>
-        <include>CommonOverlay</include>
-    </include>
-    <include name="CommonItemsHomeClassic">
-        <include>CommonContent</include>
-        <include>HomeCustomBackdrops</include>
-        <include>CommonOverlayClassic</include>
-    </include>
+    
     <include name="CommonItems">
         <include>CommonContent</include>
         <include>BackgroundFanart</include>
         <include>CommonOverlay</include>
+    </include>
+    <include name="CommonItemsHome">
+        <include>CommonContent</include>
+        <include>HomeCustomBackdrops</include>
+        <include condition="!Skin.HasSetting(HomeBackgroundOpacity)">CommonOverlay</include>
+        <include condition="Skin.HasSetting(HomeBackgroundOpacity)">CommonOverlayHome</include>
+    </include>
+    <include name="CommonItemsHomeClassic">
+        <include>CommonContent</include>
+        <include>HomeCustomBackdrops</include>
+        <include>CommonOverlayHomeClassic</include>
     </include>
     <include name="CommonItemsMusicOSD">
         <include>BackgroundFanartMusicOSD</include>

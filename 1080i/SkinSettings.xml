@@ -178,6 +178,14 @@
                     <onclick>Skin.ToggleSetting(BackgroundOpacity)</onclick>
                     <label>Show more fanart</label>
                 </control>
+                <control type="radiobutton" id="1004">
+                    <width>1210</width>
+                    <include>SettingsCategoryRadioButtonVars</include>
+                    <selected>Skin.HasSetting(HomeBackgroundOpacity)</selected>
+                    <onclick>Skin.ToggleSetting(HomeBackgroundOpacity)</onclick>
+                    <label> • but not on the Home screen</label>
+                    <visible>!Skin.HasSetting(HomeClassic.Enabled) + Skin.HasSetting(BackgroundOpacity)</visible>
+                </control>
                 <control type="radiobutton" id="1012">
                     <width>1210</width>
                     <include>SettingsCategoryRadioButtonVars</include>
