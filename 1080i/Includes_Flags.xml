@@ -63,6 +63,9 @@
             <include>visiblehidefadeflags</include>
             <visible>!IsEmpty(ListItem.AudioCodec)</visible>
         </control>
+        <include>RatingsFlags</include>
+    </include>
+    <include name="RatingsFlags">
         <control type="group">
             <width>121</width>
             <visible>Container.Content(movies) + !IsEmpty(ListItem.MPAA)</visible>
