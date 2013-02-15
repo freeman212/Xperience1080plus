@@ -6,6 +6,7 @@
     <onload condition="IsEmpty(Skin.String(music.name))">Skin.SetString(music.name,$LOCALIZE[14022])</onload>
     <onload condition="IsEmpty(Skin.String(rss.setting))">Skin.SetString(rss.setting,$LOCALIZE[1223])</onload>
     <onload condition="IsEmpty(Skin.String(BackdropMultiTime))">Skin.SetString(BackdropMultiTime,15sec)</onload>
+    <onload condition="IsEmpty(Skin.String(OSDTVShowsImage))">Skin.SetString(OSDTVShowsImage,poster)</onload>
     <controls>
         <include>CommonSettingsItems</include>
         <include>SettingsHeader</include>
@@ -796,6 +797,88 @@
                     <onclick>Skin.ToggleSetting(OSDDefaultSubtitleButton.Enabled)</onclick>
                     <enable>!IsEmpty(Skin.String(SubtitleScript_Path))</enable>
                     <label>$LOCALIZE[41242]</label>
+                </control>
+                <control type="group" id="8007">
+                    <description>Fake spin control</description>
+                    <width>1210</width>
+                    <height>77</height>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1210</width>
+                        <height>77</height>
+                        <texture border="90,3,90,3">views/list/other/separator.png</texture>
+                        <visible>!ControlGroup(8007).HasFocus</visible>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1210</width>
+                        <height>77</height>
+                        <texture border="150,3,150,3">windows/settings/images/right-focus.png</texture>
+                        <aspectratio>stretch</aspectratio>
+                        <visible>ControlGroup(8007).HasFocus</visible>
+                    </control>
+                    <control type="button" id="80071">
+                        <posx>1104</posx>
+                        <posy>8</posy>
+                        <width>43</width>
+                        <height>60</height>
+                        <onleft>80072</onleft>
+                        <onright>80072</onright>
+                        <onup>8006</onup>
+                        <ondown>1001</ondown>
+                        <texturefocus>buttons/spinctrl/arrow-down-fo.png</texturefocus>
+                        <texturenofocus>buttons/spinctrl/arrow-down-nf.png</texturenofocus>
+                        <onclick condition="stringcompare(Skin.String(OSDTVShowsImage),poster)">Skin.SetString(OSDTVShowsImage,clearart)</onclick>
+                        <onclick condition="stringcompare(Skin.String(OSDTVShowsImage),clearlogo)">Skin.SetString(OSDTVShowsImage,poster)</onclick>
+                        <onclick condition="stringcompare(Skin.String(OSDTVShowsImage),clearart)">Skin.SetString(OSDTVShowsImage,clearlogo)</onclick>
+                        <onclick condition="stringcompare(Skin.String(OSDTVShowsImage),poster)">Skin.SetString(OSDTVShowsImage,clearart)</onclick>
+                    </control>
+                    <control type="button" id="80072">
+                        <posx>1147</posx>
+                        <posy>8</posy>
+                        <width>43</width>
+                        <height>60</height>
+                        <onleft>80071</onleft>
+                        <onright>80071</onright>
+                        <onup>8006</onup>
+                        <ondown>1001</ondown>
+                        <texturefocus>buttons/spinctrl/arrow-up-fo.png</texturefocus>
+                        <texturenofocus>buttons/spinctrl/arrow-up-nf.png</texturenofocus>
+                        <onclick condition="stringcompare(Skin.String(OSDTVShowsImage),clearlogo)">Skin.SetString(OSDTVShowsImage,clearart)</onclick>
+                        <onclick condition="stringcompare(Skin.String(OSDTVShowsImage),poster)">Skin.SetString(OSDTVShowsImage,clearlogo)</onclick>
+                        <onclick condition="stringcompare(Skin.String(OSDTVShowsImage),clearart)">Skin.SetString(OSDTVShowsImage,poster)</onclick>
+                        <onclick condition="stringcompare(Skin.String(OSDTVShowsImage),clearlogo)">Skin.SetString(OSDTVShowsImage,clearart)</onclick>
+                    </control>
+                    <control type="button">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1120</width>
+                        <height>77</height>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <textoffsetx>35</textoffsetx>
+                        <font>Font-Condensed-S30-B</font>
+                        <textcolor>96FFFFFF</textcolor>
+                        <label>OSD image for TV Shows (video osd)</label>
+                        <label2>$INFO[Skin.String(OSDTVShowsImage)]</label2>
+                        <visible>!ControlGroup(8007).HasFocus</visible>
+                    </control>
+                    <control type="button">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>1120</width>
+                        <height>77</height>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <textoffsetx>35</textoffsetx>
+                        <font>Font-Condensed-S30-B</font>
+                        <textcolor>white</textcolor>
+                        <label>OSD image for TV Shows (video osd)</label>
+                        <label2>$INFO[Skin.String(OSDTVShowsImage)]</label2>
+                        <visible>ControlGroup(8007).HasFocus</visible>
+                    </control>
                 </control>
             </control>
             

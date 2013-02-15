@@ -311,21 +311,42 @@
                         <control type="group">
                             <posy>825</posy>
                             <visible>VideoPlayer.Content(Episodes)</visible>
+                            <control type="group">
+                                <visible>stringcompare(Skin.String(OSDTVShowsImage),poster) | [stringcompare(Skin.String(OSDTVShowsImage),clearart) + IsEmpty(Player.Art(tvshow.clearart))] | [stringcompare(Skin.String(OSDTVShowsImage),clearlogo) + IsEmpty(Player.Art(tvshow.clearlogo))]</visible>
+                                <control type="image">
+                                    <posx>110</posx>
+                                    <posy>-35</posy>
+                                    <width>276</width>
+                                    <height>394</height>
+                                    <texture border="30">osd/fullscreen/cover-shadow.png</texture>
+                                    <aspectratio>stretch</aspectratio>
+                                </control>                           
+                                <control type="image">
+                                    <posx>130</posx>
+                                    <posy>-15</posy>
+                                    <width>236</width>
+                                    <height>354</height>
+                                    <texture background="true" fallback="views/fallbacks/DefaultVideo.png/medium.png">$INFO[Player.Art(tvshow.poster)]</texture>
+                                    <aspectratio>stretch</aspectratio>
+                                </control>
+                            </control>
                             <control type="image">
-                                <posx>110</posx>
-                                <posy>-35</posy>
-                                <width>276</width>
-                                <height>394</height>
-                                <texture border="30">osd/fullscreen/cover-shadow.png</texture>
+                                <posx>10</posx>
+                                <posy>75</posy>
+                                <width>357</width>
+                                <height>200</height>
+                                <texture background="true">$INFO[Player.Art(tvshow.clearart)]</texture>
                                 <aspectratio>stretch</aspectratio>
-                            </control>                           
+                                <visible>stringcompare(Skin.String(OSDTVShowsImage),clearart) + !IsEmpty(Player.Art(tvshow.clearart))</visible>
+                            </control>
                             <control type="image">
-                                <posx>130</posx>
-                                <posy>-15</posy>
-                                <width>236</width>
-                                <height>354</height>
-                                <texture background="true" fallback="views/fallbacks/DefaultVideo.png/medium.png">$INFO[Player.Art(tvshow.poster)]</texture>
+                                <posx>10</posx>
+                                <posy>125</posy>
+                                <width>361</width>
+                                <height>140</height>
+                                <texture background="true">$INFO[Player.Art(tvshow.clearlogo)]</texture>
                                 <aspectratio>stretch</aspectratio>
+                                <visible>stringcompare(Skin.String(OSDTVShowsImage),clearlogo) + !IsEmpty(Player.Art(tvshow.clearlogo))</visible>
                             </control>
                             <control type="label">
                                 <posx>390</posx>
