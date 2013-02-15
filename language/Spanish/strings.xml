@@ -51,7 +51,6 @@
     <string id="41190">Vistas</string>
     <string id="41191">Desactivar fanart</string>
     <string id="41202">Ejecutar trailer al mirar la información de la película</string>
-	<string id="41203">Reproducir trailer en ventana pequeña</string>
     
 	<!-- General -->
 	<string id="41200">Ocultar boton de 'Apagar' (solo visible en inicio)</string>
@@ -88,8 +87,10 @@
 	<string id="41283">Activar add-on TVTunes</string>
     <string id="41284">Descarga temas musicales</string>
     <string id="41285">Activar TV Show Next Aired</string>
-    
-	<string id="41290">Configurar TV Show Next Aired</string>
+    <string id="41287">Activar extra fanart</string>
+    <string id="41288">Descargar extra fanarts para películas &amp; series de tv</string>
+    <string id="41289">Configurar Artwork Downloader</string>
+    <string id="41290">Configurar TV Show Next Aired</string>
     <string id="41293">Actualizar datos next aired al iniciar</string>
     <string id="41294">Actualizar arte (landscape, logo, clearart) después de actualizar la base de datos</string>
     
@@ -114,7 +115,7 @@
     <string id="41316">Reparto</string>
     <string id="41317">Trailer</string>
     <string id="41318">Duración: </string>
-    <string id="41319">Argumento</string>
+    <string id="41319">Sinópsis</string>
     <string id="41320">Parada</string>
     <string id="41321">Estrenado: </string>
     <string id="41322">Temporada</string>
@@ -212,7 +213,7 @@
 	<string id="41693">Fase lunar</string>
 	<string id="41694">Clima actual</string>
 	<string id="41695">Próximas previsiones</string>
-	<string id="41696">Clima por horas</string>
+	<string id="41696">Previsión por horas</string>
 	
 	<!-- SmartPlaylistEditor.xml -->
     <!-- From 41716 to 41719 -->
@@ -259,8 +260,9 @@
     <string id="42132">Descripción no disponible</string>
 	<string id="42133">Actualizar repositorios</string>
 	<string id="42134">Actualizar add-ons</string>
-	<string id="42135">Actualización de repositorios activada...</string>
+	<string id="42135">Actualización add-on repositorios activa...</string>
 	<string id="42136">Actualizando add-on locales...</string>
+	
 	
 	<!-- TV Guide -->
     <!-- From 42160 to 42179 -->
