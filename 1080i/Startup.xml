@@ -29,7 +29,7 @@
         <control type="group">
             <animation effect="fade" start="100" end="0" time="300" tween="sine" easing="out">WindowClose</animation>
             <control type="image">
-                <aspectratio>keep</aspectratio>
+                <!-- <aspectratio>keep</aspectratio> -->
                 <include>FullscreenDimensions</include>
                 <texture>special://skin/extras/splash/splash.png</texture>
             </control>
