@@ -3517,7 +3517,7 @@
                                 <posx>20</posx>
                                 <posy>-6</posy>
                                 <height>66</height>
-                                <width>325</width>
+                                <width>437</width>
                                 <font>Font-Condensed-S31-B</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -3527,9 +3527,9 @@
                             </control>
                             <control type="label">
                                 <posx>20</posx>
-                                <posy>28</posy>
+                                <posy>29</posy>
                                 <height>66</height>
-                                <width>325</width>
+                                <width>437</width>
                                 <font>Font-Condensed-S30</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -3695,7 +3695,7 @@
                                 <posx>20</posx>
                                 <posy>-6</posy>
                                 <height>66</height>
-                                <width>440</width>
+                                <width>437</width>
                                 <font>Font-Condensed-S30-B</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -3708,7 +3708,7 @@
                                 <posx>20</posx>
                                 <posy>-6</posy>
                                 <height>66</height>
-                                <width>440</width>
+                                <width>437</width>
                                 <font>Font-Condensed-S30-B</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -3719,9 +3719,9 @@
                             </control>
                             <control type="label">
                                 <posx>20</posx>
-                                <posy>28</posy>
+                                <posy>29</posy>
                                 <height>66</height>
-                                <width>440</width>
+                                <width>437</width>
                                 <font>Font-Condensed-S30</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -3729,7 +3729,6 @@
                                 <label>$INFO[MusicPlayer.Artist]</label>
                                 <scroll>false</scroll>
                             </control>
-
                         </control>
                     </control>                    
                
