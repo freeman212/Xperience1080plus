@@ -812,13 +812,26 @@
                         <control type="label">
                             <posx>8</posx>
                             <posy>0</posy>
-                            <width>950</width>
+                            <width>1040</width>
                             <height>45</height>
                             <font>Font-Condensed-S45</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Title]</label>
                             <textcolor>eewhite</textcolor>
                             <scroll>false</scroll>
+                            <visible>IsEmpty(ListItem.tagline)</visible>
+                        </control>
+                        <control type="label">
+                            <posx>8</posx>
+                            <posy>0</posy>
+                            <width>1040</width>
+                            <height>45</height>
+                            <font>Font-Condensed-S45</font>
+                            <align>left</align>
+                            <label>$INFO[ListItem.Tagline]</label>
+                            <textcolor>eewhite</textcolor>
+                            <scroll>true</scroll>
+                            <visible>!IsEmpty(ListItem.tagline)</visible>
                         </control>
                     </control>
                     <control type="group">
