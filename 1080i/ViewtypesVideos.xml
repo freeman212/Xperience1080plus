@@ -5735,7 +5735,7 @@
                             <width>226</width>
                             <height>340</height>
                             <texture background="true">$VAR[WallPoster]</texture>
-                            <colordiffuse>ff555555</colordiffuse>
+                            <colordiffuse>ee555555</colordiffuse>
                             <aspectratio>scale</aspectratio>
                         </control>
                         <control type="image">
@@ -5745,7 +5745,7 @@
                             <height>75</height>
                             <aspect>keepaspect</aspect>
                             <texture>$VAR[WallOverlay]</texture>
-                            <colordiffuse>ff555555</colordiffuse>
+                            <colordiffuse>ee555555</colordiffuse>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
                         </control>
                     </itemlayout>
