@@ -3843,7 +3843,7 @@
                                 <posx>13</posx>
                                 <posy>65</posy>
                                 <width>1730</width>
-                                <label>$INFO[Container(55).ListItem.Year,,]$INFO[Container(55).ListItem.Duration, • , $LOCALIZE[12391]]$INFO[Container(55).ListItem.Rating, • ,]</label>
+                                <label>$INFO[Container(55).ListItem.Year,,]$INFO[Container(55).ListItem.Studio, • ,]$INFO[Container(55).ListItem.Duration, • , $LOCALIZE[12391]]$INFO[Container(55).ListItem.Rating, • ,]</label>
                                 <font>Font-Condensed-S36</font>
                                 <textcolor>77white</textcolor>
                                 <scroll>false</scroll>
@@ -4856,7 +4856,7 @@
                                 <posx>13</posx>
                                 <posy>65</posy>
                                 <width>1730</width>
-                                <label>$INFO[Container(56).ListItem.Year,,]$INFO[Container(56).ListItem.Duration, • , $LOCALIZE[12391]]$INFO[Container(56).ListItem.Rating, • ,]</label>
+                                <label>$INFO[Container(56).ListItem.Year,,]$INFO[Container(56).ListItem.Studio, • ,]$INFO[Container(56).ListItem.Duration, • , $LOCALIZE[12391]]$INFO[Container(56).ListItem.Rating, • ,]</label>
                                 <font>Font-Condensed-S36</font>
                                 <textcolor>77white</textcolor>
                                 <scroll>false</scroll>
@@ -5835,7 +5835,7 @@
                                 <posx>13</posx>
                                 <posy>65</posy>
                                 <width>1730</width>
-                                <label>$INFO[Container(502).ListItem.Year,,]$INFO[Container(502).ListItem.Duration, • , $LOCALIZE[12391]]$INFO[Container(502).ListItem.Rating, • ,]</label>
+                                <label>$INFO[Container(502).ListItem.Year,,]$INFO[Container(502).ListItem.Studio, • ,]$INFO[Container(502).ListItem.Duration, • , $LOCALIZE[12391]]$INFO[Container(502).ListItem.Rating, • ,]</label>
                                 <font>Font-Condensed-S36</font>
                                 <textcolor>aawhite</textcolor>
                                 <scroll>false</scroll>
