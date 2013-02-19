@@ -3856,7 +3856,7 @@
                                 <posx>130</posx>
                                 <posy>15</posy>
                                 <width>1685</width>
-                                <label>$INFO[Container(55).ListItem.Label]$INFO[Container(55).ListItem.Year, (,)]</label>
+                                <label>$INFO[Container(55).ListItem.Label]</label>
                                 <font>Font-Condensed-S45-B</font>
                                 <textcolor>aawhite</textcolor>
                                 <scroll>false</scroll>
@@ -3869,18 +3869,65 @@
                                 <include>TVRatingFlagsSmall</include>
                             </control>
                             <control type="label">
-                                <posx>13</posx>
+                                <posx>15</posx>
                                 <posy>65</posy>
                                 <width>1730</width>
-                                <label>$INFO[ListItem.Property(UnWatchedEpisodes),$LOCALIZE[41311],]</label>
+                                <label>$INFO[Container(55).ListItem.Year,,]$INFO[Container(55).ListItem.Studio, • ,]$INFO[Container(55).ListItem.Rating, • ,]$INFO[ListItem.Property(TotalEpisodes),  (, $LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes), • , Unwatched)]</label>
                                 <font>Font-Condensed-S36</font>
                                 <textcolor>77white</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
+                                <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + !StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
+                            </control>
+                            <control type="label">
+                                <posx>15</posx>
+                                <posy>65</posy>
+                                <width>1730</width>
+                                <label>$INFO[Container(55).ListItem.Year,,]$INFO[Container(55).ListItem.Studio, • ,]$INFO[Container(55).ListItem.Rating, • ,]$INFO[ListItem.Property(TotalEpisodes),  (, $LOCALIZE[20360])]</label>
+                                <font>Font-Condensed-S36</font>
+                                <textcolor>77white</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                                <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
                             </control>
                         </control>
                         <control type="group">
-                            <visible>Container.Content(actors) | Container.Content(seasons) | [![Container.Content(movies) | Container.Content(tvshows) | Container.Content(genres) | Container.Content(Sets)] + Container.HasFolders]</visible>
+                            <visible>Container.Content(seasons)</visible>
+                            <control type="label">
+                                <posx>15</posx>
+                                <posy>15</posy>
+                                <width>1800</width>
+                                <label>$INFO[Container(55).ListItem.Label]</label>
+                                <font>Font-Condensed-S45-B</font>
+                                <textcolor>aawhite</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>15</posx>
+                                <posy>65</posy>
+                                <width>1730</width>
+                                <label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360] • ]$INFO[ListItem.Property(UnWatchedEpisodes),, Unwatched]</label>
+                                <font>Font-Condensed-S36</font>
+                                <textcolor>77white</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                                <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + !StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
+                            </control>
+                            <control type="label">
+                                <posx>15</posx>
+                                <posy>65</posy>
+                                <width>1730</width>
+                                <label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</label>
+                                <font>Font-Condensed-S36</font>
+                                <textcolor>77white</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                                <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <visible>Container.Content(actors) | [![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(Sets)] + Container.HasFolders]</visible>
                             <control type="label">
                                 <posx>15</posx>
                                 <posy>15</posy>
@@ -4869,7 +4916,7 @@
                                 <posx>130</posx>
                                 <posy>15</posy>
                                 <width>1685</width>
-                                <label>$INFO[Container(56).ListItem.Label]$INFO[Container(56).ListItem.Year, (,)]</label>
+                                <label>$INFO[Container(56).ListItem.Label]</label>
                                 <font>Font-Condensed-S45-B</font>
                                 <textcolor>aawhite</textcolor>
                                 <scroll>false</scroll>
@@ -4882,18 +4929,65 @@
                                 <include>TVRatingFlagsSmall</include>
                             </control>
                             <control type="label">
-                                <posx>13</posx>
+                                <posx>15</posx>
                                 <posy>65</posy>
                                 <width>1730</width>
-                                <label>$INFO[ListItem.Property(UnWatchedEpisodes),$LOCALIZE[41311],]</label>
+                                <label>$INFO[Container(56).ListItem.Year,,]$INFO[Container(56).ListItem.Studio, • ,]$INFO[Container(56).ListItem.Rating, • ,]$INFO[ListItem.Property(TotalEpisodes),  (, $LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes), • , Unwatched)]</label>
                                 <font>Font-Condensed-S36</font>
                                 <textcolor>77white</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
+                                <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + !StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
+                            </control>
+                            <control type="label">
+                                <posx>15</posx>
+                                <posy>65</posy>
+                                <width>1730</width>
+                                <label>$INFO[Container(56).ListItem.Year,,]$INFO[Container(56).ListItem.Studio, • ,]$INFO[Container(56).ListItem.Rating, • ,]$INFO[ListItem.Property(TotalEpisodes),  (, $LOCALIZE[20360])]</label>
+                                <font>Font-Condensed-S36</font>
+                                <textcolor>77white</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                                <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
                             </control>
                         </control>
                         <control type="group">
-                            <visible>Container.Content(actors) | Container.Content(seasons) | [![Container.Content(movies) | Container.Content(tvshows) | Container.Content(genres) | Container.Content(Sets)] + Container.HasFolders]</visible>
+                            <visible>Container.Content(seasons)</visible>
+                            <control type="label">
+                                <posx>15</posx>
+                                <posy>15</posy>
+                                <width>1800</width>
+                                <label>$INFO[Container(56).ListItem.Label]</label>
+                                <font>Font-Condensed-S45-B</font>
+                                <textcolor>aawhite</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>15</posx>
+                                <posy>65</posy>
+                                <width>1730</width>
+                                <label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360] • ]$INFO[ListItem.Property(UnWatchedEpisodes),, Unwatched]</label>
+                                <font>Font-Condensed-S36</font>
+                                <textcolor>77white</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                                <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + !StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
+                            </control>
+                            <control type="label">
+                                <posx>15</posx>
+                                <posy>65</posy>
+                                <width>1730</width>
+                                <label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</label>
+                                <font>Font-Condensed-S36</font>
+                                <textcolor>77white</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                                <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <visible>Container.Content(actors) | [![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(Sets)] + Container.HasFolders]</visible>
                             <control type="label">
                                 <posx>15</posx>
                                 <posy>15</posy>
@@ -5848,7 +5942,7 @@
                                 <posx>130</posx>
                                 <posy>15</posy>
                                 <width>1685</width>
-                                <label>$INFO[Container(502).ListItem.Label]$INFO[Container(502).ListItem.Year, (,)]</label>
+                                <label>$INFO[Container(502).ListItem.Label]</label>
                                 <font>Font-Condensed-S45-B</font>
                                 <textcolor>eewhite</textcolor>
                                 <scroll>false</scroll>
@@ -5861,14 +5955,26 @@
                                 <include>TVRatingFlagsSmall</include>
                             </control>
                             <control type="label">
-                                <posx>13</posx>
+                                <posx>15</posx>
                                 <posy>65</posy>
                                 <width>1730</width>
-                                <label>$INFO[ListItem.Property(UnWatchedEpisodes),$LOCALIZE[41311],]</label>
+                                <label>$INFO[Container(502).ListItem.Year,,]$INFO[Container(502).ListItem.Studio, • ,]$INFO[Container(502).ListItem.Rating, • ,]$INFO[ListItem.Property(TotalEpisodes),  (, $LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes), • , Unwatched)]</label>
                                 <font>Font-Condensed-S36</font>
                                 <textcolor>aawhite</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
+                                <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + !StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
+                            </control>
+                            <control type="label">
+                                <posx>15</posx>
+                                <posy>65</posy>
+                                <width>1730</width>
+                                <label>$INFO[Container(502).ListItem.Year,,]$INFO[Container(502).ListItem.Studio, • ,]$INFO[Container(502).ListItem.Rating, • ,]$INFO[ListItem.Property(TotalEpisodes),  (, $LOCALIZE[20360])]</label>
+                                <font>Font-Condensed-S36</font>
+                                <textcolor>aawhite</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                                <visible>!IsEmpty(ListItem.Property(TotalEpisodes)) + StringCompare(ListItem.Property(UnWatchedEpisodes),0)</visible>
                             </control>
                         </control>
                         <control type="group">
