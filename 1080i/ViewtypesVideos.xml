@@ -2063,6 +2063,7 @@
             <control type="group">
                 <posx>100</posx>
                 <posy>260</posy>
+                <animation effect="slide" start="0,0" end="0,240" time="0" condition="!Skin.HasSetting(ExtendedPlot) + !Container.Content(Episodes)">Conditional</animation>
                 <animation effect="fade" start="0" end="100" time="0" reversible="false">Visible</animation>
                 <visible>Window.Next(Home) | Window.Next(programs) | Window.Next(pictures) | Window.Next(filemanager) | Window.Next(settings) | Window.Next(music) | Window.Next(systeminfo) | Window.Next(screencalibration) | Window.Next(picturessettings) | Window.Next(programssettings) | Window.Next(weathersettings) | Window.Next(musicsettings) | Window.Next(systemsettings) | Window.Next(videossettings) | Window.Next(servicesettings) | Window.Next(appearancesettings) | Window.Next(pvrsettings) | Window.Next(videos) | Window.Next(videoplaylist) | Window.Next(LoginScreen) | Window.Next(profiles) | Window.Next(addonbrowser) | Window.Next(filebrowser) | Window.Next(ProfileSettings) | Window.Next(LockSettings) | Window.Next(smartplaylisteditor) | Window.Next(smartplaylistrule) | Window.Next(musicplaylist) | Window.Next(musicfiles) | Window.Next(musiclibrary) | Window.Next(fullscreenvideo) | Window.Next(visualisation) | Window.Next(slideshow) | Window.Next(karaoke) | Window.Next(weather) | Window.Next(pvr) | Window.Next(script-NextAired-TVGuide.xml) | !Control.IsVisible(81)</visible>
                 <control type="group">
@@ -2093,6 +2094,7 @@
                                 <height>50</height>
                                 <width>500</width>
                                 <texture>dialogs/shutdown/shadow.png</texture>
+                                <animation effect="slide" start="0,0" end="0,-240" time="0" condition="!Skin.HasSetting(ExtendedPlot) + !Container.Content(Episodes)">Conditional</animation>
                             </control>
                             <control type="image">
                                 <posx>-5</posx>
@@ -2101,6 +2103,16 @@
                                 <height>360</height>
                                 <texture border="7">windows/home/tile-grey.png</texture>
                                 <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                                <visible>Skin.HasSetting(ExtendedPlot) | Container.Content(Episodes)</visible>
+                            </control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>115</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                                <visible>!Skin.HasSetting(ExtendedPlot) + !Container.Content(Episodes)</visible>
                             </control>
                             <control type="image">
                                 <posx>0</posx>
@@ -2143,6 +2155,7 @@
                                 <shadowcolor>22000000</shadowcolor>
                                 <autoscroll>false</autoscroll>
                                 <font>Font-Condensed-S28</font>
+                                <visible>Skin.HasSetting(ExtendedPlot) | Container.Content(Episodes)</visible>
                             </control>
                             <control type="image">
                                 <description>Set icon</description>
@@ -2151,7 +2164,7 @@
                                 <width>214</width>
                                 <height>120</height>
                                 <texture>flags/other/set-landscape.png</texture>
-                                <visible>substring(Container(54).ListItem(-1).Path,videodb://1/7,left)</visible>
+                                <visible>Skin.HasSetting(ExtendedPlot) + substring(Container(54).ListItem(-1).Path,videodb://1/7,left)</visible>
                             </control>
                         </control>
                         <control type="image">
@@ -2220,6 +2233,7 @@
                                 <height>50</height>
                                 <width>500</width>
                                 <texture>dialogs/shutdown/shadow.png</texture>
+                                <animation effect="slide" start="0,0" end="0,-240" time="0" condition="!Skin.HasSetting(ExtendedPlot) + !Container.Content(Episodes)">Conditional</animation>
                             </control>
                             <control type="image">
                                 <posx>-5</posx>
@@ -2228,6 +2242,16 @@
                                 <height>360</height>
                                 <texture border="7">windows/home/tile-grey.png</texture>
                                 <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                                <visible>Skin.HasSetting(ExtendedPlot) | Container.Content(Episodes)</visible>
+                            </control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>115</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                                <visible>!Skin.HasSetting(ExtendedPlot) + !Container.Content(Episodes)</visible>
                             </control>
                             <control type="image">
                                 <posx>0</posx>
@@ -2270,6 +2294,7 @@
                                 <shadowcolor>22000000</shadowcolor>
                                 <autoscroll>false</autoscroll>
                                 <font>Font-Condensed-S28</font>
+                                <visible>Skin.HasSetting(ExtendedPlot) | Container.Content(Episodes)</visible>
                             </control>
                             <control type="image">
                                 <description>Set icon</description>
@@ -2278,7 +2303,7 @@
                                 <width>214</width>
                                 <height>120</height>
                                 <texture>flags/other/set-landscape.png</texture>
-                                <visible>substring(Container(54).ListItem(3).Path,videodb://1/7,left)</visible>
+                                <visible>Skin.HasSetting(ExtendedPlot) + substring(Container(54).ListItem(3).Path,videodb://1/7,left)</visible>
                             </control>
                         </control>
                         <control type="image">
@@ -2347,6 +2372,7 @@
                                 <height>50</height>
                                 <width>500</width>
                                 <texture>dialogs/shutdown/shadow.png</texture>
+                                <animation effect="slide" start="0,0" end="0,-240" time="0" condition="!Skin.HasSetting(ExtendedPlot) + !Container.Content(Episodes)">Conditional</animation>
                             </control>
                             <control type="image">
                                 <posx>-5</posx>
@@ -2355,6 +2381,16 @@
                                 <height>360</height>
                                 <texture border="7">windows/home/tile-grey.png</texture>
                                 <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                                <visible>Skin.HasSetting(ExtendedPlot) | Container.Content(Episodes)</visible>
+                            </control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>115</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                                <visible>!Skin.HasSetting(ExtendedPlot) + !Container.Content(Episodes)</visible>
                             </control>
                             <control type="image">
                                 <posx>0</posx>
@@ -2397,6 +2433,7 @@
                                 <shadowcolor>22000000</shadowcolor>
                                 <autoscroll>false</autoscroll>
                                 <font>Font-Condensed-S28</font>
+                                <visible>Skin.HasSetting(ExtendedPlot) | Container.Content(Episodes)</visible>
                             </control>
                             <control type="image">
                                 <description>Set icon</description>
@@ -2405,7 +2442,7 @@
                                 <width>214</width>
                                 <height>120</height>
                                 <texture>flags/other/set-landscape.png</texture>
-                                <visible>substring(Container(54).ListItem(2).Path,videodb://1/7,left)</visible>
+                                <visible>Skin.HasSetting(ExtendedPlot) + substring(Container(54).ListItem(2).Path,videodb://1/7,left)</visible>
                             </control>
                         </control>
                         <control type="image">
@@ -2474,6 +2511,7 @@
                                 <height>50</height>
                                 <width>500</width>
                                 <texture>dialogs/shutdown/shadow.png</texture>
+                                <animation effect="slide" start="0,0" end="0,-240" time="0" condition="!Skin.HasSetting(ExtendedPlot) + !Container.Content(Episodes)">Conditional</animation>
                             </control>
                             <control type="image">
                                 <posx>-5</posx>
@@ -2482,6 +2520,16 @@
                                 <height>360</height>
                                 <texture border="7">windows/home/tile-grey.png</texture>
                                 <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                                <visible>Skin.HasSetting(ExtendedPlot) | Container.Content(Episodes)</visible>
+                            </control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>115</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                                <visible>!Skin.HasSetting(ExtendedPlot) + !Container.Content(Episodes)</visible>
                             </control>
                             <control type="image">
                                 <posx>0</posx>
@@ -2524,6 +2572,7 @@
                                 <shadowcolor>22000000</shadowcolor>
                                 <autoscroll>false</autoscroll>
                                 <font>Font-Condensed-S28</font>
+                                <visible>Skin.HasSetting(ExtendedPlot) | Container.Content(Episodes)</visible>
                             </control>
                             <control type="image">
                                 <description>Set icon</description>
@@ -2532,7 +2581,7 @@
                                 <width>214</width>
                                 <height>120</height>
                                 <texture>flags/other/set-landscape.png</texture>
-                                <visible>substring(Container(54).ListItem(1).Path,videodb://1/7,left)</visible>
+                                <visible>Skin.HasSetting(ExtendedPlot) + substring(Container(54).ListItem(1).Path,videodb://1/7,left)</visible>
                             </control>
                         </control>
                         <control type="image">
@@ -2598,6 +2647,7 @@
                         <height>50</height>
                         <width>500</width>
                         <texture>dialogs/shutdown/shadow.png</texture>
+                        <animation effect="slide" start="0,0" end="0,-240" time="0" condition="!Skin.HasSetting(ExtendedPlot) + !Container.Content(Episodes)">Conditional</animation>
                     </control>
                     <control type="image">
                         <posx>-5</posx>
@@ -2605,6 +2655,15 @@
                         <width>490</width>
                         <height>360</height>
                         <texture border="7">windows/home/tile-grey.png</texture>
+                        <visible>Skin.HasSetting(ExtendedPlot) | Container.Content(Episodes)</visible>
+                    </control>
+                    <control type="image">
+                        <posx>-5</posx>
+                        <posy>265</posy>
+                        <width>490</width>
+                        <height>115</height>
+                        <texture border="7">windows/home/tile-grey.png</texture>
+                        <visible>!Skin.HasSetting(ExtendedPlot) + !Container.Content(Episodes)</visible>
                     </control>
                     <control type="image">
                         <posx>0</posx>
@@ -2647,6 +2706,7 @@
                         <shadowcolor>22000000</shadowcolor>
                         <autoscroll>false</autoscroll>
                         <font>Font-Condensed-S28</font>
+                        <visible>Skin.HasSetting(ExtendedPlot) | Container.Content(Episodes)</visible>
                     </control>
                     <control type="image">
                         <description>Set icon</description>
@@ -2655,7 +2715,7 @@
                         <width>214</width>
                         <height>120</height>
                         <texture>flags/other/set-landscape.png</texture>
-                        <visible>substring(Container(54).ListItem(0).Path,videodb://1/7,left)</visible>
+                        <visible>Skin.HasSetting(ExtendedPlot) + substring(Container(54).ListItem(0).Path,videodb://1/7,left)</visible>
                     </control>
                     <control type="image">
                         <posx>0</posx>
@@ -2697,8 +2757,9 @@
             
             <control type="group">      
                 <visible>!Window.IsActive(movieinformation) + Control.IsVisible(54)</visible>
+                <animation effect="slide" start="0,0" end="0,240" time="0" condition="!Skin.HasSetting(ExtendedPlot) + !Container.Content(Episodes)">Conditional</animation>
                 <animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
-                <animation effect="fade" start="0" end="100" time="0" delay="1255" reversible="false">Visible</animation>       
+                <animation effect="fade" start="0" end="100" time="0" delay="1255" reversible="false">Visible</animation>    
                 <control type="fixedlist" id="54">
                     <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Sets)</visible>
                     <posx>-392</posx>
@@ -2732,6 +2793,7 @@
                                 <height>50</height>
                                 <width>500</width>
                                 <texture>dialogs/shutdown/shadow.png</texture>
+                                <animation effect="slide" start="0,0" end="0,-240" time="0" condition="!Skin.HasSetting(ExtendedPlot) + !Container.Content(Episodes)">Conditional</animation>
                             </control>
                             <control type="image">
                                 <posx>-5</posx>
@@ -2740,6 +2802,16 @@
                                 <height>360</height>
                                 <texture border="7">windows/home/tile-grey.png</texture>
                                 <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                                <visible>Skin.HasSetting(ExtendedPlot) | Container.Content(Episodes)</visible>
+                            </control>
+                            <control type="image">
+                                <posx>-5</posx>
+                                <posy>265</posy>
+                                <width>490</width>
+                                <height>115</height>
+                                <texture border="7">windows/home/tile-grey.png</texture>
+                                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                                <visible>!Skin.HasSetting(ExtendedPlot) + !Container.Content(Episodes)</visible>
                             </control>
                             <control type="image">
                                 <posx>0</posx>
@@ -2782,6 +2854,7 @@
                                 <shadowcolor>22000000</shadowcolor>
                                 <autoscroll>false</autoscroll>
                                 <font>Font-Condensed-S28</font>
+                                <visible>Skin.HasSetting(ExtendedPlot) | Container.Content(Episodes)</visible>
                             </control>
                             <control type="image">
                                 <description>Set icon</description>
@@ -2790,7 +2863,7 @@
                                 <width>214</width>
                                 <height>120</height>
                                 <texture>flags/other/set-landscape.png</texture>
-                                <visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+                                <visible>Skin.HasSetting(ExtendedPlot) + substring(ListItem.Path,videodb://1/7,left)</visible>
                             </control>
                         </control>
                         <control type="image">
@@ -2843,6 +2916,7 @@
                                 <height>50</height>
                                 <width>500</width>
                                 <texture>dialogs/shutdown/shadow.png</texture>
+                                <animation effect="slide" start="0,0" end="0,-240" time="0" condition="!Skin.HasSetting(ExtendedPlot) + !Container.Content(Episodes)">Conditional</animation>
                             </control>
                             <control type="group">
                                 <animation type="Focus" condition="Container(54).OnNext | Container(54).OnPrevious">
@@ -2857,6 +2931,15 @@
                                     <width>490</width>
                                     <height>360</height>
                                     <texture border="7">windows/home/tile-grey.png</texture>
+                                    <visible>Skin.HasSetting(ExtendedPlot) | Container.Content(Episodes)</visible>
+                                </control>
+                                <control type="image">
+                                    <posx>-5</posx>
+                                    <posy>265</posy>
+                                    <width>490</width>
+                                    <height>115</height>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <visible>!Skin.HasSetting(ExtendedPlot) + !Container.Content(Episodes)</visible>
                                 </control>
                             </control>
                             <control type="image">
@@ -2900,6 +2983,7 @@
                                 <shadowcolor>22000000</shadowcolor>
                                 <autoscroll delay="13000" time="3000" repeat="13000" />
                                 <font>Font-Condensed-S28</font>
+                                <visible>Skin.HasSetting(ExtendedPlot) | Container.Content(Episodes)</visible>
                             </control>
                             <control type="image">
                                 <description>Set icon</description>
@@ -2908,7 +2992,7 @@
                                 <width>214</width>
                                 <height>120</height>
                                 <texture>flags/other/set-landscape.png</texture>
-                                <visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+                                <visible>Skin.HasSetting(ExtendedPlot) + substring(ListItem.Path,videodb://1/7,left)</visible>
                             </control>
                         </control>
                         <control type="image">
