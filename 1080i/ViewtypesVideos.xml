@@ -1155,7 +1155,8 @@
                     <pagecontrol>70</pagecontrol>
                     <onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
                     <onleft condition="Skin.HasSetting(KioskMode)">51</onleft>
-                    <onright>70</onright>
+                    <onright condition="Control.IsVisible(70)">70</onright>
+                    <onright condition="!Control.IsVisible(70)">71</onright>
                     <onup>51</onup>
                     <ondown>51</ondown>
                     <viewtype label="Info list">list</viewtype>
@@ -1461,7 +1462,6 @@
                             <textcolor>CCFFFFFF</textcolor>
                             <shadowcolor>33000000</shadowcolor>
                             <pagecontrol>71</pagecontrol>
-                            <autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
                             <font>Font-Condensed-S34</font>
                         </control>
                     </control>
@@ -1545,7 +1545,9 @@
                     <pagecontrol>70</pagecontrol>
                     <onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
                     <onleft condition="Skin.HasSetting(KioskMode)">52</onleft>
-                    <onright>70</onright>
+                    <onright condition="!Skin.HasSetting(InfoListPlot)">70</onright>
+                    <onright condition="Skin.HasSetting(InfoListPlot) + Control.IsVisible(70)">70</onright>
+                    <onright condition="Skin.HasSetting(InfoListPlot) + !Control.IsVisible(70)">71</onright>
                     <onup>52</onup>
                     <ondown>52</ondown>
                     <viewtype label="Info list">list</viewtype>
