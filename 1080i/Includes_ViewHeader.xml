@@ -278,12 +278,22 @@
                     <control type="label">
                         <width min="0" max="500">auto</width>
                         <height>120</height>
-                        <label>$INFO[Container.ListItem.TVShowTitle,: ,]$INFO[Container.ListItem.Season, (,)]</label>
+                        <label>$INFO[Container.ListItem.TVShowTitle,: ,]$INFO[Container.ListItem.Season, • $LOCALIZE[41322] ,]</label>
                         <font>Font-Condensed-S36-B</font>
                         <textcolor>aawhite</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
-                        <visible>Container.Content(episodes)</visible>
+                        <visible>Container.Content(episodes) + [Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog)]</visible>
+                    </control>
+                    <control type="label">
+                        <width min="0" max="1000">auto</width>
+                        <height>120</height>
+                        <label>$INFO[Container.ListItem.TVShowTitle,: ,]$INFO[Container.ListItem.Season, • $LOCALIZE[41322] ,]</label>
+                        <font>Font-Condensed-S36-B</font>
+                        <textcolor>aawhite</textcolor>
+                        <scroll>false</scroll>
+                        <align>left</align>
+                        <visible>Container.Content(episodes) + ![Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog)]</visible>
                     </control>
                 </control>
             </control>
