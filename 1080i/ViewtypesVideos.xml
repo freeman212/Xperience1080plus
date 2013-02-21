@@ -1285,9 +1285,8 @@
                     <width>6</width>
                     <height>600</height>
                     <onleft>51</onleft>
-                    <onright condition="Skin.HasSetting(InfoListPlot)">71</onright>
-                    <onright condition="!Skin.HasSetting(KioskMode) + !Skin.HasSetting(InfoListPlot)">9010</onright>
-                    <onright condition="Skin.HasSetting(KioskMode) + !Skin.HasSetting(InfoListPlot)">51</onright>
+                    <onright condition="!Skin.HasSetting(KioskMode)">71</onright>
+                    <onright condition="Skin.HasSetting(KioskMode)">51</onright>
                     <texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
                     <texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
                     <orientation>vertical</orientation>
