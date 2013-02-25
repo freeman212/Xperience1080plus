@@ -50,6 +50,12 @@
             <size>28</size>
         </font>
         <font>
+            <name>Font-Condensed-S28-B</name>
+            <filename>OpenSansCond.ttf</filename>
+            <size>28</size>
+            <style>bold</style>
+        </font>
+        <font>
             <name>Font-Condensed-S29</name>
             <filename>OpenSansCond.ttf</filename>
             <size>29</size>
@@ -334,7 +340,7 @@
 		</font>
     </fontset>
     
-    <fontset id="Arial" idloc="31392" unicode="true">
+    <fontset id="Arial" unicode="true">
         <font>
             <name>Font-Condensed-S18-B</name>
             <filename>Arial.ttf</filename>
