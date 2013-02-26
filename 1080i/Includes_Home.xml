@@ -127,11 +127,11 @@
         <align>left</align>
         <animation type="Visible">
             <effect type="fade" start="0" end="100" time="250" delay="150" tween="sine" easing="inout" />
-            <effect type="slide" start="0,55" end="0,0" time ="500" tween="cubic" easing="inout" />
+            <effect type="slide" start="0,55" end="0,0" time="500" tween="cubic" easing="inout" />
         </animation>
         <animation type="Hidden">
             <effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
-            <effect type="slide" start="0,0" end="0,-55" time ="500" tween="cubic" easing="inout" />
+            <effect type="slide" start="0,0" end="0,-55" time="500" tween="cubic" easing="inout" />
         </animation>
     </include>
  
@@ -286,7 +286,7 @@
                 <width>-50</width>
                 <height>100</height>
                 <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="65,50" condition="!Control.HasFocus(525)">Conditional</animation>
-                <visible>!Skin.HasSetting(HomeHome)</visible>
+                <visible>!Skin.HasSetting(HomeHome) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
                 <control type="image">
                     <posx>-25</posx>
                     <posy>12</posy>
@@ -311,7 +311,7 @@
                 <width>-50</width>
                 <height>100</height>
                 <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="65,50" condition="!Control.HasFocus(225)">Conditional</animation>
-                <visible>!Skin.HasSetting(HomeMovies)</visible>
+                <visible>!Skin.HasSetting(HomeMovies) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
                 <control type="image">
                     <posx>-25</posx>
                     <posy>12</posy>
@@ -336,7 +336,7 @@
                 <width>-50</width>
                 <height>100</height>
                 <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="65,50" condition="!Control.HasFocus(325)">Conditional</animation>
-                <visible>!Skin.HasSetting(HomeTVShows)</visible>
+                <visible>!Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
                 <control type="image">
                     <posx>-25</posx>
                     <posy>12</posy>
@@ -360,7 +360,7 @@
                 <width>-50</width>
                 <height>100</height>
                 <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="65,50" condition="!Control.HasFocus(425)">Conditional</animation>
-                <visible>!Skin.HasSetting(HomeMusic)</visible>
+                <visible>!Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
                 <control type="image">
                     <posx>-25</posx>
                     <posy>12</posy>
