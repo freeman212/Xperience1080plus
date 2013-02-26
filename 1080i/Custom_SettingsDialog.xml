@@ -39,7 +39,7 @@
                     <onclick>Skin.ToggleSetting(HomeHome)</onclick>
                     <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
                     <label>$LOCALIZE[41524]</label>
-                    <visible>!Skin.HasSetting(HomeClassic.Enabled)</visible>
+                    <visible>stringcompare(Skin.String(HomeScreen),metro)</visible>
                 </control>
                 <control type="radiobutton" id="2102">
                     <width>1210</width>
@@ -71,7 +71,7 @@
                     <selected>!Skin.HasSetting(HomePictures)</selected>
                     <onclick>Skin.ToggleSetting(HomePictures)</onclick>
                     <label>$LOCALIZE[1]</label>
-                    <visible>Skin.HasSetting(HomeClassic.Enabled)</visible>
+                    <visible>stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)</visible>
                 </control>
                 <control type="radiobutton" id="2106">
                     <width>1210</width>
@@ -79,7 +79,7 @@
                     <selected>!Skin.HasSetting(HomeTrailers)</selected>
                     <onclick>Skin.ToggleSetting(HomeTrailers)</onclick>
                     <label>Trailers</label>
-                    <visible>Skin.HasSetting(HomeClassic.Enabled) + System.HasAddon(plugin.video.the.trailers)</visible>
+                    <visible>[stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)] + System.HasAddon(plugin.video.the.trailers)</visible>
                 </control>
                 <control type="radiobutton" id="2107">
                     <width>1210</width>
@@ -87,7 +87,7 @@
                     <selected>!Skin.HasSetting(HomeMusicFiles)</selected>
                     <onclick>Skin.ToggleSetting(HomeMusicFiles)</onclick>
                     <label>$LOCALIZE[41447] [LOWERCASE]$LOCALIZE[744][/LOWERCASE]</label>
-                    <visible>Skin.HasSetting(HomeClassic.Enabled)</visible>
+                    <visible>stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)</visible>
                 </control>
                 <control type="radiobutton" id="2108">
                     <width>1210</width>
@@ -95,7 +95,7 @@
                     <selected>!Skin.HasSetting(HomeVideoFiles)</selected>
                     <onclick>Skin.ToggleSetting(HomeVideoFiles)</onclick>
                     <label>Video [LOWERCASE]$LOCALIZE[744][/LOWERCASE]</label>
-                    <visible>Skin.HasSetting(HomeClassic.Enabled)</visible>
+                    <visible>stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)</visible>
                 </control>
                 <control type="radiobutton" id="2109">
                     <width>1210</width>
@@ -111,7 +111,7 @@
                     <selected>!Skin.HasSetting(HomeAddons)</selected>
                     <onclick>Skin.ToggleSetting(HomeAddons)</onclick>
                     <label>$LOCALIZE[24001]</label>
-                    <visible>Skin.HasSetting(HomeClassic.Enabled)</visible>
+                    <visible>stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)</visible>
                 </control>
                 <control type="radiobutton" id="2111">
                     <width>1210</width>
@@ -169,6 +169,13 @@
             <control type="grouplist" id="3">
                 <include>SettingsDialogGrouplistVars</include>
                 <visible>stringcompare(Window(skinsettings).property(Dialog),Home items extras)</visible>
+                <control type="radiobutton" id="2300">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HideHomeSubmenuArrow)</selected>
+                    <onclick>Skin.ToggleSetting(HideHomeSubmenuArrow)</onclick>
+                    <label>$LOCALIZE[41135]</label>
+                </control>
                 <control type="radiobutton" id="2301">
                     <width>1210</width>
                     <include>SettingsDialogRadioButtonVars</include>

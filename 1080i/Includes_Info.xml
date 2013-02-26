@@ -362,7 +362,7 @@
     <include name="Common-Home-Info">
         <include>Common-Clock</include>
         <include>Common-NowPlaying</include>
-        <include condition="Skin.HasSetting(HomeClassic.Enabled)">Common-HomeClassicNowPlaying</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)">Common-HomeClassicNowPlaying</include>
     </include>
     
     <include name="Common-Info">

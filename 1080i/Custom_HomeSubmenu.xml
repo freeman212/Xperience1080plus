@@ -28,9 +28,16 @@
             <control type="label">
                 <description>Root</description>
                 <include>HomeLabel</include>
-                <label>$LOCALIZE[41524] Classic</label>
+                <label>Classic</label>
                 <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
                 <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
+            </control>
+            <control type="label">
+                <description>Root</description>
+                <include>HomeLabel</include>
+                <label>Horizontal</label>
+                <animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
+                <animation effect="zoom"  start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
             </control>
         </control>
         
@@ -54,7 +61,13 @@
             <content>
                 <item id="1">
                     <label>-</label>
-                    <onclick>Skin.ToggleSetting(HomeClassic.Enabled)</onclick>
+                    <onclick>Skin.SetString(HomeScreen,classic)</onclick>
+                    <onclick>Dialog.Close(3023)</onclick>
+                    <onclick>ActivateWindow(home)</onclick>
+                </item>
+                <item id="2">
+                    <label>-</label>
+                    <onclick>Skin.SetString(HomeScreen,horizontal)</onclick>
                     <onclick>Dialog.Close(3023)</onclick>
                     <onclick>ActivateWindow(home)</onclick>
                 </item>
