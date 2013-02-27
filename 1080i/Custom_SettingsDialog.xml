@@ -97,6 +97,14 @@
                     <label>Video [LOWERCASE]$LOCALIZE[744][/LOWERCASE]</label>
                     <visible>stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)</visible>
                 </control>
+                <control type="radiobutton" id="2112">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HomeGames)</selected>
+                    <onclick>Skin.ToggleSetting(HomeGames)</onclick>
+                    <label>$LOCALIZE[15016]</label>
+                    <visible>stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)</visible>
+                </control>
                 <control type="radiobutton" id="2109">
                     <width>1210</width>
                     <include>SettingsDialogRadioButtonVars</include>

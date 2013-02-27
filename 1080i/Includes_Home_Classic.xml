@@ -660,7 +660,13 @@
                     <onclick>ActivateWindow(videos,files,return)</onclick>
                     <icon>windows/home/panel_icons/panel_menu_videos.png</icon>
                     <visible>!Skin.HasSetting(HomeVideoFiles)</visible>
-                </item>             
+                </item>    
+                <item id="13">
+                    <label>$LOCALIZE[15016]</label>
+                    <onclick>ActivateWindow(10001,plugin://plugin.program.advanced.launcher,return)</onclick>
+                    <icon>windows/home/panel_icons/panel_menu_games.png</icon>
+                    <visible>!Skin.HasSetting(HomeGames)</visible>
+                </item>
                 <item id="7">
                     <label>$LOCALIZE[41504]</label>
                     <onclick>ActivateWindow(programs)</onclick>
