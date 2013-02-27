@@ -13,15 +13,15 @@
     <onunload condition="!Skin.HasSetting(HideHomeProfileInfo)">CancelAlarm(ProfileMove,true)</onunload>
     <controls>
         <!-- Backgrounds -->
-        <include condition="stringcompare(Skin.String(HomeScreen),metro)">CommonItemsHome</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))">CommonItemsHome</include>
         <include condition="stringcompare(Skin.String(HomeScreen),classic)">CommonItemsHomeClassic</include>
         <include condition="stringcompare(Skin.String(HomeScreen),horizontal)">CommonItemsHomeHorizontal</include>
 
         <!-- Home screen -->
-        <include condition="stringcompare(Skin.String(HomeScreen),metro)">HomeControlList</include>
-        <include condition="stringcompare(Skin.String(HomeScreen),metro)">HomeControlListLabels</include>
-        <include condition="stringcompare(Skin.String(HomeScreen),metro)">HomeItems</include>
-        <include condition="stringcompare(Skin.String(HomeScreen),metro)">HomeProfileInfo</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))">HomeControlList</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))">HomeControlListLabels</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))">HomeItems</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))">HomeProfileInfo</include>
         
         <!-- Home classic screen -->
         <include condition="stringcompare(Skin.String(HomeScreen),classic)">HomeSubMenuMovies</include>
@@ -50,7 +50,7 @@
         <include>FadeBackground</include>
         
         <!-- Bottom buttons -->
-        <include condition="stringcompare(Skin.String(HomeScreen),metro) + !Skin.HasSetting(HideHomeButtons)">shutdown-favs</include>
+        <include condition="[stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))] + !Skin.HasSetting(HideHomeButtons)">shutdown-favs</include>
         <include condition="stringcompare(Skin.String(HomeScreen),classic) + !Skin.HasSetting(HideHomeButtons)">shutdown-favs-classic</include>
         <include condition="stringcompare(Skin.String(HomeScreen),horizontal) + !Skin.HasSetting(HideHomeButtons)">shutdown-favs-horizontal</include>
         
