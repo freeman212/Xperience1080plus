@@ -1,11 +1,11 @@
 <window>
     <defaultcontrol>525</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
-    <onload condition="Container(20).HasFocus(2) + stringcompare(Skin.String(HomeScreen),metro)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onload>
-    <onload condition="Container(20).HasFocus(2) + stringcompare(Skin.String(HomeScreen),metro)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onload>
-    <onload condition="Container(20).HasFocus(3) + stringcompare(Skin.String(HomeScreen),metro)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onload>
-    <onload condition="Container(20).HasFocus(4) + stringcompare(Skin.String(HomeScreen),metro)">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onload>
-    <onload condition="Container(20).HasFocus(5) + stringcompare(Skin.String(HomeScreen),metro)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onload>
+    <onload condition="Container(20).HasFocus(2) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onload>
+    <onload condition="Container(20).HasFocus(2) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onload>
+    <onload condition="Container(20).HasFocus(3) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onload>
+    <onload condition="Container(20).HasFocus(4) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onload>
+    <onload condition="Container(20).HasFocus(5) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onload>
     <onload condition="!Skin.HasSetting(HideHomeProfileInfo)">AlarmClock(ProfileMove,Control.Move(30,1),00:10,silent,loop)</onload>
     <onunload>CancelAlarm(HomeTileMove,true)</onunload>
     <onunload>CancelAlarm(HomeTileMoveTwo,true)</onunload>
