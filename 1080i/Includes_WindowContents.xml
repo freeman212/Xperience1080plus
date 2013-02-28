@@ -80,7 +80,7 @@
             <include>FullscreenDimensions</include>
             <include>Animation_FanartFade</include>
             <texture>windows/common/overlay2.png</texture>
-            <visible>Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-globalsearch-infodialog.xml) | Control.HasFocus(82)</visible>
+            <visible>Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-globalsearch-infodialog.xml) | Control.HasFocus(82) | Control.HasFocus(83)</visible>
         </control>
         <control type="image">
             <include>FullscreenDimensions</include>
@@ -198,12 +198,20 @@
             <visible>!IsEmpty(Window(Home).property(fanart_image)) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
         </control>
         <control type="image">
-            <description>Classic recent items fanart(s)</description>
+            <description>Classic and Horizontal recent items fanarts</description>
             <include>FullscreenDimensions</include>
             <texture background="true">$INFO[Container(82).ListItem.Icon]</texture>
             <fadetime>600</fadetime>
             <include>Animation_FanartFade</include>
             <visible>Control.HasFocus(82) + [stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)] + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
+        </control>
+        <control type="image">
+            <description>Horizontal featured/ongoing/spotlight items fanarts</description>
+            <include>FullscreenDimensions</include>
+            <texture background="true">$INFO[Container(83).ListItem.Icon]</texture>
+            <fadetime>600</fadetime>
+            <include>Animation_FanartFade</include>
+            <visible>Control.HasFocus(83) + stringcompare(Skin.String(HomeScreen),horizontal) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
         </control>
     </include>
 

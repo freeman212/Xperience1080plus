@@ -20,26 +20,50 @@
             <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
             <effect type="slide" start="0,0" end="0,-75" time="300" tween="sine" easing="out" />
         </animation>
+        <animation type="Conditional" condition="Control.HasFocus(82)" reversible="false">
+            <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" delay="350" />
+            <effect type="slide" start="0,-75" end="0,0" time="350" tween="sine" easing="out" delay="350" />
+        </animation>
+        <animation type="Conditional" condition="Control.HasFocus(83)" reversible="false">
+            <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" delay="350" />
+            <effect type="slide" start="0,-75" end="0,0" time="350" tween="sine" easing="out" delay="350" />
+        </animation>
     </include>
     
     <variable name="HomeRecentTitleIcon">
-        <value condition="Container(20).HasFocus(2)">DefaultRecentlyAddedMovies.png</value>
-        <value condition="Container(20).HasFocus(3)">DefaultRecentlyAddedEpisodes.png</value>
-        <value condition="Container(20).HasFocus(4)">DefaultMusicRecentlyAdded.png</value>
+        <value condition="Container(20).HasFocus(2) + Control.HasFocus(82)">DefaultRecentlyAddedMovies.png</value>
+        <value condition="Container(20).HasFocus(3) + Control.HasFocus(82)">DefaultRecentlyAddedEpisodes.png</value>
+        <value condition="Container(20).HasFocus(4) + Control.HasFocus(82)">DefaultMusicRecentlyAdded.png</value>
+        <value condition="Container(20).HasFocus(2) + Control.HasFocus(83)">DefaultMovies.png</value>
+        <value condition="Container(20).HasFocus(3) + Control.HasFocus(83)">DefaultTVShows.png</value>
+        <value condition="Container(20).HasFocus(4) + Control.HasFocus(83)">DefaultMusicAlbums.png</value>
     </variable>
     
     <variable name="HomeRecentTitleLabel">
-        <value condition="Container(20).HasFocus(2)">$LOCALIZE[20386]</value>
-        <value condition="Container(20).HasFocus(3)">$LOCALIZE[20387]</value>
-        <value condition="Container(20).HasFocus(4)">$LOCALIZE[359]</value>
+        <value condition="Container(20).HasFocus(2) + Control.HasFocus(82)">$LOCALIZE[20386]</value>
+        <value condition="Container(20).HasFocus(3) + Control.HasFocus(82)">$LOCALIZE[20387]</value>
+        <value condition="Container(20).HasFocus(4) + Control.HasFocus(82)">$LOCALIZE[359]</value>
+        <value condition="Container(20).HasFocus(2) + Control.HasFocus(83)">$LOCALIZE[41550]</value>
+        <value condition="Container(20).HasFocus(3) + Control.HasFocus(83)">$LOCALIZE[41551]</value>
+        <value condition="Container(20).HasFocus(4) + Control.HasFocus(83)">$LOCALIZE[41556]</value>
     </variable>
 
     <include name="HomeRecentTitleHorizontal">
         <control type="group">
-            <visible>Control.HasFocus(82)</visible>
+            <visible>Control.HasFocus(82) | Control.HasFocus(83)</visible>
             <posx>75</posx>
             <posy>26</posy>
             <include>HomeRecentTitleAnimation</include>
+            <control type="image">
+                <posx>870</posx>
+                <posy>140</posy>
+                <width>29</width>
+                <height>14</height>
+                <texture>windows/home/arrow.png</texture>
+                <animation effect="slide" start="0,0" end="0,210" condition="Container(20).HasFocus(3)">Conditional</animation>
+                <animation effect="slide" start="0,0" end="0,100" condition="Container(20).HasFocus(4)">Conditional</animation>
+                <visible>Control.HasFocus(82)</visible>
+            </control>
             <control type="image">
                 <posx>17</posx>
                 <posy>31</posy>
@@ -59,6 +83,7 @@
                 <label>[B]$VAR[HomeRecentTitleLabel][/B]</label>
             </control>
             <control type="grouplist">
+                <visible>Control.HasFocus(82)</visible>
                 <posx>110</posx>
                 <posy>32</posy>
                 <orientation>horizontal</orientation>
@@ -94,12 +119,49 @@
                     <visible>IntegerGreaterThan(Container(82).NumPages,1)</visible>
                 </control>
             </control>
+            <control type="grouplist">
+                <visible>Control.HasFocus(83)</visible>
+                <posx>110</posx>
+                <posy>32</posy>
+                <orientation>horizontal</orientation>
+                <itemgap>0</itemgap>
+                <control type="label">
+                    <width min="50" max="400">auto</width>
+                    <height>120</height>
+                    <label>$INFO[Container(83).NumItems,, $LOCALIZE[41822]]</label>
+                    <font>Font-Condensed-S28</font>
+                    <textcolor>80FFFFFF</textcolor>
+                    <scroll>false</scroll>
+                    <align>left</align>
+                    <visible>IntegerGreaterThan(Container(83).NumItems,0) + !IntegerGreaterThan(Container(83).NumItems,1)</visible>
+                </control>
+                <control type="label">
+                    <width min="50" max="400">auto</width>
+                    <height>120</height>
+                    <label>$INFO[Container(83).NumItems,, $LOCALIZE[41817]]</label>
+                    <font>Font-Condensed-S28</font>
+                    <textcolor>80FFFFFF</textcolor>
+                    <scroll>false</scroll>
+                    <align>left</align>
+                    <visible>!IntegerGreaterThan(Container(83).NumItems,0) | IntegerGreaterThan(Container(83).NumItems,1)</visible>
+                </control>
+                <control type="label">
+                    <width min="50" max="400">auto</width>
+                    <height>120</height>
+                    <label>$INFO[Container(83).CurrentPage, • $LOCALIZE[41819] ,]$INFO[Container(83).NumPages,/,]</label>
+                    <font>Font-Condensed-S28</font>
+                    <textcolor>80FFFFFF</textcolor>
+                    <scroll>false</scroll>
+                    <align>left</align>
+                    <visible>IntegerGreaterThan(Container(83).NumPages,1)</visible>
+                </control>
+            </control>
         </control>
     </include>    
-    
+
     <include name="Recent-List-Horizontal">
         <control type="group">
-            <!-- movies -->
+            <!-- recent movies -->
             <control type="fixedlist" id="82">
                 <visible allowhiddenfocus="true">Control.HasFocus(82) + Container(20).HasFocus(2)</visible>
                 <include>BannerListInfoAnimation</include>
@@ -108,7 +170,7 @@
                 <posy>195</posy>
                 <width>2282</width>
                 <height>750</height>
-                <onup>82</onup>
+                <onup>83</onup>
                 <ondown>20</ondown>
                 <onleft>82</onleft>
                 <onright>82</onright>
@@ -365,16 +427,282 @@
                     </item>
                 </content>
             </control>
-            <!-- tv shows -->
-            <control type="fixedlist" id="82">
-                <visible allowhiddenfocus="true">Control.HasFocus(82) + Container(20).HasFocus(3)</visible>
+            <!-- random movies -->
+            <control type="fixedlist" id="83">
+                <visible allowhiddenfocus="true">Control.HasFocus(83) + Container(20).HasFocus(2)</visible>
                 <include>BannerListInfoAnimation</include>
-                <description>Episodes</description>
+                <description>Movies</description>
+                <posx>-227</posx>
+                <posy>195</posy>
+                <width>2282</width>
+                <height>750</height>
+                <onup>83</onup>
+                <ondown>82</ondown>
+                <onleft>83</onleft>
+                <onright>83</onright>
+                <viewtype label="List">List</viewtype>
+                <scrolltime tween="cubic" easing="out">500</scrolltime>
+                <orientation>horizontal</orientation>
+                <preloaditems>2</preloaditems>
+                <focusposition>1</focusposition>
+                <itemlayout width="332" height="750">
+                    <control type="group">
+                        <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+                        <control type="image">
+                            <posx>-5</posx>
+                            <posy>475</posy>
+                            <width>330</width>
+                            <height>110</height>
+                            <texture border="7">windows/home/tile-grey.png</texture>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <posy>493</posy>
+                            <width>280</width>
+                            <height>40</height>
+                            <font>Font-Condensed-S29-B</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>ddwhite</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <aligny>center</aligny>
+                            <scroll>no</scroll>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <posy>529</posy>
+                            <width>280</width>
+                            <height>40</height>
+                            <font>Font-Condensed-S27</font>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <textcolor>99FFFFFF</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <aligny>center</aligny>
+                            <scroll>false</scroll>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <animation effect="fade" start="100" end="90" time="0" condition="true">Conditional</animation>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>320</width>
+                            <height>480</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.property(Poster)]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>479</posy>
+                            <width>320</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                    </control>
+                    <control type="image">
+                        <posx>220</posx>
+                        <posy>0</posy>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>overlays/OverlayUnWatched.png/extended-w.png</texture>
+                        <visible>substring(ListItem.property(Overlay),false)</visible>
+                    </control>
+                    <control type="image">
+                        <posx>220</posx>
+                        <posy>0</posy>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>overlays/OverlayWatched.png/extended-w.png</texture>
+                        <visible>substring(ListItem.property(Overlay),true)</visible>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="332" height="750">
+                    <control type="group">
+                        <animation effect="fade" start="50" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                        <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout">UnFocus</animation>
+                        <control type="image">
+                            <posx>-5</posx>
+                            <posy>475</posy>
+                            <width>330</width>
+                            <height>110</height>
+                            <texture border="7">windows/home/tile-grey.png</texture>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <posy>493</posy>
+                            <width>280</width>
+                            <height>40</height>
+                            <font>Font-Condensed-S29-B</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>ddwhite</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <aligny>center</aligny>
+                            <scroll>true</scroll>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <posy>529</posy>
+                            <width>280</width>
+                            <height>40</height>
+                            <font>Font-Condensed-S27</font>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <textcolor>99FFFFFF</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <aligny>center</aligny>
+                            <scroll>true</scroll>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <animation effect="fade" start="90" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                        <animation effect="fade" start="100" end="90" time="300" tween="sine" easing="inout">UnFocus</animation>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>320</width>
+                            <height>480</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.property(Poster)]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>479</posy>
+                            <width>320</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                    </control>
+                    <control type="image">
+                        <posx>220</posx>
+                        <posy>0</posy>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>overlays/OverlayUnWatched.png/extended-w.png</texture>
+                        <visible>substring(ListItem.property(Overlay),false)</visible>
+                    </control>
+                    <control type="image">
+                        <posx>220</posx>
+                        <posy>0</posy>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>overlays/OverlayWatched.png/extended-w.png</texture>
+                        <visible>substring(ListItem.property(Overlay),true)</visible>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <!-- recent movies -->
+                    <item id="1">
+                        <onclick>SetFocus(20)</onclick>
+                        <onclick>$INFO[Window.Property(RandomMovie.1.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RandomMovie.1.Art(fanart))]</icon>
+                        <property name="Poster">$INFO[Window.Property(RandomMovie.1.Art(poster))]</property>
+                        <property name="Overlay">$INFO[Window.Property(RandomMovie.1.Watched)]</property>
+                        <label>$INFO[Window.Property(RandomMovie.1.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RandomMovie.1.Year),, • ]$INFO[Window.Property(RandomMovie.1.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovie.1.Rating), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
+                    </item>
+                    <item id="2">
+                        <onclick>SetFocus(20)</onclick>
+                        <onclick>$INFO[Window.Property(RandomMovie.2.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RandomMovie.2.Art(fanart))]</icon>
+                        <property name="Poster">$INFO[Window.Property(RandomMovie.2.Art(poster))]</property>
+                        <property name="Overlay">$INFO[Window.Property(RandomMovie.2.Watched)]</property>
+                        <label>$INFO[Window.Property(RandomMovie.2.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RandomMovie.2.Year),, • ]$INFO[Window.Property(RandomMovie.2.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovie.2.Rating), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
+                    </item>
+                    <item id="3">
+                        <onclick>SetFocus(20)</onclick>
+                        <onclick>$INFO[Window.Property(RandomMovie.3.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RandomMovie.3.Art(fanart))]</icon>
+                        <property name="Poster">$INFO[Window.Property(RandomMovie.3.Art(poster))]</property>
+                        <property name="Overlay">$INFO[Window.Property(RandomMovie.3.Watched)]</property>
+                        <label>$INFO[Window.Property(RandomMovie.3.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RandomMovie.3.Year),, • ]$INFO[Window.Property(RandomMovie.3.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovie.3.Rating), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
+                    </item>
+                    <item id="4">
+                        <onclick>SetFocus(20)</onclick>
+                        <onclick>$INFO[Window.Property(RandomMovie.4.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RandomMovie.4.Art(fanart))]</icon>
+                        <property name="Poster">$INFO[Window.Property(RandomMovie.4.Art(poster))]</property>
+                        <property name="Overlay">$INFO[Window.Property(RandomMovie.4.Watched)]</property>
+                        <label>$INFO[Window.Property(RandomMovie.4.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RandomMovie.4.Year),, • ]$INFO[Window.Property(RandomMovie.4.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovie.4.Rating), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
+                    </item>
+                    <item id="5">
+                        <onclick>SetFocus(20)</onclick>
+                        <onclick>$INFO[Window.Property(RandomMovie.5.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RandomMovie.5.Art(fanart))]</icon>
+                        <property name="Poster">$INFO[Window.Property(RandomMovie.5.Art(poster))]</property>
+                        <property name="Overlay">$INFO[Window.Property(RandomMovie.5.Watched)]</property>
+                        <label>$INFO[Window.Property(RandomMovie.5.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RandomMovie.5.Year),, • ]$INFO[Window.Property(RandomMovie.5.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovie.5.Rating), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
+                    </item>
+                    <item id="6">
+                        <onclick>SetFocus(20)</onclick>
+                        <onclick>$INFO[Window.Property(RandomMovie.6.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RandomMovie.6.Art(fanart))]</icon>
+                        <property name="Poster">$INFO[Window.Property(RandomMovie.6.Art(poster))]</property>
+                        <property name="Overlay">$INFO[Window.Property(RandomMovie.6.Watched)]</property>
+                        <label>$INFO[Window.Property(RandomMovie.6.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RandomMovie.6.Year),, • ]$INFO[Window.Property(RandomMovie.6.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovie.6.Rating), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
+                    </item>
+                    <item id="7">
+                        <onclick>SetFocus(20)</onclick>
+                        <onclick>$INFO[Window.Property(RandomMovie.7.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RandomMovie.7.Art(fanart))]</icon>
+                        <property name="Poster">$INFO[Window.Property(RandomMovie.7.Art(poster))]</property>
+                        <property name="Overlay">$INFO[Window.Property(RandomMovie.7.Watched)]</property>
+                        <label>$INFO[Window.Property(RandomMovie.7.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RandomMovie.7.Year),, • ]$INFO[Window.Property(RandomMovie.7.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovie.7.Rating), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
+                    </item>
+                    <item id="8">
+                        <onclick>SetFocus(20)</onclick>
+                        <onclick>$INFO[Window.Property(RandomMovie.8.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RandomMovie.8.Art(fanart))]</icon>
+                        <property name="Poster">$INFO[Window.Property(RandomMovie.8.Art(poster))]</property>
+                        <property name="Overlay">$INFO[Window.Property(RandomMovie.8.Watched)]</property>
+                        <label>$INFO[Window.Property(RandomMovie.8.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RandomMovie.8.Year),, • ]$INFO[Window.Property(RandomMovie.8.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovie.8.Rating), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
+                    </item>
+                    <item id="9">
+                        <onclick>SetFocus(20)</onclick>
+                        <onclick>$INFO[Window.Property(RandomMovie.9.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RandomMovie.9.Art(fanart))]</icon>
+                        <property name="Poster">$INFO[Window.Property(RandomMovie.9.Art(poster))]</property>
+                        <property name="Overlay">$INFO[Window.Property(RandomMovie.9.Watched)]</property>
+                        <label>$INFO[Window.Property(RandomMovie.9.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RandomMovie.9.Year),, • ]$INFO[Window.Property(RandomMovie.9.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovie.9.Rating), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
+                    </item>
+                    <item id="10">
+                        <onclick>SetFocus(20)</onclick>
+                        <onclick>$INFO[Window.Property(RandomMovie.10.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RandomMovie.10.Art(fanart))]</icon>
+                        <property name="Poster">$INFO[Window.Property(RandomMovie.10.Art(poster))]</property>
+                        <property name="Overlay">$INFO[Window.Property(RandomMovie.10.Watched)]</property>
+                        <label>$INFO[Window.Property(RandomMovie.10.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RandomMovie.10.Year),, • ]$INFO[Window.Property(RandomMovie.10.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovie.10.Rating), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(movies))</visible>
+                    </item>
+                </content>
+            </control>
+            <!-- tv shows recent -->
+            <control type="fixedlist" id="82">
+                <visible allowhiddenfocus="true">Control.HasFocus(82) + Container(20).HasFocus(3) + !Control.HasFocus(83)</visible>
+                <include>BannerListInfoAnimation</include>
+                <description>Recent Episodes</description>
                 <posx>-387</posx>
                 <posy>405</posy>
                 <width>2460</width>
                 <height>400</height>
-                <onup>82</onup>
+                <onup>83</onup>
                 <ondown>20</ondown>
                 <onleft>82</onleft>
                 <onright>82</onright>
@@ -650,8 +978,274 @@
                         <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
                     </item>
                 </content>
+            </control> 
+            <!-- tv shows ongoing -->
+            <control type="fixedlist" id="83">
+                <visible allowhiddenfocus="true">Control.HasFocus(83) + Container(20).HasFocus(3) + !Control.HasFocus(82)</visible>
+                <include>BannerListInfoAnimation</include>
+                <description>Ongoing Episodes</description>
+                <posx>-227</posx>
+                <posy>195</posy>
+                <width>2282</width>
+                <height>750</height>
+                <onup>83</onup>
+                <ondown>82</ondown>
+                <onleft>83</onleft>
+                <onright>83</onright>
+                <viewtype label="List">List</viewtype>
+                <scrolltime tween="cubic" easing="out">500</scrolltime>
+                <orientation>horizontal</orientation>
+                <preloaditems>2</preloaditems>
+                <focusposition>1</focusposition>
+                <itemlayout width="332" height="750">
+                    <control type="group">
+                        <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+                        <control type="image">
+                            <posx>-5</posx>
+                            <posy>475</posy>
+                            <width>330</width>
+                            <height>110</height>
+                            <texture border="7">windows/home/tile-grey.png</texture>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <posy>493</posy>
+                            <width>280</width>
+                            <height>40</height>
+                            <font>Font-Condensed-S29-B</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>ddwhite</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <aligny>center</aligny>
+                            <scroll>no</scroll>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <posy>529</posy>
+                            <width>280</width>
+                            <height>40</height>
+                            <font>Font-Condensed-S27</font>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <textcolor>99FFFFFF</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <aligny>center</aligny>
+                            <scroll>false</scroll>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <animation effect="fade" start="100" end="90" time="0" condition="true">Conditional</animation>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>320</width>
+                            <height>480</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.property(TVShowPoster)]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>479</posy>
+                            <width>320</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                    </control>
+                    <control type="image">
+                        <posx>220</posx>
+                        <posy>0</posy>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>overlays/OverlayUnWatched.png/extended-w.png</texture>
+                        <visible>substring(ListItem.property(Overlay),false)</visible>
+                    </control>
+                    <control type="image">
+                        <posx>220</posx>
+                        <posy>0</posy>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>overlays/OverlayWatched.png/extended-w.png</texture>
+                        <visible>substring(ListItem.property(Overlay),true)</visible>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="332" height="750">
+                    <control type="group">
+                        <animation effect="fade" start="50" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                        <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout">UnFocus</animation>
+                        <control type="image">
+                            <posx>-5</posx>
+                            <posy>475</posy>
+                            <width>330</width>
+                            <height>110</height>
+                            <texture border="7">windows/home/tile-grey.png</texture>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <posy>493</posy>
+                            <width>280</width>
+                            <height>40</height>
+                            <font>Font-Condensed-S29-B</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>ddwhite</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <aligny>center</aligny>
+                            <scroll>true</scroll>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <posy>529</posy>
+                            <width>280</width>
+                            <height>40</height>
+                            <font>Font-Condensed-S27</font>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <textcolor>99FFFFFF</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <aligny>center</aligny>
+                            <scroll>true</scroll>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <animation effect="fade" start="90" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                        <animation effect="fade" start="100" end="90" time="300" tween="sine" easing="inout">UnFocus</animation>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>320</width>
+                            <height>480</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.property(TVShowPoster)]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>479</posy>
+                            <width>320</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                    </control>
+                    <control type="image">
+                        <posx>220</posx>
+                        <posy>0</posy>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>overlays/OverlayUnWatched.png/extended-w.png</texture>
+                        <visible>substring(ListItem.property(Overlay),false)</visible>
+                    </control>
+                    <control type="image">
+                        <posx>220</posx>
+                        <posy>0</posy>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>overlays/OverlayWatched.png/extended-w.png</texture>
+                        <visible>substring(ListItem.property(Overlay),true)</visible>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <!-- ongoing episodes -->
+                    <item id="1">
+                        <onclick>SetFocus(20)</onclick>
+                        <onclick>$INFO[Window.Property(RecommendedEpisode.1.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RecommendedEpisode.1.Art(tvshow.fanart))]</icon>
+                        <property name="TVShowPoster">$INFO[Window.Property(RecommendedEpisode.1.Art(tvshow.poster))]</property>
+                        <property name="Overlay">$INFO[Window.Property(RecommendedEpisode.1.Watched)]</property>
+                        <label>$INFO[Window.Property(RecommendedEpisode.1.TVshowTitle)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecommendedEpisode.1.Title),, • ]$INFO[Window.Property(RecommendedEpisode.1.Season),S,]$INFO[Window.Property(RecommendedEpisode.1.Episode),E,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
+                    </item>
+                    <item id="2">
+                        <onclick>SetFocus(20)</onclick>
+                        <onclick>$INFO[Window.Property(RecommendedEpisode.2.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RecommendedEpisode.2.Art(tvshow.fanart))]</icon>
+                        <property name="TVShowPoster">$INFO[Window.Property(RecommendedEpisode.2.Art(tvshow.poster))]</property>
+                        <property name="Overlay">$INFO[Window.Property(RecommendedEpisode.2.Watched)]</property>
+                        <label>$INFO[Window.Property(RecommendedEpisode.2.TVshowTitle)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecommendedEpisode.2.Title),, • ]$INFO[Window.Property(RecommendedEpisode.2.Season),S,]$INFO[Window.Property(RecommendedEpisode.2.Episode),E,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
+                    </item>
+                    <item id="3">
+                        <onclick>SetFocus(20)</onclick>
+                        <onclick>$INFO[Window.Property(RecommendedEpisode.3.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RecommendedEpisode.3.Art(tvshow.fanart))]</icon>
+                        <property name="TVShowPoster">$INFO[Window.Property(RecommendedEpisode.3.Art(tvshow.poster))]</property>
+                        <property name="Overlay">$INFO[Window.Property(RecommendedEpisode.3.Watched)]</property>
+                        <label>$INFO[Window.Property(RecommendedEpisode.3.TVshowTitle)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecommendedEpisode.3.Title),, • ]$INFO[Window.Property(RecommendedEpisode.3.Season),S,]$INFO[Window.Property(RecommendedEpisode.3.Episode),E,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
+                    </item>
+                    <item id="4">
+                        <onclick>SetFocus(20)</onclick>
+                        <onclick>$INFO[Window.Property(RecommendedEpisode.4.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RecommendedEpisode.4.Art(tvshow.fanart))]</icon>
+                        <property name="TVShowPoster">$INFO[Window.Property(RecommendedEpisode.4.Art(tvshow.poster))]</property>
+                        <property name="Overlay">$INFO[Window.Property(RecommendedEpisode.4.Watched)]</property>
+                        <label>$INFO[Window.Property(RecommendedEpisode.4.TVshowTitle)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecommendedEpisode.4.Title),, • ]$INFO[Window.Property(RecommendedEpisode.4.Season),S,]$INFO[Window.Property(RecommendedEpisode.4.Episode),E,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
+                    </item>
+                    <item id="5">
+                        <onclick>SetFocus(20)</onclick>
+                        <onclick>$INFO[Window.Property(RecommendedEpisode.5.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RecommendedEpisode.5.Art(tvshow.fanart))]</icon>
+                        <property name="TVShowPoster">$INFO[Window.Property(RecommendedEpisode.5.Art(tvshow.poster))]</property>
+                        <property name="Overlay">$INFO[Window.Property(RecommendedEpisode.5.Watched)]</property>
+                        <label>$INFO[Window.Property(RecommendedEpisode.5.TVshowTitle)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecommendedEpisode.5.Title),, • ]$INFO[Window.Property(RecommendedEpisode.5.Season),S,]$INFO[Window.Property(RecommendedEpisode.5.Episode),E,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
+                    </item>
+                    <item id="6">
+                        <onclick>SetFocus(20)</onclick>
+                        <onclick>$INFO[Window.Property(RecommendedEpisode.6.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RecommendedEpisode.6.Art(tvshow.fanart))]</icon>
+                        <property name="TVShowPoster">$INFO[Window.Property(RecommendedEpisode.6.Art(tvshow.poster))]</property>
+                        <property name="Overlay">$INFO[Window.Property(RecommendedEpisode.6.Watched)]</property>
+                        <label>$INFO[Window.Property(RecommendedEpisode.6.TVshowTitle)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecommendedEpisode.6.Title),, • ]$INFO[Window.Property(RecommendedEpisode.6.Season),S,]$INFO[Window.Property(RecommendedEpisode.6.Episode),E,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
+                    </item>
+                    <item id="7">
+                        <onclick>SetFocus(20)</onclick>
+                        <onclick>$INFO[Window.Property(RecommendedEpisode.7.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RecommendedEpisode.7.Art(tvshow.fanart))]</icon>
+                        <property name="TVShowPoster">$INFO[Window.Property(RecommendedEpisode.7.Art(tvshow.poster))]</property>
+                        <property name="Overlay">$INFO[Window.Property(RecommendedEpisode.7.Watched)]</property>
+                        <label>$INFO[Window.Property(RecommendedEpisode.7.TVshowTitle)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecommendedEpisode.7.Title),, • ]$INFO[Window.Property(RecommendedEpisode.7.Season),S,]$INFO[Window.Property(RecommendedEpisode.7.Episode),E,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
+                    </item>
+                    <item id="8">
+                        <onclick>SetFocus(20)</onclick>
+                        <onclick>$INFO[Window.Property(RecommendedEpisode.8.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RecommendedEpisode.8.Art(tvshow.fanart))]</icon>
+                        <property name="TVShowPoster">$INFO[Window.Property(RecommendedEpisode.8.Art(tvshow.poster))]</property>
+                        <property name="Overlay">$INFO[Window.Property(RecommendedEpisode.8.Watched)]</property>
+                        <label>$INFO[Window.Property(RecommendedEpisode.8.TVshowTitle)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecommendedEpisode.8.Title),, • ]$INFO[Window.Property(RecommendedEpisode.8.Season),S,]$INFO[Window.Property(RecommendedEpisode.8.Episode),E,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
+                    </item>
+                    <item id="9">
+                        <onclick>SetFocus(20)</onclick>
+                        <onclick>$INFO[Window.Property(RecommendedEpisode.9.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RecommendedEpisode.9.Art(tvshow.fanart))]</icon>
+                        <property name="TVShowPoster">$INFO[Window.Property(RecommendedEpisode.9.Art(tvshow.poster))]</property>
+                        <property name="Overlay">$INFO[Window.Property(RecommendedEpisode.9.Watched)]</property>
+                        <label>$INFO[Window.Property(RecommendedEpisode.9.TVshowTitle)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecommendedEpisode.9.Title),, • ]$INFO[Window.Property(RecommendedEpisode.9.Season),S,]$INFO[Window.Property(RecommendedEpisode.9.Episode),E,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
+                    </item>
+                    <item id="10">
+                        <onclick>SetFocus(20)</onclick>
+                        <onclick>$INFO[Window.Property(RecommendedEpisode.10.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RecommendedEpisode.10.Art(tvshow.fanart))]</icon>
+                        <property name="TVShowPoster">$INFO[Window.Property(RecommendedEpisode.10.Art(tvshow.poster))]</property>
+                        <property name="Overlay">$INFO[Window.Property(RecommendedEpisode.10.Watched)]</property>
+                        <label>$INFO[Window.Property(RecommendedEpisode.10.TVshowTitle)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecommendedEpisode.10.Title),, • ]$INFO[Window.Property(RecommendedEpisode.10.Season),S,]$INFO[Window.Property(RecommendedEpisode.10.Episode),E,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
+                    </item>
+                </content>
             </control>   
-            <!-- music -->
+            <!-- recent albums -->
             <control type="fixedlist" id="82">
                 <visible allowhiddenfocus="true">Control.HasFocus(82) + Container(20).HasFocus(4)</visible>
                 <include>BannerListInfoAnimation</include>
@@ -660,7 +1254,7 @@
                 <posy>295</posy>
                 <width>2352</width>
                 <height>550</height>
-                <onup>82</onup>
+                <onup>83</onup>
                 <ondown>20</ondown>
                 <onleft>82</onleft>
                 <onright>82</onright>
@@ -864,6 +1458,220 @@
                         <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
                     </item>
                 </content>
+            </control>
+            <!-- featured albums -->
+            <control type="fixedlist" id="83">
+                <visible allowhiddenfocus="true">Control.HasFocus(83) + Container(20).HasFocus(4)</visible>
+                <include>BannerListInfoAnimation</include>
+                <description>Albums</description>
+                <posx>-287</posx>
+                <posy>295</posy>
+                <width>2352</width>
+                <height>550</height>
+                <onup>83</onup>
+                <ondown>82</ondown>
+                <onleft>83</onleft>
+                <onright>83</onright>
+                <viewtype label="List">List</viewtype>
+                <scrolltime tween="cubic" easing="out">500</scrolltime>
+                <orientation>horizontal</orientation>
+                <preloaditems>2</preloaditems>
+                <focusposition>1</focusposition>
+                <itemlayout width="392" height="550">
+                    <control type="group">
+                        <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+                        <control type="image">
+                            <posx>-5</posx>
+                            <posy>375</posy>
+                            <width>390</width>
+                            <height>110</height>
+                            <texture border="7">windows/home/tile-grey.png</texture>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <posy>393</posy>
+                            <width>340</width>
+                            <height>40</height>
+                            <font>Font-Condensed-S29-B</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>ddwhite</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <aligny>center</aligny>
+                            <scroll>no</scroll>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <posy>429</posy>
+                            <width>340</width>
+                            <height>40</height>
+                            <font>Font-Condensed-S27</font>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <textcolor>99FFFFFF</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <aligny>center</aligny>
+                            <scroll>false</scroll>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <animation effect="fade" start="100" end="90" time="0" condition="true">Conditional</animation>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.property(Cover)]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>379</posy>
+                            <width>380</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="392" height="550">
+                    <control type="group">
+                        <animation effect="fade" start="50" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                        <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout">UnFocus</animation>
+                        <control type="image">
+                            <posx>-5</posx>
+                            <posy>375</posy>
+                            <width>390</width>
+                            <height>110</height>
+                            <texture border="7">windows/home/tile-grey.png</texture>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <posy>393</posy>
+                            <width>340</width>
+                            <height>40</height>
+                            <font>Font-Condensed-S29-B</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>ddwhite</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <aligny>center</aligny>
+                            <scroll>true</scroll>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <posy>429</posy>
+                            <width>340</width>
+                            <height>40</height>
+                            <font>Font-Condensed-S27</font>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <textcolor>99FFFFFF</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <aligny>center</aligny>
+                            <scroll>true</scroll>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <animation effect="fade" start="90" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                        <animation effect="fade" start="100" end="90" time="300" tween="sine" easing="inout">UnFocus</animation>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.property(Cover)]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>379</posy>
+                            <width>380</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <!-- featured albums -->
+                    <item id="1">
+                        <onclick>$INFO[Window.Property(RandomAlbum.1.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RandomAlbum.1.Art(fanart))]</icon>
+                        <property name="Cover">$INFO[Window.Property(RandomAlbum.1.Art(thumb))]</property>
+                        <label>$INFO[Window.Property(RandomAlbum.1.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RandomAlbum.1.Artist)]$INFO[Window.Property(RandomAlbum.1.Year), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
+                    </item>
+                    <item id="2">
+                        <onclick>$INFO[Window.Property(RandomAlbum.2.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RandomAlbum.2.Art(fanart))]</icon>
+                        <property name="Cover">$INFO[Window.Property(RandomAlbum.2.Art(thumb))]</property>
+                        <label>$INFO[Window.Property(RandomAlbum.2.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RandomAlbum.2.Artist)]$INFO[Window.Property(RandomAlbum.2.Year), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
+                    </item>
+                    <item id="3">
+                        <onclick>$INFO[Window.Property(RandomAlbum.3.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RandomAlbum.3.Art(fanart))]</icon>
+                        <property name="Cover">$INFO[Window.Property(RandomAlbum.3.Art(thumb))]</property>
+                        <label>$INFO[Window.Property(RandomAlbum.3.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RandomAlbum.3.Artist)]$INFO[Window.Property(RandomAlbum.3.Year), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
+                    </item>
+                    <item id="4">
+                        <onclick>$INFO[Window.Property(RandomAlbum.4.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RandomAlbum.4.Art(fanart))]</icon>
+                        <property name="Cover">$INFO[Window.Property(RandomAlbum.4.Art(thumb))]</property>
+                        <label>$INFO[Window.Property(RandomAlbum.4.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RandomAlbum.4.Artist)]$INFO[Window.Property(RandomAlbum.4.Year), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
+                    </item>
+                    <item id="5">
+                        <onclick>$INFO[Window.Property(RandomAlbum.5.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RandomAlbum.5.Art(fanart))]</icon>
+                        <property name="Cover">$INFO[Window.Property(RandomAlbum.5.Art(thumb))]</property>
+                        <label>$INFO[Window.Property(RandomAlbum.5.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RandomAlbum.5.Artist)]$INFO[Window.Property(RandomAlbum.5.Year), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
+                    </item>
+                    <item id="6">
+                        <onclick>$INFO[Window.Property(RandomAlbum.6.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RandomAlbum.6.Art(fanart))]</icon>
+                        <property name="Cover">$INFO[Window.Property(RandomAlbum.6.Art(thumb))]</property>
+                        <label>$INFO[Window.Property(RandomAlbum.6.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RandomAlbum.6.Artist)]$INFO[Window.Property(RandomAlbum.6.Year), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
+                    </item>
+                    <item id="7">
+                        <onclick>$INFO[Window.Property(RandomAlbum.7.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RandomAlbum.7.Art(fanart))]</icon>
+                        <property name="Cover">$INFO[Window.Property(RandomAlbum.7.Art(thumb))]</property>
+                        <label>$INFO[Window.Property(RandomAlbum.7.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RandomAlbum.7.Artist)]$INFO[Window.Property(RandomAlbum.7.Year), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
+                    </item>
+                    <item id="8">
+                        <onclick>$INFO[Window.Property(RandomAlbum.8.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RandomAlbum.8.Art(fanart))]</icon>
+                        <property name="Cover">$INFO[Window.Property(RandomAlbum.8.Art(thumb))]</property>
+                        <label>$INFO[Window.Property(RandomAlbum.8.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RandomAlbum.8.Artist)]$INFO[Window.Property(RandomAlbum.8.Year), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
+                    </item>
+                    <item id="9">
+                        <onclick>$INFO[Window.Property(RandomAlbum.9.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RandomAlbum.9.Art(fanart))]</icon>
+                        <property name="Cover">$INFO[Window.Property(RandomAlbum.9.Art(thumb))]</property>
+                        <label>$INFO[Window.Property(RandomAlbum.9.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RandomAlbum.9.Artist)]$INFO[Window.Property(RandomAlbum.9.Year), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
+                    </item>
+                    <item id="10">
+                        <onclick>$INFO[Window.Property(RandomAlbum.10.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RandomAlbum.10.Art(fanart))]</icon>
+                        <property name="Cover">$INFO[Window.Property(RandomAlbum.10.Art(thumb))]</property>
+                        <label>$INFO[Window.Property(RandomAlbum.10.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RandomAlbum.10.Artist)]$INFO[Window.Property(RandomAlbum.10.Year), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
+                    </item>
+                </content>
             </control>        
             <!-- left/right arrows -->
             <control type="image">
@@ -875,11 +1683,11 @@
                 <animation type="Visible">
                     <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" delay="300"/>
                 </animation>
-               <animation type="Conditional" condition="Control.HasFocus(82)" pulse="true">
+               <animation type="Conditional" condition="Control.HasFocus(82) | Control.HasFocus(83)" pulse="true">
                    <effect type="fade" start="0" end="80" time="700" tween="sine" easing="inout" />
                    <effect type="slide" start="-45" end="-40" tween="sine" easing="inout" time="700" />
                </animation>
-               <visible>Control.HasFocus(82)</visible>
+               <visible>Control.HasFocus(82) | Control.HasFocus(83)</visible>
             </control>
             <control type="image">
                <posx>1080</posx>
@@ -890,11 +1698,11 @@
                 <animation type="Visible">
                     <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" delay="300"/>
                 </animation>
-               <animation type="Conditional" condition="Control.HasFocus(82)" pulse="true">
+               <animation type="Conditional" condition="Control.HasFocus(82) | Control.HasFocus(83)" pulse="true">
                    <effect type="fade" start="0" end="80" time="700" tween="sine" easing="inout" />
                    <effect type="slide" start="45" end="40" tween="sine" easing="inout" time="700" />
                </animation>
-               <visible>Control.HasFocus(82)</visible>
+               <visible>Control.HasFocus(82) | Control.HasFocus(83)</visible>
             </control>
         </control>
    </include>
