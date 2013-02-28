@@ -638,10 +638,12 @@
                     <visible>System.GetBool(pvrmanager.enabled)</visible>
                 </item>             
                 <item id="6">
-                    <label>$LOCALIZE[41448]</label>
+                    <label>$LOCALIZE[1]</label>
                     <onclick>ActivateWindow(pictures)</onclick>
                     <icon>windows/home/panel_icons/panel_menu_pictures.png</icon>
                     <visible>!Skin.HasSetting(HomePictures)</visible>
+                    <property name="single">$INFO[Skin.String(HomePicturesSingleImage)]</property>
+                    <property name="multi">$INFO[Skin.String(HomePicturesMultiImage)]</property>
                 </item>             
                 <item id="10">
                     <label>Trailers</label>
@@ -666,6 +668,8 @@
                     <onclick>ActivateWindow(10001,plugin://plugin.program.advanced.launcher,return)</onclick>
                     <icon>windows/home/panel_icons/panel_menu_games.png</icon>
                     <visible>!Skin.HasSetting(HomeGames)</visible>
+                    <property name="single">$INFO[Skin.String(HomeGamesSingleImage)]</property>
+                    <property name="multi">$INFO[Skin.String(HomeGamesMultiImage)]</property>
                 </item>
                 <item id="7">
                     <label>$LOCALIZE[41504]</label>

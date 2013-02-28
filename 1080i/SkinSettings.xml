@@ -665,6 +665,30 @@
                     <onclick>SetProperty(Dialog,$LOCALIZE[41504])</onclick>
                     <onclick>ActivateWindow(3002)</onclick>
                 </control>
+                <control type="button" id="5011">
+                    <width>1210</width>
+                    <texturefocus border="150,3,150,3">windows/settings/images/right-focus-arrow-fo.png</texturefocus>
+                    <texturenofocus border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
+                    <include>SettingsCategoryDefaultButtonVars</include>
+                    <label>$LOCALIZE[1]</label>
+                    <onclick>ClearProperty(CustomDialogType)</onclick>
+                    <onclick>ClearProperty(CustomDialog)</onclick>
+                    <onclick>SetProperty(Dialog,$LOCALIZE[1])</onclick>
+                    <onclick>ActivateWindow(3002)</onclick>
+                    <visible>stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)</visible>
+                </control>
+                <control type="button" id="5012">
+                    <width>1210</width>
+                    <texturefocus border="150,3,150,3">windows/settings/images/right-focus-arrow-fo.png</texturefocus>
+                    <texturenofocus border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
+                    <include>SettingsCategoryDefaultButtonVars</include>
+                    <label>$LOCALIZE[15016]</label>
+                    <onclick>ClearProperty(CustomDialogType)</onclick>
+                    <onclick>ClearProperty(CustomDialog)</onclick>
+                    <onclick>SetProperty(Dialog,$LOCALIZE[15016])</onclick>
+                    <onclick>ActivateWindow(3002)</onclick>
+                    <visible>stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)</visible>
+                </control>
                 <control type="button" id="5010">
                     <width>1210</width>
                     <texturefocus border="150,3,150,3">windows/settings/images/right-focus-arrow-fo.png</texturefocus>
