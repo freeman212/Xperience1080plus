@@ -60,6 +60,7 @@
                 <width>29</width>
                 <height>14</height>
                 <texture>windows/home/arrow.png</texture>
+                <animation effect="fade" end="60" condition="true">Conditional</animation>
                 <animation effect="slide" start="0,0" end="0,210" condition="Container(20).HasFocus(3)">Conditional</animation>
                 <animation effect="slide" start="0,0" end="0,100" condition="Container(20).HasFocus(4)">Conditional</animation>
                 <visible>Control.HasFocus(82)</visible>
