@@ -80,7 +80,7 @@
             <include>FullscreenDimensions</include>
             <include>Animation_FanartFade</include>
             <texture>windows/common/overlay2.png</texture>
-            <visible>Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-globalsearch-infodialog.xml) | Control.HasFocus(82) | Control.HasFocus(83)</visible>
+            <visible>Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-globalsearch-infodialog.xml) | Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84)</visible>
         </control>
         <control type="image">
             <include>FullscreenDimensions</include>
@@ -184,7 +184,7 @@
         <control type="image">
             <description>Music npl fanart</description>
             <include>FullscreenDimensions</include>
-            <texture background="true">$INFO[Player.Art(fanart)]</texture>
+            <texture background="true" fallback=".">$INFO[Player.Art(fanart)]</texture>
             <fadetime>600</fadetime>
             <include>Animation_FanartFade</include>
             <visible>[ControlGroup(402).HasFocus | [[stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)] + Container(20).HasFocus(4)]] + Player.HasAudio</visible>
@@ -192,7 +192,7 @@
         <control type="image">
             <description>Search results fanart</description>
             <include>FullscreenDimensions</include>
-            <texture background="true">$INFO[Window(Home).Property(fanart_image)]</texture>
+            <texture background="true" fallback=".">$INFO[Window(Home).Property(fanart_image)]</texture>
             <fadetime>600</fadetime>
             <include>Animation_FanartFade</include>
             <visible>!IsEmpty(Window(Home).property(fanart_image)) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
@@ -200,7 +200,7 @@
         <control type="image">
             <description>Classic and Horizontal recent items fanarts</description>
             <include>FullscreenDimensions</include>
-            <texture background="true">$INFO[Container(82).ListItem.Icon]</texture>
+            <texture background="true" fallback=".">$INFO[Container(82).ListItem.Icon]</texture>
             <fadetime>600</fadetime>
             <include>Animation_FanartFade</include>
             <visible>Control.HasFocus(82) + [stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)] + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
@@ -208,10 +208,30 @@
         <control type="image">
             <description>Horizontal featured/ongoing/spotlight items fanarts</description>
             <include>FullscreenDimensions</include>
-            <texture background="true">$INFO[Container(83).ListItem.Icon]</texture>
+            <texture background="true" fallback=".">$INFO[Container(83).ListItem.Icon]</texture>
             <fadetime>600</fadetime>
             <include>Animation_FanartFade</include>
             <visible>Control.HasFocus(83) + stringcompare(Skin.String(HomeScreen),horizontal) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
+        </control>
+        <control type="image">
+            <description>Horizontal featured/ongoing/spotlight items fanarts</description>
+            <include>FullscreenDimensions</include>
+            <texture background="true" fallback=".">$INFO[Container(84).ListItem.Icon]</texture>
+            <fadetime>600</fadetime>
+            <include>Animation_FanartFade</include>
+            <visible>Control.HasFocus(84) + stringcompare(Skin.String(HomeScreen),horizontal) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
+        </control>
+        <control type="multiimage">
+            <description>Weather fanarts</description>
+            <include>FullscreenDimensions</include>
+            <include>Animation_FanartFade</include>
+            <timeperimage>15000</timeperimage>
+            <randomize>true</randomize>
+            <fadetime>600</fadetime>
+            <loop>yes</loop>
+            <aspectratio>scale</aspectratio>
+            <imagepath background="true" fallback=".">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
+            <visible>[stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)] + Skin.HasSetting(ShowHomeWeatherFanart) + Container(20).HasFocus(9)</visible>
         </control>
     </include>
 

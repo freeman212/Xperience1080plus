@@ -458,6 +458,14 @@
                     <onclick>Skin.ToggleSetting(HideHomeProfileInfo)</onclick>
                     <label>$LOCALIZE[41134]</label>
                 </control>
+                <control type="radiobutton" id="2005">
+                    <width>1210</width>
+                    <include>SettingsCategoryRadioButtonVars</include>
+                    <selected>Skin.HasSetting(ShowHomeWeatherFanart)</selected>
+                    <onclick>Skin.ToggleSetting(ShowHomeWeatherFanart)</onclick>
+                    <label>Show weather fanart instead of weather background</label>
+                    <visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir)) + [stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)]</visible>
+                </control>
                 <control type="group" id="2007">
                     <description>Fake spin control</description>
                     <width>1210</width>
@@ -485,7 +493,7 @@
                         <height>60</height>
                         <onleft>20072</onleft>
                         <onright>20072</onright>
-                        <onup>2004</onup>
+                        <onup>2005</onup>
                         <ondown>4001</ondown>
                         <texturefocus>buttons/spinctrl/arrow-down-fo.png</texturefocus>
                         <texturenofocus>buttons/spinctrl/arrow-down-nf.png</texturenofocus>
