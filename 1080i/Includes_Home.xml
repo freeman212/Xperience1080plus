@@ -700,12 +700,12 @@
                     <onright>AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onright>
                     <onright>Control.Move(20,1)</onright>
                     <onright condition="!Skin.HasSetting(HomeHome)">525</onright>
-                    <onright condition="Skin.HasSetting(HomeHome + !Skin.HasSetting(HomeMovies)">225</onright>
-                    <onright condition="Skin.HasSetting(HomeHome + Skin.HasSetting(HomeMovies) + !Skin.HasSetting(HomeTVShows)">325</onright>
-                    <onright condition="Skin.HasSetting(HomeHome + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMusic)">425</onright>
-                    <onright condition="Skin.HasSetting(HomeHome + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePrograms)">625</onright>
-                    <onright condition="Skin.HasSetting(HomeHome + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeWeather)">725</onright>
-                    <onright condition="Skin.HasSetting(HomeHome + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeWeather)">825</onright>
+                    <onright condition="Skin.HasSetting(HomeHome) + !Skin.HasSetting(HomeMovies)">225</onright>
+                    <onright condition="Skin.HasSetting(HomeHome) + Skin.HasSetting(HomeMovies) + !Skin.HasSetting(HomeTVShows)">325</onright>
+                    <onright condition="Skin.HasSetting(HomeHome) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMusic)">425</onright>
+                    <onright condition="Skin.HasSetting(HomeHome) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePrograms)">625</onright>
+                    <onright condition="Skin.HasSetting(HomeHome) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeWeather)">725</onright>
+                    <onright condition="Skin.HasSetting(HomeHome) + Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeWeather)">825</onright>
                     <onclick>ActivateWindow(pvr)</onclick>
                     <onup>80</onup>
                     <ondown>901</ondown>
