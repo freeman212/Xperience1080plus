@@ -28,6 +28,10 @@
             <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" delay="350" />
             <effect type="slide" start="0,-75" end="0,0" time="350" tween="sine" easing="out" delay="350" />
         </animation>
+        <animation type="Conditional" condition="Control.HasFocus(84)" reversible="false">
+            <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" delay="350" />
+            <effect type="slide" start="0,-75" end="0,0" time="350" tween="sine" easing="out" delay="350" />
+        </animation>
     </include>
     
     <variable name="HomeRecentTitleIcon">
@@ -37,6 +41,7 @@
         <value condition="Container(20).HasFocus(2) + Control.HasFocus(83)">DefaultMovies.png</value>
         <value condition="Container(20).HasFocus(3) + Control.HasFocus(83)">DefaultTVShows.png</value>
         <value condition="Container(20).HasFocus(4) + Control.HasFocus(83)">DefaultMusicAlbums.png</value>
+        <value condition="Container(20).HasFocus(4) + Control.HasFocus(84)">DefaultMusicRecentlyPlayed.png</value>
     </variable>
     
     <variable name="HomeRecentTitleLabel">
@@ -46,11 +51,12 @@
         <value condition="Container(20).HasFocus(2) + Control.HasFocus(83)">$LOCALIZE[41550]</value>
         <value condition="Container(20).HasFocus(3) + Control.HasFocus(83)">$LOCALIZE[41551]</value>
         <value condition="Container(20).HasFocus(4) + Control.HasFocus(83)">$LOCALIZE[41556]</value>
+        <value condition="Container(20).HasFocus(4) + Control.HasFocus(84)">Most played albums</value>
     </variable>
 
     <include name="HomeRecentTitleHorizontal">
         <control type="group">
-            <visible>Control.HasFocus(82) | Control.HasFocus(83)</visible>
+            <visible>Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84)</visible>
             <posx>75</posx>
             <posy>26</posy>
             <include>HomeRecentTitleAnimation</include>
@@ -63,7 +69,7 @@
                 <animation effect="fade" end="60" condition="true">Conditional</animation>
                 <animation effect="slide" start="0,0" end="0,210" condition="Container(20).HasFocus(3)">Conditional</animation>
                 <animation effect="slide" start="0,0" end="0,100" condition="Container(20).HasFocus(4)">Conditional</animation>
-                <visible>Control.HasFocus(82)</visible>
+                <visible>Control.HasFocus(82) | [Container(20).HasFocus(4) + Control.HasFocus(83)]</visible>
             </control>
             <control type="image">
                 <posx>17</posx>
@@ -157,6 +163,43 @@
                     <visible>IntegerGreaterThan(Container(83).NumPages,1)</visible>
                 </control>
             </control>
+            <control type="grouplist">
+                <visible>Control.HasFocus(84)</visible>
+                <posx>110</posx>
+                <posy>32</posy>
+                <orientation>horizontal</orientation>
+                <itemgap>0</itemgap>
+                <control type="label">
+                    <width min="50" max="400">auto</width>
+                    <height>120</height>
+                    <label>$INFO[Container(84).NumItems,, $LOCALIZE[41822]]</label>
+                    <font>Font-Condensed-S28</font>
+                    <textcolor>80FFFFFF</textcolor>
+                    <scroll>false</scroll>
+                    <align>left</align>
+                    <visible>IntegerGreaterThan(Container(84).NumItems,0) + !IntegerGreaterThan(Container(84).NumItems,1)</visible>
+                </control>
+                <control type="label">
+                    <width min="50" max="400">auto</width>
+                    <height>120</height>
+                    <label>$INFO[Container(84).NumItems,, $LOCALIZE[41817]]</label>
+                    <font>Font-Condensed-S28</font>
+                    <textcolor>80FFFFFF</textcolor>
+                    <scroll>false</scroll>
+                    <align>left</align>
+                    <visible>!IntegerGreaterThan(Container(84).NumItems,0) | IntegerGreaterThan(Container(84).NumItems,1)</visible>
+                </control>
+                <control type="label">
+                    <width min="50" max="400">auto</width>
+                    <height>120</height>
+                    <label>$INFO[Container(84).CurrentPage, • $LOCALIZE[41819] ,]$INFO[Container(84).NumPages,/,]</label>
+                    <font>Font-Condensed-S28</font>
+                    <textcolor>80FFFFFF</textcolor>
+                    <scroll>false</scroll>
+                    <align>left</align>
+                    <visible>IntegerGreaterThan(Container(84).NumPages,1)</visible>
+                </control>
+            </control>
         </control>
     </include>    
 
@@ -164,9 +207,9 @@
         <control type="group">
             <!-- recent movies -->
             <control type="fixedlist" id="82">
+                <description>Recent movies</description>
                 <visible allowhiddenfocus="true">Control.HasFocus(82) + Container(20).HasFocus(2)</visible>
                 <include>BannerListInfoAnimation</include>
-                <description>Movies</description>
                 <posx>-227</posx>
                 <posy>195</posy>
                 <width>2282</width>
@@ -430,14 +473,15 @@
             </control>
             <!-- random movies -->
             <control type="fixedlist" id="83">
+                <description>Random movies</description>
                 <visible allowhiddenfocus="true">Control.HasFocus(83) + Container(20).HasFocus(2)</visible>
                 <include>BannerListInfoAnimation</include>
-                <description>Movies</description>
+                <include>listEndAnimation</include>
                 <posx>-227</posx>
                 <posy>195</posy>
                 <width>2282</width>
                 <height>750</height>
-                <onup>83</onup>
+                <onup>RunScript(special://skin/extras/scripts/setClearProperty.py,BounceTop)</onup>
                 <ondown>82</ondown>
                 <onleft>83</onleft>
                 <onright>83</onright>
@@ -696,6 +740,7 @@
             </control>
             <!-- tv shows recent -->
             <control type="fixedlist" id="82">
+                <description>Recent Episodes</description>
                 <visible allowhiddenfocus="true">Control.HasFocus(82) + Container(20).HasFocus(3) + !Control.HasFocus(83)</visible>
                 <include>BannerListInfoAnimation</include>
                 <description>Recent Episodes</description>
@@ -982,14 +1027,15 @@
             </control> 
             <!-- tv shows ongoing -->
             <control type="fixedlist" id="83">
+                <description>Ongoing Episodes</description>
                 <visible allowhiddenfocus="true">Control.HasFocus(83) + Container(20).HasFocus(3) + !Control.HasFocus(82)</visible>
                 <include>BannerListInfoAnimation</include>
-                <description>Ongoing Episodes</description>
+                <include>listEndAnimation</include>
                 <posx>-227</posx>
                 <posy>195</posy>
                 <width>2282</width>
                 <height>750</height>
-                <onup>83</onup>
+                <onup>RunScript(special://skin/extras/scripts/setClearProperty.py,BounceTop)</onup>
                 <ondown>82</ondown>
                 <onleft>83</onleft>
                 <onright>83</onright>
@@ -1248,9 +1294,9 @@
             </control>   
             <!-- recent albums -->
             <control type="fixedlist" id="82">
+                <description>Recent albums</description>
                 <visible allowhiddenfocus="true">Control.HasFocus(82) + Container(20).HasFocus(4)</visible>
                 <include>BannerListInfoAnimation</include>
-                <description>Albums</description>
                 <posx>-287</posx>
                 <posy>295</posy>
                 <width>2352</width>
@@ -1462,14 +1508,14 @@
             </control>
             <!-- featured albums -->
             <control type="fixedlist" id="83">
+                <description>Random albums</description>
                 <visible allowhiddenfocus="true">Control.HasFocus(83) + Container(20).HasFocus(4)</visible>
                 <include>BannerListInfoAnimation</include>
-                <description>Albums</description>
                 <posx>-287</posx>
                 <posy>295</posy>
                 <width>2352</width>
                 <height>550</height>
-                <onup>83</onup>
+                <onup>84</onup>
                 <ondown>82</ondown>
                 <onleft>83</onleft>
                 <onright>83</onright>
@@ -1673,7 +1719,222 @@
                         <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
                     </item>
                 </content>
-            </control>        
+            </control>
+            <!-- recommended albums -->
+            <control type="fixedlist" id="84">
+                <description>Most played albums</description>
+                <visible allowhiddenfocus="true">Control.HasFocus(84) + Container(20).HasFocus(4)</visible>
+                <include>BannerListInfoAnimation</include>
+                <include>listEndAnimation</include>
+                <posx>-287</posx>
+                <posy>295</posy>
+                <width>2352</width>
+                <height>550</height>
+                <onup>RunScript(special://skin/extras/scripts/setClearProperty.py,BounceTop)</onup>
+                <ondown>83</ondown>
+                <onleft>84</onleft>
+                <onright>84</onright>
+                <viewtype label="List">List</viewtype>
+                <scrolltime tween="cubic" easing="out">500</scrolltime>
+                <orientation>horizontal</orientation>
+                <preloaditems>2</preloaditems>
+                <focusposition>1</focusposition>
+                <itemlayout width="392" height="550">
+                    <control type="group">
+                        <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+                        <control type="image">
+                            <posx>-5</posx>
+                            <posy>375</posy>
+                            <width>390</width>
+                            <height>110</height>
+                            <texture border="7">windows/home/tile-grey.png</texture>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <posy>393</posy>
+                            <width>340</width>
+                            <height>40</height>
+                            <font>Font-Condensed-S29-B</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>ddwhite</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <aligny>center</aligny>
+                            <scroll>no</scroll>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <posy>429</posy>
+                            <width>340</width>
+                            <height>40</height>
+                            <font>Font-Condensed-S27</font>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <textcolor>99FFFFFF</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <aligny>center</aligny>
+                            <scroll>false</scroll>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <animation effect="fade" start="100" end="90" time="0" condition="true">Conditional</animation>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.property(Cover)]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>379</posy>
+                            <width>380</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="392" height="550">
+                    <control type="group">
+                        <animation effect="fade" start="50" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                        <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout">UnFocus</animation>
+                        <control type="image">
+                            <posx>-5</posx>
+                            <posy>375</posy>
+                            <width>390</width>
+                            <height>110</height>
+                            <texture border="7">windows/home/tile-grey.png</texture>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <posy>393</posy>
+                            <width>340</width>
+                            <height>40</height>
+                            <font>Font-Condensed-S29-B</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>ddwhite</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <aligny>center</aligny>
+                            <scroll>true</scroll>
+                        </control>
+                        <control type="label">
+                            <posx>20</posx>
+                            <posy>429</posy>
+                            <width>340</width>
+                            <height>40</height>
+                            <font>Font-Condensed-S27</font>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <textcolor>99FFFFFF</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <aligny>center</aligny>
+                            <scroll>true</scroll>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <animation effect="fade" start="90" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                        <animation effect="fade" start="100" end="90" time="300" tween="sine" easing="inout">UnFocus</animation>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>380</width>
+                            <height>380</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.property(Cover)]</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>379</posy>
+                            <width>380</width>
+                            <height>1</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture>windows/common/black.png</texture>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <!-- featured albums -->
+                    <item id="1">
+                        <onclick>$INFO[Window.Property(RecommendedAlbum.1.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RecommendedAlbum.1.Art(fanart))]</icon>
+                        <property name="Cover">$INFO[Window.Property(RecommendedAlbum.1.Art(thumb))]</property>
+                        <label>$INFO[Window.Property(RecommendedAlbum.1.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecommendedAlbum.1.Artist)]$INFO[Window.Property(RecommendedAlbum.1.Year), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
+                    </item>
+                    <item id="2">
+                        <onclick>$INFO[Window.Property(RecommendedAlbum.2.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RecommendedAlbum.2.Art(fanart))]</icon>
+                        <property name="Cover">$INFO[Window.Property(RecommendedAlbum.2.Art(thumb))]</property>
+                        <label>$INFO[Window.Property(RecommendedAlbum.2.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecommendedAlbum.2.Artist)]$INFO[Window.Property(RecommendedAlbum.2.Year), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
+                    </item>
+                    <item id="3">
+                        <onclick>$INFO[Window.Property(RecommendedAlbum.3.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RecommendedAlbum.3.Art(fanart))]</icon>
+                        <property name="Cover">$INFO[Window.Property(RecommendedAlbum.3.Art(thumb))]</property>
+                        <label>$INFO[Window.Property(RecommendedAlbum.3.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecommendedAlbum.3.Artist)]$INFO[Window.Property(RecommendedAlbum.3.Year), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
+                    </item>
+                    <item id="4">
+                        <onclick>$INFO[Window.Property(RecommendedAlbum.4.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RecommendedAlbum.4.Art(fanart))]</icon>
+                        <property name="Cover">$INFO[Window.Property(RecommendedAlbum.4.Art(thumb))]</property>
+                        <label>$INFO[Window.Property(RecommendedAlbum.4.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecommendedAlbum.4.Artist)]$INFO[Window.Property(RecommendedAlbum.4.Year), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
+                    </item>
+                    <item id="5">
+                        <onclick>$INFO[Window.Property(RecommendedAlbum.5.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RecommendedAlbum.5.Art(fanart))]</icon>
+                        <property name="Cover">$INFO[Window.Property(RecommendedAlbum.5.Art(thumb))]</property>
+                        <label>$INFO[Window.Property(RecommendedAlbum.5.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecommendedAlbum.5.Artist)]$INFO[Window.Property(RecommendedAlbum.5.Year), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
+                    </item>
+                    <item id="6">
+                        <onclick>$INFO[Window.Property(RecommendedAlbum.6.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RecommendedAlbum.6.Art(fanart))]</icon>
+                        <property name="Cover">$INFO[Window.Property(RecommendedAlbum.6.Art(thumb))]</property>
+                        <label>$INFO[Window.Property(RecommendedAlbum.6.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecommendedAlbum.6.Artist)]$INFO[Window.Property(RecommendedAlbum.6.Year), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
+                    </item>
+                    <item id="7">
+                        <onclick>$INFO[Window.Property(RecommendedAlbum.7.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RecommendedAlbum.7.Art(fanart))]</icon>
+                        <property name="Cover">$INFO[Window.Property(RecommendedAlbum.7.Art(thumb))]</property>
+                        <label>$INFO[Window.Property(RecommendedAlbum.7.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecommendedAlbum.7.Artist)]$INFO[Window.Property(RecommendedAlbum.7.Year), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
+                    </item>
+                    <item id="8">
+                        <onclick>$INFO[Window.Property(RecommendedAlbum.8.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RecommendedAlbum.8.Art(fanart))]</icon>
+                        <property name="Cover">$INFO[Window.Property(RecommendedAlbum.8.Art(thumb))]</property>
+                        <label>$INFO[Window.Property(RecommendedAlbum.8.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecommendedAlbum.8.Artist)]$INFO[Window.Property(RecommendedAlbum.8.Year), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
+                    </item>
+                    <item id="9">
+                        <onclick>$INFO[Window.Property(RecommendedAlbum.9.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RecommendedAlbum.9.Art(fanart))]</icon>
+                        <property name="Cover">$INFO[Window.Property(RecommendedAlbum.9.Art(thumb))]</property>
+                        <label>$INFO[Window.Property(RecommendedAlbum.9.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecommendedAlbum.9.Artist)]$INFO[Window.Property(RecommendedAlbum.9.Year), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
+                    </item>
+                    <item id="10">
+                        <onclick>$INFO[Window.Property(RecommendedAlbum.10.Play)]</onclick>
+                        <icon>$INFO[Window.Property(RecommendedAlbum.10.Art(fanart))]</icon>
+                        <property name="Cover">$INFO[Window.Property(RecommendedAlbum.10.Art(thumb))]</property>
+                        <label>$INFO[Window.Property(RecommendedAlbum.10.Title)]</label>
+                        <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecommendedAlbum.10.Artist)]$INFO[Window.Property(RecommendedAlbum.10.Year), • ,][/COLOR]</label2>
+                        <visible>!IsEmpty(Container(20).ListItem.Property(music))</visible>
+                    </item>
+                </content>
+            </control>  
             <!-- left/right arrows -->
             <control type="image">
                <posx>760</posx>
