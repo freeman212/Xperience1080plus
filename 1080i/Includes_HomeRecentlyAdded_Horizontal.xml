@@ -1945,11 +1945,11 @@
                 <animation type="Visible">
                     <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" delay="300"/>
                 </animation>
-               <animation type="Conditional" condition="Control.HasFocus(82) | Control.HasFocus(83)" pulse="true">
+               <animation type="Conditional" condition="Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84)" pulse="true">
                    <effect type="fade" start="0" end="80" time="700" tween="sine" easing="inout" />
                    <effect type="slide" start="-45" end="-40" tween="sine" easing="inout" time="700" />
                </animation>
-               <visible>Control.HasFocus(82) | Control.HasFocus(83)</visible>
+               <visible>Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84)</visible>
             </control>
             <control type="image">
                <posx>1080</posx>
@@ -1960,11 +1960,11 @@
                 <animation type="Visible">
                     <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" delay="300"/>
                 </animation>
-               <animation type="Conditional" condition="Control.HasFocus(82) | Control.HasFocus(83)" pulse="true">
+               <animation type="Conditional" condition="Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84)" pulse="true">
                    <effect type="fade" start="0" end="80" time="700" tween="sine" easing="inout" />
                    <effect type="slide" start="45" end="40" tween="sine" easing="inout" time="700" />
                </animation>
-               <visible>Control.HasFocus(82) | Control.HasFocus(83)</visible>
+               <visible>Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84)</visible>
             </control>
         </control>
    </include>
