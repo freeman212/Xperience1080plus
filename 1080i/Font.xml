@@ -94,6 +94,12 @@
             <size>32</size>
         </font>
         <font>
+            <name>Font-Condensed-S32-B</name>
+            <filename>OpenSansCond.ttf</filename>
+            <size>32</size>
+            <style>bold</style>
+        </font>
+        <font>
             <name>Font-Condensed-S33</name>
             <filename>OpenSansCond.ttf</filename>
             <size>33</size>
