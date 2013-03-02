@@ -126,7 +126,7 @@
                 <height>35</height>
                 <colordiffuse>35000000</colordiffuse>
                 <texture>windows/common/black.png</texture>
-                <visible>![Container(23).OnNext | Container(23).OnPrevious] + Control.HasFocus(23)</visible>
+                <visible>![Container(23).OnNext | Container(23).OnPrevious] + Control.HasFocus(23) + !Container(20).HasFocus(9)</visible>
                 <animation type="Visible" reversible="true">
                     <effect type="fade" start="0" end="100" time="350" tween="sine" easing="inout" />
                 </animation>
@@ -440,6 +440,37 @@
                     <onclick>SetFocus(12)</onclick>
                 </item>
             </content>
+        </control>
+    </include>
+    
+<!-- ====================== -->
+<!-- Home Sub Menu Weather -->
+<!-- ====================== -->
+    
+    <include name="HomeSubMenuWeatherHorizontal">
+        <control type="group">
+            <visible>![Container(20).OnNext | Container(20).OnPrevious] + Container(20).HasFocus(9)</visible>
+            <control type="button" id="23">
+                <onup>20</onup>
+                <ondown>21</ondown>
+                <onleft>23</onleft>
+                <onright>23</onright>
+                <onclick condition="!IsEmpty(Weather.Plugin)">ActivateWindow(weather)</onclick>
+                <onclick condition="IsEmpty(Weather.Plugin)">ActivateWindow(weathersettings)</onclick>
+            </control>
+            <control type="label">
+                <visible>Control.HasFocus(23)</visible>
+                <include>SubMenuAnimationHorizontal</include>
+                <posx>435</posx>
+                <posy>583</posy>
+                <width>1010</width>
+                <height>55</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>Font-Condensed-S28</font>
+                <textcolor>ee000000</textcolor>
+                <label>$INFO[Window(Weather).Property(Location),, - ]$INFO[Window(Weather).Property(Current.Condition)] ($INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits])</label>
+            </control>
         </control>
     </include>
     

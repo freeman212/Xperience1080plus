@@ -40,6 +40,7 @@
         <include condition="stringcompare(Skin.String(HomeScreen),horizontal)">HomeSubMenuTVShowsHorizontal</include>
         <include condition="stringcompare(Skin.String(HomeScreen),horizontal)">HomeSubMenuMusicHorizontal</include>
         <include condition="stringcompare(Skin.String(HomeScreen),horizontal)">HomeSubMenuLiveTVHorizontal</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),horizontal)">HomeSubMenuWeatherHorizontal</include>
         <include condition="stringcompare(Skin.String(HomeScreen),horizontal)">HomeSubMenuSettingsHorizontal</include>
         <include condition="stringcompare(Skin.String(HomeScreen),horizontal)">HomeWraplistHorizontal</include>
         <include condition="stringcompare(Skin.String(HomeScreen),horizontal)">HomeProfileInfoHorizontal</include>
