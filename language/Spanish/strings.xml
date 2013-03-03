@@ -17,12 +17,12 @@
     <string id="41114">Zona baja</string>
     
     <!-- Home -->
-    <string id="41130">Pantalla principal</string>
+    <string id="41130">Inicio</string>
     <string id="41131">Administrar categorías</string>
     <!-- 41132/41133 -->
-    <string id="41134">Ocultar imágen de perfil</string>
-    <!-- 41135 -->
-	<string id="41136">Administrar elementos personalizados de la pantalla principal</string>
+	<string id="41134">Ocultar imagen del perfil</string>
+    <string id="41135">Mostrar flecha del submenú</string>
+	<string id="41136">Administrar elementos personalizados de la pantalla de inicio</string>
     <string id="41137">Personalizado</string>
     <string id="41138">Nombre</string>
     <string id="41139">Icono</string>
@@ -38,7 +38,7 @@
     <string id="41149">Lista de reproducción de video</string>
     <string id="41150">Lista de reproducción de música</string>
     <string id="41151">Personalizado</string>
-    <string id="41152">Music panel opens</string>
+    <string id="41152">Panel de música para abrir</string>
     <string id="41153">Favorito</string>
     <string id="41154">Resolución recomendada 283x283px</string>
     <string id="41156">Mostrar nombre</string>
@@ -53,8 +53,8 @@
     <string id="41202">Ejecutar trailer al mirar la información de la película</string>
     
 	<!-- General -->
-	<string id="41200">Ocultar boton de 'Apagar' (solo visible en inicio)</string>
-    <string id="41201">Ocultar botón de 'Opciones'</string>
+	<string id="41200">Ocultar botón de apagar (solo visible en inicio)</string>
+    <string id="41201">Ocultar botón de opciones</string>
 	
 	<!-- Live TV -->
     <string id="41220">TV en Vivo</string>
@@ -73,7 +73,7 @@
 	
 	<!-- Guide -->
     <string id="41270">Ocultar reloj</string>
-    <string id="41271">Ocultar imagen de perfil</string>
+    <string id="41271">Ocultar imagen del perfil</string>
     <string id="41272">Sustituir imagenes por elementos de menú personalizado en navegación rápida</string>
     <string id="41273">Sustituir trailer por elementos de menú personalizado en navegación rápida</string>
     <string id="41274">Sustituir películas nuevas por elementos de menú personalizado en navegación rápida</string>
@@ -101,7 +101,7 @@
     <string id="41302">Estrenado: </string>
     <string id="41303">Pistas</string>
     <string id="41304">Discografía</string>
-    <string id="41305">Obtener poster</string>
+    <string id="41305">Obtener miniatura</string>
     <string id="41306">Obtener fanart</string>
     <string id="41307">Actualizar</string>
     <string id="41308">Director: </string>
@@ -115,7 +115,7 @@
     <string id="41316">Reparto</string>
     <string id="41317">Trailer</string>
     <string id="41318">Duración: </string>
-    <string id="41319">Sinópsis</string>
+    <string id="41319">Argumento</string>
     <string id="41320">Parada</string>
     <string id="41321">Estrenado: </string>
     <string id="41322">Temporada</string>
@@ -170,7 +170,7 @@
     <string id="41448">Imágenes</string>
     <string id="41449">Trailer</string>
     <string id="41450">Películas nuevas</string>
-    <string id="41451">Series nuevas</string>
+    <string id="41451">Episodios nuevos</string>
     <string id="41452">Nada en reproducción</string>
     <string id="41453">Usuario</string>
     <string id="41454">Dirección IP</string>
@@ -249,7 +249,7 @@
     <string id="42021">Vista</string>
     <string id="42022">Usar landscape</string>
     <string id="42023">Usar clearart</string>
-    <string id="42024">Thumbs pequeños</string>
+    <string id="42024">Miniaturas pequeñas</string>
     <string id="42025">Actualizar arte</string>
     <string id="42026">Usar logo</string>
 	
@@ -278,5 +278,10 @@
     <string id="42183">Borrar Grupo</string>
     <string id="42184">Opciones del canal</string>
     <string id="42185">Opciones varias</string>
+	
+	<!-- Mouse -->
+    <!-- From 42200 to 42204 -->
+    <string id="42200">Ratón no soportado</string>
+    <string id="42201">Por favor, desactívelo</string>
 	
 </strings>
