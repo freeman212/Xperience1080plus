@@ -118,6 +118,15 @@
                 <width>1920</width>
                 <height>108</height>
                 <texture>windows/home/sub_menu.png</texture>
+                <visible>!Container(20).HasFocus(9)</visible>
+            </control>
+            <control type="image">
+                <posx>0</posx>
+                <posy>585</posy>
+                <width>1920</width>
+                <height>108</height>
+                <texture>windows/home/sub_menu_short.png</texture>
+                <visible>Container(20).HasFocus(9)</visible>
             </control>
             <control type="image">
                 <posx>455</posx>

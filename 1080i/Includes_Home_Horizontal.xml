@@ -287,19 +287,19 @@
             <viewtype>list</viewtype>
             <itemlayout width="384" height="110">
                 <control type="group">
-                    <posx>0</posx>
+                    <posx>45</posx>
                     <posy>0</posy>
                     <control type="image">
-                        <posy>1</posy>
-                        <width>159</width>
-                        <height>110</height>
+                        <posy>17</posy>
+                        <width>75</width>
+                        <height>75</height>
                         <aspectratio>scale</aspectratio>
                         <texture background="true">$INFO[ListItem.ActualIcon]</texture>
                         <animation effect="fade" start="100" end="45" time="0" condition="true">Conditional</animation>
                     </control>
                     <control type="label">
                         <font>Font-Condensed-S38-B</font>
-                        <posx>134</posx>
+                        <posx>90</posx>
                         <posy>0</posy>
                         <width>260</width>
                         <height>110</height>
@@ -313,12 +313,12 @@
             </itemlayout>
             <focusedlayout width="384" height="110">
                 <control type="group">
-                    <posx>0</posx>
+                    <posx>45</posx>
                     <posy>0</posy>
                     <control type="image">
-                        <posy>1</posy>
-                        <width>159</width>
-                        <height>110</height>
+                        <posy>17</posy>
+                        <width>75</width>
+                        <height>75</height>
                         <aspectratio>scale</aspectratio>
                         <texture background="true">$INFO[ListItem.ActualIcon]</texture>
                         <animation type="Focus" condition="Container(20).OnNext | Container(20).OnPrevious">
@@ -331,7 +331,7 @@
                     </control>
                     <control type="label">
                         <font>Font-Condensed-S38-B</font>
-                        <posx>134</posx>
+                        <posx>90</posx>
                         <posy>0</posy>
                         <width>260</width>
                         <height>110</height>
@@ -353,13 +353,13 @@
                 <item id="0">
                     <label>$INFO[System.DVDLabel]</label>
                     <onclick>PlayDVD()</onclick>
-                    <icon>windows/home/panel_icons/panel_menu_dvd.png</icon>
+                    <icon>DefaultDVD.png</icon>
                     <visible>System.HasMediaDVD</visible>
                 </item>
                 <item id="1">
                     <label>$LOCALIZE[41444]</label>
                     <onclick>ActivateWindow(4)</onclick>
-                    <icon>windows/home/panel_icons/panel_menu_settings.png</icon>
+                    <icon>DefaultSettings.png</icon>
                     <property name="single">$INFO[Skin.String(HomeSettingsSingleImage)]</property>
                     <property name="multi">$INFO[Skin.String(HomeSettingsMultiImage)]</property>
                     <property name="settings">1</property>
@@ -368,7 +368,7 @@
                     <label>$LOCALIZE[41445]</label>
                     <onclick condition="!Library.HasContent(movies)">ActivateWindow(videos,files,return)</onclick>
                     <onclick condition="Library.HasContent(movies)">ActivateWindow(videos,movietitles,return)</onclick>
-                    <icon>windows/home/panel_icons/panel_menu_movies.png</icon>
+                    <icon>DefaultMovies.png</icon>
                     <visible>!Skin.HasSetting(HomeMovies)</visible>
                     <property name="single">$INFO[Skin.String(HomeMoviesSingleImage)]</property>
                     <property name="multi">$INFO[Skin.String(HomeMoviesMultiImage)]</property>
@@ -378,7 +378,7 @@
                     <label>$LOCALIZE[41446]</label>
                     <onclick condition="!Library.HasContent(tvshows)">ActivateWindow(videos,files,return)</onclick>
                     <onclick condition="Library.HasContent(tvshows)">ActivateWindow(videos,tvshowtitles,return)</onclick>
-                    <icon>windows/home/panel_icons/panel_menu_tvshows.png</icon>
+                    <icon>DefaultTVShows.png</icon>
                     <visible>!Skin.HasSetting(HomeTVShows)</visible>
                     <property name="single">$INFO[Skin.String(HomeTVShowsSingleImage)]</property>
                     <property name="multi">$INFO[Skin.String(HomeTVShowsMultiImage)]</property>
@@ -389,7 +389,7 @@
                     <onclick condition="!Library.HasContent(music)">ActivateWindow(musicfiles)</onclick>
                     <onclick condition="Library.HasContent(music) + IsEmpty(Skin.String(music.path))">ActivateWindow(musiclibrary)</onclick>
                     <onclick condition="Library.HasContent(music) + !IsEmpty(Skin.String(music.path))">ActivateWindow(musiclibrary,$INFO[Skin.String(music.path)],return)</onclick>
-                    <icon>windows/home/panel_icons/panel_menu_music.png</icon>
+                    <icon>DefaultMusic.png</icon>
                     <visible>!Skin.HasSetting(HomeMusic)</visible>
                     <property name="single">$INFO[Skin.String(HomeMusicSingleImage)]</property>
                     <property name="multi">$INFO[Skin.String(HomeMusicMultiImage)]</property>
@@ -398,13 +398,13 @@
                 <item id="5">
                     <label>$LOCALIZE[41220]</label>
                     <onclick>ActivateWindow(pvr)</onclick>
-                    <icon>windows/home/panel_icons/panel_menu_tvguide.png</icon>
+                    <icon>DefaultTVGuide.png</icon>
                     <visible>System.GetBool(pvrmanager.enabled)</visible>
                 </item>             
                 <item id="6">
                     <label>$LOCALIZE[1]</label>
                     <onclick>ActivateWindow(pictures)</onclick>
-                    <icon>windows/home/panel_icons/panel_menu_pictures.png</icon>
+                    <icon>DefaultPicture.png</icon>
                     <visible>!Skin.HasSetting(HomePictures)</visible>
                     <property name="single">$INFO[Skin.String(HomePicturesSingleImage)]</property>
                     <property name="multi">$INFO[Skin.String(HomePicturesMultiImage)]</property>
@@ -412,25 +412,25 @@
                 <item id="10">
                     <label>Trailers</label>
                     <onclick>ActivateWindow(videos,plugin://plugin.video.the.trailers/,return)</onclick>
-                    <icon>windows/home/panel_icons/panel_menu_apple.png</icon>
+                    <icon>DefaultApple.png</icon>
                     <visible>!Skin.HasSetting(HomeTrailers) + System.HasAddon(plugin.video.the.trailers)</visible>
                 </item>      
                 <item id="11">
                     <label>$LOCALIZE[41447] [LOWERCASE]$LOCALIZE[744][/LOWERCASE]</label>
                     <onclick>ActivateWindow(musicfiles)</onclick>
-                    <icon>windows/home/panel_icons/panel_menu_musicfiles.png</icon>
+                    <icon>DefaultFolder.png</icon>
                     <visible>!Skin.HasSetting(HomeMusicFiles)</visible>
                 </item>             
                 <item id="12">
                     <label>Video [LOWERCASE]$LOCALIZE[744][/LOWERCASE]</label>
                     <onclick>ActivateWindow(videos,files,return)</onclick>
-                    <icon>windows/home/panel_icons/panel_menu_videos.png</icon>
+                    <icon>DefaultFolder.png</icon>
                     <visible>!Skin.HasSetting(HomeVideoFiles)</visible>
                 </item>   
                 <item id="13">
                     <label>$LOCALIZE[15016]</label>
-                    <icon>windows/home/panel_icons/panel_menu_games.png</icon>
                     <onclick>ActivateWindow(10001,plugin://plugin.program.advanced.launcher,return)</onclick>
+                    <icon>DefaultGames.png</icon>
                     <visible>!Skin.HasSetting(HomeGames)</visible>
                     <property name="single">$INFO[Skin.String(HomeGamesSingleImage)]</property>
                     <property name="multi">$INFO[Skin.String(HomeGamesMultiImage)]</property>
@@ -438,7 +438,7 @@
                 <item id="7">
                     <label>$LOCALIZE[41504]</label>
                     <onclick>ActivateWindow(programs)</onclick>
-                    <icon>windows/home/panel_icons/panel_menu_programs.png</icon>
+                    <icon>DefaultAddonProgram.png</icon>
                     <visible>!Skin.HasSetting(HomePrograms)</visible>
                     <property name="single">$INFO[Skin.String(HomeProgramsSingleImage)]</property>
                     <property name="multi">$INFO[Skin.String(HomeProgramsMultiImage)]</property>
@@ -446,14 +446,14 @@
                 <item id="8">
                     <label>$LOCALIZE[24001]</label>
                     <onclick>ActivateWindow(addonbrowser)</onclick>
-                    <icon>windows/home/panel_icons/panel_menu_addons.png</icon>
+                    <icon>DefaultAddon.png</icon>
                     <visible>!Skin.HasSetting(HomeAddons)</visible>
                 </item>
                 <item id="9">
                     <label>$LOCALIZE[8]</label>
                     <onclick condition="!IsEmpty(Weather.Plugin)">ActivateWindow(weather)</onclick>
                     <onclick condition="IsEmpty(Weather.Plugin)">ActivateWindow(weathersettings)</onclick>
-                    <icon>windows/home/panel_icons/panel_menu_weather.png</icon>
+                    <icon>DefaultAddonWeather.png</icon>
                     <visible>!Skin.HasSetting(HomeWeather)</visible>
                     <property name="single">$INFO[Skin.String(HomeWeatherSingleImage)]</property>
                     <property name="multi">$INFO[Skin.String(HomeWeatherMultiImage)]</property>
