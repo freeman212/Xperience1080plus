@@ -222,6 +222,7 @@
                 <ondown>20</ondown>
                 <onleft>82</onleft>
                 <onright>82</onright>
+                <onback>SetFocus(20)</onback>
                 <viewtype label="List">List</viewtype>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <orientation>horizontal</orientation>
@@ -488,6 +489,7 @@
                 <ondown>82</ondown>
                 <onleft>83</onleft>
                 <onright>83</onright>
+                <onback>SetFocus(20)</onback>
                 <viewtype label="List">List</viewtype>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <orientation>horizontal</orientation>
@@ -755,6 +757,7 @@
                 <ondown>83</ondown>
                 <onleft>84</onleft>
                 <onright>84</onright>
+                <onback>SetFocus(20)</onback>
                 <viewtype label="List">List</viewtype>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <orientation>horizontal</orientation>
@@ -1055,6 +1058,7 @@
                 <ondown>20</ondown>
                 <onleft>82</onleft>
                 <onright>82</onright>
+                <onback>SetFocus(20)</onback>
                 <viewtype label="List">List</viewtype>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <orientation>horizontal</orientation>
@@ -1342,6 +1346,7 @@
                 <ondown>82</ondown>
                 <onleft>83</onleft>
                 <onright>83</onright>
+                <onback>SetFocus(20)</onback>
                 <viewtype label="List">List</viewtype>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <orientation>horizontal</orientation>
@@ -1608,6 +1613,7 @@
                 <ondown>20</ondown>
                 <onleft>82</onleft>
                 <onright>82</onright>
+                <onback>SetFocus(20)</onback>
                 <viewtype label="List">List</viewtype>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <orientation>horizontal</orientation>
@@ -1822,6 +1828,7 @@
                 <ondown>82</ondown>
                 <onleft>83</onleft>
                 <onright>83</onright>
+                <onback>SetFocus(20)</onback>
                 <viewtype label="List">List</viewtype>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <orientation>horizontal</orientation>
@@ -2037,6 +2044,7 @@
                 <ondown>83</ondown>
                 <onleft>84</onleft>
                 <onright>84</onright>
+                <onback>SetFocus(20)</onback>
                 <viewtype label="List">List</viewtype>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <orientation>horizontal</orientation>
