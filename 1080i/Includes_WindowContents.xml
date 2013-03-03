@@ -203,7 +203,7 @@
             <texture background="true" fallback=".">$INFO[Container(82).ListItem.Icon]</texture>
             <fadetime>600</fadetime>
             <include>Animation_FanartFade</include>
-            <visible>Control.HasFocus(82) + [stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)] + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
+            <visible>[Control.HasFocus(82) + !Container(20).HasFocus(7)] + [stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)] + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
         </control>
         <control type="image">
             <description>Horizontal featured/ongoing/spotlight items fanarts</description>
