@@ -215,7 +215,7 @@
                 <visible allowhiddenfocus="true">Control.HasFocus(82) + Container(20).HasFocus(2)</visible>
                 <include>BannerListInfoAnimation</include>
                 <posx>-227</posx>
-                <posy>195</posy>
+                <posy>175</posy>
                 <width>2282</width>
                 <height>750</height>
                 <onup>83</onup>
@@ -482,7 +482,7 @@
                 <visible allowhiddenfocus="true">Control.HasFocus(83) + Container(20).HasFocus(2)</visible>
                 <include>BannerListInfoAnimation</include>
                 <posx>-227</posx>
-                <posy>195</posy>
+                <posy>175</posy>
                 <width>2282</width>
                 <height>750</height>
                 <onup>84</onup>
@@ -750,7 +750,7 @@
                 <include>BannerListInfoAnimation</include>
                 <include>listEndAnimation</include>
                 <posx>-387</posx>
-                <posy>373</posy>
+                <posy>353</posy>
                 <width>2460</width>
                 <height>500</height>
                 <onup>RunScript(special://skin/extras/scripts/setClearProperty.py,BounceTop)</onup>
@@ -1051,7 +1051,7 @@
                 <visible allowhiddenfocus="true">Control.HasFocus(82) + Container(20).HasFocus(3)</visible>
                 <include>BannerListInfoAnimation</include>
                 <posx>-387</posx>
-                <posy>405</posy>
+                <posy>385</posy>
                 <width>2460</width>
                 <height>400</height>
                 <onup>83</onup>
@@ -1339,7 +1339,7 @@
                 <include>BannerListInfoAnimation</include>
                 <include>listEndAnimation</include>
                 <posx>-227</posx>
-                <posy>195</posy>
+                <posy>175</posy>
                 <width>2282</width>
                 <height>750</height>
                 <onup>RunScript(special://skin/extras/scripts/setClearProperty.py,BounceTop)</onup>
@@ -1606,7 +1606,7 @@
                 <visible allowhiddenfocus="true">Control.HasFocus(82) + Container(20).HasFocus(4)</visible>
                 <include>BannerListInfoAnimation</include>
                 <posx>-287</posx>
-                <posy>295</posy>
+                <posy>275</posy>
                 <width>2352</width>
                 <height>550</height>
                 <onup>83</onup>
@@ -1821,7 +1821,7 @@
                 <visible allowhiddenfocus="true">Control.HasFocus(83) + Container(20).HasFocus(4)</visible>
                 <include>BannerListInfoAnimation</include>
                 <posx>-287</posx>
-                <posy>295</posy>
+                <posy>275</posy>
                 <width>2352</width>
                 <height>550</height>
                 <onup>84</onup>
@@ -2037,7 +2037,7 @@
                 <include>BannerListInfoAnimation</include>
                 <include>listEndAnimation</include>
                 <posx>-287</posx>
-                <posy>295</posy>
+                <posy>275</posy>
                 <width>2352</width>
                 <height>550</height>
                 <onup>RunScript(special://skin/extras/scripts/setClearProperty.py,BounceTop)</onup>
