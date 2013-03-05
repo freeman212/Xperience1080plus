@@ -110,7 +110,7 @@
     
     <include name="HomeSubMenuOverlayHorizontal">
         <control type="group">
-            <visible>Control.HasFocus(23) + ![Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-globalsearch-infodialog.xml)]</visible>
+            <visible>![Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-globalsearch-infodialog.xml)]</visible>
             <include>SubMenuAnimationHorizontal</include>
             <control type="image">
                 <posx>0</posx>
@@ -135,7 +135,7 @@
                 <height>35</height>
                 <colordiffuse>35000000</colordiffuse>
                 <texture>windows/common/black.png</texture>
-                <visible>![Container(23).OnNext | Container(23).OnPrevious] + Control.HasFocus(23) + !Container(20).HasFocus(9)</visible>
+                <visible>![Container(23).OnNext | Container(23).OnPrevious] + !Container(20).HasFocus(9)</visible>
                 <animation type="Visible" reversible="true">
                     <effect type="fade" start="0" end="100" time="350" tween="sine" easing="inout" />
                 </animation>
@@ -459,6 +459,7 @@
     <include name="HomeSubMenuWeatherHorizontal">
         <control type="group">
             <visible>![Container(20).OnNext | Container(20).OnPrevious] + Container(20).HasFocus(9)</visible>
+            <include>SubMenuAnimationHorizontal</include>
             <control type="button" id="23">
                 <onup>20</onup>
                 <ondown>21</ondown>
@@ -468,8 +469,6 @@
                 <onclick condition="IsEmpty(Weather.Plugin)">ActivateWindow(weathersettings)</onclick>
             </control>
             <control type="label">
-                <visible>Control.HasFocus(23)</visible>
-                <include>SubMenuAnimationHorizontal</include>
                 <posx>435</posx>
                 <posy>583</posy>
                 <width>1010</width>
