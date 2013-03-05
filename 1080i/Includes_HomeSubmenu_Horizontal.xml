@@ -195,31 +195,35 @@
                     <visible>Skin.HasSetting(HomeVideoFiles)</visible>
                 </item>
                 <item id="7">
+                    <label>$LOCALIZE[20434]</label>
+                    <onclick>ActivateWindow(videos,moviesets,return)</onclick>
+                </item>
+                <item id="8">
                     <label>$LOCALIZE[20388]</label>
                     <onclick>ActivateWindow(videos,moviestudios,return)</onclick>
                 </item>
-                <item id="8">
+                <item id="9">
                     <label>$LOCALIZE[20348]</label>
                     <onclick>ActivateWindow(videos,moviedirectors,return)</onclick>
                 </item>
-                <item id="9">
+                <item id="10">
                     <label>$LOCALIZE[344]</label>
                     <onclick>ActivateWindow(videos,movieactors,return)</onclick>
                 </item>
-                <item id="10">
+                <item id="11">
                     <label>$LOCALIZE[652]</label>
                     <onclick>ActivateWindow(videos,movieyears,return)</onclick>
                 </item>
-                <item id="11">
+                <item id="12">
                     <label>$LOCALIZE[135]</label>
                     <onclick>ActivateWindow(videos,moviegenres,return)</onclick>
                 </item>
-                <item id="12">
+                <item id="13">
                     <label>Fullscreen</label>
                     <onclick>fullscreen</onclick>
                     <visible>Player.HasVideo</visible>
                 </item>
-                <item id="13">
+                <item id="14">
                     <label>$LOCALIZE[41445] ($INFO[Window.Property(Movies.Count)])</label>
                     <onclick>ActivateWindow(videos,movietitles,return)</onclick>
                 </item>
