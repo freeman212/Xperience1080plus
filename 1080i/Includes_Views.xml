@@ -12,6 +12,7 @@
         <include>Viewtype-EpisodeInfoList</include>
         <include>Viewtype-Panel</include>
         <include>Viewtype-Landscape</include>
+        <include>Viewtype-LandscapePoster</include>
         <include>Viewtype-Poster</include>
         <include>Viewtype-PosterSmall</include>
         <include>Viewtype-Thumbnail</include>
@@ -25,6 +26,7 @@
         <include>Viewtype-MusicList</include>
         <include>Viewtype-MusicInfoList</include>
         <include>Viewtype-MusicPanel</include>
+        <include>Viewtype-MusicLandscape</include>
         <include>Viewtype-CoverView</include>
         <include>Viewtype-Thumbnail</include>
         <include>Viewtype-MusicThumbnail</include>
