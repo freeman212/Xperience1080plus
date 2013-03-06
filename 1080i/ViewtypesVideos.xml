@@ -3429,9 +3429,9 @@
                     <texturesliderbar border="6,0,6,0">views/other/scrollbar-h.png</texturesliderbar>
                     <texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-h.png</texturesliderbarfocus>
                     <showonepage>false</showonepage>
-                    <onup>55</onup>
+                    <onup>54</onup>
                     <ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
-                    <ondown condition="Skin.HasSetting(KioskMode)">55</ondown>
+                    <ondown condition="Skin.HasSetting(KioskMode)">54</ondown>
                     <animation effect="fade" start="40" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
                     <visible>Control.IsVisible(54)</visible>
                 </control>
@@ -3710,9 +3710,9 @@
                     <texturesliderbar border="6,0,6,0">views/other/scrollbar-h.png</texturesliderbar>
                     <texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-h.png</texturesliderbarfocus>
                     <showonepage>false</showonepage>
-                    <onup>55</onup>
+                    <onup>504</onup>
                     <ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
-                    <ondown condition="Skin.HasSetting(KioskMode)">55</ondown>
+                    <ondown condition="Skin.HasSetting(KioskMode)">504</ondown>
                     <animation effect="fade" start="40" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
                     <visible>Control.IsVisible(504)</visible>
                 </control>

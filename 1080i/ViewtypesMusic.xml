@@ -1830,7 +1830,7 @@
                 <animation type="Hidden" reversible="true">
                     <effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
                 </animation>
-                <visible>!Window.IsActive(movieinformation) + Control.IsVisible(54)</visible>
+                <visible>!Window.IsActive(musicinformation) + Control.IsVisible(54)</visible>
                 <!--Scrollbar-->
                 <control type="image">
                     <description>Scrollbar background (visible on focus)</description>
@@ -1853,9 +1853,9 @@
                     <texturesliderbar border="6,0,6,0">views/other/scrollbar-h.png</texturesliderbar>
                     <texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-h.png</texturesliderbarfocus>
                     <showonepage>false</showonepage>
-                    <onup>55</onup>
+                    <onup>54</onup>
                     <ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
-                    <ondown condition="Skin.HasSetting(KioskMode)">55</ondown>
+                    <ondown condition="Skin.HasSetting(KioskMode)">54</ondown>
                     <animation effect="fade" start="40" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
                     <visible>Control.IsVisible(54)</visible>
                 </control>
