@@ -214,7 +214,7 @@
                 <description>Recent movies</description>
                 <visible allowhiddenfocus="true">Control.HasFocus(82) + Container(20).HasFocus(2)</visible>
                 <include>BannerListInfoAnimation</include>
-                <posx>-227</posx>
+                <posx>-232</posx>
                 <posy>175</posy>
                 <width>2282</width>
                 <height>750</height>
@@ -481,7 +481,7 @@
                 <description>Random movies</description>
                 <visible allowhiddenfocus="true">Control.HasFocus(83) + Container(20).HasFocus(2)</visible>
                 <include>BannerListInfoAnimation</include>
-                <posx>-227</posx>
+                <posx>-232</posx>
                 <posy>175</posy>
                 <width>2282</width>
                 <height>750</height>
@@ -749,7 +749,7 @@
                 <visible allowhiddenfocus="true">Control.HasFocus(84) + Container(20).HasFocus(2)</visible>
                 <include>BannerListInfoAnimation</include>
                 <include>listEndAnimation</include>
-                <posx>-387</posx>
+                <posx>-392</posx>
                 <posy>353</posy>
                 <width>2460</width>
                 <height>500</height>
@@ -1050,7 +1050,7 @@
                 <description>Recent Episodes</description>
                 <visible allowhiddenfocus="true">Control.HasFocus(82) + Container(20).HasFocus(3)</visible>
                 <include>BannerListInfoAnimation</include>
-                <posx>-387</posx>
+                <posx>-392</posx>
                 <posy>385</posy>
                 <width>2460</width>
                 <height>400</height>
@@ -1338,7 +1338,7 @@
                 <visible allowhiddenfocus="true">Control.HasFocus(83) + Container(20).HasFocus(3)</visible>
                 <include>BannerListInfoAnimation</include>
                 <include>listEndAnimation</include>
-                <posx>-227</posx>
+                <posx>-232</posx>
                 <posy>175</posy>
                 <width>2282</width>
                 <height>750</height>
@@ -1605,7 +1605,7 @@
                 <description>Recent albums</description>
                 <visible allowhiddenfocus="true">Control.HasFocus(82) + Container(20).HasFocus(4)</visible>
                 <include>BannerListInfoAnimation</include>
-                <posx>-287</posx>
+                <posx>-292</posx>
                 <posy>275</posy>
                 <width>2352</width>
                 <height>550</height>
@@ -1820,7 +1820,7 @@
                 <description>Random albums</description>
                 <visible allowhiddenfocus="true">Control.HasFocus(83) + Container(20).HasFocus(4)</visible>
                 <include>BannerListInfoAnimation</include>
-                <posx>-287</posx>
+                <posx>-292</posx>
                 <posy>275</posy>
                 <width>2352</width>
                 <height>550</height>
@@ -2036,7 +2036,7 @@
                 <visible allowhiddenfocus="true">Control.HasFocus(84) + Container(20).HasFocus(4)</visible>
                 <include>BannerListInfoAnimation</include>
                 <include>listEndAnimation</include>
-                <posx>-287</posx>
+                <posx>-292</posx>
                 <posy>275</posy>
                 <width>2352</width>
                 <height>550</height>
@@ -2596,6 +2596,7 @@
                     </item>
                 </content>
             </control>
+          
             <!-- left/right arrows -->
             <control type="image">
                <posx>760</posx>
