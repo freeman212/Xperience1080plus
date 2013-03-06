@@ -3448,7 +3448,7 @@
             <include>OptionsShutdownAnimation</include>
             <control type="group">      
                 <visible>!Window.IsActive(movieinformation) + Control.IsVisible(504)</visible>
-                <include>BannerListInfoAnimation</include>
+                <include>CommonViewAnimations</include>
                 <control type="fixedlist" id="504">
                     <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets)</visible>
                     <posx>-232</posx>

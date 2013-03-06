@@ -1665,7 +1665,7 @@
             <include>OptionsShutdownAnimation</include>
             <control type="group">      
                 <visible>!Window.IsActive(musicinformation) + Control.IsVisible(54)</visible>
-                <include>BannerListInfoAnimation</include>
+                <include>CommonViewAnimations</include>
                 <control type="fixedlist" id="54">
                     <visible>Container.Content(Artists) | Container.Content(Albums)</visible>
                     <posx>-292</posx>
