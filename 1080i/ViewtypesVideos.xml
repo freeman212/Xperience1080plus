@@ -3544,7 +3544,7 @@
                             <width>320</width>
                             <height>480</height>
                             <aspectratio>scale</aspectratio>
-                            <texture background="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Art(thumb)]</texture>
+                            <texture background="true">$VAR[PosterViewPoster]</texture>
                         </control>
                         <control type="image">
                             <posx>220</posx>
@@ -3653,7 +3653,7 @@
                             <width>320</width>
                             <height>480</height>
                             <aspectratio>scale</aspectratio>
-                            <texture background="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.Art(thumb)]</texture>
+                            <texture background="true">$VAR[PosterViewPoster]</texture>
                         </control>
                         <control type="image">
                             <posx>220</posx>
