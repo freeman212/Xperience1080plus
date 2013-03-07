@@ -131,15 +131,9 @@
     <!-- From 41350 to 41369 -->
     <string id="41350">System Info</string>
     <string id="41351">abmelden ...</string>
-    <string id="41352">XBMC beenden</string>
     <string id="41353">Dateimanager</string>
-    <string id="41354">XBMC neustarten</string>
-    <string id="41355">Ausschalten</string>
-    <string id="41356">Energie sparen</string>
-    <string id="41357">Ruhezustand</string>
-    <string id="41358">Neustarten</string>
-    <string id="41359">Öffnen/Schließen</string>
-    <string id="41360">Master-Modus</string>
+    <string id="41360">Master-Modus aus</string>
+    <string id="41361">Master-Modus an</string>
     
     <!-- DialogSeekBar.xml & VideoOSD.xml -->
     <!-- From 41370 to 41399 -->
@@ -213,7 +207,7 @@
     <string id="41693">Mondphase</string>
     <string id="41694">Aktuelles Wetter</string>
     <string id="41695">10-Tage-Prognose</string>
-    <string id="41696">Stündliche Prognose</string>    
+    <string id="41696">Stündliche Prognose</string>
     
     <!-- SmartPlaylistEditor.xml -->
     <!-- From 41716 to 41719 -->
@@ -262,7 +256,7 @@
     <string id="42133">Quellen aktualisieren</string>
     <string id="42134">Add-ons aktualisieren</string>
     <string id="42135">Aktivierte Add-on-Repositories aktualisieren...</string>
-    <string id="42136">Lokale Add-on-Verzeichnisse aktualisieren...</string>    
+    <string id="42136">Lokale Add-on-Verzeichnisse aktualisieren...</string>
     
     <!-- TV Guide -->
     <!-- From 42160 to 42179 -->
@@ -283,5 +277,5 @@
     <!-- From 42200 to 42204 -->
     <string id="42200">Maus nicht unterstützt</string>
     <string id="42201">Bitte deaktivieren</string>
-
+    
 </strings>

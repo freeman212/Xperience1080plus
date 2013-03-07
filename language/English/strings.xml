@@ -131,15 +131,9 @@
     <!-- From 41350 to 41369 -->
     <string id="41350">System Info</string>
     <string id="41351">Logout</string>
-    <string id="41352">Exit XBMC</string>
     <string id="41353">File Manager</string>
-    <string id="41354">Restart XBMC</string>
-    <string id="41355">Power</string>
-    <string id="41356">Suspend</string>
-    <string id="41357">Hibernate</string>
-    <string id="41358">Restart</string>
-    <string id="41359">Eject/Load</string>
-    <string id="41360">Master mode</string>
+    <string id="41360">Master mode off</string>
+    <string id="41361">Master mode on</string>
     
     <!-- DialogSeekBar.xml & VideoOSD.xml -->
     <!-- From 41370 to 41399 -->
@@ -213,7 +207,7 @@
     <string id="41693">Moon phase</string>
     <string id="41694">Current weather</string>
     <string id="41695">10 day forecast</string>
-    <string id="41696">Hourly forecast</string>    
+    <string id="41696">Hourly forecast</string>
     
     <!-- SmartPlaylistEditor.xml -->
     <!-- From 41716 to 41719 -->
@@ -261,8 +255,7 @@
     <string id="42133">Update repositories</string>
     <string id="42134">Update add-ons</string>
     <string id="42135">Updating enabled add-on repositories...</string>
-    <string id="42136">Updating local add-on directories...</string>    
-    
+    <string id="42136">Updating local add-on directories...</string>
     
     <!-- TV Guide -->
     <!-- From 42160 to 42179 -->
@@ -278,7 +271,7 @@
     <string id="42183">Delete Group</string>
     <string id="42184">Channel Options</string>
     <string id="42185">Misc Options</string>
-
+    
     <!-- Mouse -->
     <!-- From 42200 to 42204 -->
     <string id="42200">Mouse not supported</string>
