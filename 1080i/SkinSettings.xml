@@ -895,6 +895,8 @@
                     <selected>Skin.HasSetting(CDArt.Enabled)</selected>
                     <onclick>Skin.ToggleSetting(CDArt.Enabled)</onclick>
                     <label>$LOCALIZE[41107]</label>
+                    <enable>!Skin.HasSetting(MusicVisClassic.Enabled)</enable>
+                    <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(8005)">Conditional</animation>
                 </control>
                 <control type="radiobutton" id="8006">
                     <width>1210</width>
