@@ -1167,7 +1167,7 @@
                                 <scroll>false</scroll>
                             </control>
                             <control type="label">
-                                <posx>610</posx>
+                                <posx>530</posx>
                                 <width>590</width>
                                 <height>58</height>
                                 <font>Font-Condensed-S31</font>
@@ -1177,6 +1177,26 @@
                                 <shadowcolor>22000000</shadowcolor>
                                 <scroll>false</scroll>
                                 <align>right</align>
+                            </control>
+                            <control type="label">
+                                <posx>610</posx>
+                                <width>510</width>
+                                <height>58</height>
+                                <font>Font-Condensed-S31</font>
+                                <label fallback="    •••">$INFO[ListItem.Rating,    ,.0]</label>
+                                <textcolor>77white</textcolor>
+                                <selectedcolor>77white</selectedcolor>
+                                <shadowcolor>22000000</shadowcolor>
+                                <scroll>false</scroll>
+                                <align>right</align>
+                            </control>
+                            <control type="image">
+                                <posx>530</posx>
+                                <posy>3</posy>
+                                <width>49</width>
+                                <height>49</height>
+                                <aspect>keepaspect</aspect>
+                                <texture>views/list/other/star_nofo.png</texture>
                             </control>
                         </control>
                     </itemlayout>
@@ -1325,21 +1345,39 @@
                                     <font>Font-Condensed-S29-B</font>
                                     <label>$VAR[MusicInfoListSongLabel]</label>
                                     <textcolor>eewhite</textcolor>
-                                    <selectedcolor>eewhite</selectedcolor>
                                     <shadowcolor>22000000</shadowcolor>
-                                    <scroll>false</scroll>
+                                    <scroll>true</scroll>
                                 </control>
                                 <control type="label">
-                                    <posx>610</posx>
+                                    <posx>530</posx>
                                     <width>590</width>
                                     <height>58</height>
                                     <font>Font-Condensed-S31</font>
                                     <label fallback="">$INFO[ListItem.Duration]</label>
                                     <textcolor>eewhite</textcolor>
-                                    <selectedcolor>eewhite</selectedcolor>
                                     <shadowcolor>22000000</shadowcolor>
                                     <scroll>false</scroll>
                                     <align>right</align>
+                                </control>
+                                <control type="label">
+                                    <posx>610</posx>
+                                    <width>510</width>
+                                    <height>58</height>
+                                    <font>Font-Condensed-S31</font>
+                                    <label fallback="    •••">$INFO[ListItem.Rating,    ,.0]</label>
+                                    <textcolor>eewhite</textcolor>
+                                    <shadowcolor>22000000</shadowcolor>
+                                    <scroll>false</scroll>
+                                    <align>right</align>
+                                </control>
+                                <control type="image">
+                                    <posx>530</posx>
+                                    <posy>3</posy>
+                                    <width>49</width>
+                                    <height>49</height>
+                                    <aspect>keepaspect</aspect>
+                                    <texture>views/list/other/star_fo.png</texture>
+                                    <include>defaultfocusanim3</include>
                                 </control>
                             </control>
                         </control>
