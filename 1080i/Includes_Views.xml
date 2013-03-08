@@ -5,6 +5,7 @@
     <include file="ViewtypesPrograms.xml" />
     <include file="ViewtypesAddons.xml" />
     <include file="ViewtypesPVR.xml" />
+    <include file="ViewtypesGames.xml" />
 
     <include name="VideoViews">
         <include>Viewtype-List</include>
@@ -47,6 +48,9 @@
     <include name="ProgramViews">
         <include>Viewtype-ProgramList</include>
         <include>Viewtype-AddonThumbnail</include>
+        <include>Viewtype-GameLandscapePoster</include>
+        <include>Viewtype-GameLandscapeSquare</include>
+        <include>Viewtype-GameLandscapeWide</include>
     </include>
     
     <include name="AddonViews">
@@ -67,14 +71,14 @@
     
     <include name="PVRViews">
         <control type="group" id="50">
-        	<include>Viewtype-TVChannelView</include> 
-        	<include>Viewtype-RadioChannelView</include>
-        	<include>Viewtype-EPGTimeline</include>
-        	<include>Viewtype-TVGuideChannelView</include>
-        	<include>Viewtype-TVGuideNowNext</include>
-        	<include>Viewtype-TVRecordingsView</include>
-        	<include>Viewtype-TVTimersView</include>
-        	<include>Viewtype-TVSearch</include>
+            <include>Viewtype-TVChannelView</include> 
+            <include>Viewtype-RadioChannelView</include>
+            <include>Viewtype-EPGTimeline</include>
+            <include>Viewtype-TVGuideChannelView</include>
+            <include>Viewtype-TVGuideNowNext</include>
+            <include>Viewtype-TVRecordingsView</include>
+            <include>Viewtype-TVTimersView</include>
+            <include>Viewtype-TVSearch</include>
         </control>
     </include>
     

@@ -17,7 +17,6 @@
                 <effect type="zoom" start="0,0,1920,1080" end="335,125,1440,810" time="300" tween="cubic" easing="out" />
             </animation>
             <visible>stringcompare(Container.FolderName,Advanced Launcher)</visible>
-            
             <!-- Title Label -->            
             <control type="label">
                 <animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
@@ -30,7 +29,6 @@
                 <align>left</align>
                 <scroll>false</scroll>
             </control>
-            
             <!-- Arrow -->
             <control type="image">
                 <animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
@@ -46,7 +44,6 @@
                 <texture>dialogs/video-info/arrow.png</texture>
                 <visible>!Control.HasFocus(1110)</visible>
             </control>
-            
             <control type="grouplist">
                 <animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
                 <animation type="Conditional" condition="Control.HasFocus(1110)">
@@ -70,7 +67,6 @@
                     <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(9334) | Control.HasFocus(1110)">Conditional</animation>
                 </control>
             </control>
-            
             <!-- Info Stuff -->
             <control type="group">
                 <include>FullscreenDimensions</include>
@@ -86,83 +82,104 @@
                 <animation type="Conditional" condition="Control.HasFocus(1110)">
                     <effect type="slide" start="0" end="510" time="400" delay="0" tween="sine" easing="inout" />
                 </animation>
-                
+                <!-- Shadow -->
+                <control type="image">
+                    <description>Shadow</description>
+                    <posx>57</posx>
+                    <posy>900</posy>
+                    <width>720</width>
+                    <height>125</height>
+                    <texture>windows/home/item-shadow.png</texture>
+                </control>
                 <!-- Panel -->
                 <control type="image">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>835</width>
-                    <height>1080</height>
-                    <texture>dialogs/video-info/panel.png</texture>
+                    <posx>98</posx>
+                    <posy>573</posy>
+                    <width>638</width>
+                    <height>335</height>
+                    <texture border="3">views/list/panel/panel.png</texture>
                 </control>
-                
                 <!-- Fanart -->
                 <control type="image">
-                    <posx>132</posx>
-                    <posy>254</posy>
-                    <width>571</width>
-                    <height>321</height>
-                    <aspectratio>stretch</aspectratio>
+                    <posx>100</posx>
+                    <posy>220</posy>
+                    <width>634</width>
+                    <height>355</height>
+                    <aspectratio>scale</aspectratio>
                     <texture background="true">$INFO[ListItem.property(fanart_image)]</texture>
                     <visible>!Player.HasVideo</visible>
                 </control>
-                
                 <control type="videowindow">
                     <description>video</description>
-                    <posx>132</posx>
-                    <posy>254</posy>
-                    <width>571</width>
-                    <height>321</height>
+                    <posx>100</posx>
+                    <posy>220</posy>
+                    <width>634</width>
+                    <height>355</height>
                     <aspectratio>scale</aspectratio>
                     <visible>Player.HasVideo</visible>
                 </control>
-                
-
                 <control type="list" id="9333">
-                    <posx>122</posx>
-                    <posy>585</posy>
-                    <width>591</width>
-                    <height>316</height>
+                    <posx>100</posx>
+                    <posy>576</posy>
+                    <width>634</width>
+                    <height>332</height>
                     <onleft>1110</onleft>
                     <onright>RunScript(special://skin/extras/scripts/setClearProperty.py,Right)</onright>
                     <onup>9333</onup>
                     <ondown>9333</ondown>
-                    <scrolltime>200</scrolltime>
+                    <scrolltime>0</scrolltime>
                     <orientation>vertical</orientation>
-                    <itemlayout width="591" height="74">
-                        <control type="label">
-                            <posx>30</posx>
-                            <width>531</width>
-                            <height>89</height>
-                            <textcolor>aawhite</textcolor>
-                            <shadowcolor>33FFFFFF</shadowcolor>
-                            <font>Font-Condensed-S34</font>
-                            <align>left</align>
-                            <label>$INFO[ListItem.label]</label>
-                        </control>
-                    </itemlayout>
-                    <focusedlayout width="591" height="74">
+                    <focusposition>0</focusposition>
+                    <itemlayout height="83">
                         <control type="image">
                             <posx>0</posx>
                             <posy>0</posy>
-                            <width>591</width>
-                            <height>95</height>
-                            <texture>dialogs/video-info/button.png</texture>
-                            <animation effect="slide" start="0,-74" end="0,0" time="200" tween="sine" easing="inout" condition="Container(9333).OnNext" reversible="false">Focus</animation>
-                            <animation effect="slide" start="0,74" end="0,0" time="200" tween="sine" easing="inout" condition="Container(9333).OnPrevious" reversible="false">Focus</animation>
+                            <width>634</width>
+                            <height>84</height>
+                            <texture border="90,3,90,3">views/list/other/separator.png</texture>
                         </control>
                         <control type="label">
                             <posx>30</posx>
-                            <width>531</width>
-                            <height>89</height>
+                            <posy>0</posy>
+                            <width>574</width>
+                            <height>82</height>
+                            <font>Font-Condensed-S40</font>
+                            <label>$INFO[ListItem.Label]</label>
                             <textcolor>eewhite</textcolor>
-                            <shadowcolor>33FFFFFF</shadowcolor>
-                            <font>Font-Condensed-S34</font>
-                            <align>left</align>
-                            <label>$INFO[ListItem.label]</label>
-                            <animation type="Focus" condition="Container(9333).OnNext | Container(9333).OnPrevious" reversible="false">
-                                <effect type="fade" start="70" end="100" tween="sine" easing="inout" time="200" />
-                            </animation>
+                            <shadowcolor>33000000</shadowcolor>
+                            <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="83">
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>634</width>
+                            <height>84</height>
+                            <texture border="90,3,90,3">views/list/other/separator.png</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>634</width>
+                            <height>82</height>
+                            <texture border="150,1,150,1">views/other/focus.png</texture>
+                            <animation effect="slide" start="0,83" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnPrevious">Focus</animation>
+                            <animation effect="slide" start="0,-83" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnNext">Focus</animation>
+                            <include>visiblehidefadeinfo</include>
+                            <visible>Control.HasFocus(9333)</visible>
+                        </control>
+                        <control type="label">
+                            <posx>30</posx>
+                            <posy>0</posy>
+                            <width>574</width>
+                            <height>82</height>
+                            <font>Font-Condensed-S40</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>eewhite</textcolor>
+                            <shadowcolor>33000000</shadowcolor>
+                            <animation effect="fade" start="50" end="100" time="300" tween="sine" easing="inout" reversible="false" condition="Container(9333).OnNext | Container(9333).OnPrevious">Focus</animation>
+                            <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(9333)">Conditional</animation>
                         </control>
                     </focusedlayout>
                     <content>
@@ -187,7 +204,6 @@
                         </item>
                     </content>
                 </control>
-                
                 <!-- Info -->
                 <control type="grouplist">
                     <animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
@@ -216,7 +232,7 @@
                     <control type="group">
                         <width>950</width>
                         <height>40</height>
-                        <visible>!IsEmpty(ListItem.Premiered)</visible>
+                        <visible>!IsEmpty(ListItem.year)</visible>
                         <!-- Premiered -->
                         <control type="label">
                             <posx>8</posx>
@@ -224,7 +240,7 @@
                             <width>950</width>
                             <font>Font-Condensed-S34</font>
                             <align>left</align>
-                            <label>$LOCALIZE[41327]: [COLOR=DDFFFFFF]$INFO[ListItem.Premiered][/COLOR]</label>
+                            <label>$LOCALIZE[41327]: [COLOR=DDFFFFFF]$INFO[ListItem.year][/COLOR]</label>
                             <textcolor>aawhite</textcolor>
                             <scroll>false</scroll>
                         </control>
@@ -262,7 +278,6 @@
                         </control>
                     </control>
                 </control>
-                
                 <!-- Plot -->
                 <control type="group">
                     <animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
@@ -287,7 +302,6 @@
                     </control>
                 </control>          
             </control>
-            
             <control type="group">
                 <visible>Control.HasFocus(1110)</visible>
                 <animation type="Visible">
@@ -318,14 +332,11 @@
                     <aspectratio>keep</aspectratio>
                 </control>
             </control>
-            
         </control>
-        
         <control type="button" id="1110">
             <onleft>RunScript(special://skin/extras/scripts/setClearProperty.py,BounceLeft)</onleft>
             <onright>9333</onright>
         </control>
-        
         <include>FadeBackgroundMovieInfo</include>
     </controls>
 </window>

@@ -1,7 +1,7 @@
 <window>
     <defaultcontrol always="true">50</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
-    <views>50,500<!--,55,56,57,58,60,61--></views>
+    <views>50,500,504,505,506<!--,55,56,57,58,60,61--></views>
     <controls>
         <include>CommonItems</include>
         <include>ProgramHeader</include>
@@ -173,6 +173,42 @@
                     <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
                     <radioposx>-19</radioposx>
                     <visible>Container.HasFiles + Container.Content(addons)</visible>
+                </control>
+                <control type="radiobutton" id="204">
+                    <description>Landscape poster</description>
+                    <include>optionsbuttonsdimensions</include>
+                    <label>Landscape poster</label>
+                    <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                    <onclick>Container.SetViewMode(504)</onclick>
+                    <selected>Control.IsVisible(504)</selected>
+                    <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                    <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                    <radioposx>-19</radioposx>
+                    <visible>stringcompare(Container.FolderName,Advanced Launcher)</visible>
+                </control>
+                <control type="radiobutton" id="205">
+                    <description>Landscape square</description>
+                    <include>optionsbuttonsdimensions</include>
+                    <label>Landscape square</label>
+                    <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                    <onclick>Container.SetViewMode(505)</onclick>
+                    <selected>Control.IsVisible(505)</selected>
+                    <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                    <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                    <radioposx>-19</radioposx>
+                    <visible>stringcompare(Container.FolderName,Advanced Launcher)</visible>
+                </control>
+                <control type="radiobutton" id="206">
+                    <description>Landscape wide</description>
+                    <include>optionsbuttonsdimensions</include>
+                    <label>Landscape wide</label>
+                    <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                    <onclick>Container.SetViewMode(506)</onclick>
+                    <selected>Control.IsVisible(506)</selected>
+                    <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                    <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                    <radioposx>-19</radioposx>
+                    <visible>stringcompare(Container.FolderName,Advanced Launcher)</visible>
                 </control>
                 <!--<control type="radiobutton" id="203">
                     <description>PosterView</description>

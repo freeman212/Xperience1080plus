@@ -355,7 +355,7 @@
         <control type="group">
             <posx>75</posx>
             <posy>26</posy>
-            <visible>!Window.IsActive(addoninformation)</visible>
+            <visible>!Window.IsActive(addoninformation) + !Window.IsActive(1122)</visible>
             <include>BannerListInfoAnimation</include>
             <control type="group">
                 <control type="image">
