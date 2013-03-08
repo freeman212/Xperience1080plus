@@ -1101,7 +1101,7 @@
                         <font>Font-Condensed-S30</font>
                         <textcolor>77white</textcolor>
                         <shadowcolor>22000000</shadowcolor>
-                        <label>$INFO[Container(51).ListItem.Premiered,$LOCALIZE[41321],]</label>
+                        <label>$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[Container(51).ListItem.Premiered, • $LOCALIZE[41321],]</label>
                         <scroll>false</scroll>
                         <include>visiblehidefadeinfo</include>
                     </control>
@@ -2490,7 +2490,7 @@
                                 <posx>20</posx>
                                 <posy>329</posy>
                                 <width>440</width>
-                                <label>$INFO[Container(54).ListItem(-1).Year]$INFO[Container(54).ListItem(-1).Duration, • , $LOCALIZE[12391]]$INFO[Container(54).ListItem(-1).Rating, • ,]</label>
+                                <label>$INFO[Container(54).ListItem(-1).Year]$INFO[Container(54).ListItem(-1).Property(TotalEpisodes), • , $LOCALIZE[20360]]$INFO[Container(54).ListItem(-1).Duration, • , $LOCALIZE[12391]]$INFO[Container(54).ListItem(-1).Rating, • ,]</label>
                                 <font>Font-Condensed-S32</font>
                                 <textcolor>aawhite</textcolor>
                                 <shadowcolor>22000000</shadowcolor>
@@ -2630,7 +2630,7 @@
                                 <posx>20</posx>
                                 <posy>329</posy>
                                 <width>440</width>
-                                <label>$INFO[Container(54).ListItem(3).Year]$INFO[Container(54).ListItem(3).Duration, • , $LOCALIZE[12391]]$INFO[Container(54).ListItem(3).Rating, • ,]</label>
+                                <label>$INFO[Container(54).ListItem(3).Year]$INFO[Container(54).ListItem(3).Property(TotalEpisodes), • , $LOCALIZE[20360]]$INFO[Container(54).ListItem(3).Duration, • , $LOCALIZE[12391]]$INFO[Container(54).ListItem(3).Rating, • ,]</label>
                                 <font>Font-Condensed-S32</font>
                                 <textcolor>aawhite</textcolor>
                                 <shadowcolor>22000000</shadowcolor>
@@ -2770,7 +2770,7 @@
                                 <posx>20</posx>
                                 <posy>329</posy>
                                 <width>440</width>
-                                <label>$INFO[Container(54).ListItem(2).Year]$INFO[Container(54).ListItem(2).Duration, • , $LOCALIZE[12391]]$INFO[Container(54).ListItem(2).Rating, • ,]</label>
+                                <label>$INFO[Container(54).ListItem(2).Year]$INFO[Container(54).ListItem(2).Property(TotalEpisodes), • , $LOCALIZE[20360]]$INFO[Container(54).ListItem(2).Duration, • , $LOCALIZE[12391]]$INFO[Container(54).ListItem(2).Rating, • ,]</label>
                                 <font>Font-Condensed-S32</font>
                                 <textcolor>aawhite</textcolor>
                                 <shadowcolor>22000000</shadowcolor>
@@ -2910,7 +2910,7 @@
                                 <posx>20</posx>
                                 <posy>329</posy>
                                 <width>440</width>
-                                <label>$INFO[Container(54).ListItem(1).Year]$INFO[Container(54).ListItem(1).Duration, • , $LOCALIZE[12391]]$INFO[Container(54).ListItem(1).Rating, • ,]</label>
+                                <label>$INFO[Container(54).ListItem(1).Year]$INFO[Container(54).ListItem(1).Property(TotalEpisodes), • , $LOCALIZE[20360]]$INFO[Container(54).ListItem(1).Duration, • , $LOCALIZE[12391]]$INFO[Container(54).ListItem(1).Rating, • ,]</label>
                                 <font>Font-Condensed-S32</font>
                                 <textcolor>aawhite</textcolor>
                                 <shadowcolor>22000000</shadowcolor>
@@ -3045,7 +3045,7 @@
                         <posx>20</posx>
                         <posy>329</posy>
                         <width>440</width>
-                        <label>$INFO[Container(54).ListItem(0).Year]$INFO[Container(54).ListItem(0).Duration, • , $LOCALIZE[12391]]$INFO[Container(54).ListItem(0).Rating, • ,]</label>
+                        <label>$INFO[Container(54).ListItem(0).Year]$INFO[Container(54).ListItem(0).Property(TotalEpisodes), • , $LOCALIZE[20360]]$INFO[Container(54).ListItem(0).Duration, • , $LOCALIZE[12391]]$INFO[Container(54).ListItem(0).Rating, • ,]</label>
                         <font>Font-Condensed-S32</font>
                         <textcolor>aawhite</textcolor>
                         <shadowcolor>22000000</shadowcolor>
@@ -3194,7 +3194,7 @@
                                 <posx>20</posx>
                                 <posy>329</posy>
                                 <width>440</width>
-                                <label>$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ,]</label>
+                                <label>$INFO[ListItem.Year]$INFO[ListItem.Property(TotalEpisodes), • , $LOCALIZE[20360]]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ,]</label>
                                 <font>Font-Condensed-S32</font>
                                 <textcolor>aawhite</textcolor>
                                 <shadowcolor>22000000</shadowcolor>
@@ -3324,7 +3324,7 @@
                                 <posx>20</posx>
                                 <posy>329</posy>
                                 <width>440</width>
-                                <label>$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ,]</label>
+                                <label>$INFO[ListItem.Year]$INFO[ListItem.Property(TotalEpisodes), • , $LOCALIZE[20360]]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ,]</label>
                                 <font>Font-Condensed-S32</font>
                                 <textcolor>aawhite</textcolor>
                                 <shadowcolor>22000000</shadowcolor>
@@ -3501,12 +3501,13 @@
                                 <posy>529</posy>
                                 <width>280</width>
                                 <height>40</height>
-                                <label>$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ,]</label>
+                                <label>$INFO[ListItem.Year]$INFO[ListItem.Property(TotalEpisodes), • , $LOCALIZE[20360]]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ,]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>aawhite</textcolor>
                                 <shadowcolor>22000000</shadowcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
+                                <visible>!Container.Content(Seasons)</visible>
                             </control>
                             <control type="group">
                                 <visible>Container.Content(Seasons)</visible>
@@ -3515,7 +3516,7 @@
                                     <posy>529</posy>
                                     <width>280</width>
                                     <height>40</height>
-                                    <label>$INFO[ListItem.Property(UnWatchedEpisodes),, / ]$INFO[ListItem.Property(TotalEpisodes),, Unwatched]</label>
+                                    <label>$INFO[ListItem.Property(UnWatchedEpisodes),,/]$INFO[ListItem.Property(TotalEpisodes),, Unwatched]</label>
                                     <font>Font-Condensed-S28</font>
                                     <textcolor>aawhite</textcolor>
                                     <shadowcolor>22000000</shadowcolor>
@@ -3610,12 +3611,13 @@
                                 <posy>529</posy>
                                 <width>280</width>
                                 <height>40</height>
-                                <label>$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ,]</label>
+                                <label>$INFO[ListItem.Year]$INFO[ListItem.Property(TotalEpisodes), • , $LOCALIZE[20360]]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ,]</label>
                                 <font>Font-Condensed-S28</font>
                                 <textcolor>aawhite</textcolor>
                                 <shadowcolor>22000000</shadowcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
+                                <visible>!Container.Content(Seasons)</visible>
                             </control>
                             <control type="group">
                                 <visible>Container.Content(Seasons)</visible>
@@ -3624,7 +3626,7 @@
                                     <posy>529</posy>
                                     <width>280</width>
                                     <height>40</height>
-                                    <label>$INFO[ListItem.Property(UnWatchedEpisodes),, / ]$INFO[ListItem.Property(TotalEpisodes),, Unwatched]</label>
+                                    <label>$INFO[ListItem.Property(UnWatchedEpisodes),,/]$INFO[ListItem.Property(TotalEpisodes),, Unwatched]</label>
                                     <font>Font-Condensed-S28</font>
                                     <textcolor>aawhite</textcolor>
                                     <shadowcolor>22000000</shadowcolor>
