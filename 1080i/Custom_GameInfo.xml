@@ -74,9 +74,8 @@
             
             <!-- Info Stuff -->
             <control type="group">
-                <include>FullscreenDimensions</include>
-                <include>listEndAnimation</include>
                 <visible allowhiddenfocus="true">Control.HasFocus(9333) | Control.HasFocus(1110)</visible>
+                <include>FullscreenDimensions</include>
                 <include>listEndAnimation</include>
                 <animation type="Visible">
                     <effect type="slide" start="-1920" end="0" time="600" delay="0" tween="sine" easing="inout" />
@@ -338,7 +337,7 @@
                     <height>687</height>
                     <texture background="true" fallback="views/fallbacks/DefaultGames.png/poster.png">$INFO[ListItem.Art(thumb)]</texture>
                     <include>listEndAnimation</include>
-                    <aspectratio>scale</aspectratio>
+                    <aspectratio>keep</aspectratio>
                 </control>
             </control>
         </control>
