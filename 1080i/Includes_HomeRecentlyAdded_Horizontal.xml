@@ -41,7 +41,7 @@
         <value condition="Container(20).HasFocus(7) + Control.HasFocus(82)">DefaultAddon.png</value>
         <value condition="Container(20).HasFocus(2) + Control.HasFocus(83)">DefaultMovies.png</value>
         <value condition="Container(20).HasFocus(2) + Control.HasFocus(84)">InProgressMovies.png</value>
-        <value condition="Container(20).HasFocus(3) + Control.HasFocus(83)">DefaultTVShows.png</value>
+        <value condition="Container(20).HasFocus(3) + Control.HasFocus(83)">InProgressTVShows.png</value>
         <value condition="Container(20).HasFocus(4) + Control.HasFocus(83)">DefaultMusicAlbums.png</value>
         <value condition="Container(20).HasFocus(4) + Control.HasFocus(84)">DefaultMusicRecentlyPlayed.png</value>
     </variable>
