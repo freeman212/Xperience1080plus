@@ -2,6 +2,7 @@
     <defaultcontrol always="true">9333</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <controls>  
+    
         <!-- Advanced Launcher Game Info -->
         <control type="group">
             <posx>0</posx>
@@ -17,6 +18,7 @@
                 <effect type="zoom" start="0,0,1920,1080" end="335,125,1440,810" time="300" tween="cubic" easing="out" />
             </animation>
             <visible>stringcompare(Container.FolderName,Advanced Launcher)</visible>
+            
             <!-- Title Label -->            
             <control type="label">
                 <animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
@@ -29,6 +31,7 @@
                 <align>left</align>
                 <scroll>false</scroll>
             </control>
+            
             <!-- Arrow -->
             <control type="image">
                 <animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
@@ -54,6 +57,7 @@
                 <width>600</width>
                 <orientation>horizontal</orientation>
                 <itemgap>20</itemgap>
+                
                 <!-- Info Label -->
                 <control type="label">
                     <posx>118</posx>
@@ -67,9 +71,11 @@
                     <animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(9334) | Control.HasFocus(1110)">Conditional</animation>
                 </control>
             </control>
+            
             <!-- Info Stuff -->
             <control type="group">
                 <include>FullscreenDimensions</include>
+                <include>listEndAnimation</include>
                 <visible allowhiddenfocus="true">Control.HasFocus(9333) | Control.HasFocus(1110)</visible>
                 <include>listEndAnimation</include>
                 <animation type="Visible">
@@ -82,6 +88,7 @@
                 <animation type="Conditional" condition="Control.HasFocus(1110)">
                     <effect type="slide" start="0" end="510" time="400" delay="0" tween="sine" easing="inout" />
                 </animation>
+                
                 <!-- Shadow -->
                 <control type="image">
                     <description>Shadow</description>
@@ -91,6 +98,7 @@
                     <height>125</height>
                     <texture>windows/home/item-shadow.png</texture>
                 </control>
+                
                 <!-- Panel -->
                 <control type="image">
                     <posx>98</posx>
@@ -99,6 +107,7 @@
                     <height>335</height>
                     <texture border="3">views/list/panel/panel.png</texture>
                 </control>
+                
                 <!-- Fanart -->
                 <control type="image">
                     <posx>100</posx>
@@ -106,7 +115,7 @@
                     <width>634</width>
                     <height>355</height>
                     <aspectratio>scale</aspectratio>
-                    <texture background="true">$INFO[ListItem.property(fanart_image)]</texture>
+                    <texture background="true" fallback="views/fallbacks/DefaultGames.png/landscape.png">$INFO[ListItem.property(fanart_image)]</texture>
                     <visible>!Player.HasVideo</visible>
                 </control>
                 <control type="videowindow">
@@ -124,7 +133,7 @@
                     <width>634</width>
                     <height>332</height>
                     <onleft>1110</onleft>
-                    <onright>RunScript(special://skin/extras/scripts/setClearProperty.py,Right)</onright>
+                    <onright>RunScript(special://skin/extras/scripts/setClearProperty.py,BounceRight)</onright>
                     <onup>9333</onup>
                     <ondown>9333</ondown>
                     <scrolltime>0</scrolltime>
@@ -327,7 +336,7 @@
                     <posy>222</posy>
                     <width>466</width>
                     <height>699</height>
-                    <texture background="true">$INFO[ListItem.Thumb]</texture>
+                    <texture background="true" fallback="views/fallbacks/DefaultGames.png/poster.png">$INFO[ListItem.Art(thumb)]</texture>
                     <include>listEndAnimation</include>
                     <aspectratio>keep</aspectratio>
                 </control>
