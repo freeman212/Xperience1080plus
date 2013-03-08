@@ -332,13 +332,13 @@
                 </control>
                 <control type="image">
                     <description>Cover</description>
-                    <posx>108</posx>
-                    <posy>222</posy>
-                    <width>466</width>
-                    <height>699</height>
+                    <posx>100</posx>
+                    <posy>220</posy>
+                    <width>458</width>
+                    <height>687</height>
                     <texture background="true" fallback="views/fallbacks/DefaultGames.png/poster.png">$INFO[ListItem.Art(thumb)]</texture>
                     <include>listEndAnimation</include>
-                    <aspectratio>keep</aspectratio>
+                    <aspectratio>scale</aspectratio>
                 </control>
             </control>
         </control>
