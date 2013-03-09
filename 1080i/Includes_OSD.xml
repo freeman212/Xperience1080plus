@@ -707,7 +707,16 @@
                     <posy>30</posy>
                     <width>404</width>
                     <height>404</height>
-                    <texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.FolderPath,,cdart.png]</texture>
+                    <texture>osd/fullscreen/cd.png</texture>
+                    <animation effect="rotate" center="auto" start="360" end="0" time="2500" loop="true" condition="!Player.Paused">Conditional</animation>
+                </control>
+                <control type="image">
+                    <description>Poster</description>
+                    <posx>-32</posx>
+                    <posy>30</posy>
+                    <width>404</width>
+                    <height>404</height>
+                    <texture background="true">$INFO[Player.FolderPath,,cdart.png]</texture>
                     <animation effect="rotate" center="auto" start="360" end="0" time="2500" loop="true" condition="!Player.Paused">Conditional</animation>
                 </control>
             </control>
@@ -1101,7 +1110,16 @@
                     <posy>30</posy>
                     <width>404</width>
                     <height>404</height>
-                    <texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.FolderPath,,cdart.png]</texture>
+                    <texture>osd/fullscreen/cd.png</texture>
+                    <animation effect="rotate" center="auto" start="360" end="0" time="2500" loop="true" condition="!Player.Paused">Conditional</animation>
+                </control>
+                <control type="image">
+                    <description>Poster</description>
+                    <posx>-32</posx>
+                    <posy>30</posy>
+                    <width>404</width>
+                    <height>404</height>
+                    <texture background="true">$INFO[Player.FolderPath,,cdart.png]</texture>
                     <animation effect="rotate" center="auto" start="360" end="0" time="2500" loop="true" condition="!Player.Paused">Conditional</animation>
                 </control>
             </control>
