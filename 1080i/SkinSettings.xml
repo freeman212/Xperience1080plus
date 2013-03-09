@@ -177,6 +177,7 @@
                     <width>1210</width>
                     <include>SettingsCategoryRadioButtonVars</include>
                     <selected>Skin.HasSetting(BackgroundOpacity)</selected>
+                    <onclick condition="!Skin.HasSetting(BackgroundOpacity)">Skin.Reset(HomeBackgroundOpacity)</onclick>
                     <onclick>Skin.ToggleSetting(BackgroundOpacity)</onclick>
                     <label>Show more fanart</label>
                 </control>
@@ -862,6 +863,14 @@
                     <onclick condition="!Skin.HasSetting(OSDVisualisation.Enabled)">Skin.Reset(ArtistSlideShow.Enabled)</onclick>
                     <onclick>Skin.ToggleSetting(OSDVisualisation.Enabled)</onclick>
                     <label>$LOCALIZE[41240]</label>
+                </control>
+                <control type="radiobutton" id="8008">
+                    <width>1210</width>
+                    <include>SettingsCategoryRadioButtonVars</include>
+                    <selected>Skin.HasSetting(HomeVisualisation.Enabled)</selected>
+                    <onclick>Skin.ToggleSetting(HomeVisualisation.Enabled)</onclick>
+                    <visible>Skin.HasSetting(OSDVisualisation.Enabled)</visible>
+                    <label> • Show on Home screen</label>
                 </control>
                 <control type="radiobutton" id="8002">
                     <width>1210</width>

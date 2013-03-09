@@ -37,15 +37,29 @@
             <include>FullscreenDimensions</include>
             <visible>Skin.HasSetting(BackgroundVideo) + Player.HasVideo</visible>
         </control>
+        <control type="visualisation">
+            <include>FullscreenDimensions</include>
+            <visible>Player.HasAudio + Skin.HasSetting(OSDVisualisation.Enabled) + Skin.HasSetting(HomeVisualisation.Enabled)</visible>
+        </control>
         <control type="image">
             <include>FullscreenDimensions</include>
             <texture>windows/common/overlay.png</texture>
+            <visible>Skin.HasSetting(HomeBackgroundOpacity)</visible>
+        </control>
+        <control type="image">
+            <include>FullscreenDimensions</include>
+            <texture>windows/common/overlay2.png</texture>
+            <visible>!Skin.HasSetting(HomeBackgroundOpacity)</visible>
         </control>
     </include>
     <include name="CommonOverlayHomeClassic">
         <control type="videowindow">
             <include>FullscreenDimensions</include>
             <visible>Skin.HasSetting(BackgroundVideo) + Player.HasVideo</visible>
+        </control>
+        <control type="visualisation">
+            <include>FullscreenDimensions</include>
+            <visible>Player.HasAudio + Skin.HasSetting(OSDVisualisation.Enabled) + Skin.HasSetting(HomeVisualisation.Enabled)</visible>
         </control>
         <control type="image">
             <include>FullscreenDimensions</include>
@@ -70,6 +84,10 @@
             <include>FullscreenDimensions</include>
             <visible>Skin.HasSetting(BackgroundVideo) + Player.HasVideo</visible>
         </control>
+        <control type="visualisation">
+            <include>FullscreenDimensions</include>
+            <visible>Player.HasAudio + Skin.HasSetting(OSDVisualisation.Enabled) + Skin.HasSetting(HomeVisualisation.Enabled)</visible>
+        </control>
         <control type="image">
             <include>FullscreenDimensions</include>
             <include>Animation_FanartFade</include>
@@ -88,6 +106,7 @@
             <texture>windows/common/back-vignette.png</texture>
         </control>
     </include>
+
     <include name="CommonItems">
         <include>CommonContent</include>
         <include>BackgroundFanart</include>
@@ -96,8 +115,7 @@
     <include name="CommonItemsHome">
         <include>CommonContent</include>
         <include>HomeCustomBackdrops</include>
-        <include condition="!Skin.HasSetting(HomeBackgroundOpacity)">CommonOverlay</include>
-        <include condition="Skin.HasSetting(HomeBackgroundOpacity)">CommonOverlayHome</include>
+        <include>CommonOverlayHome</include>
     </include>
     <include name="CommonItemsHomeClassic">
         <include>CommonContent</include>
