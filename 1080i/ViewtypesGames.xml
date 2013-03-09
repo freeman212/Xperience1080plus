@@ -1,7 +1,9 @@
 <includes>
-    <!-- ====================== -->
-    <!-- Landscape Poster (504) -->
-    <!-- ====================== -->
+
+<!-- ====================== -->
+<!-- Landscape Poster (504) -->
+<!-- ====================== -->
+    
     <include name="Viewtype-GameLandscapePoster">
         <control type="group">
             <include>FullscreenDimensions</include>
@@ -221,9 +223,11 @@
             </control>
         </control>
     </include>
-    <!-- ====================== -->
-    <!-- Landscape Square (505) -->
-    <!-- ====================== -->
+    
+<!-- ====================== -->
+<!-- Landscape Square (505) -->
+<!-- ====================== -->
+    
     <include name="Viewtype-GameLandscapeSquare">
         <control type="group">
             <include>FullscreenDimensions</include>
@@ -443,9 +447,11 @@
             </control>
         </control>
     </include>
-    <!-- ==================== -->
-    <!-- Landscape Wide (506) -->
-    <!-- ==================== -->
+  
+<!-- ==================== -->
+<!-- Landscape Wide (506) -->
+<!-- ==================== -->
+    
     <include name="Viewtype-GameLandscapeWide">
         <control type="group">
             <include>FullscreenDimensions</include>

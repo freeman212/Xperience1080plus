@@ -1,5 +1,6 @@
 <includes>
     <include file="ViewtypesVideos.xml" />
+    <include file="ViewtypesVideosExtras.xml" />
     <include file="ViewtypesMusic.xml" />
     <include file="ViewtypesPictures.xml" />
     <include file="ViewtypesPrograms.xml" />
@@ -10,15 +11,16 @@
     <include name="VideoViews">
         <include>Viewtype-List</include>
         <include>Viewtype-InfoList</include>
-        <include>Viewtype-EpisodeInfoList</include>
+        <include>Viewtype-EpisodeInfoList</include>     <!--VideosExtras-->
         <include>Viewtype-Panel</include>
         <include>Viewtype-Landscape</include>
-        <include>Viewtype-LandscapePoster</include>
-        <include>Viewtype-Poster</include>
-        <include>Viewtype-PosterSmall</include>
+        <include>Viewtype-LandscapeMovies</include>     <!--VideosExtras-->
+        <include>Viewtype-LandscapePoster</include>     <!--VideosExtras-->
+        <include>Viewtype-Poster</include>              <!--VideosExtras-->
+        <include>Viewtype-PosterSmall</include>         <!--VideosExtras-->
         <include>Viewtype-Thumbnail</include>
         <include>Viewtype-ThumbnailVideo</include>
-        <include>Viewtype-WallVideo</include>
+        <include>Viewtype-WallVideo</include>           <!--VideosExtras-->
         <include>Viewtype-Banner</include>
         <include condition="Skin.HasSetting(NextAired.Enabled)">NextAiredInfo</include>
     </include>
@@ -48,9 +50,9 @@
     <include name="ProgramViews">
         <include>Viewtype-ProgramList</include>
         <include>Viewtype-AddonThumbnail</include>
-        <include>Viewtype-GameLandscapePoster</include>
-        <include>Viewtype-GameLandscapeSquare</include>
-        <include>Viewtype-GameLandscapeWide</include>
+        <include>Viewtype-GameLandscapePoster</include>     <!--Games-->
+        <include>Viewtype-GameLandscapeSquare</include>     <!--Games-->
+        <include>Viewtype-GameLandscapeWide</include>       <!--Games-->
     </include>
     
     <include name="AddonViews">
@@ -123,29 +125,48 @@
         <value>$INFO[ListItem.Overlay,overlays/,/extended-w.png]</value>
     </variable>
     
+    <!--tvshows extended overlay-->
     <variable name="ExtendedOverlay0">
         <value condition="Container(54).ListItem(0).IsResumable">$INFO[Container(54).ListItem(0).Overlay,overlays/,/extended-p.png]</value>
         <value>$INFO[Container(54).ListItem(0).Overlay,overlays/,/extended-w.png]</value>
     </variable>
-    
     <variable name="ExtendedOverlay1">
         <value condition="Container(54).ListItem(1).IsResumable">$INFO[Container(54).ListItem(1).Overlay,overlays/,/extended-p.png]</value>
         <value>$INFO[Container(54).ListItem(1).Overlay,overlays/,/extended-w.png]</value>
     </variable>
-    
     <variable name="ExtendedOverlay2">
         <value condition="Container(54).ListItem(2).IsResumable">$INFO[Container(54).ListItem(2).Overlay,overlays/,/extended-p.png]</value>
         <value>$INFO[Container(54).ListItem(2).Overlay,overlays/,/extended-w.png]</value>
     </variable>
-    
     <variable name="ExtendedOverlay3">
         <value condition="Container(54).ListItem(3).IsResumable">$INFO[Container(54).ListItem(3).Overlay,overlays/,/extended-p.png]</value>
         <value>$INFO[Container(54).ListItem(3).Overlay,overlays/,/extended-w.png]</value>
     </variable>
-    
     <variable name="ExtendedOverlay-1">
         <value condition="Container(54).ListItem(-1).IsResumable">$INFO[Container(54).ListItem(-1).Overlay,overlays/,/extended-p.png]</value>
         <value>$INFO[Container(54).ListItem(-1).Overlay,overlays/,/extended-w.png]</value>
+    </variable>
+    
+    <!--movies extended overlay-->
+    <variable name="ExtendedMovieOverlay0">
+        <value condition="Container(505).ListItem(0).IsResumable">$INFO[Container(505).ListItem(0).Overlay,overlays/,/extended-p.png]</value>
+        <value>$INFO[Container(505).ListItem(0).Overlay,overlays/,/extended-w.png]</value>
+    </variable>
+    <variable name="ExtendedMovieOverlay1">
+        <value condition="Container(505).ListItem(1).IsResumable">$INFO[Container(505).ListItem(1).Overlay,overlays/,/extended-p.png]</value>
+        <value>$INFO[Container(505).ListItem(1).Overlay,overlays/,/extended-w.png]</value>
+    </variable>
+    <variable name="ExtendedMovieOverlay2">
+        <value condition="Container(505).ListItem(2).IsResumable">$INFO[Container(505).ListItem(2).Overlay,overlays/,/extended-p.png]</value>
+        <value>$INFO[Container(505).ListItem(2).Overlay,overlays/,/extended-w.png]</value>
+    </variable>
+    <variable name="ExtendedMovieOverlay3">
+        <value condition="Container(505).ListItem(3).IsResumable">$INFO[Container(505).ListItem(3).Overlay,overlays/,/extended-p.png]</value>
+        <value>$INFO[Container(505).ListItem(3).Overlay,overlays/,/extended-w.png]</value>
+    </variable>
+    <variable name="ExtendedMovieOverlay-1">
+        <value condition="Container(505).ListItem(-1).IsResumable">$INFO[Container(505).ListItem(-1).Overlay,overlays/,/extended-p.png]</value>
+        <value>$INFO[Container(505).ListItem(-1).Overlay,overlays/,/extended-w.png]</value>
     </variable>
     
     <variable name="PosterOverlay">
@@ -403,77 +424,146 @@
         <value>$INFO[Container(56).ListItem(7).ActualIcon,views/fallbacks/,/large.png]</value>
     </variable>
     
+    <!--landscape tvshows-->
     <variable name="ExtendedViewThumb">
         <value condition="Container.Content(episodes)">$INFO[ListItem.Art(thumb)]</value>
-        <value condition="!IsEmpty(ListItem.Art(landscape)) + [[Container.Content(TVShows) + [Skin.HasSetting(ExtendedUseLandscape) | Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]] | [Container.Content(Movies) + [Skin.HasSetting(ExtendedUseMovieLandscape) | Skin.HasSetting(ExtendedUseMovieClearArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]]]">$INFO[ListItem.Art(landscape)]</value>
+        <value condition="!IsEmpty(ListItem.Art(landscape)) + [Skin.HasSetting(ExtendedUseLandscape) | Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]">$INFO[ListItem.Art(landscape)]</value>
         <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>    
         <value>$INFO[ListItem.ActualIcon,views/fallbacks/,/landscape.png]</value>
     </variable>
     
     <variable name="ExtendedViewThumb0">
         <value condition="Container.Content(episodes)">$INFO[Container(54).ListItem(0).Art(thumb)]</value>
-        <value condition="!IsEmpty(Container(54).ListItem(0).Art(landscape)) + [[Container.Content(TVShows) + [Skin.HasSetting(ExtendedUseLandscape) | Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]] | [Container.Content(Movies) + [Skin.HasSetting(ExtendedUseMovieLandscape) | Skin.HasSetting(ExtendedUseMovieClearArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]]]">$INFO[Container(54).ListItem(0).Art(landscape)]</value>
+        <value condition="!IsEmpty(Container(54).ListItem(0).Art(landscape)) + [Skin.HasSetting(ExtendedUseLandscape) | Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]">$INFO[Container(54).ListItem(0).Art(landscape)]</value>
         <value condition="!IsEmpty(Container(54).ListItem(0).Art(fanart))">$INFO[Container(54).ListItem(0).Art(fanart)]</value>    
         <value>$INFO[Container(54).ListItem(0).ActualIcon,views/fallbacks/,/landscape.png]</value>
     </variable>
     
     <variable name="ExtendedViewThumb1">
         <value condition="Container.Content(episodes)">$INFO[Container(54).ListItem(1).Art(thumb)]</value>
-        <value condition="!IsEmpty(Container(54).ListItem(1).Art(landscape)) + [[Container.Content(TVShows) + [Skin.HasSetting(ExtendedUseLandscape) | Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]] | [Container.Content(Movies) + [Skin.HasSetting(ExtendedUseMovieLandscape) | Skin.HasSetting(ExtendedUseMovieClearArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]]]">$INFO[Container(54).ListItem(1).Art(landscape)]</value>
+        <value condition="!IsEmpty(Container(54).ListItem(1).Art(landscape)) + [Skin.HasSetting(ExtendedUseLandscape) | Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]">$INFO[Container(54).ListItem(1).Art(landscape)]</value>
         <value condition="!IsEmpty(Container(54).ListItem(1).Art(fanart))">$INFO[Container(54).ListItem(1).Art(fanart)]</value>    
         <value>$INFO[Container(54).ListItem(1).ActualIcon,views/fallbacks/,/landscape.png]</value>
     </variable>
     
     <variable name="ExtendedViewThumb2">
         <value condition="Container.Content(episodes)">$INFO[Container(54).ListItem(2).Art(thumb)]</value>
-        <value condition="!IsEmpty(Container(54).ListItem(2).Art(landscape)) + [[Container.Content(TVShows) + [Skin.HasSetting(ExtendedUseLandscape) | Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]] | [Container.Content(Movies) + [Skin.HasSetting(ExtendedUseMovieLandscape) | Skin.HasSetting(ExtendedUseMovieClearArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]]]">$INFO[Container(54).ListItem(2).Art(landscape)]</value>
+        <value condition="!IsEmpty(Container(54).ListItem(2).Art(landscape)) + [Skin.HasSetting(ExtendedUseLandscape) | Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]">$INFO[Container(54).ListItem(2).Art(landscape)]</value>
         <value condition="!IsEmpty(Container(54).ListItem(2).Art(fanart))">$INFO[Container(54).ListItem(2).Art(fanart)]</value>    
         <value>$INFO[Container(54).ListItem(2).ActualIcon,views/fallbacks/,/landscape.png]</value>
     </variable>
     
     <variable name="ExtendedViewThumb3">
         <value condition="Container.Content(episodes)">$INFO[Container(54).ListItem(3).Art(thumb)]</value>
-        <value condition="!IsEmpty(Container(54).ListItem(3).Art(landscape)) + [[Container.Content(TVShows) + [Skin.HasSetting(ExtendedUseLandscape) | Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]] | [Container.Content(Movies) + [Skin.HasSetting(ExtendedUseMovieLandscape) | Skin.HasSetting(ExtendedUseMovieClearArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]]]">$INFO[Container(54).ListItem(3).Art(landscape)]</value>
+        <value condition="!IsEmpty(Container(54).ListItem(3).Art(landscape)) + [Skin.HasSetting(ExtendedUseLandscape) | Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]">$INFO[Container(54).ListItem(3).Art(landscape)]</value>
         <value condition="!IsEmpty(Container(54).ListItem(3).Art(fanart))">$INFO[Container(54).ListItem(3).Art(fanart)]</value>    
         <value>$INFO[Container(54).ListItem(3).ActualIcon,views/fallbacks/,/landscape.png]</value>
     </variable>
     
     <variable name="ExtendedViewThumb-1">
         <value condition="Container.Content(episodes)">$INFO[Container(54).ListItem(-1).Art(thumb)]</value>
-        <value condition="!IsEmpty(Container(54).ListItem(-1).Art(landscape)) + [[Container.Content(TVShows) + [Skin.HasSetting(ExtendedUseLandscape) | Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]] | [Container.Content(Movies) + [Skin.HasSetting(ExtendedUseMovieLandscape) | Skin.HasSetting(ExtendedUseMovieClearArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]]]">$INFO[Container(54).ListItem(-1).Art(landscape)]</value>
+        <value condition="!IsEmpty(Container(54).ListItem(-1).Art(landscape)) + [Skin.HasSetting(ExtendedUseLandscape) | Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]">$INFO[Container(54).ListItem(-1).Art(landscape)]</value>
         <value condition="!IsEmpty(Container(54).ListItem(-1).Art(fanart))">$INFO[Container(54).ListItem(-1).Art(fanart)]</value>    
         <value>$INFO[Container(54).ListItem(-1).ActualIcon,views/fallbacks/,/landscape.png]</value>
     </variable>
     
     <variable name="ExtendedViewLogo">
-        <value condition="[!IsEmpty(ListItem.Art(clearlogo)) + [[Container.Content(TVShows) + Skin.HasSetting(ExtendedUseClearLogo)] | [Container.Content(Movies) + Skin.HasSetting(ExtendedUseClearMovieLogo)]]] | [IsEmpty(ListItem.Art(clearart)) + [[Container.Content(TVShows) + Skin.HasSetting(ExtendedUseClearArt)] | [Container.Content(Movies) + Skin.HasSetting(ExtendedUseClearMovieArt)]]]">$INFO[ListItem.Art(clearlogo)]</value>
+        <value condition="[!IsEmpty(ListItem.Art(clearlogo)) + Skin.HasSetting(ExtendedUseClearLogo)] | [IsEmpty(ListItem.Art(clearart)) + Skin.HasSetting(ExtendedUseClearArt)]">$INFO[ListItem.Art(clearlogo)]</value>
         <value condition="!IsEmpty(ListItem.Art(clearart)) + [Skin.HasSetting(ExtendedUseClearArt) | Skin.HasSetting(ExtendedUseClearLogo)]">$INFO[ListItem.Art(clearart)]</value>
     </variable>
     
     <variable name="ExtendedViewLogo0">
-        <value condition="[!IsEmpty(Container(54).ListItem(0).Art(clearlogo)) + [[Container.Content(TVShows) + Skin.HasSetting(ExtendedUseClearLogo)] | [Container.Content(Movies) + Skin.HasSetting(ExtendedUseClearMovieLogo)]]] | [IsEmpty(Container(54).ListItem(0).Art(clearart)) + [[Container.Content(TVShows) + Skin.HasSetting(ExtendedUseClearArt)] | [Container.Content(Movies) + Skin.HasSetting(ExtendedUseClearMovieArt)]]]">$INFO[Container(54).ListItem(0).Art(clearlogo)]</value>
+        <value condition="[!IsEmpty(Container(54).ListItem(0).Art(clearlogo)) + Skin.HasSetting(ExtendedUseClearLogo)] | [IsEmpty(Container(54).ListItem(0).Art(clearart)) + Skin.HasSetting(ExtendedUseClearArt)]">$INFO[Container(54).ListItem(0).Art(clearlogo)]</value>
         <value>$INFO[Container(54).ListItem(0).Art(clearart)]</value>
     </variable>
     
     <variable name="ExtendedViewLogo1">
-        <value condition="[!IsEmpty(Container(54).ListItem(1).Art(clearlogo)) + [[Container.Content(TVShows) + Skin.HasSetting(ExtendedUseClearLogo)] | [Container.Content(Movies) + Skin.HasSetting(ExtendedUseClearMovieLogo)]]] | [IsEmpty(Container(54).ListItem(1).Art(clearart)) + [[Container.Content(TVShows) + Skin.HasSetting(ExtendedUseClearArt)] | [Container.Content(Movies) + Skin.HasSetting(ExtendedUseClearMovieArt)]]]">$INFO[Container(54).ListItem(1).Art(clearlogo)]</value>
+        <value condition="[!IsEmpty(Container(54).ListItem(1).Art(clearlogo)) + Skin.HasSetting(ExtendedUseClearLogo)] | [IsEmpty(Container(54).ListItem(1).Art(clearart)) + Skin.HasSetting(ExtendedUseClearArt)]">$INFO[Container(54).ListItem(1).Art(clearlogo)]</value>
         <value>$INFO[Container(54).ListItem(1).Art(clearart)]</value>
     </variable>
     
     <variable name="ExtendedViewLogo2">
-        <value condition="[!IsEmpty(Container(54).ListItem(2).Art(clearlogo)) + [[Container.Content(TVShows) + Skin.HasSetting(ExtendedUseClearLogo)] | [Container.Content(Movies) + Skin.HasSetting(ExtendedUseClearMovieLogo)]]] | [IsEmpty(Container(54).ListItem(2).Art(clearart)) + [[Container.Content(TVShows) + Skin.HasSetting(ExtendedUseClearArt)] | [Container.Content(Movies) + Skin.HasSetting(ExtendedUseClearMovieArt)]]]">$INFO[Container(54).ListItem(2).Art(clearlogo)]</value>
+        <value condition="[!IsEmpty(Container(54).ListItem(2).Art(clearlogo)) + Skin.HasSetting(ExtendedUseClearLogo)] | [IsEmpty(Container(54).ListItem(2).Art(clearart)) + Skin.HasSetting(ExtendedUseClearArt)]">$INFO[Container(54).ListItem(2).Art(clearlogo)]</value>
         <value>$INFO[Container(54).ListItem(2).Art(clearart)]</value>
     </variable>
     
     <variable name="ExtendedViewLogo3">
-        <value condition="[!IsEmpty(Container(54).ListItem(3).Art(clearlogo)) + [[Container.Content(TVShows) + Skin.HasSetting(ExtendedUseClearLogo)] | [Container.Content(Movies) + Skin.HasSetting(ExtendedUseClearMovieLogo)]]] | [IsEmpty(Container(54).ListItem(3).Art(clearart)) + [[Container.Content(TVShows) + Skin.HasSetting(ExtendedUseClearArt)] | [Container.Content(Movies) + Skin.HasSetting(ExtendedUseClearMovieArt)]]]">$INFO[Container(54).ListItem(3).Art(clearlogo)]</value>
+        <value condition="[!IsEmpty(Container(54).ListItem(3).Art(clearlogo)) + Skin.HasSetting(ExtendedUseClearLogo)] | [IsEmpty(Container(54).ListItem(3).Art(clearart)) + Skin.HasSetting(ExtendedUseClearArt)]">$INFO[Container(54).ListItem(3).Art(clearlogo)]</value>
         <value>$INFO[Container(54).ListItem(3).Art(clearart)]</value>
     </variable>
     
     <variable name="ExtendedViewLogo-1">
-        <value condition="[!IsEmpty(Container(54).ListItem(-1).Art(clearlogo)) + [[Container.Content(TVShows) + Skin.HasSetting(ExtendedUseClearLogo)] | [Container.Content(Movies) + Skin.HasSetting(ExtendedUseClearMovieLogo)]]] | [IsEmpty(Container(54).ListItem(-1).Art(clearart)) + [[Container.Content(TVShows) + Skin.HasSetting(ExtendedUseClearArt)] | [Container.Content(Movies) + Skin.HasSetting(ExtendedUseClearMovieArt)]]]">$INFO[Container(54).ListItem(-1).Art(clearlogo)]</value>
+        <value condition="[!IsEmpty(Container(54).ListItem(-1).Art(clearlogo)) + Skin.HasSetting(ExtendedUseClearLogo)] | [IsEmpty(Container(54).ListItem(-1).Art(clearart)) + Skin.HasSetting(ExtendedUseClearArt)]">$INFO[Container(54).ListItem(-1).Art(clearlogo)]</value>
         <value>$INFO[Container(54).ListItem(-1).Art(clearart)]</value>
     </variable>
+    
+    <!--landscape movies-->
+    <variable name="ExtendedViewMovieThumb">
+        <value condition="!IsEmpty(ListItem.Art(landscape)) + [Skin.HasSetting(ExtendedUseMovieLandscape) | Skin.HasSetting(ExtendedUseMovieClearArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]">$INFO[ListItem.Art(landscape)]</value>
+        <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>    
+        <value>$INFO[ListItem.ActualIcon,views/fallbacks/,/landscape.png]</value>
+    </variable>
+    
+    <variable name="ExtendedViewMovieThumb0">
+        <value condition="!IsEmpty(Container(505).ListItem(0).Art(landscape)) + [Skin.HasSetting(ExtendedUseMovieLandscape) | Skin.HasSetting(ExtendedUseMovieClearArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]">$INFO[Container(505).ListItem(0).Art(landscape)]</value>
+        <value condition="!IsEmpty(Container(505).ListItem(0).Art(fanart))">$INFO[Container(505).ListItem(0).Art(fanart)]</value>    
+        <value>$INFO[Container(505).ListItem(0).ActualIcon,views/fallbacks/,/landscape.png]</value>
+    </variable>
+    
+    <variable name="ExtendedViewMovieThumb1">
+        <value condition="!IsEmpty(Container(505).ListItem(1).Art(landscape)) + [Skin.HasSetting(ExtendedUseMovieLandscape) | Skin.HasSetting(ExtendedUseMovieClearArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]">$INFO[Container(505).ListItem(1).Art(landscape)]</value>
+        <value condition="!IsEmpty(Container(505).ListItem(1).Art(fanart))">$INFO[Container(505).ListItem(1).Art(fanart)]</value>    
+        <value>$INFO[Container(505).ListItem(1).ActualIcon,views/fallbacks/,/landscape.png]</value>
+    </variable>
+    
+    <variable name="ExtendedViewMovieThumb2">
+        <value condition="!IsEmpty(Container(505).ListItem(2).Art(landscape)) + [Skin.HasSetting(ExtendedUseMovieLandscape) | Skin.HasSetting(ExtendedUseMovieClearArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]">$INFO[Container(505).ListItem(2).Art(landscape)]</value>
+        <value condition="!IsEmpty(Container(505).ListItem(2).Art(fanart))">$INFO[Container(505).ListItem(2).Art(fanart)]</value>    
+        <value>$INFO[Container(505).ListItem(2).ActualIcon,views/fallbacks/,/landscape.png]</value>
+    </variable>
+    
+    <variable name="ExtendedViewMovieThumb3">
+        <value condition="!IsEmpty(Container(505).ListItem(3).Art(landscape)) + [Skin.HasSetting(ExtendedUseMovieLandscape) | Skin.HasSetting(ExtendedUseMovieClearArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]">$INFO[Container(505).ListItem(3).Art(landscape)]</value>
+        <value condition="!IsEmpty(Container(505).ListItem(3).Art(fanart))">$INFO[Container(505).ListItem(3).Art(fanart)]</value>    
+        <value>$INFO[Container(505).ListItem(3).ActualIcon,views/fallbacks/,/landscape.png]</value>
+    </variable>
+    
+    <variable name="ExtendedViewMovieThumb-1">
+        <value condition="!IsEmpty(Container(505).ListItem(-1).Art(landscape)) + [Skin.HasSetting(ExtendedUseMovieLandscape) | Skin.HasSetting(ExtendedUseMovieClearArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]">$INFO[Container(505).ListItem(-1).Art(landscape)]</value>
+        <value condition="!IsEmpty(Container(505).ListItem(-1).Art(fanart))">$INFO[Container(505).ListItem(-1).Art(fanart)]</value>    
+        <value>$INFO[Container(505).ListItem(-1).ActualIcon,views/fallbacks/,/landscape.png]</value>
+    </variable>
+    
+    <variable name="ExtendedViewMovieLogo">
+        <value condition="[!IsEmpty(ListItem.Art(clearlogo)) + Skin.HasSetting(ExtendedUseClearMovieLogo)] | [IsEmpty(ListItem.Art(clearart)) + Skin.HasSetting(ExtendedUseClearMovieArt)]">$INFO[ListItem.Art(clearlogo)]</value>
+        <value condition="!IsEmpty(ListItem.Art(clearart)) + [Skin.HasSetting(ExtendedUseMovieClearArt) | Skin.HasSetting(ExtendedUseMovieClearLogo)]">$INFO[ListItem.Art(clearart)]</value>
+    </variable>
+    
+    <variable name="ExtendedViewMovieLogo0">
+        <value condition="[!IsEmpty(Container(505).ListItem(0).Art(clearlogo)) + Skin.HasSetting(ExtendedUseClearMovieLogo)] | [IsEmpty(Container(505).ListItem(0).Art(clearart)) + Skin.HasSetting(ExtendedUseClearMovieArt)]">$INFO[Container(505).ListItem(0).Art(clearlogo)]</value>
+        <value>$INFO[Container(505).ListItem(0).Art(clearart)]</value>
+    </variable>
+    
+    <variable name="ExtendedViewMovieLogo1">
+        <value condition="[!IsEmpty(Container(505).ListItem(1).Art(clearlogo)) + Skin.HasSetting(ExtendedUseClearMovieLogo)] | [IsEmpty(Container(505).ListItem(1).Art(clearart)) + Skin.HasSetting(ExtendedUseClearMovieArt)]">$INFO[Container(505).ListItem(1).Art(clearlogo)]</value>
+        <value>$INFO[Container(505).ListItem(1).Art(clearart)]</value>
+    </variable>
+    
+    <variable name="ExtendedViewMovieLogo2">
+        <value condition="[!IsEmpty(Container(505).ListItem(2).Art(clearlogo)) + Skin.HasSetting(ExtendedUseClearMovieLogo)] | [IsEmpty(Container(505).ListItem(2).Art(clearart)) + Skin.HasSetting(ExtendedUseClearMovieArt)]">$INFO[Container(505).ListItem(2).Art(clearlogo)]</value>
+        <value>$INFO[Container(505).ListItem(2).Art(clearart)]</value>
+    </variable>
+    
+    <variable name="ExtendedViewMovieLogo3">
+        <value condition="[!IsEmpty(Container(505).ListItem(3).Art(clearlogo)) + Skin.HasSetting(ExtendedUseClearMovieLogo)] | [IsEmpty(Container(505).ListItem(3).Art(clearart)) + Skin.HasSetting(ExtendedUseClearMovieArt)]">$INFO[Container(505).ListItem(3).Art(clearlogo)]</value>
+        <value>$INFO[Container(505).ListItem(3).Art(clearart)]</value>
+    </variable>
+    
+    <variable name="ExtendedViewMovieLogo-1">
+        <value condition="[!IsEmpty(Container(505).ListItem(-1).Art(clearlogo)) + Skin.HasSetting(ExtendedUseClearMovieLogo)] | [IsEmpty(Container(505).ListItem(-1).Art(clearart)) + Skin.HasSetting(ExtendedUseClearMovieArt)]">$INFO[Container(505).ListItem(-1).Art(clearlogo)]</value>
+        <value>$INFO[Container(505).ListItem(-1).Art(clearart)]</value>
+    </variable>
+    
     
     <variable name="WallPoster">
         <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
