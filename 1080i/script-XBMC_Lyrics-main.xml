@@ -76,7 +76,7 @@
                 <posy>240</posy>
                 <height>630</height>
                 <width>1020</width>
-                <font>Font-Condensed-S33</font>
+                <font>Font-Condensed-S34</font>
                 <align>center</align>
                 <onleft>101</onleft>
                 <onright>101</onright>
@@ -127,7 +127,7 @@
                         <posy>0</posy>
                         <width>1020</width>
                         <height>45</height>
-                        <font>Font-Condensed-S33</font>
+                        <font>Font-Condensed-S34</font>
                         <align>center</align>
                         <textcolor>eewhite</textcolor>
                         <info>ListItem.Label</info>
@@ -142,7 +142,7 @@
                         <posy>0</posy>
                         <width>1020</width>
                         <height>45</height>
-                        <font>Font-Condensed-S33</font>
+                        <font>Font-Condensed-S34</font>
                         <align>center</align>
                         <textcolor>eewhite</textcolor>
                         <label>$INFO[ListItem.Label]</label>
@@ -157,7 +157,7 @@
                         <posy>0</posy>
                         <width>1020</width>
                         <height>45</height>
-                        <font>Font-Condensed-S33</font>
+                        <font>Font-Condensed-S34</font>
                         <align>center</align>
                         <aligny>center</aligny>
                         <textcolor>eewhite</textcolor>
