@@ -131,15 +131,9 @@
     <!-- From 41350 to 41369 -->
     <string id="41350">Info del Sistema</string>
     <string id="41351">Cerrar Sesión</string>
-    <string id="41352">Salir de XBMC</string>
     <string id="41353">Explorador</string>
-    <string id="41354">Reiniciar XBMC</string>
-    <string id="41355">Apagar</string>
-    <string id="41356">Suspender</string>
-    <string id="41357">Hibernar</string>
-    <string id="41358">Reiniciar</string>
-    <string id="41359">Expulsar/Cargar</string>
-    <string id="41360">Modo maestro</string>
+    <string id="41360">Modo maestro apagado</string>
+	<string id="41361">Modo maestro encendido</string>
     
     <!-- DialogSeekBar.xml & VideoOSD.xml -->
     <!-- From 41370 to 41399 -->
@@ -262,7 +256,6 @@
 	<string id="42134">Actualizar add-ons</string>
 	<string id="42135">Actualización add-on repositorios activa...</string>
 	<string id="42136">Actualizando add-on locales...</string>
-	
 	
 	<!-- TV Guide -->
     <!-- From 42160 to 42179 -->
