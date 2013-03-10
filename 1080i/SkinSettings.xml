@@ -427,8 +427,7 @@
                     <onclick>SetProperty(Dialog,$LOCALIZE[41136])</onclick>
                     <onclick>ActivateWindow(3003)</onclick>
                     <label>$LOCALIZE[41136]</label>
-                    <enable>stringcompare(Skin.String(HomeScreen),metro)</enable>
-                    <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2001)">Conditional</animation>
+                    <visible>stringcompare(Skin.String(HomeScreen),metro)</visible>
                 </control>
                 <control type="button" id="2002">
                     <width>1210</width>
@@ -438,8 +437,7 @@
                     <onclick>SetProperty(Dialog,Home items colors)</onclick>
                     <onclick>ActivateWindow(3001)</onclick>
                     <label>Manage custom home items colors</label>
-                    <enable>stringcompare(Skin.String(HomeScreen),metro)</enable>
-                    <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2002)">Conditional</animation>
+                    <visible>stringcompare(Skin.String(HomeScreen),metro)</visible>
                 </control>
                 <control type="button" id="2003">
                     <width>1210</width>
@@ -449,8 +447,6 @@
                     <onclick>SetProperty(Dialog,Home items extras)</onclick>
                     <onclick>ActivateWindow(3001)</onclick>
                     <label>Home items extras</label>
-                    <enable>stringcompare(Skin.String(HomeScreen),metro)</enable>
-                    <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2003)">Conditional</animation>
                 </control>
                 <control type="radiobutton" id="2004">
                     <width>1210</width>

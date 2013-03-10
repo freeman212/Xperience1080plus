@@ -64,7 +64,7 @@
                         <shadowcolor>22000000</shadowcolor>
                         <align>right</align>
                         <scroll>false</scroll>
-                        <animation effect="slide" end="0,-16" time="150" tween="sine" easing="inout" condition="Control.HasFocus(21) | Control.HasFocus(22)">Conditional</animation>
+                        <animation effect="slide" end="0,-16" time="150" tween="sine" easing="inout" condition="!Skin.HasSetting(HideHomeDate) + [Control.HasFocus(21) | Control.HasFocus(22)]">Conditional</animation>
                     </control>
                     <control type="label">
                         <description>Date label</description>
@@ -77,7 +77,7 @@
                         <textcolor>80FFFFFF</textcolor>
                         <scroll>false</scroll>
                         <align>right</align>
-                        <visible>Control.HasFocus(21) | Control.HasFocus(22)</visible>
+                        <visible>!Skin.HasSetting(HideHomeDate) + [Control.HasFocus(21) | Control.HasFocus(22)]</visible>
                         <animation effect="fade" start="0" end="100" time="250" tween="sine" easing="inout">Visible</animation>
                         <animation effect="fade" start="100" end="0" time="150" tween="sine" easing="inout">Hidden</animation>
                     </control>
