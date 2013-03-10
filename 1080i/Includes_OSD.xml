@@ -396,24 +396,14 @@
                         </control>
                         <control type="group">
                             <posy>825</posy>
-                            <control type="group">
+                            <control type="image">
+                                <posx>138</posx>
+                                <posy>-15</posy>
+                                <width>220</width>
+                                <height>220</height>
+                                <texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.FolderPath,,cdart.png]</texture>
+                                <animation effect="rotate" center="auto" start="360" end="0" time="2500" loop="true" condition="!Player.Paused">Conditional</animation>
                                 <visible>Skin.HasSetting(CDArt.Enabled)</visible>
-                                <control type="image">
-                                    <posx>130</posx>
-                                    <posy>-10</posy>
-                                    <width>236</width>
-                                    <height>236</height>
-                                    <texture>osd/fullscreen/cd.png</texture>
-                                    <animation effect="rotate" center="auto" start="360" end="0" time="2500" loop="true" condition="!Player.Paused">Conditional</animation>
-                                </control>
-                                <control type="image">
-                                    <posx>138</posx>
-                                    <posy>-2</posy>
-                                    <width>220</width>
-                                    <height>220</height>
-                                    <texture diffuse="osd/fullscreen/cd-diffuse.png" background="true">$INFO[Player.FolderPath,,cdart.png]</texture>
-                                    <animation effect="rotate" center="auto" start="360" end="0" time="2500" loop="true" condition="!Player.Paused">Conditional</animation>
-                                </control>
                             </control>
                             <control type="image">
                                 <posx>110</posx>
