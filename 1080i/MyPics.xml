@@ -1,7 +1,7 @@
 <window>
     <defaultcontrol always="true">50</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <views>50,52,500,55</views>
+    <views>50,52,500,55,505</views>
     <controls>
         
         <include>CommonItems</include>
@@ -215,10 +215,22 @@
                 <control type="radiobutton" id="205">
                     <description>PictureView</description>
                     <include>optionsbuttonsdimensions</include>
-                    <label>PosterView</label>
+                    <label>Cover</label>
                     <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
                     <onclick>Container.SetViewMode(55)</onclick>
                     <selected>Control.IsVisible(55)</selected>
+                    <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                    <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                    <radioposx>-19</radioposx>
+                    <visible>Container.HasFiles + !Container.Content(addons)</visible>
+                </control>
+                <control type="radiobutton" id="206">
+                    <description>Classic PictureView</description>
+                    <include>optionsbuttonsdimensions</include>
+                    <label>Classic Cover</label>
+                    <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                    <onclick>Container.SetViewMode(505)</onclick>
+                    <selected>Control.IsVisible(505)</selected>
                     <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
                     <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
                     <radioposx>-19</radioposx>

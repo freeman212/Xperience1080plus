@@ -47,6 +47,7 @@
         <include>Viewtype-PictureList</include>
         <include>Viewtype-PictureListLargeThumb</include>
         <include>Viewtype-PictureView</include>
+        <include>Viewtype-ClassicPictureView</include>
         <include>Viewtype-AddonThumbnail</include>
     </include>
 
