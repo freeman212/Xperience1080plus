@@ -1,7 +1,7 @@
 <window>
     <defaultcontrol always="true">50</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
-    <views>50,52,53,54,55,500,501,60</views>
+    <views>50,52,53,54,55,56,500,501,60</views>
     <controls>
         
         <include>CommonItems</include>
@@ -313,6 +313,18 @@
                     <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
                     <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
                     <radioposx>-19</radioposx>
+                    <visible>Container.Content(Artists) | Container.Content(Albums)</visible>
+                </control>
+                <control type="radiobutton" id="210">
+                    <description>Classic Cover</description>
+                    <include>optionsbuttonsdimensions</include>
+                    <label>Classic Cover</label>
+                    <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                    <onclick>Container.SetViewMode(56)</onclick>
+                    <selected>Control.IsVisible(56)</selected>
+                    <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                    <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                    <radioposx>-19</radioposx>
                     <visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(Genres)</visible>
                 </control>
                 <control type="radiobutton" id="206">
@@ -337,7 +349,7 @@
                     <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
                     <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
                     <radioposx>-19</radioposx>
-                    <visible>Container.Content(artists) | Container.Content(albums)</visible>
+                    <visible>Container.Content(artists) | Container.Content(albums) | Container.Content(genres)</visible>
                 </control>
                 <control type="radiobutton" id="208">
                     <description>Banner</description>
