@@ -607,23 +607,23 @@
                 <control type="image">
                     <description>Scrollbar background (visible on focus)</description>
                     <posx>104</posx>
-                    <posy>135r</posy>
+                    <posy>125r</posy>
                     <width>1712</width>
-                    <height>11</height>
-                    <texture border="6,0,6,0">views/other/scrollbar-h.png</texture>
-                    <visible>Control.IsVisible(504) + Control.HasFocus(70)</visible>
+                    <height>6</height>
+                    <texture border="6,0,6,0">views/other/scrollbar-sq.png</texture>
+                    <visible>Control.HasFocus(70)</visible>
                     <animation effect="fade" start="0" end="25" time="300" tween="sine" easing="inout">Visible</animation>
                     <animation effect="fade" start="25" end="0" time="300" tween="sine" easing="inout">Hidden</animation>
                 </control>
                 <control type="scrollbar" id="70">
                     <description>Scrollbar</description>
                     <posx>104</posx>
-                    <posy>135r</posy>
+                    <posy>125r</posy>
                     <width>1712</width>
-                    <height>11</height>
+                    <height>6</height>
                     <orientation>horizontal</orientation>
-                    <texturesliderbar border="6,0,6,0">views/other/scrollbar-h.png</texturesliderbar>
-                    <texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-h.png</texturesliderbarfocus>
+                    <texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
+                    <texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
                     <showonepage>false</showonepage>
                     <onup>504</onup>
                     <ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
@@ -1650,23 +1650,23 @@
                 <control type="image">
                     <description>Scrollbar background (visible on focus)</description>
                     <posx>104</posx>
-                    <posy>135r</posy>
+                    <posy>125r</posy>
                     <width>1712</width>
-                    <height>11</height>
-                    <texture border="6,0,6,0">views/other/scrollbar-h.png</texture>
-                    <visible>Control.IsVisible(505) + Control.HasFocus(70)</visible>
+                    <height>6</height>
+                    <texture border="6,0,6,0">views/other/scrollbar-sq.png</texture>
+                    <visible>Control.HasFocus(70)</visible>
                     <animation effect="fade" start="0" end="25" time="300" tween="sine" easing="inout">Visible</animation>
                     <animation effect="fade" start="25" end="0" time="300" tween="sine" easing="inout">Hidden</animation>
                 </control>
                 <control type="scrollbar" id="70">
                     <description>Scrollbar</description>
                     <posx>104</posx>
-                    <posy>135r</posy>
+                    <posy>125r</posy>
                     <width>1712</width>
-                    <height>11</height>
+                    <height>6</height>
                     <orientation>horizontal</orientation>
-                    <texturesliderbar border="6,0,6,0">views/other/scrollbar-h.png</texturesliderbar>
-                    <texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-h.png</texturesliderbarfocus>
+                    <texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
+                    <texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
                     <showonepage>false</showonepage>
                     <onup>505</onup>
                     <ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
