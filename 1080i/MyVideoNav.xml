@@ -114,7 +114,7 @@
                            <height>57</height>
                            <font>-</font>
                            <label>-</label>
-                           <onclick>XBMC.RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, dbid=$INFO[ListItem.DBID], extrafanart)</onclick>
+                           <onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,dbid=$INFO[ListItem.DBID],extrafanart)</onclick>
                            <onleft>300</onleft>
                            <onright>302</onright>
                            <onup>98</onup>
@@ -128,7 +128,7 @@
                            <height>57</height>
                            <font>-</font>
                            <label>-</label>
-                           <onclick>XBMC.RunScript(script.artwork.downloader, mediatype=tvshow)</onclick>
+                           <onclick>XBMC.RunScript(script.artwork.downloader,mediatype=tvshow)</onclick>
                            <onleft>301</onleft>
                            <onright>302</onright>
                            <onup>98</onup>
@@ -144,7 +144,7 @@
                            <height>57</height>
                            <font>-</font>
                            <label>-</label>
-                           <onclick>XBMC.RunScript(script.artwork.downloader, mode=custom, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+                           <onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=movie,dbid=$INFO[ListItem.DBID])</onclick>
                            <onleft>303</onleft>
                            <onright>304</onright>
                            <onup>98</onup>
@@ -159,7 +159,7 @@
                            <height>57</height>
                            <font>-</font>
                            <label>-</label>
-                           <onclick>XBMC.RunScript(script.artwork.downloader, mode=custom, mediatype=movie, dbid=$INFO[ListItem.DBID], extrafanart)</onclick>
+                           <onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=movie,dbid=$INFO[ListItem.DBID],extrafanart)</onclick>
                            <onleft>303</onleft>
                            <onright>305</onright>
                            <onup>98</onup>
@@ -173,7 +173,7 @@
                            <height>57</height>
                            <font>-</font>
                            <label>-</label>
-                           <onclick>XBMC.RunScript(script.artwork.downloader, mediatype=movie)</onclick>
+                           <onclick>XBMC.RunScript(script.artwork.downloader,mediatype=movie)</onclick>
                            <onleft>304</onleft>
                            <onright>305</onright>
                            <onup>98</onup>
@@ -270,7 +270,7 @@
                         <description>libraryeditor</description>
                         <include>optionsbuttonsdimensions</include>
                         <label>Edit info</label>
-                        <onclick>XBMC.RunScript(script.libraryeditor, dbid=$INFO[ListItem.DBID])</onclick>
+                        <onclick>XBMC.RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
                         <texturefocus>dialogs/options/buttons/edit-fo.png</texturefocus>
                         <texturenofocus>dialogs/options/buttons/edit-nf.png</texturenofocus>
                         <visible>System.HasAddon(script.libraryeditor)</visible>

@@ -76,7 +76,7 @@
                     <description>libraryeditor</description>
                     <include>optionsbuttonsdimensions</include>
                     <label>Edit info</label>
-                    <onclick>XBMC.RunScript(script.libraryeditor, dbid=$INFO[ListItem.DBID])</onclick>
+                    <onclick>XBMC.RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
                     <texturefocus>dialogs/options/buttons/edit-fo.png</texturefocus>
                     <texturenofocus>dialogs/options/buttons/edit-nf.png</texturenofocus>
                     <visible>System.HasAddon(script.libraryeditor)</visible>
