@@ -379,17 +379,18 @@
                         <effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
                         <effect type="slide" start="332" end="0" delay="350" tween="cubic" easing="out" time="450" />
                     </animation>
-                    <animation type="WindowClose" reversible="true">
-                        <effect type="slide" start="0" end="332" tween="sine" easing="in" time="200" />
-                        <effect type="fade" delay="150" start="100" end="0" time="100" />
-                    </animation>
                     <animation type="Visible" reversible="false">
                         <effect type="fade" start="0" end="100" delay="650" tween="sine" easing="in" time="350" />
                         <effect type="slide" start="332" end="0" delay="650" tween="cubic" easing="out" time="450" />
                     </animation>
+                    <include>GuideNoAnimation</include>
                     <animation type="Hidden" reversible="false">
-                        <effect type="slide" start="0" end="332" tween="sine" easing="in" time="100" />
-                        <effect type="fade" delay="75" start="100" end="0" time="25" />
+                        <effect type="zoom" start="100" end="115" center="960,360" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
                     </animation>
                     <visible>!Window.IsActive(movieinformation) + Control.IsVisible(504)</visible>
                     <control type="group">
@@ -498,17 +499,18 @@
                         <effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
                         <effect type="slide" start="-1660" end="0" delay="350" tween="cubic" easing="out" time="660" />
                     </animation>
-                    <animation type="WindowClose" reversible="true">
-                        <effect type="slide" start="0" end="-1660" tween="sine" easing="in" time="200" />
-                        <effect type="fade" delay="150" start="100" end="0" time="100" />
-                    </animation>
                     <animation type="Visible" reversible="false">
                         <effect type="fade" start="0" end="100" delay="650" tween="sine" easing="in" time="350" />
                         <effect type="slide" start="-1660" end="0" delay="650" tween="cubic" easing="out" time="660" />
                     </animation>
+                    <include>GuideNoAnimation</include>
                     <animation type="Hidden" reversible="false">
-                        <effect type="slide" start="0" end="-1660" tween="sine" easing="in" time="100" />
-                        <effect type="fade" delay="75" start="100" end="0" time="25" />
+                        <effect type="zoom" start="100" end="115" center="960,360" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
                     </animation>
                     <visible>!Window.IsActive(movieinformation) + Control.IsVisible(504)</visible>
                     <control type="group">
@@ -617,17 +619,18 @@
                         <effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
                         <effect type="slide" start="-1328" end="0" delay="350" tween="cubic" easing="out" time="635" />
                     </animation>
-                    <animation type="WindowClose" reversible="true">
-                        <effect type="slide" start="0" end="-1328" tween="sine" easing="in" time="200" />
-                        <effect type="fade" delay="150" start="100" end="0" time="100" />
-                    </animation>
                     <animation type="Visible" reversible="false">
                         <effect type="fade" start="0" end="100" delay="650" tween="sine" easing="in" time="350" />
                         <effect type="slide" start="-1328" end="0" delay="650" tween="cubic" easing="out" time="635" />
                     </animation>
+                    <include>GuideNoAnimation</include>
                     <animation type="Hidden" reversible="false">
-                        <effect type="slide" start="0" end="-1328" tween="sine" easing="in" time="100" />
-                        <effect type="fade" delay="75" start="100" end="0" time="25" />
+                        <effect type="zoom" start="100" end="115" center="960,360" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
                     </animation>
                     <visible>!Window.IsActive(movieinformation) + Control.IsVisible(504)</visible>
                     <control type="group">
@@ -734,19 +737,20 @@
                 <control type="group">
                     <animation type="WindowOpen" reversible="true">
                         <effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
-                        <effect type="slide" start="-492" end="0" delay="350" tween="cubic" easing="out" time="605" />
-                    </animation>
-                    <animation type="WindowClose" reversible="true">
-                        <effect type="slide" start="0" end="-996" tween="sine" easing="in" time="200" />
-                        <effect type="fade" delay="150" start="100" end="0" time="100" />
+                        <effect type="slide" start="-996" end="0" delay="350" tween="cubic" easing="out" time="605" />
                     </animation>
                     <animation type="Visible" reversible="false">
                         <effect type="fade" start="0" end="100" delay="650" tween="sine" easing="in" time="350" />
                         <effect type="slide" start="-996" end="0" delay="650" tween="cubic" easing="out" time="605" />
                     </animation>
+                    <include>GuideNoAnimation</include>
                     <animation type="Hidden" reversible="false">
-                        <effect type="slide" start="0" end="-996" tween="sine" easing="in" time="100" />
-                        <effect type="fade" delay="75" start="100" end="0" time="25" />
+                        <effect type="zoom" start="100" end="115" center="960,360" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
                     </animation>
                     <visible>!Window.IsActive(movieinformation) + Control.IsVisible(504)</visible>
                     <control type="group">
@@ -855,17 +859,18 @@
                         <effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
                         <effect type="slide" start="-664" end="0" delay="350" tween="cubic" easing="out" time="540" />
                     </animation>
-                    <animation type="WindowClose" reversible="true">
-                        <effect type="slide" start="0" end="-664" tween="sine" easing="in" time="200" />
-                        <effect type="fade" delay="150" start="100" end="0" time="100" />
-                    </animation>
                     <animation type="Visible" reversible="false">
                         <effect type="fade" start="0" end="100" delay="650" tween="sine" easing="in" time="350" />
                         <effect type="slide" start="-664" end="0" delay="650" tween="cubic" easing="out" time="540" />
                     </animation>
+                    <include>GuideNoAnimation</include>
                     <animation type="Hidden" reversible="false">
-                        <effect type="slide" start="0" end="-664" tween="sine" easing="in" time="100" />
-                        <effect type="fade" delay="75" start="100" end="0" time="25" />
+                        <effect type="zoom" start="100" end="115" center="960,360" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
                     </animation>
                     <visible>!Window.IsActive(movieinformation) + Control.IsVisible(504)</visible>
                     <control type="group">
@@ -974,17 +979,18 @@
                         <effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
                         <effect type="slide" start="-332" end="0" delay="350" tween="cubic" easing="out" time="450" />
                     </animation>
-                    <animation type="WindowClose" reversible="true">
-                        <effect type="slide" start="0" end="-332" tween="sine" easing="in" time="200" />
-                        <effect type="fade" delay="150" start="100" end="0" time="100" />
-                    </animation>
                     <animation type="Visible" reversible="false">
                         <effect type="fade" start="0" end="100" delay="650" tween="sine" easing="in" time="350" />
                         <effect type="slide" start="-332" end="0" delay="650" tween="cubic" easing="out" time="450" />
                     </animation>
+                    <include>GuideNoAnimation</include>
                     <animation type="Hidden" reversible="false">
-                        <effect type="slide" start="0" end="-332" tween="sine" easing="in" time="100" />
-                        <effect type="fade" delay="75" start="100" end="0" time="25" />
+                        <effect type="zoom" start="100" end="115" center="960,360" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
                     </animation>
                     <visible>!Window.IsActive(movieinformation) + Control.IsVisible(504)</visible>
                     <control type="group">
@@ -1093,18 +1099,18 @@
                         <effect type="zoom" start="65" end="100" center="160,400" tween="sine" easing="out" time="350" /> 
                         <effect type="fade" start="25" end="100" tween="sine" easing="in" time="250" />
                     </animation>
-                    <animation type="WindowClose" reversible="true">
-                        <effect type="zoom" start="100" end="65" center="160,400" tween="sine" delay="200" easing="out" time="300" /> 
-                        <effect type="fade" start="100" end="0" tween="cubic" easing="inout" delay="200" time="300" />
-                    </animation>
                     <animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
                         <effect type="zoom" start="175" end="100" delay="300" center="160,400" tween="sine" easing="out" time="350" /> 
                         <effect type="fade" start="25" end="100" delay="300" tween="sine" easing="in" time="350" />
                     </animation>
                     <include>GuideNoAnimation</include>
                     <animation type="Hidden" reversible="false">
-                        <effect type="zoom" start="100" end="175" center="160,400" tween="sine" delay="100" easing="out" time="200" /> 
-                        <effect type="fade" start="100" end="0" tween="sine" easing="out" delay="200" time="100" />
+                        <effect type="zoom" start="100" end="115" center="960,360" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
                     </animation>
                     <visible>!Window.IsActive(movieinformation) + Control.IsVisible(504)</visible>
                     <control type="image">
@@ -1514,17 +1520,18 @@
                         <effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
                         <effect type="slide" start="492" end="0" delay="350" tween="cubic" easing="out" time="450" />
                     </animation>
-                    <animation type="WindowClose" reversible="true">
-                        <effect type="slide" start="0" end="492" tween="sine" easing="in" time="200" />
-                        <effect type="fade" delay="150" start="100" end="0" time="100" />
-                    </animation>
                     <animation type="Visible" reversible="false">
                         <effect type="fade" start="0" end="100" delay="650" tween="sine" easing="in" time="350" />
                         <effect type="slide" start="492" end="0" delay="650" tween="cubic" easing="out" time="450" />
                     </animation>
+                    <include>GuideNoAnimation</include>
                     <animation type="Hidden" reversible="false">
-                        <effect type="slide" start="0" end="492" tween="sine" easing="in" time="100" />
-                        <effect type="fade" delay="75" start="100" end="0" time="25" />
+                        <effect type="zoom" start="100" end="115" center="960,360" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
                     </animation>
                     <visible>!Window.IsActive(movieinformation) + Control.IsVisible(505)</visible>
                     <control type="group">
@@ -1654,17 +1661,18 @@
                         <effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
                         <effect type="slide" start="-1476" end="0" delay="350" tween="cubic" easing="out" time="605" />
                     </animation>
-                    <animation type="WindowClose" reversible="true">
-                        <effect type="slide" start="0" end="-1476" tween="sine" easing="in" time="200" />
-                        <effect type="fade" delay="150" start="100" end="0" time="100" />
-                    </animation>
                     <animation type="Visible" reversible="false">
                         <effect type="fade" start="0" end="100" delay="650" tween="sine" easing="in" time="350" />
                         <effect type="slide" start="-1476" end="0" delay="650" tween="cubic" easing="out" time="605" />
                     </animation>
+                    <include>GuideNoAnimation</include>
                     <animation type="Hidden" reversible="false">
-                        <effect type="slide" start="0" end="-1476" tween="sine" easing="in" time="100" />
-                        <effect type="fade" delay="75" start="100" end="0" time="25" />
+                        <effect type="zoom" start="100" end="115" center="960,360" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
                     </animation>
                     <visible>!Window.IsActive(movieinformation) + Control.IsVisible(505)</visible>
                     <control type="group">
@@ -1794,17 +1802,18 @@
                         <effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
                         <effect type="slide" start="-984" end="0" delay="350" tween="cubic" easing="out" time="540" />
                     </animation>
-                    <animation type="WindowClose" reversible="true">
-                        <effect type="slide" start="0" end="-984" tween="sine" easing="in" time="200" />
-                        <effect type="fade" delay="150" start="100" end="0" time="100" />
-                    </animation>
                     <animation type="Visible" reversible="false">
                         <effect type="fade" start="0" end="100" delay="650" tween="sine" easing="in" time="350" />
                         <effect type="slide" start="-984" end="0" delay="650" tween="cubic" easing="out" time="540" />
                     </animation>
+                    <include>GuideNoAnimation</include>
                     <animation type="Hidden" reversible="false">
-                        <effect type="slide" start="0" end="-984" tween="sine" easing="in" time="100" />
-                        <effect type="fade" delay="75" start="100" end="0" time="25" />
+                        <effect type="zoom" start="100" end="115" center="960,360" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
                     </animation>
                     <visible>!Window.IsActive(movieinformation) + Control.IsVisible(505)</visible>
                     <control type="group">
@@ -1934,17 +1943,18 @@
                         <effect type="fade" start="0" end="100" delay="350" tween="sine" easing="in" time="350" />
                         <effect type="slide" start="-492" end="0" delay="350" tween="cubic" easing="out" time="450" />
                     </animation>
-                    <animation type="WindowClose" reversible="true">
-                        <effect type="slide" start="0" end="-492" tween="sine" easing="in" time="200" />
-                        <effect type="fade" delay="150" start="100" end="0" time="100" />
-                    </animation>
                     <animation type="Visible" reversible="false">
                         <effect type="fade" start="0" end="100" delay="650" tween="sine" easing="in" time="350" />
                         <effect type="slide" start="-492" end="0" delay="650" tween="cubic" easing="out" time="450" />
                     </animation>
+                    <include>GuideNoAnimation</include>
                     <animation type="Hidden" reversible="false">
-                        <effect type="slide" start="0" end="-492" tween="sine" easing="in" time="100" />
-                        <effect type="fade" delay="75" start="100" end="0" time="25" />
+                        <effect type="zoom" start="100" end="115" center="960,360" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
                     </animation>
                     <visible>!Window.IsActive(movieinformation) + Control.IsVisible(505)</visible>
                     <control type="group">
@@ -2074,18 +2084,18 @@
                         <effect type="zoom" start="65" end="100" center="240,400" tween="sine" easing="out" time="350" /> 
                         <effect type="fade" start="25" end="100" tween="sine" easing="in" time="250" />
                     </animation>
-                    <animation type="WindowClose" reversible="true">
-                        <effect type="zoom" start="100" end="65" center="240,400" tween="sine" delay="200" easing="out" time="300" /> 
-                        <effect type="fade" start="100" end="0" tween="cubic" easing="inout" delay="200" time="300" />
-                    </animation>
                     <animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
                         <effect type="zoom" start="175" end="100" delay="300" center="240,400" tween="sine" easing="out" time="350" /> 
                         <effect type="fade" start="25" end="100" delay="300" tween="sine" easing="in" time="350" />
                     </animation>
                     <include>GuideNoAnimation</include>
                     <animation type="Hidden" reversible="false">
-                        <effect type="zoom" start="100" end="175" center="240,400" tween="sine" delay="100" easing="out" time="200" /> 
-                        <effect type="fade" start="100" end="0" tween="sine" easing="out" delay="200" time="100" />
+                        <effect type="zoom" start="100" end="115" center="960,360" tween="sine" delay="0" easing="out" time="300" /> 
+                        <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
+                    </animation>
+                    <animation type="WindowClose" reversible="false">
+                        <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                        <effect type="zoom" start="100" end="85" time="300" center="960,360" tween="sine" easing="out" />
                     </animation>
                     <visible>!Window.IsActive(movieinformation) + Control.IsVisible(505)</visible>
                     <control type="image">
