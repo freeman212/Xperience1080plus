@@ -635,6 +635,30 @@
         <value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
         <value>$INFO[ListItem.Year]$INFO[ListItem.Genre, • ,]</value>
     </variable>
+    <variable name="MusicPanelSubInfo0">
+        <value condition="Container.Content(Artists)">$INFO[ListItem(0).Property(Artist_Genre)]</value>
+        <value>$INFO[ListItem(0).Year]$INFO[ListItem(0).Genre, • ,]</value>
+    </variable>
+    <variable name="MusicPanelSubInfo1">
+        <value condition="Container.Content(Artists)">$INFO[ListItem(1).Property(Artist_Genre)]</value>
+        <value>$INFO[ListItem(1).Year]$INFO[ListItem(1).Genre, • ,]</value>
+    </variable>
+    <variable name="MusicPanelSubInfo2">
+        <value condition="Container.Content(Artists)">$INFO[ListItem(2).Property(Artist_Genre)]</value>
+        <value>$INFO[ListItem(2).Year]$INFO[ListItem(2).Genre, • ,]</value>
+    </variable>
+    <variable name="MusicPanelSubInfo3">
+        <value condition="Container.Content(Artists)">$INFO[ListItem(3).Property(Artist_Genre)]</value>
+        <value>$INFO[ListItem(3).Year]$INFO[ListItem(3).Genre, • ,]</value>
+    </variable>
+    <variable name="MusicPanelSubInfo4">
+        <value condition="Container.Content(Artists)">$INFO[ListItem(4).Property(Artist_Genre)]</value>
+        <value>$INFO[ListItem(4).Year]$INFO[ListItem(4).Genre, • ,]</value>
+    </variable>
+    <variable name="MusicPanelSubInfo-1">
+        <value condition="Container.Content(Artists)">$INFO[ListItem(-1).Property(Artist_Genre)]</value>
+        <value>$INFO[ListItem(-1).Year]$INFO[ListItem(-1).Genre, • ,]</value>
+    </variable>
     
     <variable name="MusicThumbnailInfo">
         <value condition="Container.Content(Artists)">$INFO[ListItem.Artist]</value>
