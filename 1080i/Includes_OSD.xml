@@ -411,7 +411,7 @@
                                 <width>276</width>
                                 <height>276</height>
                                 <texture border="30">osd/fullscreen/cover-shadow.png</texture>
-                            </control>                    
+                            </control>
                             <control type="image">
                                 <posx>130</posx>
                                 <posy>87</posy>

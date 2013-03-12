@@ -129,7 +129,7 @@
         <value>$INFO[ListItem.Overlay,overlays/,/extended-w.png]</value>
     </variable>
     <variable name="ExtendedOverlay0">
-        <value condition="ListItem(0).IsResumable">$INFO[ListItem(0).Overlay,overlays/,/extended-p.png]</value>
+        <value condition="ListItem(0).IsResumable">$INFO[.ListItem(0).Overlay,overlays/,/extended-p.png]</value>
         <value>$INFO[ListItem(0).Overlay,overlays/,/extended-w.png]</value>
     </variable>
     <variable name="ExtendedOverlay1">
@@ -143,6 +143,14 @@
     <variable name="ExtendedOverlay3">
         <value condition="ListItem(3).IsResumable">$INFO[ListItem(3).Overlay,overlays/,/extended-p.png]</value>
         <value>$INFO[ListItem(3).Overlay,overlays/,/extended-w.png]</value>
+    </variable>
+    <variable name="ExtendedOverlay4">
+        <value condition="ListItem(4).IsResumable">$INFO[ListItem(4).Overlay,overlays/,/extended-p.png]</value>
+        <value>$INFO[ListItem(4).Overlay,overlays/,/extended-w.png]</value>
+    </variable>
+    <variable name="ExtendedOverlay5">
+        <value condition="ListItem(5).IsResumable">$INFO[ListItem(5).Overlay,overlays/,/extended-p.png]</value>
+        <value>$INFO[ListItem(5).Overlay,overlays/,/extended-w.png]</value>
     </variable>
     <variable name="ExtendedOverlay-1">
         <value condition="ListItem(-1).IsResumable">$INFO[ListItem(-1).Overlay,overlays/,/extended-p.png]</value>

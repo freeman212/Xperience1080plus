@@ -179,7 +179,7 @@
                 <control type="image">
                     <description>Scrollbar background (visible on focus)</description>
                     <posx>104</posx>
-                    <posy>125r</posy>
+                    <posy>135r</posy>
                     <width>1712</width>
                     <height>6</height>
                     <texture border="6,0,6,0">views/other/scrollbar-sq.png</texture>
@@ -190,7 +190,7 @@
                 <control type="scrollbar" id="70">
                     <description>Scrollbar</description>
                     <posx>104</posx>
-                    <posy>125r</posy>
+                    <posy>135r</posy>
                     <width>1712</width>
                     <height>6</height>
                     <orientation>horizontal</orientation>

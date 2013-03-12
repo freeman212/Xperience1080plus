@@ -80,8 +80,6 @@
                     <texturefocus>dialogs/options/buttons/edit-fo.png</texturefocus>
                     <texturenofocus>dialogs/options/buttons/edit-nf.png</texturenofocus>
                     <visible>System.HasAddon(script.libraryeditor)</visible>
-                    <enable>false</enable>
-                    <animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(97)">Conditional</animation>
                 </control>
                 <control type="button" id="3">
                     <description>sort</description>
