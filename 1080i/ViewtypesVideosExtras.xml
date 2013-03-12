@@ -1090,20 +1090,20 @@
                 </control>
                 <control type="group">
                     <animation type="WindowOpen" reversible="true">
-                        <effect type="zoom" start="65" end="100" center="240,400" tween="sine" easing="out" time="350" /> 
+                        <effect type="zoom" start="65" end="100" center="160,300" tween="sine" easing="out" time="350" /> 
                         <effect type="fade" start="25" end="100" tween="sine" easing="in" time="250" />
                     </animation>
                     <animation type="WindowClose" reversible="true">
-                        <effect type="zoom" start="100" end="65" center="240,400" tween="sine" delay="200" easing="out" time="300" /> 
+                        <effect type="zoom" start="100" end="65" center="160,300" tween="sine" delay="200" easing="out" time="300" /> 
                         <effect type="fade" start="100" end="0" tween="cubic" easing="inout" delay="200" time="300" />
                     </animation>
                     <animation type="Visible" condition="IsEmpty(Window(home).property(NoAnimation)) + !Window.Next(visualisation)" reversible="false">
-                        <effect type="zoom" start="175" end="100" delay="300" center="240,400" tween="sine" easing="out" time="350" /> 
+                        <effect type="zoom" start="175" end="100" delay="300" center="160,300" tween="sine" easing="out" time="350" /> 
                         <effect type="fade" start="25" end="100" delay="300" tween="sine" easing="in" time="350" />
                     </animation>
                     <include>GuideNoAnimation</include>
                     <animation type="Hidden" reversible="false">
-                        <effect type="zoom" start="100" end="175" center="240,400" tween="sine" delay="100" easing="out" time="200" /> 
+                        <effect type="zoom" start="100" end="175" center="160,300" tween="sine" delay="100" easing="out" time="200" /> 
                         <effect type="fade" start="100" end="0" tween="sine" easing="out" delay="200" time="100" />
                     </animation>
                     <visible>!Window.IsActive(movieinformation) + Control.IsVisible(504)</visible>
