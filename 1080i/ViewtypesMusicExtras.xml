@@ -65,7 +65,7 @@
                                 <posy>393</posy>
                                 <width>340</width>
                                 <height>40</height>
-                                <label>$INFO[ListItem(-1).Label]</label>
+                                <label>$INFO[Container(54).ListItem(-1).Label]</label>
                                 <font>Font-Condensed-S32-B</font>
                                 <textcolor>ddwhite</textcolor>
                                 <shadowcolor>22000000</shadowcolor>
@@ -147,7 +147,7 @@
                                 <posy>393</posy>
                                 <width>340</width>
                                 <height>40</height>
-                                <label>$INFO[ListItem(4).Label]</label>
+                                <label>$INFO[Container(54).ListItem(4).Label]</label>
                                 <font>Font-Condensed-S32-B</font>
                                 <textcolor>ddwhite</textcolor>
                                 <shadowcolor>22000000</shadowcolor>
@@ -229,7 +229,7 @@
                                 <posy>393</posy>
                                 <width>340</width>
                                 <height>40</height>
-                                <label>$INFO[ListItem(3).Label]</label>
+                                <label>$INFO[Container(54).ListItem(3).Label]</label>
                                 <font>Font-Condensed-S32-B</font>
                                 <textcolor>ddwhite</textcolor>
                                 <shadowcolor>22000000</shadowcolor>
@@ -311,7 +311,7 @@
                                 <posy>393</posy>
                                 <width>340</width>
                                 <height>40</height>
-                                <label>$INFO[ListItem(2).Label]</label>
+                                <label>$INFO[Container(54).ListItem(2).Label]</label>
                                 <font>Font-Condensed-S32-B</font>
                                 <textcolor>ddwhite</textcolor>
                                 <shadowcolor>22000000</shadowcolor>
@@ -393,7 +393,7 @@
                                 <posy>393</posy>
                                 <width>340</width>
                                 <height>40</height>
-                                <label>$INFO[ListItem(1).Label]</label>
+                                <label>$INFO[Container(54).ListItem(1).Label]</label>
                                 <font>Font-Condensed-S32-B</font>
                                 <textcolor>ddwhite</textcolor>
                                 <shadowcolor>22000000</shadowcolor>
@@ -470,7 +470,7 @@
                         <posy>393</posy>
                         <width>340</width>
                         <height>40</height>
-                        <label>$INFO[ListItem(0).Label]</label>
+                        <label>$INFO[Container(54).ListItem(0).Label]</label>
                         <font>Font-Condensed-S32-B</font>
                         <textcolor>ddwhite</textcolor>
                         <shadowcolor>22000000</shadowcolor>
@@ -720,7 +720,6 @@
 <!-- Classic Cover (56) -->
 <!-- ================== -->
     <include name="Viewtype-ClassicCoverView">     
-        <!-- List -->
         <control type="group">
             <include>FullscreenDimensions</include>
             <include>OptionsShutdownAnimation</include>
