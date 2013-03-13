@@ -618,7 +618,7 @@
                     <posy>458</posy>
                     <width>444</width>
                     <height>444</height>
-                    <texture flipy="true" diffuse="views/posterview/diffuse-ref-square.png">views/posterview/DefaultAlbumCover.png</texture>
+                    <texture flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">views/fallbacks/DefaultAudio.png/square-large.png</texture>
                     <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                     <visible>IsEmpty(MusicPlayer.Offset(1).Cover) | stringcompare(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
                 </control>
@@ -628,7 +628,7 @@
                     <posy>458</posy>
                     <width>444</width>
                     <height>444</height>
-                    <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png">$INFO[MusicPlayer.Offset(1).Cover]</texture>
+                    <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">$INFO[MusicPlayer.Offset(1).Cover]</texture>
                     <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                     <visible>!IsEmpty(MusicPlayer.Offset(1).Cover) + !stringcompare(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
                 </control>
@@ -647,7 +647,7 @@
                     <posy>10</posy>
                     <width>444</width>
                     <height>444</height>
-                    <texture diffuse="views/posterview/diffuse-square.png">views/posterview/DefaultAlbumCover.png</texture>
+                    <texture diffuse="views/posterview/diffuse-square.png">views/fallbacks/DefaultAudio.png/square-large.png</texture>
                     <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                     <visible>IsEmpty(MusicPlayer.Offset(1).Cover) | stringcompare(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
                 </control>
@@ -745,7 +745,7 @@
                     <posy>458</posy>
                     <width>444</width>
                     <height>444</height>
-                    <texture flipy="true" diffuse="views/posterview/diffuse-ref-square.png">views/posterview/DefaultAlbumCover.png</texture>
+                    <texture flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">views/fallbacks/DefaultAudio.png/square-large.png</texture>
                     <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                     <visible>IsEmpty(MusicPlayer.Cover) | stringcompare(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
                 </control>
@@ -755,7 +755,7 @@
                     <posy>458</posy>
                     <width>444</width>
                     <height>444</height>
-                    <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png">$INFO[MusicPlayer.Cover]</texture>
+                    <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">$INFO[MusicPlayer.Cover]</texture>
                     <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                     <visible>!IsEmpty(MusicPlayer.Cover) + !stringcompare(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
                 </control>
@@ -782,7 +782,7 @@
                     <posy>10</posy>
                     <width>444</width>
                     <height>444</height>
-                    <texture diffuse="views/posterview/diffuse-square.png">views/posterview/DefaultAlbumCover.png</texture>
+                    <texture diffuse="views/posterview/diffuse-square.png">views/fallbacks/DefaultAudio.png/square-large.png</texture>
                     <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                     <visible>IsEmpty(MusicPlayer.Cover) | stringcompare(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
                 </control>
@@ -1025,7 +1025,7 @@
                     <posy>458</posy>
                     <width>444</width>
                     <height>444</height>
-                    <texture flipy="true" diffuse="views/posterview/diffuse-ref-square.png">views/posterview/DefaultAlbumCover.png</texture>
+                    <texture flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">views/fallbacks/DefaultAudio.png/square-large.png</texture>
                     <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                     <visible>IsEmpty(MusicPlayer.Offset(1).Cover) | stringcompare(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
                 </control>
@@ -1035,7 +1035,7 @@
                     <posy>458</posy>
                     <width>444</width>
                     <height>444</height>
-                    <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png">$INFO[MusicPlayer.Offset(1).Cover]</texture>
+                    <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">$INFO[MusicPlayer.Offset(1).Cover]</texture>
                     <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                     <visible>!IsEmpty(MusicPlayer.Offset(1).Cover) + !stringcompare(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
                 </control>
@@ -1054,7 +1054,7 @@
                     <posy>10</posy>
                     <width>444</width>
                     <height>444</height>
-                    <texture diffuse="views/posterview/diffuse-square.png">views/posterview/DefaultAlbumCover.png</texture>
+                    <texture diffuse="views/posterview/diffuse-square.png">views/fallbacks/DefaultAudio.png/square-large.png</texture>
                     <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                     <visible>IsEmpty(MusicPlayer.Offset(1).Cover) | stringcompare(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
                 </control>
@@ -1144,7 +1144,7 @@
                     <posy>458</posy>
                     <width>444</width>
                     <height>444</height>
-                    <texture flipy="true" diffuse="views/posterview/diffuse-ref-square.png">views/posterview/DefaultAlbumCover.png</texture>
+                    <texture flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">views/fallbacks/DefaultAudio.png/square-large.png</texture>
                     <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                     <visible>IsEmpty(MusicPlayer.Cover) | stringcompare(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
                 </control>
@@ -1154,7 +1154,7 @@
                     <posy>458</posy>
                     <width>444</width>
                     <height>444</height>
-                    <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square.png">$INFO[MusicPlayer.Cover]</texture>
+                    <texture background="true" flipy="true" diffuse="views/posterview/diffuse-ref-square-classic.png">$INFO[MusicPlayer.Cover]</texture>
                     <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                     <visible>!IsEmpty(MusicPlayer.Cover) + !stringcompare(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
                 </control>
@@ -1181,7 +1181,7 @@
                     <posy>10</posy>
                     <width>444</width>
                     <height>444</height>
-                    <texture diffuse="views/posterview/diffuse-square.png">views/posterview/DefaultAlbumCover.png</texture>
+                    <texture diffuse="views/posterview/diffuse-square.png">views/fallbacks/DefaultAudio.png/square-large.png</texture>
                     <aspectratio align="center" scalediffuse="false">scale</aspectratio>
                     <visible>IsEmpty(MusicPlayer.Cover) | stringcompare(MusicPlayer.Cover,DefaultAlbumCover.png)</visible>
                 </control>
