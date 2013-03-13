@@ -1073,6 +1073,8 @@
                             <scrolltime tween="cubic" easing="out">800</scrolltime>
                             <orientation>horizontal</orientation>
                             <preloaditems>2</preloaditems>
+                            <visible>!IsEmpty(Window.Property(RandomMovie.1.File)) + !IsEmpty(Window.Property(RandomEpisode.1.File))</visible>
+                            <include>visiblehidefadeinfo</include>
                             <itemlayout width="572" height="501">
                                 <control type="image">
                                     <posx>0</posx>
@@ -1200,6 +1202,41 @@
                             <height>64</height>
                             <colordiffuse>99000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
+                            <visible>System.HasAddon(service.skin.widgets)</visible>
+                        </control>
+                        <control type="group">
+                            <visible>System.HasAddon(service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running)) + IsEmpty(Window.Property(RandomEpisode.1.File)) + IsEmpty(Window.Property(RandomMovie.1.File))</visible>
+                            <include>visiblehidefadeinfo</include>
+                            <control type="image">
+                                <description>Loading Back</description>
+                                <posx>212</posx>
+                                <posy>180</posy>
+                                <width>148</width>
+                                <height>148</height>
+                                <texture>windows/home/loading-back.png</texture>
+                            </control>
+                            <control type="image">
+                                <description>Loading</description>
+                                <posx>212</posx>
+                                <posy>180</posy>
+                                <width>148</width>
+                                <height>148</height>
+                                <texture>windows/home/loading.png</texture>
+                                <animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
+                            </control>
+                            <control type="label">
+                                <decription>Title label</decription>
+                                <posx>20</posx>
+                                <posy>508</posy>
+                                <width>532</width>
+                                <height>64</height>
+                                <label>$LOCALIZE[41557]</label>
+                                <font>Font-Condensed-S29-B</font>
+                                <textcolor>aawhite</textcolor>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <scroll>false</scroll>
+                            </control>
                         </control>
                         <control type="button">
                             <decription>Title label</decription>
@@ -1215,6 +1252,8 @@
                             <aligny>center</aligny>
                             <scroll>false</scroll>
                             <enabled>false</enabled>
+                            <visible>!IsEmpty(Window.Property(RandomMovie.1.File)) + !IsEmpty(Window.Property(RandomEpisode.1.File))</visible>
+                            <include>visiblehidefadeinfo</include>
                         </control>
                         <control type="label">
                             <posx>0</posx>
@@ -1255,6 +1294,8 @@
                             <orientation>horizontal</orientation>
                             <itemgap>0</itemgap>
                             <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(502).HasFocus">Conditional</animation>
+                            <visible>!IsEmpty(Window.Property(RandomMovie.1.File)) + !IsEmpty(Window.Property(RandomEpisode.1.File))</visible>
+                            <include>visiblehidefadeinfo</include>
                             <control type="image">
                                 <decription>Dot #1</decription>
                                 <include>HomeDotIndicator</include>
@@ -1390,6 +1431,8 @@
                             <scrolltime tween="cubic" easing="out">800</scrolltime>
                             <orientation>horizontal</orientation>
                             <preloaditems>2</preloaditems>
+                            <visible>!IsEmpty(Window.Property(RecommendedEpisode.1.File))</visible>
+                            <include>visiblehidefadeinfo</include>
                             <itemlayout width="382" height="572">
                                 <control type="image">
                                     <posx>0</posx>
@@ -1517,6 +1560,41 @@
                             <height>64</height>
                             <colordiffuse>99000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
+                            <visible>System.HasAddon(service.skin.widgets)</visible>
+                        </control>
+                        <control type="group">
+                            <visible>System.HasAddon(service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running)) + IsEmpty(Window.Property(RecommendedEpisode.1.File))</visible>
+                            <include>visiblehidefadeinfo</include>
+                            <control type="image">
+                                <description>Loading Back</description>
+                                <posx>117</posx>
+                                <posy>180</posy>
+                                <width>148</width>
+                                <height>148</height>
+                                <texture>windows/home/loading-back.png</texture>
+                            </control>
+                            <control type="image">
+                                <description>Loading</description>
+                                <posx>117</posx>
+                                <posy>180</posy>
+                                <width>148</width>
+                                <height>148</height>
+                                <texture>windows/home/loading.png</texture>
+                                <animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
+                            </control>
+                            <control type="label">
+                                <decription>Title label</decription>
+                                <posx>20</posx>
+                                <posy>508</posy>
+                                <width>342</width>
+                                <height>64</height>
+                                <label>$LOCALIZE[41558]</label>
+                                <font>Font-Condensed-S29-B</font>
+                                <textcolor>aawhite</textcolor>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <scroll>false</scroll>
+                            </control>
                         </control>
                         <control type="button">
                             <decription>Title label</decription>
@@ -1532,6 +1610,8 @@
                             <aligny>center</aligny>
                             <scroll>false</scroll>
                             <enabled>false</enabled>
+                            <visible>!IsEmpty(Window.Property(RecommendedEpisode.1.File))</visible>
+                            <include>visiblehidefadeinfo</include>
                         </control>
                         <control type="label">
                             <posx>0</posx>
@@ -1571,6 +1651,8 @@
                             <height>16</height>
                             <orientation>horizontal</orientation>
                             <itemgap>0</itemgap>
+                            <visible>!IsEmpty(Window.Property(RecommendedEpisode.1.File))</visible>
+                            <include>visiblehidefadeinfo</include>
                             <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(503).HasFocus">Conditional</animation>
                             <control type="image">
                                 <decription>Dot #1</decription>
@@ -1928,6 +2010,20 @@
                             <texture border="7">windows/home/tile2.png</texture>
                             <visible>!Skin.HasSetting(HomeBackgroundOpacity)</visible>
                         </control>
+                        <control type="label">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>382</width>
+                            <height>572</height>
+                            <font>Font-Condensed-S30</font>
+                            <textcolor>77white</textcolor>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <textoffsetx>5</textoffsetx>
+                            <wrapmultiline>true</wrapmultiline>
+                            <label>service.skin.widgets[CR]$LOCALIZE[416] / $LOCALIZE[1223]</label>
+                            <visible>!System.HasAddon(service.skin.widgets)</visible>
+                        </control>
                         <control type="wraplist" id="2022">
                             <posx>0</posx>
                             <posy>0</posy>
@@ -1939,6 +2035,8 @@
                             <scrolltime tween="cubic" easing="out">800</scrolltime>
                             <orientation>horizontal</orientation>
                             <preloaditems>2</preloaditems>
+                            <visible>!IsEmpty(Window.Property(RecentMovie.1.File))</visible>
+                            <include>visiblehidefadeinfo</include>
                             <itemlayout width="382" height="572">
                                 <control type="image">
                                     <posx>0</posx>
@@ -2018,6 +2116,41 @@
                             <height>64</height>
                             <colordiffuse>99000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
+                            <visible>System.HasAddon(service.skin.widgets)</visible>
+                        </control>
+                        <control type="group">
+                            <visible>System.HasAddon(service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running)) + IsEmpty(Window.Property(RecentMovie.1.File))</visible>
+                            <include>visiblehidefadeinfo</include>
+                            <control type="image">
+                                <description>Loading Back</description>
+                                <posx>117</posx>
+                                <posy>180</posy>
+                                <width>148</width>
+                                <height>148</height>
+                                <texture>windows/home/loading-back.png</texture>
+                            </control>
+                            <control type="image">
+                                <description>Loading</description>
+                                <posx>117</posx>
+                                <posy>180</posy>
+                                <width>148</width>
+                                <height>148</height>
+                                <texture>windows/home/loading.png</texture>
+                                <animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
+                            </control>
+                            <control type="label">
+                                <decription>Title label</decription>
+                                <posx>20</posx>
+                                <posy>508</posy>
+                                <width>342</width>
+                                <height>64</height>
+                                <label>$LOCALIZE[41559]</label>
+                                <font>Font-Condensed-S29-B</font>
+                                <textcolor>aawhite</textcolor>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <scroll>false</scroll>
+                            </control>
                         </control>
                         <control type="button">
                             <decription>Title label</decription>
@@ -2033,6 +2166,8 @@
                             <aligny>center</aligny>
                             <scroll>false</scroll>
                             <enabled>false</enabled>
+                            <visible>!IsEmpty(Window.Property(RecentMovie.1.File))</visible>
+                            <include>visiblehidefadeinfo</include>
                         </control>
                         <control type="label">
                             <posx>0</posx>
@@ -2056,6 +2191,8 @@
                             <height>16</height>
                             <orientation>horizontal</orientation>
                             <itemgap>0</itemgap>
+                            <visible>!IsEmpty(Window.Property(RecentMovie.1.File))</visible>
+                            <include>visiblehidefadeinfo</include>
                             <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(202).HasFocus">Conditional</animation>
                             <control type="image">
                                 <decription>Dot #1</decription>
@@ -2679,6 +2816,20 @@
                             <texture border="7">windows/home/tile2.png</texture>
                             <visible>!Skin.HasSetting(HomeBackgroundOpacity)</visible>
                         </control>
+                        <control type="label">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>671</width>
+                            <height>572</height>
+                            <font>Font-Condensed-S30</font>
+                            <textcolor>77white</textcolor>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <textoffsetx>5</textoffsetx>
+                            <wrapmultiline>true</wrapmultiline>
+                            <label>service.skin.widgets[CR]$LOCALIZE[416] / $LOCALIZE[1223]</label>
+                            <visible>!System.HasAddon(service.skin.widgets)</visible>
+                        </control>
                         <control type="wraplist" id="3022">
                             <posx>0</posx>
                             <posy>0</posy>
@@ -2690,6 +2841,8 @@
                             <scrolltime tween="cubic" easing="out">800</scrolltime>
                             <orientation>horizontal</orientation>
                             <preloaditems>2</preloaditems>
+                            <visible>!IsEmpty(Window.Property(RecentEpisode.1.File))</visible>
+                            <include>visiblehidefadeinfo</include>
                             <itemlayout width="671" height="572">
                                 <control type="image">
                                     <posx>0</posx>
@@ -2769,6 +2922,41 @@
                             <height>64</height>
                             <colordiffuse>99000000</colordiffuse>
                             <texture border="1">windows/common/black.png</texture>
+                            <visible>System.HasAddon(service.skin.widgets)</visible>
+                        </control>
+                        <control type="group">
+                            <visible>System.HasAddon(service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running)) + IsEmpty(Window.Property(RecentEpisode.1.File))</visible>
+                            <include>visiblehidefadeinfo</include>
+                            <control type="image">
+                                <description>Loading Back</description>
+                                <posx>261</posx>
+                                <posy>180</posy>
+                                <width>148</width>
+                                <height>148</height>
+                                <texture>windows/home/loading-back.png</texture>
+                            </control>
+                            <control type="image">
+                                <description>Loading</description>
+                                <posx>261</posx>
+                                <posy>180</posy>
+                                <width>148</width>
+                                <height>148</height>
+                                <texture>windows/home/loading.png</texture>
+                                <animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
+                            </control>
+                            <control type="label">
+                                <decription>Title label</decription>
+                                <posx>20</posx>
+                                <posy>508</posy>
+                                <width>342</width>
+                                <height>64</height>
+                                <label>$LOCALIZE[41560]</label>
+                                <font>Font-Condensed-S29-B</font>
+                                <textcolor>aawhite</textcolor>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <scroll>false</scroll>
+                            </control>
                         </control>
                         <control type="button">
                             <decription>Title label</decription>
@@ -2784,6 +2972,8 @@
                             <aligny>center</aligny>
                             <scroll>false</scroll>
                             <enabled>false</enabled>
+                            <visible>!IsEmpty(Window.Property(RecentEpisode.1.File))</visible>
+                            <include>visiblehidefadeinfo</include>
                         </control>
                         <control type="label">
                             <posx>0</posx>
@@ -2807,6 +2997,8 @@
                             <height>16</height>
                             <orientation>horizontal</orientation>
                             <itemgap>0</itemgap>
+                            <visible>!IsEmpty(Window.Property(RecentEpisode.1.File))</visible>
+                            <include>visiblehidefadeinfo</include>
                             <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(302).HasFocus">Conditional</animation>
                             <control type="image">
                                 <decription>Dot #1</decription>
@@ -3030,7 +3222,7 @@
                                 <onclick condition="Library.HasContent(tvshows)">ActivateWindow(videos,tvshowtitles,return)</onclick>
                             </item>
                             <item id="1">
-                                <label>$LOCALIZE[41932]</label>
+                                <label>$LOCALIZE[1037]</label>
                                 <icon>windows/home/icons/videoaddons.png</icon>
                                 <onclick>ActivateWindow(videos,addons,return)</onclick>
                                 <visible>!System.HasAddon(script.tv.show.next.aired)</visible>
@@ -3148,13 +3340,13 @@
                                         <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
                                     </animation>
                                 </control>
-                                    <control type="group">
-                                          <animation type="Focus">
-                                              <effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
-                                          </animation>
-                                          <animation type="Unfocus">
-                                              <effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
-                                          </animation>
+                                <control type="group">
+                                    <animation type="Focus">
+                                        <effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
+                                    </animation>
                                     <control type="image">
                                           <posx>19</posx>
                                           <posy>19</posy>
@@ -3346,24 +3538,32 @@
                         <effect type="slide" start="0" end="-500" tween="sine" delay="250" easing="out" time="350" /> 
                         <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="350" time="250" />
                     </animation>
+                    <animation effect="slide" end="-39" time="500" tween="cubic" easing="inout" condition="Container(20).HasFocus(2) | Container(20).HasFocus(3) | Container(20).HasFocus(4)">Conditional</animation>
+                    <animation effect="slide" end="39" time="500" tween="cubic" easing="inout" condition="Container(20).HasFocus(6) | Container(20).HasFocus(7) | Container(20).HasFocus(8)">Conditional</animation>
                     <animation type="Conditional" condition="!Container(20).HasFocus(5) | Container(20).OnScrollNext | Container(20).OnScrollPrevious | Container(20).Scrolling | Window.IsVisible(shutdownmenu)">
                         <effect type="fade" start="100" end="80" time="500" tween="cubic" easing="inout" />
                         <effect type="zoom" start="100" end="80" time="500" tween="cubic" easing="inout" center="1160,386" />
                     </animation>
                     <control type="image">
                         <decription>Bottom shadow</decription>
-                        <posx>-92</posx>
+                        <posx>-42</posx>
                         <posy>570</posy>
-                        <width>1440</width>
+                        <width>1340</width>
                         <height>150</height>
                         <texture>windows/home/item-shadow.png</texture>
                     </control>
-                  
-                  <!-- Featured albums-->
                     <control type="group" id="402">
                         <description>Featured albums</description>
-                        <visible>!Player.HasAudio</visible>
-                        <posx>289</posx>
+                        <posx>339</posx>
+                        <visible>IsEmpty(Window(Home).Property(ShowRecentAlbums))</visible>
+                        <animation type="Visible">
+                            <effect type="rotatey" start="-180" end="0" center="625,0" time="300" tween="sine" easing="inout" />
+                            <effect type="fade" start="0" end="100" time="10" delay="150" />
+                        </animation>
+                        <animation type="Hidden">
+                            <effect type="rotatey" start="0" end="-180" center="625,0" time="300" tween="sine" easing="inout" />
+                            <effect type="fade" start="100" end="0" time="10" delay="150" />
+                        </animation>
                         <control type="button" id="4021">
                             <onfocus>CancelAlarm(HomeTileMove,true)</onfocus>
                             <onup>AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onup>
@@ -3378,24 +3578,15 @@
                         <control type="image">
                             <posx>-5</posx>
                             <posy>-5</posy>
-                            <width>487</width>
-                            <height>487</height>
+                            <width>582</width>
+                            <height>582</height>
                             <texture border="7">windows/home/tile.png</texture>
-                            <visible>Skin.HasSetting(HomeBackgroundOpacity)</visible>
-                        </control>
-                        <control type="image">
-                            <posx>-5</posx>
-                            <posy>-5</posy>
-                            <width>487</width>
-                            <height>487</height>
-                            <texture border="7">windows/home/tile2.png</texture>
-                            <visible>!Skin.HasSetting(HomeBackgroundOpacity)</visible>
                         </control>
                         <control type="label">
                             <posx>0</posx>
                             <posy>0</posy>
-                            <width>477</width>
-                            <height>477</height>
+                            <width>572</width>
+                            <height>572</height>
                             <font>Font-Condensed-S30</font>
                             <textcolor>77white</textcolor>
                             <align>center</align>
@@ -3408,7 +3599,7 @@
                         <control type="wraplist" id="4022">
                             <posx>0</posx>
                             <posy>0</posy>
-                            <width>477</width>
+                            <width>572</width>
                             <height>572</height>
                             <onup>425</onup>
                             <ondown>80</ondown>
@@ -3416,23 +3607,24 @@
                             <scrolltime tween="cubic" easing="out">800</scrolltime>
                             <orientation>horizontal</orientation>
                             <preloaditems>2</preloaditems>
-                            <itemgap>6</itemgap>
-                            <itemlayout width="477" height="572">
+                            <visible>!IsEmpty(Window.Property(RandomAlbum.1.Play))</visible>
+                            <include>visiblehidefadeinfo</include>
+                            <itemlayout width="572" height="572">
                                 <control type="image">
                                     <posx>0</posx>
                                     <posy>0</posy>
-                                    <width>477</width>
-                                    <height>477</height>
+                                    <width>572</width>
+                                    <height>572</height>
                                     <aspectratio>scale</aspectratio>
                                     <texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.ActualIcon]</texture>
                                 </control>
                             </itemlayout>
-                            <focusedlayout width="477" height="572">
+                            <focusedlayout width="572" height="572">
                                 <control type="image">
                                     <posx>0</posx>
                                     <posy>0</posy>
-                                    <width>477</width>
-                                    <height>477</height>
+                                    <width>572</width>
+                                    <height>572</height>
                                     <aspectratio>scale</aspectratio>
                                     <texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[ListItem.ActualIcon]</texture>
                                 </control>
@@ -3494,145 +3686,65 @@
                                 </item>
                             </content>
                         </control>
-                        <control type="group">
+                        <control type="image">
+                            <decription>Title overlay</decription>
                             <posx>0</posx>
-                            <posy>483</posy>
+                            <posy>508</posy>
+                            <width>572</width>
+                            <height>64</height>
+                            <colordiffuse>99000000</colordiffuse>
+                            <texture border="1">windows/common/black.png</texture>
+                            <visible>System.HasAddon(service.skin.widgets)</visible>
+                        </control>
+                        <control type="group">
+                            <visible>System.HasAddon(service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running)) + IsEmpty(Window.Property(RandomAlbum.1.Play))</visible>
+                            <include>visiblehidefadeinfo</include>
                             <control type="image">
-                                <posx>-5</posx>
-                                <posy>-5</posy>
-                                <width>487</width>
-                                <height>99</height>
-                                <texture border="7">windows/home/tile.png</texture>
-                                <visible>Skin.HasSetting(HomeBackgroundOpacity)</visible>
+                                <description>Loading Back</description>
+                                <posx>212</posx>
+                                <posy>212</posy>
+                                <width>148</width>
+                                <height>148</height>
+                                <texture>windows/home/loading-back.png</texture>
                             </control>
                             <control type="image">
-                                <posx>-5</posx>
-                                <posy>-5</posy>
-                                <width>487</width>
-                                <height>99</height>
-                                <texture border="7">windows/home/tile2.png</texture>
-                                <visible>!Skin.HasSetting(HomeBackgroundOpacity)</visible>
+                                <description>Loading</description>
+                                <posx>212</posx>
+                                <posy>212</posy>
+                                <width>148</width>
+                                <height>148</height>
+                                <texture>windows/home/loading.png</texture>
+                                <animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="true">Conditional</animation>
                             </control>
                             <control type="label">
                                 <posx>20</posx>
-                                <posy>-6</posy>
-                                <height>66</height>
+                                <posy>482</posy>
+                                <height>89</height>
                                 <width>437</width>
                                 <font>Font-Condensed-S31-B</font>
                                 <align>left</align>
                                 <aligny>center</aligny>
                                 <textcolor>bbwhite</textcolor>
-                                <label>$INFO[Container(4022).ListItem.Label]</label>
+                                <label>$LOCALIZE[41561]</label>
                                 <scroll>false</scroll>
-                            </control>
-                            <control type="label">
-                                <posx>20</posx>
-                                <posy>29</posy>
-                                <height>66</height>
-                                <width>437</width>
-                                <font>Font-Condensed-S30</font>
-                                <align>left</align>
-                                <aligny>center</aligny>
-                                <textcolor>99FFFFFF</textcolor>
-                                <label>$INFO[Container(4022).ListItem.Label2]</label>
-                                <scroll>false</scroll>
-                            </control>
-                            <control type="label">
-                                <posx>0</posx>
-                                <posy>93</posy>
-                                <width>477</width>
-                                <height>25</height>
-                                <font>Font-Condensed-S20-B</font>
-                                <shadowcolor>11000000</shadowcolor>
-                                <textcolor>77white</textcolor>
-                                <align>left</align>
-                                <aligny>center</aligny>
-                                <textoffsetx>5</textoffsetx>
-                                <label>[UPPERCASE]$LOCALIZE[41556][/UPPERCASE]</label>
-                                <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(402).HasFocus">Conditional</animation>
-                            </control>
-                            <control type="grouplist">
-                                <posx>372</posx>
-                                <posy>97</posy>
-                                <align>right</align>
-                                <width>96</width>
-                                <height>16</height>
-                                <orientation>horizontal</orientation>
-                                <itemgap>0</itemgap>
-                                <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(402).HasFocus">Conditional</animation>
-                                <control type="image">
-                                    <decription>Dot #1</decription>
-                                    <include>HomeDotIndicator</include>
-                                    <animation type="Conditional" condition="!Container(4022).HasFocus(1)">
-                                        <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
-                                        <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
-                                    </animation>
-                                    <visible>!IsEmpty(Window.Property(RandomAlbum.1.Play))</visible>
-                                </control>
-                                <control type="image">
-                                    <decription>Dot #2</decription>
-                                    <include>HomeDotIndicator</include>
-                                    <animation type="Conditional" condition="!Container(4022).HasFocus(2)">
-                                        <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
-                                        <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
-                                    </animation>
-                                    <visible>!IsEmpty(Window.Property(RandomAlbum.2.Play))</visible>
-                                </control>
-                                <control type="image">
-                                    <decription>Dot #3</decription>
-                                    <include>HomeDotIndicator</include>
-                                    <animation type="Conditional" condition="!Container(4022).HasFocus(3)">
-                                        <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
-                                        <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
-                                    </animation>
-                                    <visible>!IsEmpty(Window.Property(RandomAlbum.3.Play))</visible>
-                                </control>
-                                <control type="image">
-                                    <decription>Dot #4</decription>
-                                    <include>HomeDotIndicator</include>
-                                    <animation type="Conditional" condition="!Container(4022).HasFocus(4)">
-                                        <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
-                                        <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
-                                    </animation>
-                                    <visible>!IsEmpty(Window.Property(RandomAlbum.4.Play))</visible>
-                                </control>
-                                <control type="image">
-                                    <decription>Dot #5</decription>
-                                    <include>HomeDotIndicator</include>
-                                    <animation type="Conditional" condition="!Container(4022).HasFocus(5)">
-                                        <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
-                                        <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
-                                    </animation>
-                                    <visible>!IsEmpty(Window.Property(RandomAlbum.5.Play))</visible>
-                                </control>
-                                <control type="image">
-                                    <decription>Dot #6</decription>
-                                    <include>HomeDotIndicator</include>
-                                    <animation type="Conditional" condition="!Container(4022).HasFocus(6)">
-                                        <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
-                                        <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
-                                    </animation>
-                                    <visible>!IsEmpty(Window.Property(RandomAlbum.6.Play))</visible>
-                                </control>
                             </control>
                         </control>
-                    </control>
-                 
-                  <!-- Now playing album-->
-                    <control type="group" id="402">
-                        <description>Now playing info</description>
-                        <visible>Player.HasAudio</visible>
-                        <posx>289</posx>
-                        <control type="button" id="4021">
-                            <onfocus>CancelAlarm(HomeTileMove,true)</onfocus>
-                            <onup>AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onup>
-                            <onup>425</onup>
-                            <ondown>80</ondown>
-                            <onleft>AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onleft>
-                            <onleft>401</onleft>
-                            <onright>AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
-                            <onright>403</onright>
-                            <onclick>ActivateWindow(musicplaylist)</onclick>
+                        <control type="button">
+                            <decription>Title label</decription>
+                            <posx>20</posx>
+                            <posy>508</posy>
+                            <width>532</width>
+                            <height>64</height>
+                            <label>[B]$INFO[Container(4022).ListItem.Label][/B]</label>
+                            <label2>$INFO[Container(4022).ListItem.Label2]</label2>
+                            <font>Font-Condensed-S29</font>
+                            <textcolor>aawhite</textcolor>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <scroll>false</scroll>
+                            <enabled>false</enabled>
+                            <visible>!IsEmpty(Window.Property(RandomAlbum.1.Play))</visible>
+                            <include>visiblehidefadeinfo</include>
                         </control>
                         <control type="label">
                             <posx>0</posx>
@@ -3645,95 +3757,295 @@
                             <align>left</align>
                             <aligny>center</aligny>
                             <textoffsetx>5</textoffsetx>
-                            <label>[UPPERCASE]$LOCALIZE[41443][/UPPERCASE]</label>
+                            <label>[UPPERCASE]$LOCALIZE[41556][/UPPERCASE]</label>
                             <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(402).HasFocus">Conditional</animation>
                         </control>
+                        <control type="grouplist">
+                            <posx>471</posx>
+                            <posy>580</posy>
+                            <align>right</align>
+                            <width>96</width>
+                            <height>16</height>
+                            <orientation>horizontal</orientation>
+                            <itemgap>0</itemgap>
+                            <visible>!IsEmpty(Window.Property(RandomAlbum.1.Play))</visible>
+                            <include>visiblehidefadeinfo</include>
+                            <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(402).HasFocus">Conditional</animation>
+                            <control type="image">
+                                <decription>Dot #1</decription>
+                                <include>HomeDotIndicator</include>
+                                <animation type="Conditional" condition="!Container(4022).HasFocus(1)">
+                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="iout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RandomAlbum.1.Play))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #2</decription>
+                                <include>HomeDotIndicator</include>
+                                <animation type="Conditional" condition="!Container(4022).HasFocus(2)">
+                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="iout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RandomAlbum.2.Play))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #3</decription>
+                                <include>HomeDotIndicator</include>
+                                <animation type="Conditional" condition="!Container(4022).HasFocus(3)">
+                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="iout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RandomAlbum.3.Play))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #4</decription>
+                                <include>HomeDotIndicator</include>
+                                <animation type="Conditional" condition="!Container(4022).HasFocus(4)">
+                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="iout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RandomAlbum.4.Play))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #5</decription>
+                                <include>HomeDotIndicator</include>
+                                <animation type="Conditional" condition="!Container(4022).HasFocus(5)">
+                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="iout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RandomAlbum.5.Play))</visible>
+                            </control>
+                            <control type="image">
+                                <decription>Dot #6</decription>
+                                <include>HomeDotIndicator</include>
+                                <animation type="Conditional" condition="!Container(4022).HasFocus(6)">
+                                    <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
+                                    <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="iout" /> 
+                                </animation>
+                                <visible>!IsEmpty(Window.Property(RandomAlbum.6.Play))</visible>
+                            </control>
+                        </control>
+                    </control>
+                    <control type="group" id="402">
+                        <description>New albums</description>
+                        <posx>339</posx>
+                        <visible>!IsEmpty(Window(Home).Property(ShowRecentAlbums))</visible>
+                        <animation type="Visible">
+                            <effect type="rotatey" start="180" end="0" center="625,0" time="300" tween="sine" easing="inout" />
+                            <effect type="fade" start="0" end="100" time="10" delay="150" />
+                        </animation>                                
+                        <animation type="Hidden">
+                            <effect type="rotatey" start="0" end="180" center="625,0" time="300" tween="sine" easing="inout" />
+                            <effect type="fade" start="100" end="0" time="10" delay="150" />
+                        </animation>
                         <control type="image">
                             <posx>-5</posx>
                             <posy>-5</posy>
-                            <width>487</width>
-                            <height>487</height>
+                            <width>582</width>
+                            <height>582</height>
                             <texture border="7">windows/home/tile.png</texture>
                             <visible>Skin.HasSetting(HomeBackgroundOpacity)</visible>
                         </control>
                         <control type="image">
                             <posx>-5</posx>
                             <posy>-5</posy>
-                            <width>487</width>
-                            <height>487</height>
+                            <width>582</width>
+                            <height>582</height>
                             <texture border="7">windows/home/tile2.png</texture>
                             <visible>!Skin.HasSetting(HomeBackgroundOpacity)</visible>
                         </control>
-                        <control type="image">
-                           <posx>0</posx>
-                           <posy>0</posy>
-                           <width>477</width>
-                           <height>477</height>
-                           <aspectratio>scale</aspectratio>
-                           <texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-large.png">$INFO[Player.Art(thumb)]</texture>
-                        </control>
-                        <control type="group">
+                        <control type="list" id="4023">
                             <posx>0</posx>
-                            <posy>483</posy>
-                            <control type="image">
-                                <posx>-5</posx>
-                                <posy>-5</posy>
-                                <width>487</width>
-                                <height>99</height>
-                                <texture border="7">windows/home/tile.png</texture>
-                                <visible>Skin.HasSetting(HomeBackgroundOpacity)</visible>
-                            </control>
-                            <control type="image">
-                                <posx>-5</posx>
-                                <posy>-5</posy>
-                                <width>487</width>
-                                <height>99</height>
-                                <texture border="7">windows/home/tile2.png</texture>
-                                <visible>!Skin.HasSetting(HomeBackgroundOpacity)</visible>
-                            </control>
-                            <control type="label">
-                                <posx>20</posx>
-                                <posy>-6</posy>
-                                <height>66</height>
-                                <width>437</width>
-                                <font>Font-Condensed-S30-B</font>
-                                <align>left</align>
-                                <aligny>center</aligny>
-                                <textcolor>bbwhite</textcolor>
-                                <label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.Year, • ,]</label>
-                                <scroll>false</scroll>
-                                <visible>!ControlGroup(402).HasFocus</visible>
-                            </control>
-                            <control type="label">
-                                <posx>20</posx>
-                                <posy>-6</posy>
-                                <height>66</height>
-                                <width>437</width>
-                                <font>Font-Condensed-S30-B</font>
-                                <align>left</align>
-                                <aligny>center</aligny>
-                                <textcolor>bbwhite</textcolor>
-                                <label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.Year, • ,]</label>
-                                <scroll>true</scroll>
-                                <visible>ControlGroup(402).HasFocus</visible>
-                            </control>
-                            <control type="label">
-                                <posx>20</posx>
-                                <posy>29</posy>
-                                <height>66</height>
-                                <width>437</width>
-                                <font>Font-Condensed-S30</font>
-                                <align>left</align>
-                                <aligny>center</aligny>
-                                <textcolor>99FFFFFF</textcolor>
-                                <label>$INFO[MusicPlayer.Artist]</label>
-                                <scroll>false</scroll>
-                            </control>
+                            <posy>0</posy>
+                            <width>572</width>
+                            <height>572</height>
+                            <onup>4023</onup>
+                            <ondown>4023</ondown>
+                            <onleft>ClearProperty(ShowRecentAlbums)</onleft>
+                            <onleft>AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onleft>
+                            <onleft>401</onleft>
+                            <onright>ClearProperty(ShowRecentAlbums)</onright>
+                            <onright>AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
+                            <onright>403</onright>
+                            <viewtype label="List">List</viewtype>
+                            <scrolltime tween="cubic" easing="out">500</scrolltime>
+                            <orientation>vertical</orientation>
+                            <include>visiblehidefadeinfo</include>
+                            <itemlayout width="572" height="64">
+                                <control type="image">
+                                    <posx>0</posx>
+                                    <posy>0</posy>
+                                    <width>572</width>
+                                    <height>65</height>
+                                    <texture border="90,3,90,3">views/list/other/separator.png</texture>
+                                </control>
+                                <control type="label">
+                                    <posx>90</posx>
+                                    <posy>0</posy>
+                                    <height>64</height>
+                                    <width>462</width>
+                                    <font>Font-Condensed-S29-B</font>
+                                    <label>$INFO[ListItem.Label]</label>
+                                    <textcolor>77white</textcolor>
+                                    <shadowcolor>22000000</shadowcolor>
+                                    <scroll>false</scroll>
+                                </control>
+                                <control type="label">
+                                    <posx>46</posx>
+                                    <width>100</width>
+                                    <height>62</height>
+                                    <font>Font-Condensed-S31</font>
+                                    <label fallback="••••">$INFO[ListItem.Property(Year)]</label>
+                                    <align>center</align>
+                                    <textcolor>77white</textcolor>
+                                    <shadowcolor>22000000</shadowcolor>
+                                    <scroll>false</scroll>
+                                </control>
+                            </itemlayout>
+                            <focusedlayout width="572" height="124">
+                                <control type="image">
+                                    <posx>0</posx>
+                                    <posy>0</posy>
+                                    <width>572</width>
+                                    <height>125</height>
+                                    <texture border="90,3,90,3">views/list/other/separator.png</texture>
+                                </control>
+                                <control type="group">
+                                    <animation effect="slide" start="0,71" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(4023).OnPrevious">focus</animation>
+                                    <animation effect="slide" start="0,-71" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(4023).OnNext">focus</animation>
+                                    <control type="image">
+                                        <posx>0</posx>
+                                        <posy>0</posy>
+                                        <width>572</width>
+                                        <height>123</height>
+                                        <texture border="150,1,150,1">views/other/focus.png</texture>
+                                        <include>visiblehidefadeinfo</include>
+                                        <visible>Control.HasFocus(4023)</visible>
+                                    </control>
+                                    <control type="image">
+                                        <posx>20</posx>
+                                        <posy>15</posy>
+                                        <width>94</width>
+                                        <height>94</height>
+                                        <texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-small.png">$INFO[ListItem.Thumb]</texture>
+                                    </control>
+                                    <control type="label">
+                                        <posx>129</posx>
+                                        <posy>8</posy>
+                                        <height>70</height>
+                                        <width>423</width>
+                                        <font>Font-Condensed-S32</font>
+                                        <label>[B]$INFO[ListItem.Label][/B]</label>
+                                        <textcolor>eewhite</textcolor>
+                                        <shadowcolor>22000000</shadowcolor>
+                                        <scroll>false</scroll>
+                                    </control>
+                                    <control type="label">
+                                        <posx>129</posx>
+                                        <posy>47</posy>
+                                        <height>70</height>
+                                        <width>423</width>
+                                        <font>Font-Condensed-S29</font>
+                                        <label>$INFO[ListItem.Label2]</label>
+                                        <textcolor>eewhite</textcolor>
+                                        <shadowcolor>22000000</shadowcolor>
+                                        <scroll>false</scroll>
+                                    </control>
+                                </control>
+                            </focusedlayout>
+                            <content>
+                                <item id="1">
+                                    <onclick>$INFO[Window.Property(RecentAlbum.1.Play)]</onclick>
+                                    <label>$INFO[Window.Property(RecentAlbum.1.Title)]</label>
+                                    <label2>$INFO[Window.Property(RecentAlbum.1.Artist)]</label2>
+                                    <thumb>$INFO[Window.Property(RecentAlbum.1.Thumb)]</thumb>
+                                    <property name="Year">$INFO[Window.Property(RecentAlbum.1.Year)]</property>
+                                    <property name="Play">$INFO[Window.Property(RecentAlbum.1.Play)]</property>
+                                    <visible>!IsEmpty(Window.Property(RecentAlbum.1.Play))</visible>
+                                </item>
+                                <item id="2">
+                                    <onclick>$INFO[Window.Property(RecentAlbum.2.Play)]</onclick>
+                                    <label>$INFO[Window.Property(RecentAlbum.2.Title)]</label>
+                                    <label2>$INFO[Window.Property(RecentAlbum.2.Artist)]</label2>
+                                    <thumb>$INFO[Window.Property(RecentAlbum.2.Thumb)]</thumb>
+                                    <property name="Year">$INFO[Window.Property(RecentAlbum.2.Year)]</property>
+                                    <property name="Play">$INFO[Window.Property(RecentAlbum.2.Play)]</property>
+                                    <visible>!IsEmpty(Window.Property(RecentAlbum.2.Play))</visible>
+                                </item>
+                                <item id="3">
+                                    <onclick>$INFO[Window.Property(RecentAlbum.3.Play)]</onclick>
+                                    <label>$INFO[Window.Property(RecentAlbum.3.Title)]</label>
+                                    <label2>$INFO[Window.Property(RecentAlbum.3.Artist)]</label2>
+                                    <thumb>$INFO[Window.Property(RecentAlbum.3.Thumb)]</thumb>
+                                    <property name="Year">$INFO[Window.Property(RecentAlbum.3.Year)]</property>
+                                    <property name="Play">$INFO[Window.Property(RecentAlbum.3.Play)]</property>
+                                    <visible>!IsEmpty(Window.Property(RecentAlbum.3.Play))</visible>
+                                </item>
+                                <item id="4">
+                                    <onclick>$INFO[Window.Property(RecentAlbum.4.Play)]</onclick>
+                                    <label>$INFO[Window.Property(RecentAlbum.4.Title)]</label>
+                                    <label2>$INFO[Window.Property(RecentAlbum.4.Artist)]</label2>
+                                    <thumb>$INFO[Window.Property(RecentAlbum.4.Thumb)]</thumb>
+                                    <property name="Year">$INFO[Window.Property(RecentAlbum.4.Year)]</property>
+                                    <property name="Play">$INFO[Window.Property(RecentAlbum.4.Play)]</property>
+                                    <visible>!IsEmpty(Window.Property(RecentAlbum.4.Play))</visible>
+                                </item>
+                                <item id="5">
+                                    <onclick>$INFO[Window.Property(RecentAlbum.5.Play)]</onclick>
+                                    <label>$INFO[Window.Property(RecentAlbum.5.Title)]</label>
+                                    <label2>$INFO[Window.Property(RecentAlbum.5.Artist)]</label2>
+                                    <thumb>$INFO[Window.Property(RecentAlbum.5.Thumb)]</thumb>
+                                    <property name="Year">$INFO[Window.Property(RecentAlbum.5.Year)]</property>
+                                    <property name="Play">$INFO[Window.Property(RecentAlbum.5.Play)]</property>
+                                    <visible>!IsEmpty(Window.Property(RecentAlbum.5.Play))</visible>
+                                </item>
+                                <item id="6">
+                                    <onclick>$INFO[Window.Property(RecentAlbum.6.Play)]</onclick>
+                                    <label>$INFO[Window.Property(RecentAlbum.6.Title)]</label>
+                                    <label2>$INFO[Window.Property(RecentAlbum.6.Artist)]</label2>
+                                    <thumb>$INFO[Window.Property(RecentAlbum.6.Thumb)]</thumb>
+                                    <property name="Year">$INFO[Window.Property(RecentAlbum.6.Year)]</property>
+                                    <property name="Play">$INFO[Window.Property(RecentAlbum.6.Play)]</property>
+                                    <visible>!IsEmpty(Window.Property(RecentAlbum.6.Play))</visible>
+                                </item>
+                                <item id="7">
+                                    <onclick>$INFO[Window.Property(RecentAlbum.7.Play)]</onclick>
+                                    <label>$INFO[Window.Property(RecentAlbum.7.Title)]</label>
+                                    <label2>$INFO[Window.Property(RecentAlbum.7.Artist)]</label2>
+                                    <thumb>$INFO[Window.Property(RecentAlbum.7.Thumb)]</thumb>
+                                    <property name="Year">$INFO[Window.Property(RecentAlbum.7.Year)]</property>
+                                    <property name="Play">$INFO[Window.Property(RecentAlbum.7.Play)]</property>
+                                    <visible>!IsEmpty(Window.Property(RecentAlbum.7.Play))</visible>
+                                </item>
+                                <item id="8">
+                                    <onclick>$INFO[Window.Property(RecentAlbum.8.Play)]</onclick>
+                                    <label>$INFO[Window.Property(RecentAlbum.8.Title)]</label>
+                                    <label2>$INFO[Window.Property(RecentAlbum.8.Artist)]</label2>
+                                    <thumb>$INFO[Window.Property(RecentAlbum.8.Thumb)]</thumb>
+                                    <property name="Year">$INFO[Window.Property(RecentAlbum.8.Year)]</property>
+                                    <property name="Play">$INFO[Window.Property(RecentAlbum.8.Play)]</property>
+                                    <visible>!IsEmpty(Window.Property(RecentAlbum.8.Play))</visible>
+                                </item>
+                            </content>
                         </control>
-                    </control>                    
-               
+                        <control type="label">
+                            <posx>0</posx>
+                            <posy>576</posy>
+                            <width>477</width>
+                            <height>25</height>
+                            <font>Font-Condensed-S20-B</font>
+                            <shadowcolor>11000000</shadowcolor>
+                            <textcolor>77white</textcolor>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <textoffsetx>5</textoffsetx>
+                            <label>[UPPERCASE]$LOCALIZE[41554][/UPPERCASE]</label>
+                            <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(402).HasFocus">Conditional</animation>
+                        </control>
+                    </control>
                     <control type="panel" id="401">
-                        <posx>-24</posx>
+                        <posx>26</posx>
                         <posy>-24</posy>
                         <width>331</width>
                         <height>620</height>
@@ -3899,7 +4211,7 @@
                                 <visible>Skin.HasSetting(HideHomeMusicAddons)</visible>
                             </item>
                             <item id="1">
-                                <label>$LOCALIZE[41935]</label>
+                                <label>$LOCALIZE[1038]</label>
                                 <icon>windows/home/icons/addons.png</icon>
                                 <onclick condition="!Library.HasContent(music)">ActivateWindow(musicfiles,addons,return)</onclick>
                                 <onclick condition="Library.HasContent(music)">ActivateWindow(musiclibrary,addons,return)</onclick>
@@ -3907,310 +4219,275 @@
                             </item>
                         </content>
                     </control>
-                    <control type="group" id="403">
-                        <posx>768</posx>
-                        <control type="list" id="4033">
-                            <description>Recently added albums</description>
-                            <posx>0</posx>
-                            <posy>-5</posy>
-                            <width>525</width>
-                            <height>580</height>
-                            <onleft>402</onleft>
-                            <onright>CancelAlarm(HomeTileMove,true)</onright>
-                            <onright>Control.Move(20,1)</onright>
-                            <onright condition="!Skin.HasSetting(HomePrograms)">601</onright>
-                            <onright condition="Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeWeather)">701</onright>
-                            <onright condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeWeather)">801</onright>
-                            <onup>425</onup>
-                            <ondown>4033</ondown>
-                            <orientation>vertical</orientation>
-                            <scrolltime tween="cubic" easing="out">500</scrolltime>
-                            <preloaditems>2</preloaditems>
-                            <viewtype>list</viewtype>
-                            <itemlayout width="525" height="193">
-                                <control type="group">
-                                    <animation effect="fade" end="75" time="0" condition="true">Conditional</animation>
-                                    <control type="image">
-                                        <posx>0</posx>
-                                        <posy>0</posy>
-                                        <width>487</width>
-                                        <height>196</height>
-                                        <texture border="7">windows/home/tile.png</texture>
-                                        <visible>!Skin.HasSetting(HomeMusicTiles) + Skin.HasSetting(HomeBackgroundOpacity)</visible>
-                                    </control>
-                                    <control type="image">
-                                        <posx>0</posx>
-                                        <posy>0</posy>
-                                        <width>487</width>
-                                        <height>196</height>
-                                        <texture border="7">windows/home/tile2.png</texture>
-                                        <visible>!Skin.HasSetting(HomeMusicTiles) + !Skin.HasSetting(HomeBackgroundOpacity)</visible>
-                                    </control>
-                                    <control type="image">
-                                        <posx>0</posx>
-                                        <posy>0</posy>
-                                        <width>487</width>
-                                        <height>196</height>
-                                        <texture border="7">windows/home/tile-red.png</texture>
-                                        <visible>Skin.HasSetting(HomeMusicTiles)</visible>
-                                    </control>
-                                    <control type="image">
-                                        <posx>24</posx>
-                                        <posy>25</posy>
-                                        <width>150</width>
-                                        <height>150</height>
-                                        <texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-small.png">$INFO[ListItem.ActualIcon]</texture>
-                                    </control>
-                                    <control type="label">
-                                        <posx>193</posx>
-                                        <posy>0</posy>
-                                        <height>80</height>
-                                        <width>270</width>
-                                        <font>Font-Condensed-S26-B</font>
-                                        <align>left</align>
-                                        <aligny>center</aligny>
-                                        <textcolor>eewhite</textcolor>
-                                        <label>$INFO[ListItem.Label]</label>
-                                        <scroll>false</scroll>
-                                    </control>
-                                    <control type="label">
-                                        <posx>193</posx>
-                                        <posy>0</posy>
-                                        <height>148</height>
-                                        <width>270</width>
-                                        <font>Font-Condensed-S25</font>
-                                        <align>left</align>
-                                        <aligny>center</aligny>
-                                        <textcolor>99FFFFFF</textcolor>
-                                        <label>$INFO[ListItem.Label2]</label>
-                                        <scroll>false</scroll>
-                                    </control>
-                                    <control type="label">
-                                        <posx>193</posx>
-                                        <posy>72</posy>
-                                        <height>76</height>
-                                        <width>270</width>
-                                        <font>Font-Condensed-S25</font>
-                                        <align>left</align>
-                                        <aligny>center</aligny>
-                                        <textcolor>99FFFFFF</textcolor>
-                                        <label>$INFO[ListItem.Property(info)]</label>
-                                        <scroll>false</scroll>
-                                    </control>
-                                </control>
-                            </itemlayout>
-                            <focusedlayout width="525" height="193">
-                                <control type="group">
-                                    <control type="image">
-                                        <posx>0</posx>
-                                        <posy>5</posy>
-                                        <width>487</width>
-                                        <height>186</height>
-                                        <texture>views/other/focus.png</texture>
-                                        <include>visiblehidefadeinfo</include>
-                                        <visible>Control.HasFocus(4033)</visible>
-                                    </control>
-                                    <control type="image">
-                                        <posx>0</posx>
-                                        <posy>0</posy>
-                                        <width>487</width>
-                                        <height>196</height>
-                                        <texture border="7">windows/home/tile.png</texture>
-                                        <visible>!Skin.HasSetting(HomeMusicTiles) + Skin.HasSetting(HomeBackgroundOpacity)</visible>
-                                    </control>
-                                    <control type="image">
-                                        <posx>0</posx>
-                                        <posy>0</posy>
-                                        <width>487</width>
-                                        <height>196</height>
-                                        <texture border="7">windows/home/tile2.png</texture>
-                                        <visible>!Skin.HasSetting(HomeMusicTiles) + !Skin.HasSetting(HomeBackgroundOpacity)</visible>
-                                    </control>
-                                    <control type="image">
-                                        <posx>0</posx>
-                                        <posy>0</posy>
-                                        <width>487</width>
-                                        <height>196</height>
-                                        <texture border="7">windows/home/tile-red.png</texture>
-                                        <visible>Skin.HasSetting(HomeMusicTiles)</visible>
-                                    </control>
-                                    <control type="image">
-                                        <posx>24</posx>
-                                        <posy>25</posy>
-                                        <width>150</width>
-                                        <height>150</height>
-                                        <texture background="true" fallback="views/fallbacks/DefaultAlbumCover.png/square-small.png">$INFO[ListItem.ActualIcon]</texture>
-                                    </control>
-                                    <control type="label">
-                                        <posx>193</posx>
-                                        <posy>0</posy>
-                                        <height>80</height>
-                                        <width>270</width>
-                                        <font>Font-Condensed-S26-B</font>
-                                        <align>left</align>
-                                        <aligny>center</aligny>
-                                        <textcolor>eewhite</textcolor>
-                                        <label>$INFO[ListItem.Label]</label>
-                                        <scroll>false</scroll>
-                                    </control>
-                                    <control type="label">
-                                        <posx>193</posx>
-                                        <posy>0</posy>
-                                        <height>148</height>
-                                        <width>270</width>
-                                        <font>Font-Condensed-S25</font>
-                                        <align>left</align>
-                                        <aligny>center</aligny>
-                                        <textcolor>99FFFFFF</textcolor>
-                                        <label>$INFO[ListItem.Label2]</label>
-                                        <scroll>false</scroll>
-                                    </control>
-                                    <control type="label">
-                                        <posx>193</posx>
-                                        <posy>72</posy>
-                                        <height>76</height>
-                                        <width>270</width>
-                                        <font>Font-Condensed-S25</font>
-                                        <align>left</align>
-                                        <aligny>center</aligny>
-                                        <textcolor>99FFFFFF</textcolor>
-                                        <label>$INFO[ListItem.Property(info)]</label>
-                                        <scroll>false</scroll>
-                                    </control>
-                                </control>
-                            </focusedlayout>
-                            <content>
-                                <item id="1">
-                                    <onclick>$INFO[Window.Property(RecentAlbum.1.Play)]</onclick>
-                                    <icon>$INFO[Window.Property(RecentAlbum.1.Thumb)]</icon>
-                                    <label>$INFO[Window.Property(RecentAlbum.1.Title)]</label>
-                                    <label2>$INFO[Window.Property(RecentAlbum.1.Artist)]</label2>
-                                    <property name="info">$INFO[Window.Property(RecentAlbum.1.Year)]</property>
-                                </item>
-                                <item id="2">
-                                    <onclick>$INFO[Window.Property(RecentAlbum.2.Play)]</onclick>
-                                    <icon>$INFO[Window.Property(RecentAlbum.2.Thumb)]</icon>
-                                    <label>$INFO[Window.Property(RecentAlbum.2.Title)]</label>
-                                    <label2>$INFO[Window.Property(RecentAlbum.2.Artist)]</label2>
-                                    <property name="info">$INFO[Window.Property(RecentAlbum.2.Year)]</property>
-                                </item>
-                                <item id="3">
-                                    <onclick>$INFO[Window.Property(RecentAlbum.3.Play)]</onclick>
-                                    <icon>$INFO[Window.Property(RecentAlbum.3.Thumb)]</icon>
-                                    <label>$INFO[Window.Property(RecentAlbum.3.Title)]</label>
-                                    <label2>$INFO[Window.Property(RecentAlbum.3.Artist)]</label2>
-                                    <property name="info">$INFO[Window.Property(RecentAlbum.3.Year)]</property>
-                                </item>
-                                <item id="4">
-                                    <onclick>$INFO[Window.Property(RecentAlbum.4.Play)]</onclick>
-                                    <icon>$INFO[Window.Property(RecentAlbum.4.Thumb)]</icon>
-                                    <label>$INFO[Window.Property(RecentAlbum.4.Title)]</label>
-                                    <label2>$INFO[Window.Property(RecentAlbum.4.Artist)]</label2>
-                                    <property name="info">$INFO[Window.Property(RecentAlbum.4.Year)]</property>
-                                </item>
-                                <item id="5">
-                                    <onclick>$INFO[Window.Property(RecentAlbum.5.Play)]</onclick>
-                                    <icon>$INFO[Window.Property(RecentAlbum.5.Thumb)]</icon>
-                                    <label>$INFO[Window.Property(RecentAlbum.5.Title)]</label>
-                                    <label2>$INFO[Window.Property(RecentAlbum.5.Artist)]</label2>
-                                    <property name="info">$INFO[Window.Property(RecentAlbum.5.Year)]</property>
-                                </item>
-                                <item id="6">
-                                    <onclick>$INFO[Window.Property(RecentAlbum.6.Play)]</onclick>
-                                    <icon>$INFO[Window.Property(RecentAlbum.6.Thumb)]</icon>
-                                    <label>$INFO[Window.Property(RecentAlbum.6.Title)]</label>
-                                    <label2>$INFO[Window.Property(RecentAlbum.6.Artist)]</label2>
-                                    <property name="info">$INFO[Window.Property(RecentAlbum.6.Year)]</property>
-                                </item>
-                            </content>
-                        </control>
-                        <control type="group">
-                            <posx>0</posx>
-                            <posy>483</posy>
-                            <control type="label">
-                                <posx>3</posx>
-                                <posy>93</posy>
-                                <width>477</width>
-                                <height>25</height>
-                                <font>Font-Condensed-S20-B</font>
-                                <shadowcolor>11000000</shadowcolor>
-                                <textcolor>77white</textcolor>
-                                <align>left</align>
-                                <aligny>center</aligny>
-                                <textoffsetx>5</textoffsetx>
-                                <label>[UPPERCASE]$LOCALIZE[41554][/UPPERCASE]</label>
-                                <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="ControlGroup(403).HasFocus">Conditional</animation>
-                            </control>
-                            <control type="grouplist">
-                                <posx>372</posx>
-                                <posy>97</posy>
-                                <align>right</align>
-                                <width>96</width>
-                                <height>16</height>
-                                <orientation>horizontal</orientation>
-                                <itemgap>0</itemgap>
-                                <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="Control.HasFocus(4033)">Conditional</animation>
-                                <control type="image">
-                                    <decription>Dot #1</decription>
-                                    <include>HomeDotIndicator</include>
-                                    <animation type="Conditional" condition="!Container(4033).HasFocus(1)">
-                                        <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
-                                        <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
-                                    </animation>
-                                    <visible>!IsEmpty(Window.Property(RecentAlbum.1.Play))</visible>
-                                </control>
-                                <control type="image">
-                                    <decription>Dot #2</decription>
-                                    <include>HomeDotIndicator</include>
-                                    <animation type="Conditional" condition="!Container(4033).HasFocus(2)">
-                                        <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
-                                        <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
-                                    </animation>
-                                    <visible>!IsEmpty(Window.Property(RecentAlbum.2.Play))</visible>
-                                </control>
-                                <control type="image">
-                                    <decription>Dot #3</decription>
-                                    <include>HomeDotIndicator</include>
-                                    <animation type="Conditional" condition="!Container(4033).HasFocus(3)">
-                                        <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
-                                        <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
-                                    </animation>
-                                    <visible>!IsEmpty(Window.Property(RecentAlbum.3.Play))</visible>
-                                </control>
-                                <control type="image">
-                                    <decription>Dot #4</decription>
-                                    <include>HomeDotIndicator</include>
-                                    <animation type="Conditional" condition="!Container(4033).HasFocus(4)">
-                                        <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
-                                        <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
-                                    </animation>
-                                    <visible>!IsEmpty(Window.Property(RecentAlbum.4.Play))</visible>
-                                </control>
-                                <control type="image">
-                                    <decription>Dot #5</decription>
-                                    <include>HomeDotIndicator</include>
-                                    <animation type="Conditional" condition="!Container(4033).HasFocus(5)">
-                                        <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
-                                        <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
-                                    </animation>
-                                    <visible>!IsEmpty(Window.Property(RecentAlbum.5.Play))</visible>
-                                </control>
-                                <control type="image">
-                                    <decription>Dot #6</decription>
-                                    <include>HomeDotIndicator</include>
-                                    <animation type="Conditional" condition="!Container(4033).HasFocus(6)">
-                                        <effect type="fade" start="100" end="30" time="300" tween="sine" easing="inout" />
-                                        <effect type="zoom" center="auto" start="100" end="57" time="300" tween="sine" easing="inout" /> 
-                                    </animation>
-                                    <visible>!IsEmpty(Window.Property(RecentAlbum.6.Play))</visible>
-                                </control>
-                            </control>
-                        </control>
+                    <control type="fadelabel" id="404">
+                        <posx>-1</posx>
+                        <posy>-1</posy>
+                        <width>500</width>
+                        <height>1</height>
+                        <scroll>false</scroll>
+                        <scrollout>false</scrollout>
+                        <pauseatend>10000</pauseatend>
+                        <aligny>center</aligny>
+                        <font>Font-Condensed-S1</font>
+                        <textcolor>00000000</textcolor>
+                        <label>$INFO[Window.Property(RecentAlbum.1.Thumb)]</label>
+                        <label>$INFO[Window.Property(RecentAlbum.2.Thumb)]</label>
+                        <label>$INFO[Window.Property(RecentAlbum.3.Thumb)]</label>
+                        <label>$INFO[Window.Property(RecentAlbum.4.Thumb)]</label>
+                        <label>$INFO[Window.Property(RecentAlbum.5.Thumb)]</label>
+                        <label>$INFO[Window.Property(RecentAlbum.6.Thumb)]</label>
+                        <label>$INFO[Window.Property(RecentAlbum.7.Thumb)]</label>
+                        <label>$INFO[Window.Property(RecentAlbum.8.Thumb)]</label>
+                        <visible>Container(20).HasFocus(5)</visible>
+                        <animation effect="fade" start="100" end="0" time="0" condition="true">Conditional</animation>
                     </control>
                     <control type="image">
-                        <posx>268</posx>
+                        <posx>917</posx>
+                        <posy>289</posy>
+                        <width>283</width>
+                        <height>283</height>
+                        <texture background="true">$INFO[Control.GetLabel(404)]</texture>
+                        <fadetime>300</fadetime>
+                        <aspectratio>scale</aspectratio>
+                    </control>
+                    <control type="label">
+                        <posx>917</posx>
+                        <posy>576</posy>
+                        <width>477</width>
+                        <height>25</height>
+                        <font>Font-Condensed-S20-B</font>
+                        <shadowcolor>11000000</shadowcolor>
+                        <textcolor>77white</textcolor>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <textoffsetx>5</textoffsetx>
+                        <label>[UPPERCASE]$LOCALIZE[41554][/UPPERCASE]</label>
+                        <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="Control.HasFocus(403) + Container(403).HasFocus(2)">Conditional</animation>
+                    </control>
+                    <control type="panel" id="403">
+                        <posx>893</posx>
+                        <posy>-24</posy>
+                        <width>331</width>
+                        <height>620</height>
+                        <onleft>402</onleft>
+                        <onright>CancelAlarm(HomeTileMove,true)</onright>
+                        <onright>Control.Move(20,1)</onright>
+                        <onright condition="!Skin.HasSetting(HomePrograms)">601</onright>
+                        <onright condition="Skin.HasSetting(HomePrograms)">701</onright>
+                        <onup>425</onup>
+                        <ondown>80</ondown>
+                        <onback>SetProperty(EditTile,1)</onback>
+                        <onback>Select</onback>
+                        <scrolltime>0</scrolltime>
+                        <itemlayout width="289" height="289">
+                            <control type="image">
+                                <posx>19</posx>
+                                <posy>19</posy>
+                                <width>293</width>
+                                <height>293</height>
+                                <texture border="7">windows/home/tile.png</texture>
+                                <animation effect="fade" end="90" time="0" condition="true">Conditional</animation>
+                            </control>
+                            <control type="label">
+                                <posx>164</posx>
+                                <posy>24</posy>
+                                <width>328</width>
+                                <height>283</height>
+                                <font>Font-Condensed-S30</font>
+                                <textcolor>77white</textcolor>
+                                <align>center</align>
+                                <aligny>center</aligny>
+                                <wrapmultiline>true</wrapmultiline>
+                                <label>$INFO[ListItem.Label]</label>
+                                <visible>!IsEmpty(ListItem.Property(noaddon))</visible>
+                            </control>
+                            <control type="group">
+                                <animation effect="fade" end="90" time="0" condition="true">Conditional</animation>
+                                <visible>IsEmpty(ListItem.Property(recent))</visible>
+                                <control type="image">
+                                    <posx>24</posx>
+                                    <posy>24</posy>
+                                    <width>283</width>
+                                    <height>283</height>
+                                    <texture background="true">$INFO[ListItem.Icon]</texture>
+                                    <aspectratio>scale</aspectratio>
+                                    <visible>!IsEmpty(ListItem.Property(Path))</visible>
+                                </control>
+                                <control type="image">
+                                    <posx>24</posx>
+                                    <posy>24</posy>
+                                    <width>283</width>
+                                    <height>283</height>
+                                    <texture>windows/home/icons/addtile.png</texture>
+                                    <visible>IsEmpty(ListItem.Property(Path)) + IsEmpty(ListItem.Property(recent))</visible>
+                                </control>
+                                <control type="group">
+                                    <visible>!IsEmpty(ListItem.property(showlabel)) + !IsEmpty(ListItem.Property(Path))</visible>
+                                    <control type="image">
+                                        <posx>24</posx>
+                                        <posy>241</posy>
+                                        <width>283</width>
+                                        <height>66</height>
+                                        <texture border="1">windows/home/tile-overlay.png</texture>
+                                        <colordiffuse>99FFFFFF</colordiffuse>
+                                    </control>
+                                    <control type="label">
+                                        <posx>24</posx>
+                                        <posy>241</posy>
+                                        <width>283</width>
+                                        <height>66</height>
+                                        <label>$INFO[ListItem.Label]</label>
+                                        <font>Font-Condensed-S33</font>
+                                        <textcolor>aawhite</textcolor>
+                                        <align>left</align>
+                                        <aligny>center</aligny>
+                                        <textoffsetx>20</textoffsetx>
+                                    </control>
+                                </control>
+                            </control>
+                        </itemlayout>
+                        <focusedlayout width="289" height="289">
+                            <control type="group">
+                                <control type="image">
+                                    <posx>3</posx>
+                                    <posy>3</posy>
+                                    <width>325</width>
+                                    <height>325</height>
+                                    <texture border="40">windows/home/tile-fo.png</texture>
+                                    <animation type="Focus">
+                                        <effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="auto" />
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+                                </control>
+                                <control type="image">
+                                    <posx>19</posx>
+                                    <posy>19</posy>
+                                    <width>293</width>
+                                    <height>293</height>
+                                    <texture border="7">windows/home/tile.png</texture>
+                                    <animation type="Focus">
+                                        <effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
+                                    </animation>
+                                </control>
+                                <control type="label">
+                                    <posx>164</posx>
+                                    <posy>24</posy>
+                                    <width>328</width>
+                                    <height>283</height>
+                                    <font>Font-Condensed-S30</font>
+                                    <textcolor>77white</textcolor>
+                                    <align>center</align>
+                                    <aligny>center</aligny>
+                                    <wrapmultiline>true</wrapmultiline>
+                                    <label>$INFO[ListItem.Label]</label>
+                                    <visible>!IsEmpty(ListItem.Property(noaddon))</visible>
+                                </control>
+                                <control type="group">
+                                    <animation type="Focus">
+                                        <effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
+                                    </animation>
+                                    <visible>IsEmpty(ListItem.Property(recent))</visible>
+                                    <control type="image">
+                                        <posx>24</posx>
+                                        <posy>24</posy>
+                                        <width>283</width>
+                                        <height>283</height>
+                                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                                        <aspectratio>scale</aspectratio>
+                                        <visible>!IsEmpty(ListItem.Property(Path))</visible>
+                                        <animation type="Focus" condition="!IsEmpty(Container(403).ListItem.Property(animate))" reversible="false">
+                                            <effect type="zoom" end="115" time="75" tween="sine" easing="out" center="auto" />
+                                            <effect type="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" />
+                                        </animation>
+                                    </control>
+                                    <control type="image">
+                                        <posx>24</posx>
+                                        <posy>24</posy>
+                                        <width>283</width>
+                                        <height>283</height>
+                                        <texture>windows/home/icons/addtile.png</texture>
+                                        <visible>IsEmpty(ListItem.Property(Path))</visible>
+                                        <animation type="Focus" reversible="false">
+                                            <effect type="zoom" end="115" time="75" tween="sine" easing="out" center="auto" />
+                                            <effect type="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" />
+                                        </animation>
+                                    </control>
+                                    <control type="group">
+                                        <visible>!IsEmpty(ListItem.property(showlabel)) + !IsEmpty(ListItem.Property(Path))</visible>
+                                        <control type="image">
+                                            <posx>24</posx>
+                                            <posy>241</posy>
+                                            <width>283</width>
+                                            <height>66</height>
+                                            <texture border="1">windows/home/tile-overlay.png</texture>
+                                            <colordiffuse>99FFFFFF</colordiffuse>
+                                        </control>
+                                        <control type="label">
+                                            <posx>24</posx>
+                                            <posy>241</posy>
+                                            <width>283</width>
+                                            <height>66</height>
+                                            <label>$INFO[ListItem.Label]</label>
+                                            <font>Font-Condensed-S33</font>
+                                            <textcolor>aawhite</textcolor>
+                                            <align>left</align>
+                                            <aligny>center</aligny>
+                                            <textoffsetx>20</textoffsetx>
+                                        </control>
+                                    </control>
+                                </control>
+                            </control>
+                        </focusedlayout>
+                        <content>
+                            <item id="1">
+                                <label>$INFO[Skin.String(HomeMusicTile1.Label)]</label>
+                                <onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeMusicTile1.Type),4) + !stringcompare(Skin.String(HomeMusicTile1.Type),5) + !stringcompare(Skin.String(HomeMusicTile1.Type),6) + !stringcompare(Skin.String(HomeMusicTile1.Type),7)">RunAddon($INFO[Skin.String(HomeMusicTile1.Path)])</onclick>
+                                <onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeMusicTile1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeMusicTile1.Path)],return)</onclick>
+                                <onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeMusicTile1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeMusicTile1.Path)],return)</onclick>
+                                <onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeMusicTile1.Type),6) | stringcompare(Skin.String(HomeMusicTile1.Type),7)]">$INFO[Skin.String(HomeMusicTile1.Path)]</onclick>
+                                <onclick condition="IsEmpty(Skin.String(HomeMusicTile1.Path)) | !IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeMusicTile1)</onclick>
+                                <onclick condition="[IsEmpty(Skin.String(HomeMusicTile1.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeMusicTile1.Type))">Skin.SetString(HomeMusicTile1.Type,0)</onclick>
+                                <onclick condition="[IsEmpty(Skin.String(HomeMusicTile1.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeMusicTile1.TypeName))">Skin.SetString(HomeMusicTile1.TypeName,$LOCALIZE[41145])</onclick>
+                                <onclick condition="IsEmpty(Skin.String(HomeMusicTile1.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,fifteen,3003)</onclick>
+                                <onclick condition="IsEmpty(Skin.String(HomeMusicTile1.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
+                                <onclick condition="IsEmpty(Skin.String(HomeMusicTile1.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
+                                <onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
+                                <icon>$INFO[Skin.String(HomeMusicTile1.Icon)]</icon>
+                                <property name="showlabel">$INFO[Skin.String(HomeMusicTile1.ShowLabel)]</property>
+                                <property name="path">$INFO[Skin.String(HomeMusicTile1.Path)]</property>
+                                <property name="animate">$INFO[Skin.String(HomeMusicTile1.Animate)]</property>
+                            </item>
+                            <item id="2">
+                                <label>-</label>
+                                <onclick condition="!IsEmpty(Window.Property(RecentAlbum.1.Play)) + !IsEmpty(Window(Home).Property(SkinWidgets_Running))">CancelAlarm(HomeTileMove,true)</onclick>
+                                <onclick condition="!IsEmpty(Window.Property(RecentAlbum.1.Play)) + !IsEmpty(Window(Home).Property(SkinWidgets_Running))">SetProperty(ShowRecentAlbums,1)</onclick>
+                                <onclick condition="!IsEmpty(Window.Property(RecentAlbum.1.Play)) + !IsEmpty(Window(Home).Property(SkinWidgets_Running))">SetFocus(4023)</onclick>
+                                <property name="recent">1</property>
+                                <visible>System.HasAddon(service.skin.widgets)</visible>visible>
+                            </item>
+                            <item id="2">
+                                <label>service.skin.widgets[CR]$LOCALIZE[416] /[CR]$LOCALIZE[1223]</label>
+                                <onclick>-</onclick>
+                                <property name="recent">1</property>
+                                <property name="noaddon">1</property>
+                                <visible>!System.HasAddon(service.skin.widgets)</visible>
+                            </item>
+                        </content>
+                    </control>
+                    <control type="image">
+                        <posx>318</posx>
                         <posy>-21</posy>
-                        <width>519</width>
+                        <width>614</width>
                         <height>614</height>
                         <texture border="40">windows/home/tile-fo.png</texture>
                         <animation type="Visible">
@@ -4221,24 +4498,10 @@
                         </animation>
                         <visible>ControlGroup(402).HasFocus</visible>
                     </control>
-                    <control type="image">
-                        <posx>751</posx>
-                        <posy>-21</posy>
-                        <width>519</width>
-                        <height>614</height>
-                        <texture border="40">windows/home/tile-fo.png</texture>
-                        <animation type="Visible">
-                            <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
-                        </animation>
-                        <animation type="Hidden">
-                            <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
-                        </animation>
-                        <visible>ControlGroup(403).HasFocus</visible>
-                    </control>
                 </control>
             </control>
-           
-       <!-- Apps -->  
+            
+       <!-- Applications -->
             <control type="group" id="600">
                 <width>2320</width>
                 <height>780</height>
@@ -5653,7 +5916,6 @@
                     </control>
                 </control>
             </control>
-      
-      </control>
+        </control>
     </include>
 </includes>

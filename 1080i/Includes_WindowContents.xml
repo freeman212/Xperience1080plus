@@ -205,7 +205,7 @@
             <texture background="true" fallback=".">$INFO[Player.Art(fanart)]</texture>
             <fadetime>600</fadetime>
             <include>Animation_FanartFade</include>
-            <visible>[ControlGroup(402).HasFocus | [[stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)] + Container(20).HasFocus(4)]] + Player.HasAudio</visible>
+            <visible>[[stringcompare(Skin.String(HomeScreen),classic) | stringcompare(Skin.String(HomeScreen),horizontal)] + Container(20).HasFocus(4)] + Player.HasAudio</visible>
         </control>
         <control type="image">
             <description>Search results fanart</description>

@@ -154,7 +154,7 @@
                     <enable>!Skin.HasSetting(HomeTVShows)</enable>
                     <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2202)">Conditional</animation>
                 </control>
-                <control type="radiobutton" id="2203">
+                <!-- <control type="radiobutton" id="2203">
                     <width>1210</width>
                     <include>SettingsDialogRadioButtonVars</include>
                     <selected>Skin.HasSetting(HomeMusicTiles)</selected>
@@ -162,7 +162,7 @@
                     <label>Set custom Music tiles red</label>
                     <enable>!Skin.HasSetting(HomeMusic)</enable>
                     <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2203)">Conditional</animation>
-                </control>
+                </control> -->
                 <control type="radiobutton" id="2204">
                     <width>1210</width>
                     <include>SettingsDialogRadioButtonVars</include>
