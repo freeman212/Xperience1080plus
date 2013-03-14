@@ -4063,6 +4063,8 @@
                         <onright>402</onright>
                         <onup>425</onup>
                         <ondown>80</ondown>
+                        <onback condition="!IsEmpty(Container(401).ListItem.Property(Custom))">SetProperty(EditTile,1)</onback>
+                        <onback condition="!IsEmpty(Container(401).ListItem.Property(Custom))">Select</onback>
                         <scrolltime>0</scrolltime>
                         <itemlayout width="289" height="289">
                             <control type="group">
@@ -4076,43 +4078,55 @@
                                 </control>
                                 <control type="image">
                                     <posx>24</posx>
-                                    <posy>241</posy>
+                                    <posy>24</posy>
                                     <width>283</width>
-                                    <height>66</height>
-                                    <texture border="1">windows/home/tile-overlay.png</texture>
-                                    <colordiffuse>99FFFFFF</colordiffuse>
+                                    <height>283</height>
+                                    <texture background="true">$INFO[ListItem.Icon]</texture>
+                                    <aspectratio>scale</aspectratio>
                                 </control>
                                 <control type="image">
                                     <posx>24</posx>
                                     <posy>24</posy>
                                     <width>283</width>
                                     <height>283</height>
-                                    <texture>$INFO[ListItem.Icon]</texture>
+                                    <texture>windows/home/icons/addtile.png</texture>
+                                    <visible>IsEmpty(ListItem.Property(Path)) + !IsEmpty(ListItem.Property(Custom))</visible>
                                 </control>
-                                <control type="label">
-                                    <posx>24</posx>
-                                    <posy>241</posy>
-                                    <width>283</width>
-                                    <height>66</height>
-                                    <label>$INFO[ListItem.Label]</label>
-                                    <font>Font-Condensed-S33</font>
-                                    <textcolor>aawhite</textcolor>
-                                    <align>left</align>
-                                    <aligny>center</aligny>
-                                    <textoffsetx>20</textoffsetx>
-                                </control>
-                                <control type="label">
-                                    <posx>307</posx>
-                                    <posy>241</posy>
-                                    <width>283</width>
-                                    <height>66</height>
-                                    <label>$INFO[ListItem.Label2]</label>
-                                    <font>Font-Condensed-S31-B</font>
-                                    <textcolor>77white</textcolor>
-                                    <align>right</align>
-                                    <aligny>center</aligny>
-                                    <textoffsetx>20</textoffsetx>
-                                    <visible>!IsEmpty(ListItem.Label2)</visible>
+                                <control type="group">
+                                    <visible>IsEmpty(ListItem.Property(Custom)) | [!IsEmpty(ListItem.property(showlabel)) + !IsEmpty(ListItem.Property(Path))]</visible>
+                                    <control type="image">
+                                        <posx>24</posx>
+                                        <posy>241</posy>
+                                        <width>283</width>
+                                        <height>66</height>
+                                        <texture border="1">windows/home/tile-overlay.png</texture>
+                                        <colordiffuse>99FFFFFF</colordiffuse>
+                                    </control>
+                                    <control type="label">
+                                        <posx>24</posx>
+                                        <posy>241</posy>
+                                        <width>283</width>
+                                        <height>66</height>
+                                        <label>$INFO[ListItem.Label]</label>
+                                        <font>Font-Condensed-S33</font>
+                                        <textcolor>aawhite</textcolor>
+                                        <align>left</align>
+                                        <aligny>center</aligny>
+                                        <textoffsetx>20</textoffsetx>
+                                    </control>
+                                    <control type="label">
+                                        <posx>307</posx>
+                                        <posy>241</posy>
+                                        <width>283</width>
+                                        <height>66</height>
+                                        <label>$INFO[ListItem.Label2]</label>
+                                        <font>Font-Condensed-S31-B</font>
+                                        <textcolor>77white</textcolor>
+                                        <align>right</align>
+                                        <aligny>center</aligny>
+                                        <textoffsetx>20</textoffsetx>
+                                        <visible>!IsEmpty(ListItem.Label2)</visible>
+                                    </control>
                                 </control>
                             </control>
                         </itemlayout>
@@ -4141,55 +4155,71 @@
                                         <effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
                                     </animation>
                                     <control type="image">
-                                        <posx>19</posx>
-                                        <posy>19</posy>
-                                        <width>293</width>
-                                        <height>293</height>
-                                        <texture border="7">windows/home/tile-red.png</texture>
-                                    </control>
-                                    <control type="image">
-                                        <posx>24</posx>
-                                        <posy>241</posy>
-                                        <width>283</width>
-                                        <height>66</height>
-                                        <texture border="1">windows/home/tile-overlay.png</texture>
-                                        <colordiffuse>99FFFFFF</colordiffuse>
+                                          <posx>19</posx>
+                                          <posy>19</posy>
+                                          <width>293</width>
+                                          <height>293</height>
+                                          <texture border="7">windows/home/tile-red.png</texture>
                                     </control>
                                     <control type="image">
                                         <posx>24</posx>
                                         <posy>24</posy>
                                         <width>283</width>
                                         <height>283</height>
-                                        <texture>$INFO[ListItem.Icon]</texture>
+                                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                                        <aspectratio>scale</aspectratio>
+                                        <animation type="Focus" condition="!IsEmpty(Container(401).ListItem.Property(animate)) | IsEmpty(Container(401).ListItem.Property(Custom))" reversible="false">
+                                            <effect type="zoom" end="115" time="75" tween="sine" easing="out" center="auto" />
+                                            <effect type="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" />
+                                        </animation>
+                                    </control>
+                                    <control type="image">
+                                        <posx>24</posx>
+                                        <posy>24</posy>
+                                        <width>283</width>
+                                        <height>283</height>
+                                        <texture>windows/home/icons/addtile.png</texture>
+                                        <visible>IsEmpty(ListItem.Property(Path)) + !IsEmpty(ListItem.Property(Custom))</visible>
                                         <animation type="Focus" reversible="false">
                                             <effect type="zoom" end="115" time="75" tween="sine" easing="out" center="auto" />
                                             <effect type="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" />
                                         </animation>
                                     </control>
-                                    <control type="label">
-                                        <posx>24</posx>
-                                        <posy>241</posy>
-                                        <width>246</width>
-                                        <height>66</height>
-                                        <label>$INFO[ListItem.Label]</label>
-                                        <font>Font-Condensed-S33</font>
-                                        <textcolor>aawhite</textcolor>
-                                        <align>left</align>
-                                        <aligny>center</aligny>
-                                        <textoffsetx>20</textoffsetx>
-                                    </control>
-                                    <control type="label">
-                                        <posx>307</posx>
-                                        <posy>241</posy>
-                                        <width>283</width>
-                                        <height>66</height>
-                                        <label>$INFO[ListItem.Label2]</label>
-                                        <font>Font-Condensed-S31-B</font>
-                                        <textcolor>77white</textcolor>
-                                        <align>right</align>
-                                        <aligny>center</aligny>
-                                        <textoffsetx>20</textoffsetx>
-                                        <visible>!IsEmpty(ListItem.Label2)</visible>
+                                    <control type="group">
+                                        <visible>IsEmpty(ListItem.Property(Custom)) | [!IsEmpty(ListItem.property(showlabel)) + !IsEmpty(ListItem.Property(Path))]</visible>
+                                        <control type="image">
+                                            <posx>24</posx>
+                                            <posy>241</posy>
+                                            <width>283</width>
+                                            <height>66</height>
+                                            <texture border="1">windows/home/tile-overlay.png</texture>
+                                            <colordiffuse>99FFFFFF</colordiffuse>
+                                        </control>
+                                        <control type="label">
+                                            <posx>24</posx>
+                                            <posy>241</posy>
+                                            <width>283</width>
+                                            <height>66</height>
+                                            <label>$INFO[ListItem.Label]</label>
+                                            <font>Font-Condensed-S33</font>
+                                            <textcolor>aawhite</textcolor>
+                                            <align>left</align>
+                                            <aligny>center</aligny>
+                                            <textoffsetx>20</textoffsetx>
+                                        </control>
+                                        <control type="label">
+                                            <posx>307</posx>
+                                            <posy>241</posy>
+                                            <width>283</width>
+                                            <height>66</height>
+                                            <label>$INFO[ListItem.Label2]</label>
+                                            <font>Font-Condensed-S31-B</font>
+                                            <textcolor>77white</textcolor>
+                                            <align>right</align>
+                                            <aligny>center</aligny>
+                                            <textoffsetx>20</textoffsetx>
+                                            <visible>!IsEmpty(ListItem.Label2)</visible>
+                                        </control>
                                     </control>
                                 </control>
                             </control>
@@ -4204,18 +4234,23 @@
                                 <onclick condition="Library.HasContent(music) + !IsEmpty(Skin.String(music.path))">ActivateWindow(musiclibrary,$INFO[Skin.String(music.path)],return)</onclick>
                             </item>
                             <item id="1">
-                                <label>Recently played</label>
-                                <icon>windows/home/icons/musicplaylist.png</icon>
-                                <onclick condition="!Library.HasContent(music)">ActivateWindow(musicfiles,recent,return)</onclick>
-                                <onclick condition="Library.HasContent(music)">ActivateWindow(10502,musicdb://7/,return)</onclick>
-                                <visible>Skin.HasSetting(HideHomeMusicAddons)</visible>
-                            </item>
-                            <item id="1">
-                                <label>$LOCALIZE[1038]</label>
-                                <icon>windows/home/icons/addons.png</icon>
-                                <onclick condition="!Library.HasContent(music)">ActivateWindow(musicfiles,addons,return)</onclick>
-                                <onclick condition="Library.HasContent(music)">ActivateWindow(musiclibrary,addons,return)</onclick>
-                                <visible>!Skin.HasSetting(HideHomeMusicAddons)</visible>
+                                <label>$INFO[Skin.String(HomeMusicTile2.Label)]</label>
+                                <onclick condition="IsEmpty(Window.Property(EditTile)) + !stringcompare(Skin.String(HomeMusicTile2.Type),4) + !stringcompare(Skin.String(HomeMusicTile2.Type),5) + !stringcompare(Skin.String(HomeMusicTile2.Type),6) + !stringcompare(Skin.String(HomeMusicTile2.Type),7)">RunAddon($INFO[Skin.String(HomeMusicTile2.Path)])</onclick>
+                                <onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeMusicTile2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(HomeMusicTile2.Path)],return)</onclick>
+                                <onclick condition="IsEmpty(Window.Property(EditTile)) + stringcompare(Skin.String(HomeMusicTile2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(HomeMusicTile2.Path)],return)</onclick>
+                                <onclick condition="IsEmpty(Window.Property(EditTile)) + [stringcompare(Skin.String(HomeMusicTile2.Type),6) | stringcompare(Skin.String(HomeMusicTile2.Type),7)]">$INFO[Skin.String(HomeMusicTile2.Path)]</onclick>
+                                <onclick condition="IsEmpty(Skin.String(HomeMusicTile2.Path)) | !IsEmpty(Window.Property(EditTile))">Skin.SetBool(HomeMusicTile2)</onclick>
+                                <onclick condition="[IsEmpty(Skin.String(HomeMusicTile2.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeMusicTile2.Type))">Skin.SetString(HomeMusicTile2.Type,0)</onclick>
+                                <onclick condition="[IsEmpty(Skin.String(HomeMusicTile2.Path)) | !IsEmpty(Window.Property(EditTile))] + IsEmpty(Skin.String(HomeMusicTile2.TypeName))">Skin.SetString(HomeMusicTile2.TypeName,$LOCALIZE[41145])</onclick>
+                                <onclick condition="IsEmpty(Skin.String(HomeMusicTile2.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(SingleDialog,sixteen,3003)</onclick>
+                                <onclick condition="IsEmpty(Skin.String(HomeMusicTile2.Path)) | !IsEmpty(Window.Property(EditTile))">SetProperty(Dialog,$LOCALIZE[41136],skinsettings)</onclick>
+                                <onclick condition="IsEmpty(Skin.String(HomeMusicTile2.Path)) | !IsEmpty(Window.Property(EditTile))">ActivateWindow(3003)</onclick>
+                                <onclick condition="!IsEmpty(Window.Property(EditTile))">ClearProperty(EditTile)</onclick>
+                                <icon>$INFO[Skin.String(HomeMusicTile2.Icon)]</icon>
+                                <property name="showlabel">$INFO[Skin.String(HomeMusicTile2.ShowLabel)]</property>
+                                <property name="path">$INFO[Skin.String(HomeMusicTile2.Path)]</property>
+                                <property name="animate">$INFO[Skin.String(HomeMusicTile2.Animate)]</property>
+                                <property name="custom">1</property>
                             </item>
                         </content>
                     </control>
