@@ -277,5 +277,16 @@
     <!-- From 42200 to 42204 -->
     <string id="42200">Mouse not supported</string>
     <string id="42201">Please disable</string>
-
+    
+    <!-- Context menu -->
+    <!-- From 42205 to 42215 -->
+    <string id="42205">Edit movie</string>
+    <string id="42206">Edit TV show</string>
+    <string id="42207">Edit season</string>
+    <string id="42208">Edit episode</string>
+    <string id="42209">Edit music video</string>
+    <string id="42210">Edit artist</string>
+    <string id="42211">Edit album</string>
+    <string id="42212">Edit song</string>
+    
 </strings>

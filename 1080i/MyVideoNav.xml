@@ -103,7 +103,7 @@
                            <onleft>300</onleft>
                            <onright>301</onright>
                            <onup>98</onup>
-                           <ondown>97</ondown>
+                           <ondown>3</ondown>
                            <texturefocus>dialogs/options/buttons/refresh-fo.png</texturefocus>
                            <texturenofocus>dialogs/options/buttons/refresh-nf.png</texturenofocus>
                            <visible>Container.Content(TVShows)</visible>
@@ -118,7 +118,7 @@
                            <onleft>300</onleft>
                            <onright>302</onright>
                            <onup>98</onup>
-                           <ondown>97</ondown>
+                           <ondown>3</ondown>
                            <texturefocus>dialogs/options/buttons/refresh-fo.png</texturefocus>
                            <visible>Container.Content(TVShows) + Skin.HasSetting(ExtraFanart.Enabled)</visible>
                        </control>
@@ -148,7 +148,7 @@
                            <onleft>303</onleft>
                            <onright>304</onright>
                            <onup>98</onup>
-                           <ondown>97</ondown>
+                           <ondown>3</ondown>
                            <texturefocus>dialogs/options/buttons/refresh-fo.png</texturefocus>
                            <texturenofocus>dialogs/options/buttons/refresh-nf.png</texturenofocus>
                            <visible>Container.Content(Movies)</visible>
@@ -163,7 +163,7 @@
                            <onleft>303</onleft>
                            <onright>305</onright>
                            <onup>98</onup>
-                           <ondown>97</ondown>
+                           <ondown>3</ondown>
                            <texturefocus>dialogs/options/buttons/refresh-fo.png</texturefocus>
                            <visible>Container.Content(Movies) + Skin.HasSetting(ExtraFanart.Enabled)</visible>
                        </control>
@@ -177,7 +177,7 @@
                            <onleft>304</onleft>
                            <onright>305</onright>
                            <onup>98</onup>
-                           <ondown>97</ondown>
+                           <ondown>3</ondown>
                            <texturefocus>dialogs/options/buttons/refresh-fo.png</texturefocus>
                            <visible>Container.Content(Movies)</visible>
                        </control>
@@ -266,15 +266,6 @@
                        </control>
                     </control>
                 
-                    <control type="button" id="97">
-                        <description>libraryeditor</description>
-                        <include>optionsbuttonsdimensions</include>
-                        <label>Edit info</label>
-                        <onclick>XBMC.RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
-                        <texturefocus>dialogs/options/buttons/edit-fo.png</texturefocus>
-                        <texturenofocus>dialogs/options/buttons/edit-nf.png</texturenofocus>
-                        <visible>System.HasAddon(script.libraryeditor)</visible>
-                    </control>
                     <control type="button" id="3">
                         <description>sort</description>
                         <include>optionsbuttonsdimensions</include>

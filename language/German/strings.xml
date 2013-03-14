@@ -279,4 +279,15 @@
     <string id="42200">Maus nicht unterstützt</string>
     <string id="42201">Bitte deaktivieren</string>
     
+    <!-- Context menu -->
+    <!-- From 42205 to 42215 -->
+    <string id="42205">Film bearbeiten</string>
+    <string id="42206">Serie bearbeiten</string>
+    <string id="42207">Staffel bearbeiten</string>
+    <string id="42208">Episode bearbeiten</string>
+    <string id="42209">Musikvideo bearbeiten</string>
+    <string id="42210">Interpret bearbeiten</string>
+    <string id="42211">Album bearbeiten</string>
+    <string id="42212">Titel bearbeiten</string>
+    
 </strings>
