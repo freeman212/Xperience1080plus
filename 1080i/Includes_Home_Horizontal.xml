@@ -194,6 +194,13 @@
         <animation effect="slide" start="0,0" end="0,295" time="350" tween="sine" easing="out" condition="Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84) | Skin.HasSetting(HomeScreenHorizontal.Low)">Conditional</animation>
     </include>
        
+    <variable name="HomeMenuTopLabel">
+        <value condition="Container(20).HasFocus(2)">$INFO[Window.Property(Movies.Count)] $LOCALIZE[342] / $INFO[Window.Property(Movies.UnWatched)] $LOCALIZE[16101]</value>
+        <value condition="Container(20).HasFocus(3)">$INFO[Window.Property(TVShows.Count)] $LOCALIZE[20343] / $INFO[Window.Property(Episodes.Count)] $LOCALIZE[20360] ($INFO[Window.Property(Episodes.UnWatched)] $LOCALIZE[16101]) </value>
+        <value condition="Container(20).HasFocus(4)">$INFO[Window.Property(Music.ArtistsCount)] $LOCALIZE[133] / $INFO[Window.Property(Music.AlbumsCount)] $LOCALIZE[132] / $INFO[Window.Property(Music.SongsCount)] $LOCALIZE[134]</value>
+        <value condition="Container(20).HasFocus(9)">$INFO[Window(Weather).Property(Location),, - ]$INFO[Window(Weather).Property(Current.Condition)] ($INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits])</value>
+    </variable>
+       
     <!-- Home Buttons -->
     <include name="HomeWraplistHorizontal">
         <control type="button" id="525">
@@ -203,26 +210,44 @@
             <description>Home menu</description>
             <visible>!Window.IsActive(favourites) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-globalsearch-infodialog.xml) + !Window.IsActive(script-globalsearch-contextmenu.xml) + ![Window.IsVisible(virtualkeyboard) + !IsEmpty(Window.Property(HomeSearch))]</visible>
             <include>HomeMenuAnimationHorizontal</include>
+            <control type="group">
+                <visible>[Skin.HasSetting(HideHomeDescription) + Container(20).HasFocus(9)] | [Skin.HasSetting(HideHomeDescription) + [![Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84)] + [Container(20).HasFocus(2) | Container(20).HasFocus(3) | Container(20).HasFocus(4)]]]</visible>
+                <animation type="Visible">
+                    <effect type="fade" start="0" end="100" time="0" tween="sine" easing="in" />
+                    <effect type="slide" start="0,15" end="0,0" time="300" tween="cubic" easing="out" />
+                </animation>
+                <animation type="Hidden">
+                    <effect type="fade" start="100" end="0" time="0" tween="sine" easing="out" />
+                    <effect type="slide" start="0,-15" end="0,0" time="0" tween="cubic" easing="in" />
+                </animation>
+                <posx>0</posx>
+                <posy>387</posy>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>1920</width>
+                    <height>108</height>
+                    <texture>windows/home/top_menu.png</texture>
+                </control>
+                <control type="label">
+                    <posx>660</posx>
+                    <posy>57</posy>
+                    <width>580</width>
+                    <height>55</height>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>$VAR[HomeMenuTopLabel]</label>
+                    <font>Font-Condensed-S28</font>
+                    <textcolor>85000000</textcolor>
+                    <scroll>true</scroll>
+                </control>
+            </control>
             <control type="image">
                 <posx>0</posx>
                 <posy>495</posy>
                 <width>1920</width>
                 <height>90</height>
                 <texture>windows/home/main_menu.png</texture>
-            </control>
-            <control type="image">
-                <posx>810</posx>
-                <posy>331</posy>
-                <width>300</width>
-                <height>164</height>
-                <texture>windows/home/main_menu_top_shadow.png</texture>
-                <visible>![Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84)] + [[[Container(20).HasFocus(2) | Container(20).HasFocus(3) | Container(20).HasFocus(4)] + System.HasAddon(service.skin.widgets)] | Container(20).HasFocus(7)]</visible>
-                <animation type="Visible">
-                    <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" />
-                </animation>
-                <animation type="Hidden">
-                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-                </animation>
             </control>
             <control type="image">
                 <posx>0</posx>
@@ -238,20 +263,29 @@
                     <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
                 </animation>
             </control>
-            <control type="image">
-                <posx>945</posx>
-                <posy>478</posy>
-                <width>29</width>
-                <height>14</height>
-                <texture>windows/home/arrow.png</texture>
-                <animation type="Conditional" condition="![Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84)] + [Container(20).HasFocus(2) | Container(20).HasFocus(3) | Container(20).HasFocus(4) | Container(20).HasFocus(7)]">
+            <control type="group">
+                <visible>[Container(20).HasFocus(7) + !Control.HasFocus(82)] | [!Skin.HasSetting(HideHomeDescription) + ![Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84)] + [Container(20).HasFocus(2) | Container(20).HasFocus(3) | Container(20).HasFocus(4)]]</visible>
+                <animation type="Visible">
                     <effect type="fade" start="5" end="60" time="350" tween="sine" easing="inout" />
                     <effect type="slide" start="0,0" end="0,-6" tween="sine" easing="inout" time="350" />
                 </animation>
                 <animation type="Unfocus" condition="Container(20).OnNext | Container(20).OnPrevious">
                     <effect type="fade" start="100" end="0" time="0" />
                 </animation>
-                <visible>![Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84)] + [Container(20).HasFocus(2) | Container(20).HasFocus(3) | Container(20).HasFocus(4) | Container(20).HasFocus(7)]</visible>
+                <control type="image">
+                    <posx>810</posx>
+                    <posy>337</posy>
+                    <width>300</width>
+                    <height>164</height>
+                    <texture>windows/home/main_menu_top_shadow.png</texture>
+                </control>
+                <control type="image">
+                    <posx>945</posx>
+                    <posy>478</posy>
+                    <width>29</width>
+                    <height>14</height>
+                    <texture>windows/home/arrow.png</texture>
+                </control>
             </control>
             <control type="image">
                 <posx>945</posx>

@@ -213,6 +213,14 @@
                     <onclick>Skin.ToggleSetting(HideHomeDate)</onclick>
                     <label>Disable date popup</label>
                 </control>
+                <control type="radiobutton" id="2304">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
+                    <selected>Skin.HasSetting(HideHomeDescription)</selected>
+                    <onclick>Skin.ToggleSetting(HideHomeDescription)</onclick>
+                    <label>Show menu decription</label>
+                    <visible>stringcompare(Skin.String(HomeScreen),horizontal)</visible>
+                </control>
             </control>            
             
           <!-- custom guide -->

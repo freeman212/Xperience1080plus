@@ -5,13 +5,13 @@
 <!-- ======================= -->
 
     <include name="SubMenuAnimationHorizontal">
-        <animation type="WindowOpen" reversible="false">
-            <effect type="fade" start="0" end="100" time="0" tween="sine" easing="in" />
-            <effect type="slide" start="0,-15" end="0,0" time="300" tween="cubic" easing="out" />
+        <animation type="WindowOpen">
+            <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+            <effect type="slide" start="0,-75" end="0,0" time="350" tween="cubic" easing="out" />
         </animation>
-        <animation type="WindowClose" reversible="false">
-            <effect type="fade" start="100" end="0" time="0" tween="sine" easing="out" />
-            <effect type="slide" start="0,0" end="0,-15" time="250" tween="cubic" easing="in" />
+        <animation type="WindowClose">
+            <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
+            <effect type="slide" start="0,0" end="0,-75" time="300" tween="sine" easing="out" />
         </animation>
         <animation type="Conditional" condition="Control.HasFocus(23)">
             <effect type="fade" start="0" end="100" time="0" tween="sine" easing="in" />
@@ -469,19 +469,17 @@
                 <ondown>21</ondown>
                 <onleft>23</onleft>
                 <onright>23</onright>
-                <onclick condition="!IsEmpty(Weather.Plugin)">ActivateWindow(weather)</onclick>
-                <onclick condition="IsEmpty(Weather.Plugin)">ActivateWindow(weathersettings)</onclick>
-            </control>
-            <control type="label">
-                <posx>435</posx>
+                <posx>800</posx>
                 <posy>583</posy>
-                <width>1010</width>
+                <width>300</width>
                 <height>55</height>
                 <align>center</align>
                 <aligny>center</aligny>
                 <font>Font-Condensed-S28</font>
                 <textcolor>ee000000</textcolor>
-                <label>$INFO[Window(Weather).Property(Location),, - ]$INFO[Window(Weather).Property(Current.Condition)] ($INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits])</label>
+                <focusedcolor>ee000000</focusedcolor>
+                <label>$LOCALIZE[5]</label>
+                <onclick>ActivateWindow(weathersettings)</onclick>
             </control>
         </control>
     </include>

@@ -2311,10 +2311,10 @@
                             <width>283</width>
                             <height>283</height>
                             <texture>windows/home/icons/addtile.png</texture>
-                            <visible>!IsEmpty(ListItem.Property(custom)) + IsEmpty(ListItem.Property(Path))</visible>
+                            <visible>IsEmpty(ListItem.Property(Path))</visible>
                         </control>
                         <control type="group">
-                            <visible>IsEmpty(ListItem.Property(custom)) | [!IsEmpty(ListItem.property(showlabel)) + !IsEmpty(ListItem.Property(Path))]</visible>
+                            <visible>!IsEmpty(ListItem.property(showlabel)) + !IsEmpty(ListItem.Property(Path))</visible>
                             <control type="image">
                                 <posx>24</posx>
                                 <posy>241</posy>
@@ -2387,14 +2387,14 @@
                                 <width>283</width>
                                 <height>283</height>
                                 <texture>windows/home/icons/addtile.png</texture>
-                                <visible>!IsEmpty(ListItem.Property(custom)) + IsEmpty(ListItem.Property(Path))</visible>
+                                <visible>IsEmpty(ListItem.Property(Path))</visible>
                                 <animation type="Focus" reversible="false">
                                     <effect type="zoom" end="115" time="75" tween="sine" easing="out" center="auto" />
                                     <effect type="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" />
                                 </animation>
                             </control>
                             <control type="group">
-                                <visible>IsEmpty(ListItem.Property(custom)) | [!IsEmpty(ListItem.property(showlabel)) + !IsEmpty(ListItem.Property(Path))]</visible>
+                                <visible>!IsEmpty(ListItem.property(showlabel)) + !IsEmpty(ListItem.Property(Path))</visible>
                                 <control type="image">
                                     <posx>24</posx>
                                     <posy>241</posy>
@@ -2497,7 +2497,6 @@
                         <property name="showlabel">$INFO[Skin.String(HomeProgramTile1.ShowLabel)]</property>
                         <property name="path">$INFO[Skin.String(HomeProgramTile1.Path)]</property>
                         <property name="animate">$INFO[Skin.String(HomeProgramTile1.Animate)]</property>
-                        <property name="custom">1</property>
                     </item>
                     <item id="5">
                         <label>$INFO[Skin.String(HomeProgramTile2.Label)]</label>
@@ -2517,7 +2516,6 @@
                         <property name="showlabel">$INFO[Skin.String(HomeProgramTile2.ShowLabel)]</property>
                         <property name="path">$INFO[Skin.String(HomeProgramTile2.Path)]</property>
                         <property name="animate">$INFO[Skin.String(HomeProgramTile2.Animate)]</property>
-                        <property name="custom">1</property>
                     </item>
                     <item id="6">
                         <label>$INFO[Skin.String(HomeVideoTile3.Label)]</label>
@@ -2596,7 +2594,6 @@
                         <property name="showlabel">$INFO[Skin.String(HomeProgramTile3.ShowLabel)]</property>
                         <property name="path">$INFO[Skin.String(HomeProgramTile3.Path)]</property>
                         <property name="animate">$INFO[Skin.String(HomeProgramTile3.Animate)]</property>
-                        <property name="custom">1</property>
                     </item>
                     <item id="10">
                         <label>$INFO[Skin.String(HomeProgramTile4.Label)]</label>
@@ -2616,7 +2613,6 @@
                         <property name="showlabel">$INFO[Skin.String(HomeProgramTile4.ShowLabel)]</property>
                         <property name="path">$INFO[Skin.String(HomeProgramTile4.Path)]</property>
                         <property name="animate">$INFO[Skin.String(HomeProgramTile4.Animate)]</property>
-                        <property name="custom">1</property>
                     </item>
                 </content>
             </control>
