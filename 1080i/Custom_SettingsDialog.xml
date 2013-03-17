@@ -218,10 +218,10 @@
                     <include>SettingsDialogRadioButtonVars</include>
                     <selected>Skin.HasSetting(HideHomeDescription)</selected>
                     <onclick>Skin.ToggleSetting(HideHomeDescription)</onclick>
-                    <label>Show menu decription</label>
+                    <label>Show menu description</label>
                     <visible>stringcompare(Skin.String(HomeScreen),horizontal)</visible>
                 </control>
-            </control>            
+            </control>
             
           <!-- custom guide -->
             <control type="grouplist" id="3">
