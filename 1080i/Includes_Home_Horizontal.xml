@@ -195,10 +195,10 @@
     </include>
        
     <variable name="HomeMenuTopLabel">
-        <value condition="Container(20).HasFocus(2)">$INFO[Window.Property(Movies.Count)] $LOCALIZE[342] / $INFO[Window.Property(Movies.UnWatched)] $LOCALIZE[16101]</value>
-        <value condition="Container(20).HasFocus(3)">$INFO[Window.Property(TVShows.Count)] $LOCALIZE[20343] / $INFO[Window.Property(Episodes.Count)] $LOCALIZE[20360] ($INFO[Window.Property(Episodes.UnWatched)] $LOCALIZE[16101]) </value>
-        <value condition="Container(20).HasFocus(4)">$INFO[Window.Property(Music.ArtistsCount)] $LOCALIZE[133] / $INFO[Window.Property(Music.AlbumsCount)] $LOCALIZE[132] / $INFO[Window.Property(Music.SongsCount)] $LOCALIZE[134]</value>
-        <value condition="Container(20).HasFocus(9)">$INFO[Window(Weather).Property(Location),, - ]$INFO[Window(Weather).Property(Current.Condition)] ($INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits])</value>
+        <value condition="Container(20).HasFocus(2)">$INFO[Window.Property(Movies.Count),, $LOCALIZE[41445]]$INFO[Window.Property(Movies.UnWatched), / , $LOCALIZE[16101]]</value>
+        <value condition="Container(20).HasFocus(3)">$INFO[Window.Property(TVShows.Count),, $LOCALIZE[41446]]$INFO[Window.Property(Episodes.Count), / , $LOCALIZE[20360]]$INFO[Window.Property(Episodes.UnWatched), (, $LOCALIZE[16101])]</value>
+        <value condition="Container(20).HasFocus(4)">$INFO[Window.Property(Music.ArtistsCount),, $LOCALIZE[133]]$INFO[Window.Property(Music.AlbumsCount), / , $LOCALIZE[132]]$INFO[Window.Property(Music.SongsCount), / , $LOCALIZE[134]]</value>
+        <value condition="Container(20).HasFocus(9)">$INFO[Window(Weather).Property(Location)]$INFO[Window(Weather).Property(Current.Condition), - ,] ($INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits])</value>
     </variable>
        
     <!-- Home Buttons -->
