@@ -1575,7 +1575,7 @@
                             <control type="label">
                                 <posx>20</posx>
                                 <posy>288</posy>
-                                <width>420</width>
+                                <width>440</width>
                                 <label>$INFO[Container(505).ListItem(-1).Label]</label>
                                 <font>Font-Condensed-S34-B</font>
                                 <textcolor>ddwhite</textcolor>
@@ -1647,11 +1647,12 @@
                         </control>
                         <control type="image">
                             <posx>380</posx>
-                            <posy>270</posy>
+                            <posy>0</posy>
                             <width>100</width>
                             <height>100</height>
                             <aspect>keepaspect</aspect>
                             <texture>$VAR[ExtendedOverlay-1]</texture>
+                            <animation effect="slide" end="0,270" time="0" condition="Container.Content(movies) + [Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]">Conditional</animation>
                         </control>
                         <visible>!IsEmpty(Container(505).ListItemNoWrap(-1).Label)</visible>
                     </control>
@@ -1716,7 +1717,7 @@
                             <control type="label">
                                 <posx>20</posx>
                                 <posy>288</posy>
-                                <width>420</width>
+                                <width>440</width>
                                 <label>$INFO[Container(505).ListItem(3).Label]</label>
                                 <font>Font-Condensed-S34-B</font>
                                 <textcolor>ddwhite</textcolor>
@@ -1788,11 +1789,12 @@
                         </control>
                         <control type="image">
                             <posx>380</posx>
-                            <posy>270</posy>
+                            <posy>0</posy>
                             <width>100</width>
                             <height>100</height>
                             <aspect>keepaspect</aspect>
                             <texture>$VAR[ExtendedOverlay3]</texture>
+                            <animation effect="slide" end="0,270" time="0" condition="Container.Content(movies) + [Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]">Conditional</animation>
                         </control>
                         <visible>!IsEmpty(Container(505).ListItemNoWrap(3).Label)</visible>
                     </control>
@@ -1857,7 +1859,7 @@
                             <control type="label">
                                 <posx>20</posx>
                                 <posy>288</posy>
-                                <width>420</width>
+                                <width>440</width>
                                 <label>$INFO[Container(505).ListItem(2).Label]</label>
                                 <font>Font-Condensed-S34-B</font>
                                 <textcolor>ddwhite</textcolor>
@@ -1929,11 +1931,12 @@
                         </control>
                         <control type="image">
                             <posx>380</posx>
-                            <posy>270</posy>
+                            <posy>0</posy>
                             <width>100</width>
                             <height>100</height>
                             <aspect>keepaspect</aspect>
                             <texture>$VAR[ExtendedOverlay2]</texture>
+                            <animation effect="slide" end="0,270" time="0" condition="Container.Content(movies) + [Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]">Conditional</animation>
                         </control>
                         <visible>!IsEmpty(Container(505).ListItemNoWrap(2).Label)</visible>
                     </control>
@@ -1998,7 +2001,7 @@
                             <control type="label">
                                 <posx>20</posx>
                                 <posy>288</posy>
-                                <width>420</width>
+                                <width>440</width>
                                 <label>$INFO[Container(505).ListItem(1).Label]</label>
                                 <font>Font-Condensed-S34-B</font>
                                 <textcolor>ddwhite</textcolor>
@@ -2070,11 +2073,12 @@
                         </control>
                         <control type="image">
                             <posx>380</posx>
-                            <posy>270</posy>
+                            <posy>0</posy>
                             <width>100</width>
                             <height>100</height>
                             <aspect>keepaspect</aspect>
                             <texture>$VAR[ExtendedOverlay1]</texture>
+                            <animation effect="slide" end="0,270" time="0" condition="Container.Content(movies) + [Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]">Conditional</animation>
                         </control>
                         <visible>!IsEmpty(Container(505).ListItemNoWrap(1).Label)</visible>
                     </control>
@@ -2133,7 +2137,7 @@
                     <control type="label">
                         <posx>20</posx>
                         <posy>288</posy>
-                        <width>420</width>
+                        <width>440</width>
                         <label>$INFO[Container(505).ListItem(0).Label]</label>
                         <font>Font-Condensed-S34-B</font>
                         <textcolor>ddwhite</textcolor>
@@ -2204,11 +2208,12 @@
                     </control>
                     <control type="image">
                         <posx>380</posx>
-                        <posy>270</posy>
+                        <posy>0</posy>
                         <width>100</width>
                         <height>100</height>
                         <aspect>keepaspect</aspect>
                         <texture>$VAR[ExtendedOverlay0]</texture>
+                        <animation effect="slide" end="0,270" time="0" condition="Container.Content(movies) + [Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]">Conditional</animation>
                     </control>
                 </control>
             </control>
@@ -2282,7 +2287,7 @@
                             <control type="label">
                                 <posx>20</posx>
                                 <posy>288</posy>
-                                <width>420</width>
+                                <width>440</width>
                                 <label>$INFO[ListItem.Label]</label>
                                 <font>Font-Condensed-S34-B</font>
                                 <textcolor>ddwhite</textcolor>
@@ -2345,11 +2350,12 @@
                         </control>
                         <control type="image">
                             <posx>380</posx>
-                            <posy>270</posy>
+                            <posy>0</posy>
                             <width>100</width>
                             <height>100</height>
                             <aspect>keepaspect</aspect>
                             <texture>$VAR[ExtendedOverlay]</texture>
+                            <animation effect="slide" end="0,270" time="0" condition="Container.Content(movies) + [Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]">Conditional</animation>
                         </control>
                         <control type="image">
                             <posx>0</posx>
@@ -2412,7 +2418,7 @@
                             <control type="label">
                                 <posx>20</posx>
                                 <posy>288</posy>
-                                <width>420</width>
+                                <width>440</width>
                                 <label>$INFO[ListItem.Label]</label>
                                 <font>Font-Condensed-S34-B</font>
                                 <textcolor>ddwhite</textcolor>
@@ -2475,11 +2481,12 @@
                         </control>
                         <control type="image">
                             <posx>380</posx>
-                            <posy>270</posy>
+                            <posy>0</posy>
                             <width>100</width>
                             <height>100</height>
                             <aspect>keepaspect</aspect>
                             <texture>$VAR[ExtendedOverlay]</texture>
+                            <animation effect="slide" end="0,270" time="0" condition="Container.Content(movies) + [Skin.HasSetting(ExtendedUseClearMovieArt) | Skin.HasSetting(ExtendedUseClearMovieLogo)]">Conditional</animation>
                         </control>
                         <control type="image">
                             <posx>0</posx>
