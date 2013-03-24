@@ -23,6 +23,18 @@
         <control type="image">
             <include>FullscreenDimensions</include>
             <texture>windows/common/overlay.png</texture>
+            <visible>Skin.HasSetting(HomeBackgroundOpacity)</visible>
+        </control>
+        <control type="image">
+            <include>FullscreenDimensions</include>
+            <texture>windows/common/overlay2.png</texture>
+            <visible>!Skin.HasSetting(HomeBackgroundOpacity)</visible>
+        </control>
+        <control type="image">
+            <include>FullscreenDimensions</include>
+            <include>Animation_FanartFade</include>
+            <texture>windows/common/stage-dark.png</texture>
+            <visible>Skin.HasSetting(Stage.Enabled)</visible>
         </control>
         <control type="group">
             <posx>75</posx>
