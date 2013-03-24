@@ -31,6 +31,12 @@
             <texture>windows/common/overlay2.png</texture>
             <visible>Skin.HasSetting(BackgroundOpacity)</visible>
         </control>
+        <control type="image">
+            <include>FullscreenDimensions</include>
+            <include>Animation_FanartFade</include>
+            <texture>windows/common/stage-dark.png</texture>
+            <visible>Skin.HasSetting(Stage.Enabled)</visible>
+        </control>
     </include>
     <include name="CommonOverlayHome">
         <control type="videowindow">
@@ -50,6 +56,12 @@
             <include>FullscreenDimensions</include>
             <texture>windows/common/overlay2.png</texture>
             <visible>!Skin.HasSetting(HomeBackgroundOpacity)</visible>
+        </control>
+        <control type="image">
+            <include>FullscreenDimensions</include>
+            <include>Animation_FanartFade</include>
+            <texture>windows/common/stage-dark.png</texture>
+            <visible>Skin.HasSetting(Stage.Enabled)</visible>
         </control>
     </include>
     <include name="CommonOverlayHomeClassic">

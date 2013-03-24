@@ -4648,9 +4648,9 @@
                     </animation>
                     <control type="image">
                         <decription>Bottom shadow</decription>
-                        <posx>-22</posx>
+                        <posx>-92</posx>
                         <posy>570</posy>
-                        <width>1222</width>
+                        <width>1340</width>
                         <height>150</height>
                         <texture>windows/home/item-shadow.png</texture>
                     </control>

@@ -173,6 +173,13 @@
                     <onclick>Skin.ToggleSetting(BackgroundVideo)</onclick>
                     <label>$LOCALIZE[41102]</label>
                 </control>
+                <control type="radiobutton" id="1013">
+                    <width>1210</width>
+                    <include>SettingsCategoryRadioButtonVars</include>
+                    <selected>Skin.HasSetting(Stage.Enabled)</selected>
+                    <onclick>Skin.ToggleSetting(Stage.Enabled)</onclick>
+                    <label>Show stage</label>
+                </control>
                 <control type="radiobutton" id="1003">
                     <width>1210</width>
                     <include>SettingsCategoryRadioButtonVars</include>
