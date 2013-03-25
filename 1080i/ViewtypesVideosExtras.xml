@@ -3596,6 +3596,14 @@
                             <texture flipy="true" diffuse="views/posterview/diffuse-watched.png">$VAR[PosterOverlay-1]</texture>
                         </control>
                         <control type="image">
+                            <description>Shadow Bottom</description>
+                            <posx>40</posx>
+                            <posy>463</posy>
+                            <width>310</width>
+                            <height>18</height>
+                            <texture>views/posterview/shadow.png</texture>
+                        </control>
+                        <control type="image">
                             <description>Poster</description>
                             <posx>60</posx>
                             <posy>70</posy>
@@ -3671,6 +3679,14 @@
                             <height>75</height>
                             <aspect>keepaspect</aspect>
                             <texture flipy="true" diffuse="views/posterview/diffuse-watched.png">$VAR[PosterOverlay7]</texture>
+                        </control>
+                        <control type="image">
+                            <description>Shadow Bottom</description>
+                            <posx>40</posx>
+                            <posy>463</posy>
+                            <width>310</width>
+                            <height>18</height>
+                            <texture>views/posterview/shadow.png</texture>
                         </control>
                         <control type="image">
                             <description>Poster</description>
@@ -3750,6 +3766,14 @@
                             <texture flipy="true" diffuse="views/posterview/diffuse-watched.png">$VAR[PosterOverlay6]</texture>
                         </control>
                         <control type="image">
+                            <description>Shadow Bottom</description>
+                            <posx>40</posx>
+                            <posy>463</posy>
+                            <width>310</width>
+                            <height>18</height>
+                            <texture>views/posterview/shadow.png</texture>
+                        </control>
+                        <control type="image">
                             <description>Poster</description>
                             <posx>60</posx>
                             <posy>70</posy>
@@ -3825,6 +3849,14 @@
                             <height>75</height>
                             <aspect>keepaspect</aspect>
                             <texture flipy="true" diffuse="views/posterview/diffuse-watched.png">$VAR[PosterOverlay5]</texture>
+                        </control>
+                        <control type="image">
+                            <description>Shadow Bottom</description>
+                            <posx>40</posx>
+                            <posy>463</posy>
+                            <width>310</width>
+                            <height>18</height>
+                            <texture>views/posterview/shadow.png</texture>
                         </control>
                         <control type="image">
                             <description>Poster</description>
@@ -3904,6 +3936,14 @@
                             <texture flipy="true" diffuse="views/posterview/diffuse-watched.png">$VAR[PosterOverlay4]</texture>
                         </control>
                         <control type="image">
+                            <description>Shadow Bottom</description>
+                            <posx>40</posx>
+                            <posy>463</posy>
+                            <width>310</width>
+                            <height>18</height>
+                            <texture>views/posterview/shadow.png</texture>
+                        </control>
+                        <control type="image">
                             <description>Poster</description>
                             <posx>60</posx>
                             <posy>70</posy>
@@ -3979,6 +4019,14 @@
                             <height>75</height>
                             <aspect>keepaspect</aspect>
                             <texture flipy="true" diffuse="views/posterview/diffuse-watched.png">$VAR[PosterOverlay3]</texture>
+                        </control>
+                        <control type="image">
+                            <description>Shadow Bottom</description>
+                            <posx>40</posx>
+                            <posy>463</posy>
+                            <width>310</width>
+                            <height>18</height>
+                            <texture>views/posterview/shadow.png</texture>
                         </control>
                         <control type="image">
                             <description>Poster</description>
@@ -4058,6 +4106,14 @@
                             <texture flipy="true" diffuse="views/posterview/diffuse-watched.png">$VAR[PosterOverlay2]</texture>
                         </control>
                         <control type="image">
+                            <description>Shadow Bottom</description>
+                            <posx>40</posx>
+                            <posy>463</posy>
+                            <width>310</width>
+                            <height>18</height>
+                            <texture>views/posterview/shadow.png</texture>
+                        </control>
+                        <control type="image">
                             <description>Poster</description>
                             <posx>60</posx>
                             <posy>70</posy>
@@ -4135,6 +4191,14 @@
                             <texture flipy="true" diffuse="views/posterview/diffuse-watched.png">$VAR[PosterOverlay1]</texture>
                         </control>
                         <control type="image">
+                            <description>Shadow Bottom</description>
+                            <posx>40</posx>
+                            <posy>463</posy>
+                            <width>310</width>
+                            <height>18</height>
+                            <texture>views/posterview/shadow.png</texture>
+                        </control>
+                        <control type="image">
                             <description>Poster</description>
                             <posx>60</posx>
                             <posy>70</posy>
@@ -4206,6 +4270,14 @@
                         <height>75</height>
                         <aspect>keepaspect</aspect>
                         <texture flipy="true" diffuse="views/posterview/diffuse-watched.png">$VAR[PosterOverlay0]</texture>
+                    </control>
+                    <control type="image">
+                        <description>Shadow Bottom</description>
+                        <posx>40</posx>
+                        <posy>463</posy>
+                        <width>310</width>
+                        <height>18</height>
+                        <texture>views/posterview/shadow.png</texture>
                     </control>
                     <control type="image">
                         <description>Shadow focus</description>
@@ -4303,6 +4375,14 @@
                                 <texture flipy="true" diffuse="views/posterview/diffuse-watched.png">$VAR[PosterOverlay]</texture>
                             </control>
                             <control type="image">
+                                <description>Shadow Bottom</description>
+                                <posx>40</posx>
+                                <posy>463</posy>
+                                <width>310</width>
+                                <height>18</height>
+                                <texture>views/posterview/shadow.png</texture>
+                            </control>
+                            <control type="image">
                                 <description>Poster</description>
                                 <posx>60</posx>
                                 <posy>70</posy>
@@ -4362,6 +4442,14 @@
                                 <height>75</height>
                                 <aspect>keepaspect</aspect>
                                 <texture flipy="true" diffuse="views/posterview/diffuse-watched.png">$VAR[PosterOverlay]</texture>
+                            </control>
+                            <control type="image">
+                                <description>Shadow Bottom</description>
+                                <posx>40</posx>
+                                <posy>463</posy>
+                                <width>310</width>
+                                <height>18</height>
+                                <texture>views/posterview/shadow.png</texture>
                             </control>
                             <control type="image">
                                 <description>Shadow focus</description>
