@@ -117,6 +117,12 @@
             <include>Animation_FanartFade</include>
             <texture>windows/common/back-vignette.png</texture>
         </control>
+        <control type="image">
+            <include>FullscreenDimensions</include>
+            <include>Animation_FanartFade</include>
+            <texture>windows/common/stage-dark.png</texture>
+            <visible>Skin.HasSetting(Stage.Enabled) + [Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-globalsearch-infodialog.xml)]</visible>
+        </control>
     </include>
 
     <include name="CommonItems">
