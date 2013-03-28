@@ -51,9 +51,9 @@
         <include>FadeBackground</include>
         
         <!-- Bottom buttons -->
-        <include condition="[stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))] + !Skin.HasSetting(HideHomeButtons)">shutdown-favs</include>
-        <include condition="stringcompare(Skin.String(HomeScreen),classic) + !Skin.HasSetting(HideHomeButtons)">shutdown-favs-classic</include>
-        <include condition="stringcompare(Skin.String(HomeScreen),horizontal) + !Skin.HasSetting(HideHomeButtons)">shutdown-favs-horizontal</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))">shutdown-favs</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),classic)">shutdown-favs-classic</include>
+        <include condition="stringcompare(Skin.String(HomeScreen),horizontal) + !Skin.HasSetting(HideShutdownButton)">shutdown-favs-horizontal</include>
         
         <!-- Common/profile info -->
         <include>Common-Home-Info</include>

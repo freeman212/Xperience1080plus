@@ -72,7 +72,7 @@
             </control>
         </control>
     </include>
-
+    
     <include name="HomeProfileInfoLabelHorizontal">
         <posx>110</posx>
         <posy>46</posy>
@@ -493,6 +493,22 @@
                     <property name="multi">$INFO[Skin.String(HomeWeatherMultiImage)]</property>
                 </item>
             </content>
+        </control>
+        <control type="button" id="21">
+            <description>Fake date button</description>
+            <posx>72</posx>
+            <posy>950</posy>
+            <width>100</width>
+            <height>100</height>
+            <aspect>keep</aspect>
+            <onup>20</onup>
+            <ondown>21</ondown>
+            <onleft>21</onleft>
+            <onright>21</onright>
+            <texturefocus>-</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <onclick>ActivateWindow(Favourites)</onclick>
+            <visible>Skin.HasSetting(HideShutdownButton)</visible>
         </control>
     </include>
 </includes>

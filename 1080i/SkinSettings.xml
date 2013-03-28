@@ -202,6 +202,7 @@
                     <selected>!Skin.HasSetting(SpinControl.Default)</selected>
                     <onclick>Skin.ToggleSetting(SpinControl.Default)</onclick>
                     <label>$LOCALIZE[41112]</label>
+                    <visible>false</visible>
                 </control>
                 <control type="radiobutton" id="1005">
                     <width>1210</width>
@@ -209,6 +210,15 @@
                     <selected>Skin.HasSetting(HideShutdownButton)</selected>
                     <onclick>Skin.ToggleSetting(HideShutdownButton)</onclick>
                     <label>$LOCALIZE[41200]</label>
+                    <visible>!stringcompare(Skin.String(HomeScreen),horizontal)</visible>
+                </control>
+                <control type="radiobutton" id="1008">
+                    <width>1210</width>
+                    <include>SettingsCategoryRadioButtonVars</include>
+                    <selected>Skin.HasSetting(HideShutdownButton)</selected>
+                    <onclick>Skin.ToggleSetting(HideShutdownButton)</onclick>
+                    <label>Hide power button</label>
+                    <visible>stringcompare(Skin.String(HomeScreen),horizontal)</visible>
                 </control>
                 <control type="radiobutton" id="1006">
                     <width>1210</width>

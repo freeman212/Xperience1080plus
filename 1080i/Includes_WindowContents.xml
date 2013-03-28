@@ -116,6 +116,13 @@
             <include>FullscreenDimensions</include>
             <include>Animation_FanartFade</include>
             <texture>windows/common/back-vignette.png</texture>
+            <visible>!Skin.HasSetting(HideShutdownButton)</visible>
+        </control>
+        <control type="image">
+            <include>FullscreenDimensions</include>
+            <include>Animation_FanartFade</include>
+            <texture>windows/common/back-vignette-clock.png</texture>
+            <visible>Skin.HasSetting(HideShutdownButton)</visible>
         </control>
         <control type="image">
             <include>FullscreenDimensions</include>
