@@ -115,11 +115,11 @@
                 <posy>240</posy>
                 <height>630</height>
                 <width>1020</width>
-                <onleft>111</onleft>
-                <onright>111</onright>
+                <onleft>110</onleft>
+                <onright>122</onright>
                 <onup>110</onup>
                 <ondown>110</ondown>
-                <pagecontrol>111</pagecontrol>
+                <pagecontrol>122</pagecontrol>
                 <scrolltime>400</scrolltime>
                 <itemlayout height="45">
                     <control type="label">
@@ -173,27 +173,44 @@
                         </animation>
                     </control>
                 </focusedlayout>
-            </control>            
-            <control type="spincontrol" id="111">
-                <posx>1399</posx>
+            </control>  
+
+            <control type="scrollbar" id="122">
+                <description>Scrollbar</description>
+                <posx>1494</posx>
+                <posy>230</posy>
+                <width>6</width>
+                <height>658</height>
+                <onup>122</onup>
+                <ondown>122</ondown>                  
+                <onleft>110</onleft>
+                <onright>122</onright>
+                <texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
+                <texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+                <orientation>vertical</orientation>
+                <showonepage>false</showonepage>
+                <animation effect="fade" start="50" end="0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(122)">Conditional</animation>
+                <visible>Control.IsVisible(110)</visible>
+            </control>
+            
+            <control type="label">
+                <posx>1385</posx>
                 <posy>891</posy>
-                <width>43</width>
+                <width>120</width>
                 <height>60</height>
                 <font>Font-Condensed-S25-B</font>
-                <textcolor>bbwhite</textcolor>
-                <focusedcolor>eewhite</focusedcolor>
-                <align>right</align>
-                <onleft>111</onleft>
-                <onright>111</onright>
-                <ondown>111</ondown>
-                <onup>110</onup>
-                <subtype>page</subtype>
-                <showonepage>false</showonepage>
-                <visible>Control.IsVisible(110)</visible>
+                <textcolor>aawhite</textcolor>
+                <label>$INFO[Container(110).CurrentPage,$LOCALIZE[41819] ,]$INFO[Container(110).NumPages,/,]</label>
+                <scroll>false</scroll>
+                <align>left</align>
+                <visible>IntegerGreaterThan(Container(110).NumPages,1)</visible>
             </control>
 
             <!---->
             <control type="label" id="2">
+                <visible>false</visible>
+            </control>
+            <control type="spincontrol" id="111">
                 <visible>false</visible>
             </control>
             <control type="list" id="120">
