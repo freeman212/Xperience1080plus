@@ -317,8 +317,9 @@
             <posy>485</posy>
             <width>1920</width>
             <height>1080</height>
-            <ondown>SetFocus(21)</ondown>
+            <ondown condition="!Skin.HasSetting(HideHomeDate)">SetFocus(21)</ondown>
             <ondown condition="Container(20).HasFocus(1) | Container(20).HasFocus(2) | Container(20).HasFocus(3) | Container(20).HasFocus(4) | Container(20).HasFocus(5) | Container(20).HasFocus(9)">SetFocus(23)</ondown>
+            <ondown condition="Skin.HasSetting(HideHomeDate) + ![Container(20).HasFocus(1) | Container(20).HasFocus(2) | Container(20).HasFocus(3) | Container(20).HasFocus(4) | Container(20).HasFocus(5) | Container(20).HasFocus(9)]">RunScript(special://skin/extras/scripts/setClearProperty.py,BounceBottom)</ondown>
             <onup condition="[[Container(20).HasFocus(2) | Container(20).HasFocus(3) | Container(20).HasFocus(4)] + System.HasAddon(service.skin.widgets)]] | Container(20).HasFocus(7)">SetFocus(82)</onup>
             <onup>RunScript(special://skin/extras/scripts/setClearProperty.py,BounceTop)</onup>
             <orientation>horizontal</orientation>
@@ -509,13 +510,13 @@
             <height>100</height>
             <aspect>keep</aspect>
             <onup>20</onup>
-            <ondown>21</ondown>
+            <ondown>20</ondown>
             <onleft>21</onleft>
             <onright>21</onright>
             <texturefocus>-</texturefocus>
             <texturenofocus>-</texturenofocus>
             <onclick>ActivateWindow(Favourites)</onclick>
-            <visible>Skin.HasSetting(HideShutdownButton)</visible>
+            <visible>Skin.HasSetting(HideShutdownButton) + !Skin.HasSetting(HideHomeDate)</visible>
         </control>
     </include>
 </includes>

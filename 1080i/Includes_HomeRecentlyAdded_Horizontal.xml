@@ -2743,7 +2743,7 @@
                     <height>150</height>
                     <texture>windows/home/item-shadow.png</texture>
                 </control>
-             </control>
+            </control>
         </control>
    </include>
 </includes>
