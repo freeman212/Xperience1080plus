@@ -36,7 +36,6 @@
         <width>1000</width>
         <height>90</height>
         <onup>20</onup>
-        <ondown>21</ondown>
         <ondown condition="Skin.HasSetting(HideHomeDate)">RunScript(special://skin/extras/scripts/setClearProperty.py,BounceBottom)</ondown>
         <ondown condition="!Skin.HasSetting(HideHomeDate)">21</ondown>
         <onleft>23</onleft>
