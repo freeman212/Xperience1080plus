@@ -128,7 +128,7 @@
             <include>FullscreenDimensions</include>
             <include>Animation_FanartFade</include>
             <texture>windows/common/stage-dark.png</texture>
-            <visible>Skin.HasSetting(Stage.Enabled) + [Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-globalsearch-infodialog.xml)]</visible>
+            <visible>Skin.HasSetting(Stage.Enabled) + [Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-globalsearch-infodialog.xml) | Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84)]</visible>
         </control>
     </include>
 

@@ -191,7 +191,11 @@
             <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
             <effect type="slide" start="0,0" end="0,-75" time="300" tween="sine" easing="out" />
         </animation>
-        <animation effect="slide" start="0,0" end="0,295" time="350" tween="sine" easing="out" condition="Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84) | Skin.HasSetting(HomeScreenHorizontal.Low)">Conditional</animation>
+        <animation type="Conditional" condition="Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84)">
+            <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out"/>
+            <effect type="slide" start="0,0" end="0,275" time="350" tween="sine" easing="out" />
+        </animation>
+        <animation effect="slide" start="0,0" end="0,295" time="350" tween="sine" easing="out" condition="Skin.HasSetting(HomeScreenHorizontal.Low)">Conditional</animation>
     </include>
        
     <variable name="HomeMenuTopLabel">
@@ -210,6 +214,7 @@
             <description>Home menu</description>
             <visible>!Window.IsActive(favourites) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-globalsearch-infodialog.xml) + !Window.IsActive(script-globalsearch-contextmenu.xml) + ![Window.IsVisible(virtualkeyboard) + !IsEmpty(Window.Property(HomeSearch))]</visible>
             <include>HomeMenuAnimationHorizontal</include>
+            <include>listEndAnimation</include>
             <control type="group">
                 <visible>[Skin.HasSetting(HideHomeDescription) + Container(20).HasFocus(9)] | [Skin.HasSetting(HideHomeDescription) + [![Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84)] + [Container(20).HasFocus(2) | Container(20).HasFocus(3) | Container(20).HasFocus(4)]]]</visible>
                 <animation type="Visible">
@@ -266,54 +271,56 @@
             <control type="group">
                 <visible>[Container(20).HasFocus(7) + !Control.HasFocus(82)] | [!Skin.HasSetting(HideHomeDescription) + ![Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84)] + [Container(20).HasFocus(2) | Container(20).HasFocus(3) | Container(20).HasFocus(4)]]</visible>
                 <animation type="Visible">
-                    <effect type="fade" start="5" end="60" time="350" tween="sine" easing="inout" />
-                    <effect type="slide" start="0,0" end="0,-6" tween="sine" easing="inout" time="350" />
+                    <effect type="fade" start="0" end="100" time="350" tween="sine" easing="inout" />
                 </animation>
-                <animation type="Unfocus" condition="Container(20).OnNext | Container(20).OnPrevious">
-                    <effect type="fade" start="100" end="0" time="0" />
+                <animation type="Hidden">
+                    <effect type="fade" start="100" end="0" time="0" tween="sine" easing="inout" />
                 </animation>
                 <control type="image">
                     <posx>810</posx>
-                    <posy>337</posy>
+                    <posy>331</posy>
                     <width>300</width>
                     <height>164</height>
                     <texture>windows/home/main_menu_top_shadow.png</texture>
                 </control>
                 <control type="image">
                     <posx>945</posx>
-                    <posy>478</posy>
+                    <posy>472</posy>
                     <width>29</width>
                     <height>14</height>
                     <texture>windows/home/arrow.png</texture>
+                    <animation effect="fade" start="100" end="60" time="0" condition="true">Conditional</animation>
                 </control>
             </control>
             <control type="image">
                 <posx>945</posx>
-                <posy>588</posy>
+                <posy>594</posy>
                 <width>29</width>
                 <height>14</height>
                 <texture flipy="true">windows/home/arrow.png</texture>
-                <animation type="Conditional" condition="[!Control.HasFocus(23) + [Container(20).HasFocus(1) | Container(20).HasFocus(2) | Container(20).HasFocus(3) | Container(20).HasFocus(4) | Container(20).HasFocus(5) | Container(20).HasFocus(9)]] | [Control.HasFocus(82) + Container(20).HasFocus(7)]">
-                    <effect type="fade" start="5" end="60" time="350" tween="sine" easing="inout" />
-                    <effect type="slide" start="0,0" end="0,6" tween="sine" easing="inout" time="350" />
+                <animation effect="fade" start="100" end="60" time="0" condition="true">Conditional</animation>
+                <animation type="Visible">
+                    <effect type="fade" start="0" end="100" time="350" tween="sine" easing="inout" />
                 </animation>
-                <animation type="Unfocus" condition="Container(20).OnNext | Container(20).OnPrevious">
-                    <effect type="fade" start="100" end="0" time="0" />
+                <animation type="Hidden">
+                    <effect type="fade" start="100" end="0" time="0" tween="sine" easing="inout" />
                 </animation>
                 <visible>[!Control.HasFocus(23) + [Container(20).HasFocus(1) | Container(20).HasFocus(2) | Container(20).HasFocus(3) | Container(20).HasFocus(4) | Container(20).HasFocus(5) | Container(20).HasFocus(9)]] | [Control.HasFocus(82) + Container(20).HasFocus(7)]</visible>
             </control>
         </control>
         <control type="wraplist" id="20">
             <description>Home Container</description>
-            <visible>!Window.IsActive(favourites) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-globalsearch-infodialog.xml) + !Window.IsActive(script-globalsearch-contextmenu.xml) + ![Window.IsVisible(virtualkeyboard) + !IsEmpty(Window.Property(HomeSearch))]</visible>
+            <visible allowhiddenfocus="true">!Window.IsActive(favourites) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-globalsearch-infodialog.xml) + !Window.IsActive(script-globalsearch-contextmenu.xml) + ![Window.IsVisible(virtualkeyboard) + !IsEmpty(Window.Property(HomeSearch))]</visible>
             <include>HomeMenuAnimationHorizontal</include>
+            <include>listEndAnimation</include>
             <posx>0</posx>
             <posy>485</posy>
             <width>1920</width>
             <height>1080</height>
+            <ondown>SetFocus(21)</ondown>
             <ondown condition="Container(20).HasFocus(1) | Container(20).HasFocus(2) | Container(20).HasFocus(3) | Container(20).HasFocus(4) | Container(20).HasFocus(5) | Container(20).HasFocus(9)">SetFocus(23)</ondown>
-            <ondown condition="![Container(20).HasFocus(1) | Container(20).HasFocus(2) | Container(20).HasFocus(3) | Container(20).HasFocus(4) | Container(20).HasFocus(5) | Container(20).HasFocus(9)]">SetFocus(21)</ondown>
             <onup condition="[[Container(20).HasFocus(2) | Container(20).HasFocus(3) | Container(20).HasFocus(4)] + System.HasAddon(service.skin.widgets)]] | Container(20).HasFocus(7)">SetFocus(82)</onup>
+            <onup>RunScript(special://skin/extras/scripts/setClearProperty.py,BounceTop)</onup>
             <orientation>horizontal</orientation>
             <focusposition>2</focusposition>
             <scrolltime tween="cubic" easing="out">500</scrolltime>
