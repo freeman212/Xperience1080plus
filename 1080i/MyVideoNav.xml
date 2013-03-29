@@ -670,18 +670,6 @@
                         <radioposx>-19</radioposx>
                         <visible>Container.Content(Movies) | Container.Content(Sets)</visible>
                     </control>
-                    <control type="radiobutton" id="206">
-                        <description>Poster</description>
-                        <include>optionsbuttonsdimensions</include>
-                        <label>Poster</label>
-                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
-                        <onclick>Container.SetViewMode(55)</onclick>
-                        <selected>Control.IsVisible(55)</selected>
-                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
-                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
-                        <radioposx>-19</radioposx>
-                        <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Actors) | Container.Content(Sets) | Container.HasFolders</visible>
-                    </control>
                     <control type="radiobutton" id="213">
                         <description>Landscape poster</description>
                         <include>optionsbuttonsdimensions</include>
@@ -693,6 +681,18 @@
                         <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
                         <radioposx>-19</radioposx>
                         <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets)</visible>
+                    </control>
+                    <control type="radiobutton" id="206">
+                        <description>Poster</description>
+                        <include>optionsbuttonsdimensions</include>
+                        <label>Poster</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Container.SetViewMode(55)</onclick>
+                        <selected>Control.IsVisible(55)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Actors) | Container.Content(Sets) | Container.HasFolders</visible>
                     </control>
                     <control type="radiobutton" id="215">
                         <description>Classic Poster</description>
