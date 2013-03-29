@@ -12,6 +12,11 @@
         <aspectratio>stretch</aspectratio>
     </include>
 
+    <variable name="FullscreenOverlay">
+        <value condition="!Skin.HasSetting(BackgroundOpacity)">windows/common/overlay.png</value>
+        <value condition="Skin.HasSetting(BackgroundOpacity)">windows/common/overlay2.png</value>
+    </variable>
+    
 <!-- ================================================== -->
 <!-- Common Items: Shutdown, Options, Clock etc. -->
 <!-- ================================================== --> 
@@ -23,13 +28,7 @@
         </control>
         <control type="image">
             <include>FullscreenDimensions</include>
-            <texture>windows/common/overlay.png</texture>
-            <visible>!Skin.HasSetting(BackgroundOpacity)</visible>
-        </control>
-        <control type="image">
-            <include>FullscreenDimensions</include>
-            <texture>windows/common/overlay2.png</texture>
-            <visible>Skin.HasSetting(BackgroundOpacity)</visible>
+            <texture>$VAR[FullscreenOverlay]</texture>
         </control>
         <control type="image">
             <include>FullscreenDimensions</include>
@@ -104,12 +103,12 @@
             <include>FullscreenDimensions</include>
             <include>Animation_FanartFade</include>
             <texture>windows/common/fanartoverlay.png</texture>
-            <visible>Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) | !Skin.HasSetting(HideHomeProfileInfo)</visible>
+            <visible>[Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) | !Skin.HasSetting(HideHomeProfileInfo)] + ![Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84)]</visible>
         </control>
         <control type="image">
             <include>FullscreenDimensions</include>
             <include>Animation_FanartFade</include>
-            <texture>windows/common/overlay2.png</texture>
+            <texture>$VAR[FullscreenOverlay]</texture>
             <visible>Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-globalsearch-infodialog.xml) | Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84)</visible>
         </control>
         <control type="image">
