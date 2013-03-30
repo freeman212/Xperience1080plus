@@ -1,5 +1,4 @@
-<window id="2003">
-    <!--<allowoverlay>no</allowoverlay>-->
+<window>
     <controls>
         <control type="image" id="1234">
             <animation type="WindowOpen">
