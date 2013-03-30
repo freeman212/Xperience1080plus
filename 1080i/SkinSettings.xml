@@ -885,14 +885,14 @@
                     <visible>Skin.HasSetting(OSDVisualisation.Enabled)</visible>
                     <label> • Show on Home screen</label>
                 </control>
-                <!-- <control type="radiobutton" id="8002">
+                <control type="radiobutton" id="8002">
                     <width>1210</width>
                     <include>SettingsCategoryRadioButtonVars</include>
                     <selected>Skin.HasSetting(OSDVisualisation.ShowFanart)</selected>
                     <onclick>Skin.ToggleSetting(OSDVisualisation.ShowFanart)</onclick>
                     <visible>Skin.HasSetting(OSDVisualisation.Enabled)</visible>
                     <label> • $LOCALIZE[41106]</label>
-                </control> -->
+                </control>
                 <control type="radiobutton" id="8003">
                     <width>1210</width>
                     <include>SettingsCategoryRadioButtonVars</include>
