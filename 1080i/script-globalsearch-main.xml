@@ -586,7 +586,8 @@
                                     <posy>475</posy>
                                     <width>330</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -670,7 +671,9 @@
                                     <posy>475</posy>
                                     <width>330</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" start="60" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                                    <animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout">UnFocus</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -791,7 +794,8 @@
                                     <posy>475</posy>
                                     <width>330</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -875,7 +879,9 @@
                                     <posy>475</posy>
                                     <width>330</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" start="60" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                                    <animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout">UnFocus</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -996,7 +1002,8 @@
                                     <posy>475</posy>
                                     <width>330</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -1031,7 +1038,7 @@
                                     <width>320</width>
                                     <height>480</height>
                                     <bordersize>5</bordersize>
-                                    <bordertexture border="7">windows/home/tile.png</bordertexture>
+                                    <bordertexture border="7">windows/home/tile-grey.png</bordertexture>
                                     <aspectratio>scale</aspectratio>
                                     <texture background="true" fallback="views/fallbacks/DefaultFolder.png/large.png">$INFO[ListItem.Thumb]</texture>
                                 </control>
@@ -1066,7 +1073,9 @@
                                     <posy>475</posy>
                                     <width>330</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" start="60" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                                    <animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout">UnFocus</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -1171,7 +1180,8 @@
                                     <posy>265</posy>
                                     <width>490</width>
                                     <height>142</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -1267,7 +1277,9 @@
                                     <posy>265</posy>
                                     <width>490</width>
                                     <height>142</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" start="60" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                                    <animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout">UnFocus</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -1400,7 +1412,8 @@
                                     <posy>265</posy>
                                     <width>490</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -1484,7 +1497,9 @@
                                     <posy>265</posy>
                                     <width>490</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" start="60" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                                    <animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout">UnFocus</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -1605,7 +1620,8 @@
                                     <posy>375</posy>
                                     <width>390</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -1673,7 +1689,9 @@
                                     <posy>375</posy>
                                     <width>390</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" start="60" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                                    <animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout">UnFocus</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -1778,7 +1796,8 @@
                                     <posy>375</posy>
                                     <width>390</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -1846,7 +1865,9 @@
                                     <posy>375</posy>
                                     <width>390</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" start="60" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                                    <animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout">UnFocus</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -1951,7 +1972,8 @@
                                     <posy>375</posy>
                                     <width>390</width>
                                     <height>174</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -2043,7 +2065,9 @@
                                     <posy>375</posy>
                                     <width>390</width>
                                     <height>174</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" start="60" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                                    <animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout">UnFocus</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
