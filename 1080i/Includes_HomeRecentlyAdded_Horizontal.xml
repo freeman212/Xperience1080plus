@@ -3,6 +3,25 @@
         <include>Recent-List-Horizontal</include>
     </include>
     
+    <include name="HomeRecentAnimation">
+        <animation type="WindowOpen" reversible="false">
+            <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+            <effect type="slide" start="0,-60" end="0,0" time="300" tween="cubic" easing="out" />
+        </animation>
+        <animation type="Visible" reversible="false">
+            <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" delay="300" />
+            <effect type="slide" start="0,-60" end="0,0" time="300" tween="sine" easing="out" delay="300" />
+        </animation>
+        <animation type="WindowClose" reversible="false">
+            <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
+            <effect type="slide" start="0,0" end="0,-60" time="300" tween="sine" easing="out" />
+        </animation>
+        <animation type="Hidden" reversible="false">
+            <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
+            <effect type="slide" start="0,0" end="0,-60" time="300" tween="sine" easing="out" />
+        </animation>
+    </include>
+
     <include name="HomeRecentTitleAnimation">
         <animation type="WindowOpen" reversible="false">
             <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
@@ -203,7 +222,7 @@
             <control type="fixedlist" id="82">
                 <description>Recent movies</description>
                 <visible allowhiddenfocus="true">Control.HasFocus(82) + Container(20).HasFocus(2)</visible>
-                <include>BannerListInfoAnimation</include>
+                <include>HomeRecentAnimation</include>
                 <posx>-232</posx>
                 <posy>175</posy>
                 <width>2282</width>
@@ -489,7 +508,7 @@
             <control type="fixedlist" id="83">
                 <description>Random movies</description>
                 <visible allowhiddenfocus="true">Control.HasFocus(83) + Container(20).HasFocus(2)</visible>
-                <include>BannerListInfoAnimation</include>
+                <include>HomeRecentAnimation</include>
                 <posx>-232</posx>
                 <posy>175</posy>
                 <width>2282</width>
@@ -775,7 +794,7 @@
             <control type="fixedlist" id="84">
                 <description>Recommended movies</description>
                 <visible allowhiddenfocus="true">Control.HasFocus(84) + Container(20).HasFocus(2)</visible>
-                <include>BannerListInfoAnimation</include>
+                <include>HomeRecentAnimation</include>
                 <include>listEndAnimation</include>
                 <posx>-392</posx>
                 <posy>353</posy>
@@ -1096,7 +1115,7 @@
             <control type="fixedlist" id="82">
                 <description>Recent Episodes</description>
                 <visible allowhiddenfocus="true">Control.HasFocus(82) + Container(20).HasFocus(3)</visible>
-                <include>BannerListInfoAnimation</include>
+                <include>HomeRecentAnimation</include>
                 <posx>-392</posx>
                 <posy>385</posy>
                 <width>2460</width>
@@ -1402,7 +1421,7 @@
             <control type="fixedlist" id="83">
                 <description>Ongoing Episodes</description>
                 <visible allowhiddenfocus="true">Control.HasFocus(83) + Container(20).HasFocus(3)</visible>
-                <include>BannerListInfoAnimation</include>
+                <include>HomeRecentAnimation</include>
                 <include>listEndAnimation</include>
                 <posx>-232</posx>
                 <posy>175</posy>
@@ -1689,7 +1708,7 @@
             <control type="fixedlist" id="82">
                 <description>Recent albums</description>
                 <visible allowhiddenfocus="true">Control.HasFocus(82) + Container(20).HasFocus(4)</visible>
-                <include>BannerListInfoAnimation</include>
+                <include>HomeRecentAnimation</include>
                 <posx>-292</posx>
                 <posy>275</posy>
                 <width>2352</width>
@@ -1923,7 +1942,7 @@
             <control type="fixedlist" id="83">
                 <description>Random albums</description>
                 <visible allowhiddenfocus="true">Control.HasFocus(83) + Container(20).HasFocus(4)</visible>
-                <include>BannerListInfoAnimation</include>
+                <include>HomeRecentAnimation</include>
                 <posx>-292</posx>
                 <posy>275</posy>
                 <width>2352</width>
@@ -2157,7 +2176,7 @@
             <control type="fixedlist" id="84">
                 <description>Most played albums</description>
                 <visible allowhiddenfocus="true">Control.HasFocus(84) + Container(20).HasFocus(4)</visible>
-                <include>BannerListInfoAnimation</include>
+                <include>HomeRecentAnimation</include>
                 <include>listEndAnimation</include>
                 <posx>-292</posx>
                 <posy>275</posy>
@@ -2391,7 +2410,7 @@
             <!-- apps -->
             <control type="group">
                 <visible allowhiddenfocus="true">Control.HasFocus(82) + Container(20).HasFocus(7)</visible>
-                <include>BannerListInfoAnimation</include>
+                <include>HomeRecentAnimation</include>
                 <include>listEndAnimation</include>
                 <control type="panel" id="82">
                     <description>Custom items</description>
