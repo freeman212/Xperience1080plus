@@ -1117,9 +1117,9 @@
                 <visible allowhiddenfocus="true">Control.HasFocus(82) + Container(20).HasFocus(3)</visible>
                 <include>HomeRecentAnimation</include>
                 <posx>-392</posx>
-                <posy>385</posy>
-                <width>2460</width>
-                <height>500</height>
+                <posy>135</posy>
+                <width>2500</width>
+                <height>830</height>
                 <onup>83</onup>
                 <ondown>20</ondown>
                 <onleft>82</onleft>
@@ -1130,13 +1130,13 @@
                 <orientation>horizontal</orientation>
                 <preloaditems>2</preloaditems>
                 <focusposition>1</focusposition>
-                <itemlayout width="492" height="500">
+                <itemlayout width="492" height="830">
                     <control type="group">
                         <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
                         <control type="image">
                             <decription>Bottom shadow</decription>
                             <posx>-10</posx>
-                            <posy>375</posy>
+                            <posy>625</posy>
                             <width>500</width>
                             <height>50</height>
                             <texture>dialogs/shutdown/shadow.png</texture>
@@ -1145,9 +1145,16 @@
                             <posx>-5</posx>
                             <posy>265</posy>
                             <width>490</width>
-                            <height>110</height>
+                            <height>360</height>
                             <texture border="7">windows/home/tile-grey.png</texture>
                             <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>270</posy>
+                            <width>480</width>
+                            <height>104</height>
+                            <texture border="2">views/extended/overlay.png</texture>
                         </control>
                         <control type="label">
                             <posx>20</posx>
@@ -1172,6 +1179,19 @@
                             <shadowcolor>22000000</shadowcolor>
                             <aligny>center</aligny>
                             <scroll>false</scroll>
+                        </control>
+                        <control type="textbox">
+                            <description>Plot</description>
+                            <posx>20</posx>
+                            <posy>379</posy>
+                            <width>440</width>
+                            <height>230</height>
+                            <info>ListItem.property(Plot)</info>
+                            <align>justify</align>
+                            <textcolor>99FFFFFF</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <autoscroll>false</autoscroll>
+                            <font>Font-Condensed-S28</font>
                         </control>
                     </control>
                     <control type="group">
@@ -1220,14 +1240,14 @@
                         <visible>substring(ListItem.property(Overlay),true)</visible>
                     </control>
                 </itemlayout>
-                <focusedlayout width="492" height="500">
+                <focusedlayout width="492" height="830">
                     <control type="group">
                         <animation effect="fade" start="50" end="100" time="300" tween="sine" easing="inout">Focus</animation>
                         <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout">UnFocus</animation>
                         <control type="image">
                             <decription>Bottom shadow</decription>
                             <posx>-10</posx>
-                            <posy>375</posy>
+                            <posy>625</posy>
                             <width>500</width>
                             <height>50</height>
                             <texture>dialogs/shutdown/shadow.png</texture>
@@ -1236,10 +1256,17 @@
                             <posx>-5</posx>
                             <posy>265</posy>
                             <width>490</width>
-                            <height>110</height>
+                            <height>360</height>
                             <texture border="7">windows/home/tile-grey.png</texture>
                             <animation effect="fade" start="60" end="100" time="300" tween="sine" easing="inout">Focus</animation>
                             <animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout">UnFocus</animation>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>270</posy>
+                            <width>480</width>
+                            <height>104</height>
+                            <texture border="2">views/extended/overlay.png</texture>
                         </control>
                         <control type="label">
                             <posx>20</posx>
@@ -1264,6 +1291,19 @@
                             <shadowcolor>22000000</shadowcolor>
                             <aligny>center</aligny>
                             <scroll>true</scroll>
+                        </control>
+                        <control type="textbox">
+                            <description>Plot</description>
+                            <posx>20</posx>
+                            <posy>379</posy>
+                            <width>440</width>
+                            <height>230</height>
+                            <info>ListItem.property(Plot)</info>
+                            <align>justify</align>
+                            <textcolor>99FFFFFF</textcolor>
+                            <shadowcolor>22000000</shadowcolor>
+                            <autoscroll delay="13000" time="3000" repeat="13000" />
+                            <font>Font-Condensed-S28</font>
                         </control>
                     </control>
                     <control type="group">
@@ -1321,6 +1361,7 @@
                         <icon>$INFO[Window.Property(RecentEpisode.1.Art(tvshow.fanart))]</icon>
                         <property name="EpisodeThumb">$INFO[Window.Property(RecentEpisode.1.Art(thumb))]</property>
                         <property name="Overlay">$INFO[Window.Property(RecentEpisode.1.Watched)]</property>
+                        <property name="Plot">$INFO[Window.Property(RecentEpisode.1.Plot)]</property>
                         <label>$INFO[Window.Property(RecentEpisode.1.TVshowTitle)]</label>
                         <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentEpisode.1.Title),, • ]$INFO[Window.Property(RecentEpisode.1.Season),S,]$INFO[Window.Property(RecentEpisode.1.Episode),E,][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
@@ -1331,6 +1372,7 @@
                         <icon>$INFO[Window.Property(RecentEpisode.2.Art(tvshow.fanart))]</icon>
                         <property name="EpisodeThumb">$INFO[Window.Property(RecentEpisode.2.Art(thumb))]</property>
                         <property name="Overlay">$INFO[Window.Property(RecentEpisode.2.Watched)]</property>
+                        <property name="Plot">$INFO[Window.Property(RecentEpisode.2.Plot)]</property>
                         <label>$INFO[Window.Property(RecentEpisode.2.TVshowTitle)]</label>
                         <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentEpisode.2.Title),, • ]$INFO[Window.Property(RecentEpisode.2.Season),S,]$INFO[Window.Property(RecentEpisode.2.Episode),E,][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
@@ -1341,6 +1383,7 @@
                         <icon>$INFO[Window.Property(RecentEpisode.3.Art(tvshow.fanart))]</icon>
                         <property name="EpisodeThumb">$INFO[Window.Property(RecentEpisode.3.Art(thumb))]</property>
                         <property name="Overlay">$INFO[Window.Property(RecentEpisode.3.Watched)]</property>
+                        <property name="Plot">$INFO[Window.Property(RecentEpisode.2.Plot)]</property>
                         <label>$INFO[Window.Property(RecentEpisode.3.TVshowTitle)]</label>
                         <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentEpisode.3.Title),, • ]$INFO[Window.Property(RecentEpisode.3.Season),S,]$INFO[Window.Property(RecentEpisode.3.Episode),E,][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
@@ -1351,6 +1394,7 @@
                         <icon>$INFO[Window.Property(RecentEpisode.4.Art(tvshow.fanart))]</icon>
                         <property name="EpisodeThumb">$INFO[Window.Property(RecentEpisode.4.Art(thumb))]</property>
                         <property name="Overlay">$INFO[Window.Property(RecentEpisode.4.Watched)]</property>
+                        <property name="Plot">$INFO[Window.Property(RecentEpisode.4.Plot)]</property>
                         <label>$INFO[Window.Property(RecentEpisode.4.TVshowTitle)]</label>
                         <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentEpisode.4.Title),, • ]$INFO[Window.Property(RecentEpisode.4.Season),S,]$INFO[Window.Property(RecentEpisode.4.Episode),E,][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
@@ -1361,6 +1405,7 @@
                         <icon>$INFO[Window.Property(RecentEpisode.5.Art(tvshow.fanart))]</icon>
                         <property name="EpisodeThumb">$INFO[Window.Property(RecentEpisode.5.Art(thumb))]</property>
                         <property name="Overlay">$INFO[Window.Property(RecentEpisode.5.Watched)]</property>
+                        <property name="Plot">$INFO[Window.Property(RecentEpisode.5.Plot)]</property>
                         <label>$INFO[Window.Property(RecentEpisode.5.TVshowTitle)]</label>
                         <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentEpisode.5.Title),, • ]$INFO[Window.Property(RecentEpisode.5.Season),S,]$INFO[Window.Property(RecentEpisode.5.Episode),E,][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
@@ -1371,6 +1416,7 @@
                         <icon>$INFO[Window.Property(RecentEpisode.6.Art(tvshow.fanart))]</icon>
                         <property name="EpisodeThumb">$INFO[Window.Property(RecentEpisode.6.Art(thumb))]</property>
                         <property name="Overlay">$INFO[Window.Property(RecentEpisode.6.Watched)]</property>
+                        <property name="Plot">$INFO[Window.Property(RecentEpisode.6.Plot)]</property>
                         <label>$INFO[Window.Property(RecentEpisode.6.TVshowTitle)]</label>
                         <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentEpisode.6.Title),, • ]$INFO[Window.Property(RecentEpisode.6.Season),S,]$INFO[Window.Property(RecentEpisode.6.Episode),E,][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
@@ -1381,6 +1427,7 @@
                         <icon>$INFO[Window.Property(RecentEpisode.7.Art(tvshow.fanart))]</icon>
                         <property name="EpisodeThumb">$INFO[Window.Property(RecentEpisode.7.Art(thumb))]</property>
                         <property name="Overlay">$INFO[Window.Property(RecentEpisode.7.Watched)]</property>
+                        <property name="Plot">$INFO[Window.Property(RecentEpisode.7.Plot)]</property>
                         <label>$INFO[Window.Property(RecentEpisode.7.TVshowTitle)]</label>
                         <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentEpisode.7.Title),, • ]$INFO[Window.Property(RecentEpisode.7.Season),S,]$INFO[Window.Property(RecentEpisode.7.Episode),E,][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
@@ -1391,6 +1438,7 @@
                         <icon>$INFO[Window.Property(RecentEpisode.8.Art(tvshow.fanart))]</icon>
                         <property name="EpisodeThumb">$INFO[Window.Property(RecentEpisode.8.Art(thumb))]</property>
                         <property name="Overlay">$INFO[Window.Property(RecentEpisode.8.Watched)]</property>
+                        <property name="Plot">$INFO[Window.Property(RecentEpisode.8.Plot)]</property>
                         <label>$INFO[Window.Property(RecentEpisode.8.TVshowTitle)]</label>
                         <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentEpisode.8.Title),, • ]$INFO[Window.Property(RecentEpisode.8.Season),S,]$INFO[Window.Property(RecentEpisode.8.Episode),E,][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
@@ -1401,6 +1449,7 @@
                         <icon>$INFO[Window.Property(RecentEpisode.9.Art(tvshow.fanart))]</icon>
                         <property name="EpisodeThumb">$INFO[Window.Property(RecentEpisode.9.Art(thumb))]</property>
                         <property name="Overlay">$INFO[Window.Property(RecentEpisode.9.Watched)]</property>
+                        <property name="Plot">$INFO[Window.Property(RecentEpisode.9.Plot)]</property>
                         <label>$INFO[Window.Property(RecentEpisode.9.TVshowTitle)]</label>
                         <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentEpisode.9.Title),, • ]$INFO[Window.Property(RecentEpisode.9.Season),S,]$INFO[Window.Property(RecentEpisode.9.Episode),E,][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
@@ -1411,6 +1460,7 @@
                         <icon>$INFO[Window.Property(RecentEpisode.10.Art(tvshow.fanart))]</icon>
                         <property name="EpisodeThumb">$INFO[Window.Property(RecentEpisode.10.Art(thumb))]</property>
                         <property name="Overlay">$INFO[Window.Property(RecentEpisode.10.Watched)]</property>
+                        <property name="Plot">$INFO[Window.Property(RecentEpisode.10.Plot)]</property>
                         <label>$INFO[Window.Property(RecentEpisode.10.TVshowTitle)]</label>
                         <label2>[COLOR=88FFFFFF]$INFO[Window.Property(RecentEpisode.10.Title),, • ]$INFO[Window.Property(RecentEpisode.10.Season),S,]$INFO[Window.Property(RecentEpisode.10.Episode),E,][/COLOR]</label2>
                         <visible>!IsEmpty(Container(20).ListItem.Property(tvshows))</visible>
