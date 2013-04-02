@@ -1119,7 +1119,6 @@
                     <width>458</width>
                     <height>687</height>
                     <texture background="true">$VAR[VideoInfoThumb]</texture>
-                    <!--<texture background="true" diffuse="views/posterview/diffuse.png">$VAR[VideoInfoThumb]</texture>-->
                     <include>listEndAnimation</include>
                     <aspectratio>scale</aspectratio>
                 </control>
@@ -1130,6 +1129,7 @@
                     <width>544</width>
                     <height>125</height>
                     <texture>windows/home/item-shadow.png</texture>
+                    <include>listEndAnimation</include>
                 </control>
             </control>
         </control>
