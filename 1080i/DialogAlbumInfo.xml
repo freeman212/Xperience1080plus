@@ -676,12 +676,14 @@
                             <height>60</height>
                             <label>$VAR[ArtistInfoDiscography]</label>
                             <font>Font-Condensed-S40</font>
-                            <textcolor>aawhite</textcolor>
-                            <selectedcolor>eewhite</selectedcolor>
+                            <textcolor>eewhite</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
                             <scroll>no</scroll>
                             <visible>!IsEmpty(ListItem.label2)</visible>
+                            <animation type="Conditional" condition="true" reversible="false">
+                                <effect type="fade" end="40" time="0" />
+                            </animation>
                         </control>  
                     </itemlayout>
                     <itemlayout condition="Container.Content(Albums)" height="60">
@@ -692,11 +694,13 @@
                             <height>60</height>
                             <label>$VAR[AlbumInfoTracks]</label>
                             <font>Font-Condensed-S40</font>
-                            <textcolor>aawhite</textcolor>
-                            <selectedcolor>eewhite</selectedcolor>
+                            <textcolor>eewhite</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
                             <scroll>no</scroll>
+                            <animation type="Conditional" condition="true" reversible="false">
+                                <effect type="fade" end="40" time="0" />
+                            </animation>
                         </control>  
                     </itemlayout>
                     <focusedlayout condition="Container.Content(Artists)" height="60">
@@ -707,10 +711,15 @@
                             <height>60</height>
                             <label>$VAR[ArtistInfoDiscography]</label>
                             <textcolor>eewhite</textcolor>
-                            <selectedcolor>eewhite</selectedcolor>
                             <font>Font-Condensed-S40</font>
                             <align>left</align>
                             <aligny>center</aligny>
+                            <animation type="Focus" reversible="false">
+                                <effect type="fade" start="40" end="100" time="200" tween="sine" easing="in" />
+                            </animation>
+                            <animation type="Unfocus" reversible="false">
+                                <effect type="fade" start="100" end="40" time="200" tween="sine" easing="out" />
+                            </animation>
                         </control>  
                     </focusedlayout>
                     <focusedlayout condition="Container.Content(Albums)" height="60">
@@ -721,10 +730,15 @@
                             <height>60</height>
                             <label>$VAR[AlbumInfoTracks]</label>
                             <textcolor>eewhite</textcolor>
-                            <selectedcolor>eewhite</selectedcolor>
                             <font>Font-Condensed-S40</font>
                             <align>left</align>
                             <aligny>center</aligny>
+                            <animation type="Focus" reversible="false">
+                                <effect type="fade" start="40" end="100" time="200" tween="sine" easing="in" />
+                            </animation>
+                            <animation type="Unfocus" reversible="false">
+                                <effect type="fade" start="100" end="40" time="200" tween="sine" easing="out" />
+                            </animation>
                         </control>
                     </focusedlayout>
                 </control>
