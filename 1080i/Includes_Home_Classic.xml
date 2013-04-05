@@ -588,7 +588,7 @@
             <content>
                 <item id="0">
                     <label>$INFO[System.DVDLabel]</label>
-                    <onclick>PlayDVD()</onclick>
+                    <onclick>XBMC.PlayDVD()</onclick>
                     <icon>windows/home/panel_icons/panel_menu_dvd.png</icon>
                     <visible>System.HasMediaDVD</visible>
                 </item>

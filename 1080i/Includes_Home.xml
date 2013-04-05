@@ -2422,7 +2422,7 @@
                             <item id="1">
                                 <label>$INFO[System.DVDLabel]</label>
                                 <icon>windows/home/icons/dvd.png</icon>
-                                <onclick>PlayDVD()</onclick>
+                                <onclick>XBMC.PlayDVD()</onclick>
                                 <visible>System.HasMediaDVD</visible>
                             </item>
                         </content>

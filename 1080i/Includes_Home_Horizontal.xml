@@ -394,7 +394,7 @@
             <content>
                 <item id="0">
                     <label>$INFO[System.DVDLabel]</label>
-                    <onclick>PlayDVD()</onclick>
+                    <onclick>XBMC.PlayDVD()</onclick>
                     <icon>DefaultDVD.png</icon>
                     <visible>System.HasMediaDVD</visible>
                 </item>
