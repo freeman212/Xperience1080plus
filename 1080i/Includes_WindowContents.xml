@@ -408,7 +408,7 @@
     <include name="FadeBackgroundDialog">
         <control type="image">
             <include>FullscreenDimensions</include>
-            <texture>windows/common/black_content.png</texture>
+            <texture background="true">special://skin/extras/fade/black_content.png</texture>
             <animation effect="fade" time="300" start="0" end="95" tween="sine" easing="out">WindowOpen</animation>
             <animation effect="fade" time="300" start="95" end="0" tween="sine" easing="in">WindowClose</animation>
         </control>
@@ -416,7 +416,7 @@
     <include name="FadeBackground">
         <control type="image">
             <include>FullscreenDimensions</include>
-            <texture>windows/common/black_content.png</texture>
+            <texture background="true">special://skin/extras/fade/black_content.png</texture>
             <animation effect="fade" time="300" start="0" end="95" tween="sine" easing="out" condition="!Window.IsActive(mediafilter) + !Window.IsVisible(contextmenu) + !Window.IsActive(script-Actors-DialogVideoInfo.xml">Visible</animation>
             <animation effect="fade" time="300" start="95" end="0" tween="sine" easing="in">Hidden</animation>
             <visible>[[Window.IsActive(contentsettings) | Window.IsActive(addonsettings) | Window.IsActive(filebrowser) | [Window.IsActive(virtualkeyboard) + IsEmpty(Window(Home).Property(HomeSearch))] | Window.IsActive(playercontrols) | Window.IsActive(profilesettings) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(mediasource) | Window.IsActive(screencalibration) | Window.IsActive(numericinput) | Window.IsActive(filestackingdialog) | Window.IsActive(LockSettings)] + !Window.IsActive(movieinformation) + !Window.IsActive(1122) + !Window.IsActive(addoninformation) + !Window.IsActive(musicinformation) + !Window.IsActive(script-globalsearch-infodialog.xml)] | Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule) | Window.IsActive(pictureinfo) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml) | Window.IsActive(3001) | Window.IsActive(3002) | Window.IsActive(3003) | Window.IsActive(3006) | Window.IsActive(peripherals) | Window.IsActive(peripheralsettings) | Window.IsActive(mediafilter) | Window.IsActive(pvrgroupmanager) | Window.IsActive(pvrtimersetting) | Window.IsActive(pvrguidesearch) | Window.IsActive(pvrchannelmanager) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(DialogSelect.xml)</visible>
@@ -425,7 +425,7 @@
     <include name="FadeBackgroundMovieInfo">
         <control type="image">
             <include>FullscreenDimensions</include>
-            <texture>windows/common/black_content.png</texture>
+            <texture background="true">special://skin/extras/fade/black_content.png</texture>
             <animation effect="fade" time="300" start="0" end="95" tween="sine" easing="out">Visible</animation>
             <animation effect="fade" time="300" start="95" end="0" tween="sine" easing="in">Hidden</animation>
             <visible>Window.IsActive(contentsettings) | Window.IsActive(addonsettings) | Window.IsActive(filebrowser) | Window.IsActive(yesnodialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(playercontrols) | Window.IsActive(profilesettings) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(numericinput) | Window.IsActive(3004) | Window.IsActive(DialogSelect.xml)</visible>
@@ -434,7 +434,7 @@
     <include name="FadeBackgroundContentContext">
         <control type="image">
             <include>FullscreenDimensions</include>
-            <texture>windows/common/black2.png</texture>
+            <texture background="true">special://skin/extras/fade/black2.png</texture>
             <include>OpenCloseAnimationTwo</include>
             <visible>[ControlGroup(9000).HasFocus() | Window.IsActive(contextmenu)] + !Window.IsActive(shutdownmenu) + !Window.IsActive(movieinformation) + !Window.IsActive(1122) + !Window.IsActive(addoninformation) + !Window.IsActive(musicinformation)</visible>
         </control>
@@ -442,7 +442,7 @@
     <include name="FadeBackgroundButtonMenu">
         <control type="image">
             <include>FullscreenDimensions</include>
-            <texture>windows/common/black2.png</texture>
+            <texture background="true">special://skin/extras/fade/black2.png</texture>
             <include>OpenCloseAnimationThree</include>
         </control>
     </include>
@@ -478,7 +478,7 @@
                 <font>Font-Condensed-S80-B</font>
                 <align>center</align>
                 <textcolor>MenuGrey</textcolor>
-                <textshadow>white</textshadow>
+                <shadowcolor>white</shadowcolor>
                 <label>$INFO[Container(450).ListItem.SortLetter]</label>
             </control>
             <visible>Container(450).Scrolling</visible>
