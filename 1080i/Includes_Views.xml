@@ -7,7 +7,6 @@
     <include file="ViewtypesPrograms.xml" />
     <include file="ViewtypesAddons.xml" />
     <include file="ViewtypesPVR.xml" />
-    <include file="ViewtypesGames.xml" />
 
     <include name="VideoViews">
         <include>Viewtype-List</include>
