@@ -194,6 +194,10 @@
     <string id="41555">Unwatched movies</string>
     <string id="41556">Featured albums</string>
     
+    <string id="41562">Loading weather...</string>
+    <string id="41563">No city specified</string>
+    
+    
     <!-- Includes_Window-Contents.xml -->
     <!-- From 41600 to 41619 -->
     <string id="41600">Options</string>
