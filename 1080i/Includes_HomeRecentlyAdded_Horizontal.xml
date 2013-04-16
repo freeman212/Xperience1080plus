@@ -241,7 +241,7 @@
                     <control type="group">
                         <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <decription>Bottom shadow</decription>
+                            <description>Bottom shadow</description>
                             <posx>-10</posx>
                             <posy>585</posy>
                             <width>340</width>
@@ -322,7 +322,7 @@
                         <animation effect="fade" start="50" end="100" time="300" tween="sine" easing="inout">Focus</animation>
                         <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout">UnFocus</animation>
                         <control type="image">
-                            <decription>Bottom shadow</decription>
+                            <description>Bottom shadow</description>
                             <posx>-10</posx>
                             <posy>585</posy>
                             <width>340</width>
@@ -527,7 +527,7 @@
                     <control type="group">
                         <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <decription>Bottom shadow</decription>
+                            <description>Bottom shadow</description>
                             <posx>-10</posx>
                             <posy>585</posy>
                             <width>340</width>
@@ -608,7 +608,7 @@
                         <animation effect="fade" start="50" end="100" time="300" tween="sine" easing="inout">Focus</animation>
                         <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout">UnFocus</animation>
                         <control type="image">
-                            <decription>Bottom shadow</decription>
+                            <description>Bottom shadow</description>
                             <posx>-10</posx>
                             <posy>585</posy>
                             <width>340</width>
@@ -814,7 +814,7 @@
                     <control type="group">
                         <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <decription>Bottom shadow</decription>
+                            <description>Bottom shadow</description>
                             <posx>-10</posx>
                             <posy>407</posy>
                             <width>500</width>
@@ -907,7 +907,7 @@
                         <animation effect="fade" start="50" end="100" time="300" tween="sine" easing="inout">Focus</animation>
                         <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout">UnFocus</animation>
                         <control type="image">
-                            <decription>Bottom shadow</decription>
+                            <description>Bottom shadow</description>
                             <posx>-10</posx>
                             <posy>407</posy>
                             <width>500</width>
@@ -1134,7 +1134,7 @@
                     <control type="group">
                         <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <decription>Bottom shadow</decription>
+                            <description>Bottom shadow</description>
                             <posx>-10</posx>
                             <posy>625</posy>
                             <width>500</width>
@@ -1245,7 +1245,7 @@
                         <animation effect="fade" start="50" end="100" time="300" tween="sine" easing="inout">Focus</animation>
                         <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout">UnFocus</animation>
                         <control type="image">
-                            <decription>Bottom shadow</decription>
+                            <description>Bottom shadow</description>
                             <posx>-10</posx>
                             <posy>625</posy>
                             <width>500</width>
@@ -1491,7 +1491,7 @@
                     <control type="group">
                         <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <decription>Bottom shadow</decription>
+                            <description>Bottom shadow</description>
                             <posx>-10</posx>
                             <posy>585</posy>
                             <width>340</width>
@@ -1572,7 +1572,7 @@
                         <animation effect="fade" start="50" end="100" time="300" tween="sine" easing="inout">Focus</animation>
                         <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout">UnFocus</animation>
                         <control type="image">
-                            <decription>Bottom shadow</decription>
+                            <description>Bottom shadow</description>
                             <posx>-10</posx>
                             <posy>585</posy>
                             <width>340</width>
@@ -1777,7 +1777,7 @@
                     <control type="group">
                         <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <decription>Bottom shadow</decription>
+                            <description>Bottom shadow</description>
                             <posx>-10</posx>
                             <posy>485</posy>
                             <width>400</width>
@@ -1842,7 +1842,7 @@
                         <animation effect="fade" start="50" end="100" time="300" tween="sine" easing="inout">Focus</animation>
                         <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout">UnFocus</animation>
                         <control type="image">
-                            <decription>Bottom shadow</decription>
+                            <description>Bottom shadow</description>
                             <posx>-10</posx>
                             <posy>485</posy>
                             <width>400</width>
@@ -2011,7 +2011,7 @@
                     <control type="group">
                         <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <decription>Bottom shadow</decription>
+                            <description>Bottom shadow</description>
                             <posx>-10</posx>
                             <posy>485</posy>
                             <width>400</width>
@@ -2076,7 +2076,7 @@
                         <animation effect="fade" start="50" end="100" time="300" tween="sine" easing="inout">Focus</animation>
                         <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout">UnFocus</animation>
                         <control type="image">
-                            <decription>Bottom shadow</decription>
+                            <description>Bottom shadow</description>
                             <posx>-10</posx>
                             <posy>485</posy>
                             <width>400</width>
@@ -2246,7 +2246,7 @@
                     <control type="group">
                         <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
                         <control type="image">
-                            <decription>Bottom shadow</decription>
+                            <description>Bottom shadow</description>
                             <posx>-10</posx>
                             <posy>485</posy>
                             <width>400</width>
@@ -2311,7 +2311,7 @@
                         <animation effect="fade" start="50" end="100" time="300" tween="sine" easing="inout">Focus</animation>
                         <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout">UnFocus</animation>
                         <control type="image">
-                            <decription>Bottom shadow</decription>
+                            <description>Bottom shadow</description>
                             <posx>-10</posx>
                             <posy>485</posy>
                             <width>400</width>
@@ -2805,7 +2805,7 @@
                     </content>
                 </control>
                 <control type="image">
-                    <decription>Bottom shadow</decription>
+                    <description>Bottom shadow</description>
                     <posx>120</posx>
                     <posy>745</posy>
                     <width>1680</width>
