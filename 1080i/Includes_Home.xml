@@ -289,7 +289,7 @@
                 <visible>!Skin.HasSetting(HomeHome) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
                 <control type="image">
                     <posx>-25</posx>
-                    <posy>12</posy>
+                    <posy>13</posy>
                     <width>19</width>
                     <height>38</height>
                     <texture>windows/home/submenu-arrow.png</texture>
@@ -314,7 +314,7 @@
                 <visible>!Skin.HasSetting(HomeMovies) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
                 <control type="image">
                     <posx>-25</posx>
-                    <posy>12</posy>
+                    <posy>13</posy>
                     <width>19</width>
                     <height>38</height>
                     <texture>windows/home/submenu-arrow.png</texture>
@@ -339,7 +339,7 @@
                 <visible>!Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
                 <control type="image">
                     <posx>-25</posx>
-                    <posy>12</posy>
+                    <posy>13</posy>
                     <width>19</width>
                     <height>38</height>
                     <texture>windows/home/submenu-arrow.png</texture>
@@ -363,7 +363,7 @@
                 <visible>!Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HideHomeSubmenuArrow)</visible>
                 <control type="image">
                     <posx>-25</posx>
-                    <posy>12</posy>
+                    <posy>13</posy>
                     <width>19</width>
                     <height>38</height>
                     <texture>windows/home/submenu-arrow.png</texture>
