@@ -63,7 +63,6 @@
                     <include>SettingsDialogRadioButtonVars</include>
                     <selected>!Skin.HasSetting(HomeTVGuide)</selected>
                     <onclick>Skin.ToggleSetting(HomeTVGuide)</onclick>
-                    <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
                     <label>$LOCALIZE[42160]</label>
                     <visible>stringcompare(Skin.String(HomeScreen),horizontal)</visible>
                 </control>
