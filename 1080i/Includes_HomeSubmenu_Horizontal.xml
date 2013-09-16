@@ -304,7 +304,7 @@
                 <item id="11">     
                     <label>$LOCALIZE[42160] ($INFO[Window.Property(NextAired.TodayTotal)])</label>
                     <onclick>RunAddon(script.tv.show.next.aired)</onclick>
-                    <visible>System.HasAddon(script.tv.show.next.aired)</visible>
+                    <visible>System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(HomeTVGuide)</visible>
                 </item>
                 <item id="12">
                     <label>Fullscreen</label>

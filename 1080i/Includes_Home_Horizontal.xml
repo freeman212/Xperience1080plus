@@ -426,6 +426,12 @@
                     <property name="multi">$INFO[Skin.String(HomeTVShowsMultiImage)]</property>
                     <property name="tvshows">1</property>
                 </item>
+                <item id="14">
+                    <label>$LOCALIZE[42160] ($INFO[Window.Property(NextAired.TodayTotal)])</label>
+                    <onclick>RunAddon(script.tv.show.next.aired)</onclick>
+                    <icon>DefaultTVGuide.png</icon>
+                    <visible>!Skin.HasSetting(HomeTVGuide) + System.HasAddon(script.tv.show.next.aired)</visible>
+                </item>             
                 <item id="4">
                     <label>$LOCALIZE[41447]</label>
                     <onclick condition="!Library.HasContent(music)">ActivateWindow(musicfiles)</onclick>
