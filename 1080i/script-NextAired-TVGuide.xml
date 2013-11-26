@@ -716,7 +716,7 @@
                 </control>
             </control>
         </control>
-        <include>FadeBackgroundContentContext</include>
+        <!--<include>FadeBackgroundContentContext</include>-->
         <control type="group" id="9000">
             <posx>267</posx>
             <posy>517</posy>
