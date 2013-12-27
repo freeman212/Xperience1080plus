@@ -99,7 +99,7 @@
                         <textcolor>aawhite</textcolor>
                         <font>Font-Condensed-S34</font>
                         <align>right</align>
-                        <visible>Player.Paused + ![Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding]</visible>
+                        <visible>Player.Paused + ![Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(fullscreeninfo)]</visible>
                         <animation effect="fade" start="0" end="100" time="400" tween="sine" easing="inout">Visible</animation>
                         <animation effect="fade" start="100" end="0" time="400" tween="sine" easing="inout">Hidden</animation>
                     </control>
@@ -237,24 +237,32 @@
                                 </control>
                             </control>
                         </control>
-                        <control type="group">
+                       <control type="group">
+							<posy>825</posy>
+                            <visible>[VideoPlayer.Content(files) | SubString(Player.FolderPath,http)]</visible>
+                            <control type="image">
+                                <posx>20</posx>
+                                <posy>70</posy>
+                                <width>360</width>
+                                <height>270</height>
+                                <texture background="true">$INFO[Player.Art(thumb)]</texture>
+								<bordertexture border="30">osd/fullscreen/cover-shadow.png</bordertexture>
+								<bordersize>20</bordersize>
+                                <aspectratio>keep</aspectratio>
+                            </control>
+						</control>						
+						<control type="group">
                             <posy>825</posy>
                             <visible>VideoPlayer.Content(Movies)</visible>
                             <control type="image">
-                                <posx>110</posx>
+                                <posx>80</posx>
                                 <posy>-35</posy>
                                 <width>276</width>
                                 <height>394</height>
-                                <texture border="30">osd/fullscreen/cover-shadow.png</texture>
-                                <aspectratio>stretch</aspectratio>
-                            </control>
-                            <control type="image">
-                                <posx>130</posx>
-                                <posy>-15</posy>
-                                <width>236</width>
-                                <height>354</height>
-                                <texture background="true" fallback="views/fallbacks/DefaultVideo.png/medium.png">$INFO[Player.Art(thumb)]</texture>
-                                <aspectratio>stretch</aspectratio>
+                                <texture background="true">$INFO[Player.Art(poster)]</texture>
+                                <bordertexture border="30">osd/fullscreen/cover-shadow.png</bordertexture>
+                                <bordersize>20</bordersize>
+                                <aspectratio align="right">keep</aspectratio>
                             </control>
                             <control type="label">
                                 <posx>390</posx>
@@ -441,7 +449,7 @@
                                 </control>
                             </control>
                         </control>
-                        <control type="group">
+                        <!--<control type="group">
                             <visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(LiveTV)</visible>
                             <posy>825</posy>                        
                             <control type="image">
@@ -478,7 +486,7 @@
                                 <aligny>center</aligny>
                                 <scroll>false</scroll>
                             </control>
-                        </control>
+                        </control>-->
                     </control>
                 </control>
             </control>
